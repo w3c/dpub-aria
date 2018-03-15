@@ -1219,7 +1219,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				<p>Below is an alphabetical list of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 					<a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a> to be used by rich internet application authors.</p>
 				<dl id="index_role" class="compact"><dt><a href="#doc-abstract" class="role-reference">doc-abstract</a></dt>
-<dd>A short summary of the principle ideas, concepts and conclusions of the
+<dd>A short summary of the principal ideas, concepts and conclusions of the
 							work, or of a section or excerpt within it.</dd>
 <dt><a href="#doc-acknowledgments" class="role-reference">doc-acknowledgments</a></dt>
 <dd>A section or statement that acknowledges significant contributions by
@@ -1344,7 +1344,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				<section class="role notoc" id="doc-abstract">
 					<h4 class="role-name" title="doc-abstract" aria-describedby="desc-doc-abstract" id="doc-abstract-0"><code>doc-abstract</code> <span class="type-indicator">(role)</span><span class="permalink"><a href="#doc-abstract" aria-label="Permalink for doc-abstract (role)" title="Permalink for doc-abstract (role)"><span>§</span></a></span></h4>
 					<div class="role-description" id="desc-doc-abstract" role="definition">
-						<p>A short summary of the principle ideas, concepts and conclusions of the
+						<p>A short summary of the principal ideas, concepts and conclusions of the
 							work, or of a section or excerpt within it.</p>
 						<div class="example"><div class="example-title marker"><span>Example 1</span></div><pre class="highlight hljs xml" aria-busy="false"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-abstract"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Abstract"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Accessibility of web content requires semantic information about widgets, structures,
@@ -5061,14 +5061,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					<div class="role-description" id="desc-doc-pagelist" role="definition">
 						<p>A navigational aid that provides a list of links to the pagebreaks in the
 							content.</p>
-						<div class="example"><div class="example-title marker"><span>Example 34</span></div><pre class="highlight hljs javascript" aria-busy="false">&lt;nav role=<span class="hljs-string">"doc-pagelist"</span>&gt;
-   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Pages<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&lt;
-   &lt;<span class="hljs-attr">ol</span>&gt;</span>
+						<div class="example"><div class="example-title marker"><span>Example 34</span></div><pre class="highlight hljs xml" aria-busy="false"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagelist"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Pages<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"chapter.xhtml#Page_1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"chapter.xhtml#Page_2"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
       …
    <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></span></pre></div>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></pre></div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -5579,7 +5579,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-parent-head" scope="row">Superclass Role:</th>
-								<td class="role-parent"><rref>none</rref></td>
+								<td class="role-parent"><rref>section</rref></td>
 							</tr>
 							<tr>
 								<th class="role-children-head" scope="row">Subclass Roles:</th>
@@ -5615,7 +5615,31 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited">&nbsp;</td>
+								<td class="role-inherited"><ul>
+<li><pref>aria-atomic</pref></li>
+<li><sref title="aria-busy">aria-busy (state)</sref></li>
+<li><pref>aria-controls</pref></li>
+<li><sref title="aria-current">aria-current (state)</sref></li>
+<li><pref>aria-describedby</pref></li>
+<li><pref>aria-details</pref></li>
+<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
+<li><pref>aria-dropeffect</pref></li>
+<li><pref>aria-errormessage</pref></li>
+<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
+<li><pref>aria-flowto</pref></li>
+<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
+<li><pref>aria-haspopup</pref></li>
+<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
+<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
+<li><pref>aria-keyshortcuts</pref></li>
+<li><pref>aria-label</pref></li>
+<li><pref>aria-labelledby</pref></li>
+<li><pref>aria-live</pref></li>
+<li><pref>aria-owns</pref></li>
+<li><pref>aria-relevant</pref></li>
+<li><pref>aria-roledescription</pref></li>
+</ul>
+</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -5859,7 +5883,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
-								<td class="role-namefrom">author</td>
+								<td class="role-namefrom">
+									<ul>
+										<li>contents</li>
+										<li>author</li>
+									</ul>
+								</td>
 							</tr>
 							<tr>
 								<th class="role-namerequired-head" scope="row">Accessible Name
