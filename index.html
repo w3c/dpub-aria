@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 21.0.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 22.3.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
 div.example-title {
     min-width: 7.5em;
     color: #b9ab2d;
@@ -184,6 +184,10 @@ a.bibref {
   text-decoration: none;
 }
 
+#references :target {
+  background: #eaf3ff;
+}
+
 cite .bibref {
   font-style: normal;
 }
@@ -291,9 +295,9 @@ details.respec-tests-details[open] {
   z-index: 999999;
   position: absolute;
   border: thin solid #cad3e2;
-  border-radius: .3em;
+  border-radius: 0.3em;
   background-color: white;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
 
 details.respec-tests-details[open] > summary {
@@ -517,7 +521,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     "EPUB-Content": {
       "href": "http://www.idpf.org/epub/31/spec/epub-contentdocs.html",
       "title": "EPUB Content Documents 3.1",
-      "publisher": "IDPF"
+      "publisher": "IDPF",
+      "id": "epub-content"
     },
     "HTML-AAM": {
       "aliasOf": "HTML-AAM-1.0"
@@ -532,9 +537,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishDate": "2018-06-15",
-  "publishISODate": "2018-06-15T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 15 June 2018"
+  "publishDate": "2018-07-19",
+  "publishISODate": "2018-07-19T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 19 July 2018"
 }</script><meta name="description" content="Enabling users of assistive technologies to find their way through Web content
 				requires embedding semantic metadata about Web document structural divisions. This
 				is particularly important for structural divisions of long-form documents and goes
@@ -548,7 +553,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   </a>
   <h1 id="title" class="title p-name">Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Module 1.1</h1>
   
-  <h2 id="w3c-editor-s-draft-15-june-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-06-15">15 June 2018</time></h2>
+  <h2 id="w3c-editor-s-draft-19-july-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-07-19">19 July 2018</time></h2>
   <dl>
     <dt>This version:</dt><dd><a class="u-url" href="https://w3c.github.io/dpub-aria/">https://w3c.github.io/dpub-aria/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/dpub-aria/">https://www.w3.org/TR/dpub-aria/</a></dd>
     <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/dpub-aria/">https://w3c.github.io/dpub-aria/</a></dd>
@@ -653,7 +658,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			<p>This specification is a modular extension of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> designed for the
 				digital publishing industry. The goals of this specification include:</p>
 			<ul>
-				<li>Expanding [<cite><a class="bibref" href="#bib-WAI-ARIA">WAI-ARIA</a></cite>] to produce structural semantic extensions to accommodate
+				<li>Expanding [<cite><a class="bibref" href="#bib-wai-aria">WAI-ARIA</a></cite>] to produce structural semantic extensions to accommodate
 					the digital publishing industry.</li>
 				<li>Align with a new governance model for modularization and extensions to <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>.</li>
 				<li>Provide structural semantics extensions that will support both assistive
@@ -695,15 +700,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			<section id="ua-support">
 				<h3 id="x1-2-user-agent-support"><span class="secno">1.2 </span>User Agent Support<span class="permalink"><a href="#ua-support" aria-label="Permalink for 1.2 User Agent Support" title="Permalink for 1.2 User Agent Support"><span>§</span></a></span></h3>
 				<p>This module builds on the general <a href="http://www.w3.org/TR/wai-aria-1.1/#ua-support">User Agent support
-						principles</a> defined in [<cite><a class="bibref" href="#bib-WAI-ARIA">WAI-ARIA</a></cite>] by also providing the ability for
+						principles</a> defined in [<cite><a class="bibref" href="#bib-wai-aria">WAI-ARIA</a></cite>] by also providing the ability for
 					user agents to enhance the general user interface presented to readers.</p>
 			</section>
 
 			<section id="co-evolution">
 				<h3 id="x1-3-co-evolution-of-wai-aria-and-host-languages"><span class="secno">1.3 </span>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages<span class="permalink"><a href="#co-evolution" aria-label="Permalink for 1.3 Co-Evolution of WAI-ARIA and Host Languages" title="Permalink for 1.3 Co-Evolution of WAI-ARIA and Host Languages"><span>§</span></a></span></h3>
 				<p>The Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module follows the model for <a href="http://www.w3.org/TR/wai-aria-1.1/#co-evolution">co-evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and host
-						languages</a> defined in [<cite><a class="bibref" href="#bib-WAI-ARIA">WAI-ARIA</a></cite>]. It is intended to augment semantics
-					in supporting languages like [<cite><a class="bibref" href="#bib-HTML5">HTML5</a></cite>], [<cite><a class="bibref" href="#bib-SVG2">SVG2</a></cite>] and EPUB, or to be used as an
+						languages</a> defined in [<cite><a class="bibref" href="#bib-wai-aria">WAI-ARIA</a></cite>]. It is intended to augment semantics
+					in supporting languages like [<cite><a class="bibref" href="#bib-html5">HTML5</a></cite>], [<cite><a class="bibref" href="#bib-svg2">SVG2</a></cite>] and EPUB, or to be used as an
 					accessibility enhancement technology in other markup-based languages that do not
 					explicitly include support for ARIA. It clarifies semantics to assistive
 					technologies when authors create new types of objects, via style and script,
@@ -773,7 +778,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				<h3 id="x1-5-assistive-technologies"><span class="secno">1.5 </span>Assistive Technologies<span class="permalink"><a href="#at_support" aria-label="Permalink for 1.5 Assistive Technologies" title="Permalink for 1.5 Assistive Technologies"><span>§</span></a></span></h3>
 				<p>Programmatic access to accessibility semantics is essential for assistive
 					technologies. For more information, refer to the <a href="http://www.w3.org/TR/wai-aria-1.1/#at_support">Assistive
-						Technologies</a> section in [<cite><a class="bibref" href="#bib-WAI-ARIA">WAI-ARIA</a></cite>].</p>
+						Technologies</a> section in [<cite><a class="bibref" href="#bib-wai-aria">WAI-ARIA</a></cite>].</p>
 			</section>
 		</section>
 		<section class="normative" id="conformance"><!--OddPage--><h2 id="x2-conformance"><span class="secno">2. </span>Conformance<span class="permalink"><a href="#conformance" aria-label="Permalink for 2. Conformance" title="Permalink for 2. Conformance"><span>§</span></a></span></h2><p>
@@ -781,7 +786,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   and notes in this specification are non-normative. Everything else in this specification is
   normative.
 </p><p id="respecRFC2119">The key words  <em class="rfc2119">MUST</em> and <em class="rfc2119">SHOULD</em> are 
-  to be interpreted as described in [<cite><a class="bibref" href="#bib-RFC2119">RFC2119</a></cite>].
+  to be interpreted as described in [<cite><a class="bibref" href="#bib-rfc2119">RFC2119</a></cite>].
 </p>
 			<p>This specification indicates whether a section is <a href="#dfn-normative" class="internalDFN" data-link-type="dfn">normative</a> or
 					<a href="#dfn-informative" class="internalDFN" data-link-type="dfn">informative</a>. Classifying a section as normative or informative applies to
@@ -799,8 +804,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 <dl class="termlist">
     <dt><dfn data-lt="accessibility api|accessibility apis" data-dfn-type="dfn" id="dfn-accessibility-api">Accessibility <abbr title="Application Programming Interface">API</abbr></dfn></dt>
     <dd>
-      <p>Operating systems and other platforms provide a set of interfaces that expose information about <a class="termref internalDFN" data-lt="object" href="#dfn-object" data-link-type="dfn">objects</a> and <a class="termref internalDFN" data-lt="event" href="#dfn-event" data-link-type="dfn">events</a> to <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a>. Assistive technologies use these interfaces to get information about and interact with those <a class="termref internalDFN" data-lt="widget" href="#dfn-widget" data-link-type="dfn">widgets</a>. Examples of accessibility APIs are <a href="https://msdn.microsoft.com/en-us/library/ms697270(VS.85).aspx">Microsoft Active Accessibility</a> [<cite><a class="bibref" href="#bib-MSAA">MSAA</a></cite>], <a href="https://msdn.microsoft.com/en-us/library/ee684013%28VS.85%29.aspx">Microsoft User Interface Automation</a> [<cite><a class="bibref" href="#bib-UI-AUTOMATION">UI-AUTOMATION</a></cite>], <abbr title="Microsoft Active Accessibility">MSAA</abbr> with <cite><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898(v=vs.85).aspx"><abbr title="User Interface Automation">UIA</abbr> Express</a></cite> [<cite><a class="bibref" href="#bib-UIA-EXPRESS">UIA-EXPRESS</a></cite>], the
-      	<a href="https://developer.apple.com/documentation/appkit/accessibility/nsaccessibility">Mac <abbr title="OS Ten">OS X</abbr> Accessibility Protocol</a> [<cite><a class="bibref" href="#bib-AXAPI">AXAPI</a></cite>], the <cite><a href="https://developer.gnome.org/atk/unstable/">Linux/Unix Accessibility Toolkit</a></cite> [<cite><a class="bibref" href="#bib-ATK">ATK</a></cite>] and <cite><a href="https://developer.gnome.org/libatspi/stable/">Assistive Technology Service Provider Interface</a></cite> [<cite><a class="bibref" href="#bib-AT-SPI">AT-SPI</a></cite>], and <a href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/start">IAccessible2</a> [<cite><a class="bibref" href="#bib-IAccessible2">IAccessible2</a></cite>].</p>
+      <p>Operating systems and other platforms provide a set of interfaces that expose information about <a class="termref internalDFN" data-lt="object" href="#dfn-object" data-link-type="dfn">objects</a> and <a class="termref internalDFN" data-lt="event" href="#dfn-event" data-link-type="dfn">events</a> to <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a>. Assistive technologies use these interfaces to get information about and interact with those <a class="termref internalDFN" data-lt="widget" href="#dfn-widget" data-link-type="dfn">widgets</a>. Examples of accessibility APIs are <a href="https://msdn.microsoft.com/en-us/library/ms697270(VS.85).aspx">Microsoft Active Accessibility</a> [<cite><a class="bibref" href="#bib-msaa">MSAA</a></cite>], <a href="https://msdn.microsoft.com/en-us/library/ee684013%28VS.85%29.aspx">Microsoft User Interface Automation</a> [<cite><a class="bibref" href="#bib-ui-automation">UI-AUTOMATION</a></cite>], <abbr title="Microsoft Active Accessibility">MSAA</abbr> with <cite><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898(v=vs.85).aspx"><abbr title="User Interface Automation">UIA</abbr> Express</a></cite> [<cite><a class="bibref" href="#bib-uia-express">UIA-EXPRESS</a></cite>], the
+      	<a href="https://developer.apple.com/documentation/appkit/accessibility/nsaccessibility">Mac <abbr title="OS Ten">OS X</abbr> Accessibility Protocol</a> [<cite><a class="bibref" href="#bib-axapi">AXAPI</a></cite>], the <cite><a href="https://developer.gnome.org/atk/unstable/">Linux/Unix Accessibility Toolkit</a></cite> [<cite><a class="bibref" href="#bib-atk">ATK</a></cite>] and <cite><a href="https://developer.gnome.org/libatspi/stable/">Assistive Technology Service Provider Interface</a></cite> [<cite><a class="bibref" href="#bib-at-spi">AT-SPI</a></cite>], and <a href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/start">IAccessible2</a> [<cite><a class="bibref" href="#bib-iaccessible2">IAccessible2</a></cite>].</p>
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-accessibility-subtree">Accessibility Subtree</dfn></dt>
     <dd>
@@ -856,7 +861,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </dd>
     <dt><dfn data-lt="deprecated|deprecate|deprecation" data-dfn-type="dfn" id="dfn-deprecated">Deprecated</dfn></dt>
     <dd>
-      <p>A deprecated <a class="termref" href="#dfn-role">role</a>, <a class="termref" href="#dfn-state">state</a>, or <a class="termref" href="#dfn-property">property</a> is one which has been outdated by newer constructs or changed circumstances, and which may be removed in future versions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification. <a class="termref internalDFN" data-lt="user agent" href="#dfn-user-agent" data-link-type="dfn">User agents</a> are encouraged to continue to support items identified as deprecated for backward compatibility. For more information, see <a href="#deprecated">Deprecated Requirements</a> in the Conformance section.</p>
+      <p>A deprecated <a class="termref" href="#dfn-role">role</a>, <a class="termref" href="#dfn-state">state</a>, or <a class="termref" href="#dfn-property">property</a> is one which has been outdated by newer constructs or changed circumstances, and which may be removed in future versions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification. <a class="termref internalDFN" data-lt="user agent" href="#dfn-user-agent" data-link-type="dfn">User agents</a> are encouraged to continue to support items identified as deprecated for backward compatibility. For more information, see <a href="#deprecated" class="respec-offending-element">Deprecated Requirements</a> in the Conformance section.</p>
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-desktop-focus-event">Desktop focus event</dfn></dt>
     <dd>
@@ -872,7 +877,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-expose">Expose</dfn></dt>
     <dd>
-      <p>Translated to platform-specific <a class="termref internalDFN" data-lt="accessibility api" href="#dfn-accessibility-api" data-link-type="dfn">accessibility APIs</a> as defined in the <a href="" class="core-mapping">Core Accessibility <abbr title="Application Programming Interfaces">API</abbr> Mappings</a>. [<cite><a class="bibref" href="#bib-CORE-AAM-1.1">CORE-AAM-1.1</a></cite>]</p>
+      <p>Translated to platform-specific <a class="termref internalDFN" data-lt="accessibility api" href="#dfn-accessibility-api" data-link-type="dfn">accessibility APIs</a> as defined in the <a href="" class="core-mapping">Core Accessibility <abbr title="Application Programming Interfaces">API</abbr> Mappings</a>. [<cite><a class="bibref" href="#bib-core-aam-1.1">CORE-AAM-1.1</a></cite>]</p>
     </dd>
 	<dt><dfn data-lt="graphical document|graphical documents" data-dfn-type="dfn" id="dfn-graphical-document">Graphical Document</dfn></dt>
     <dd>
@@ -888,7 +893,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-keyboard-accessible">Keyboard Accessible</dfn></dt>
     <dd>
-    	<p>Accessible to the user using a keyboard or <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a> that mimic keyboard input, such as a sip and puff tube. References in this document relate to <cite><a href="http://www.w3.org/TR/WCAG21/#keyboard-accessible"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Guideline 2.1: Make all functionality available from a keyboard</a></cite> [<cite><a class="bibref" href="#bib-WCAG21">WCAG21</a></cite>].</p>
+    	<p>Accessible to the user using a keyboard or <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a> that mimic keyboard input, such as a sip and puff tube. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#keyboard-accessible"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Guideline 2.1: Make all functionality available from a keyboard</a></cite> [<cite><a class="bibref" href="#bib-wcag21">WCAG21</a></cite>].</p>
     </dd>
     <dt><dfn data-lt="landmark|landmarks" data-dfn-type="dfn" id="dfn-landmark">Landmark</dfn></dt>
     <dd>
@@ -929,7 +934,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-operable">Operable</dfn></dt>
     <dd>
-      <p>Usable by users in ways they can control. References in this document relate to <cite><a href="http://www.w3.org/TR/WCAG21/#operable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 2: Content must be operable</a></cite> [<cite><a class="bibref" href="#bib-WCAG21">WCAG21</a></cite>]. See <a href="#dfn-keyboard-accessible" class="internalDFN" data-link-type="dfn">Keyboard Accessible</a>.</p>
+      <p>Usable by users in ways they can control. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#operable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 2: Content must be operable</a></cite> [<cite><a class="bibref" href="#bib-wcag21">WCAG21</a></cite>]. See <a href="#dfn-keyboard-accessible" class="internalDFN" data-link-type="dfn">Keyboard Accessible</a>.</p>
     </dd>
     <dt><dfn data-lt="owned element|owned|owned element's|owned elements" data-dfn-type="dfn" id="dfn-owned-element">Owned Element</dfn></dt>
     <dd>
@@ -941,7 +946,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-perceivable">Perceivable</dfn></dt>
     <dd>
-      <p>Presentable to users in ways they can sense. References in this document relate to <cite><a href="http://www.w3.org/TR/WCAG21/#perceivable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 1: Content must be perceivable</a></cite> [<cite><a class="bibref" href="#bib-WCAG21">WCAG21</a></cite>].</p>
+      <p>Presentable to users in ways they can sense. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#perceivable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 1: Content must be perceivable</a></cite> [<cite><a class="bibref" href="#bib-wcag21">WCAG21</a></cite>].</p>
     </dd>
     <dt><dfn data-lt="property|properties" data-dfn-type="dfn" id="dfn-property">Property</dfn></dt>
     <dd>
@@ -965,7 +970,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </dd>
     <dt><dfn data-lt="state|states" data-dfn-type="dfn" id="dfn-state">State</dfn></dt>
     <dd>
-      <p>A state is a dynamic <a class="termref" href="#dfn-property">property</a> expressing characteristics of an <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a> that may change in response to user action or automated processes. States do not affect the essential nature of the object, but represent data associated with the object or user interaction possibilities. See <a href="http://www.w3.org/TR/wai-aria-1.1/#statevsprop">clarification of states versus properties</a>.</p>
+      <p>A state is a dynamic <a class="termref" href="#dfn-property">property</a> expressing characteristics of an <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a> that may change in response to user action or automated processes. States do not affect the essential nature of the object, but represent data associated with the object or user interaction possibilities. See <a href="https://www.w3.org/TR/wai-aria-1.1/#statevsprop">clarification of states versus properties</a>.</p>
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-sub-document">Sub-document</dfn></dt>
     <dd>
@@ -989,7 +994,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-understandable">Understandable</dfn></dt>
     <dd>
-      <p>Presentable to users in ways they can construct an appropriate meaning. References in this document relate to <cite><a href="http://www.w3.org/TR/WCAG21/#understandable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 3: Information and the operation of user interface must be understandable</a></cite> [<cite><a class="bibref" href="#bib-WCAG21">WCAG21</a></cite>].</p>
+      <p>Presentable to users in ways they can construct an appropriate meaning. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#understandable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 3: Information and the operation of user interface must be understandable</a></cite> [<cite><a class="bibref" href="#bib-wcag21">WCAG21</a></cite>].</p>
     </dd>
     <dt><dfn data-lt="user agent|user agents" data-dfn-type="dfn" id="dfn-user-agent">User Agent</dfn></dt>
     <dd>
@@ -1176,7 +1181,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#abstract">abstract</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#abstract">abstract</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1294,7 +1299,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#acknowledgments">acknowledgments</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#acknowledgments">acknowledgments</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1414,7 +1419,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#afterword">afterword</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#afterword">afterword</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1532,7 +1537,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#appendix">appendix</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#appendix">appendix</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1652,7 +1657,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#backlink">referrer</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#backlink">referrer</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1794,7 +1799,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#biblioentry">biblioentry</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#biblioentry">biblioentry</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1917,7 +1922,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#bibliography">bibliography</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#bibliography">bibliography</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2035,7 +2040,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#biblioref">biblioref</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#biblioref">biblioref</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2157,7 +2162,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#chapter">chapter</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#chapter">chapter</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2274,7 +2279,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#colophon">colophon</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#colophon">colophon</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2392,7 +2397,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#conclusion">conclusion</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#conclusion">conclusion</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2507,7 +2512,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#cover">cover</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#cover">cover</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2626,7 +2631,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#credit">credit</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#credit">credit</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2743,7 +2748,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#credits">credits</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#credits">credits</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2858,7 +2863,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#dedication">dedication</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#dedication">dedication</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2998,7 +3003,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#rearnote">rearnote</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#rearnote">rearnote</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3125,7 +3130,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#rearnotes">rearnotes</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#rearnotes">rearnotes</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3243,7 +3248,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#epigraph">epigraph</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#epigraph">epigraph</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3365,7 +3370,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#epilogue">epilogue</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#epilogue">epilogue</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3483,7 +3488,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#errata">errata</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#errata">errata</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3722,7 +3727,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#footnote">footnote</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#footnote">footnote</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3840,7 +3845,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#foreword">foreword</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#foreword">foreword</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3965,7 +3970,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#glossary">glossary</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#glossary">glossary</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4083,7 +4088,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#glossref">glossref</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#glossref">glossref</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4215,7 +4220,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#index">index</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#index">index</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4332,7 +4337,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#introduction">introduction</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#introduction">introduction</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4530,7 +4535,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#noteref">noteref</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#noteref">noteref</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4659,7 +4664,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#notice">notice</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#notice">notice</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4774,7 +4779,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#pagebreak">pagebreak</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#pagebreak">pagebreak</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4897,7 +4902,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#page-list">page-list</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#page-list">page-list</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5020,7 +5025,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#part">part</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#part">part</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5138,7 +5143,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#preface">preface</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#preface">preface</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5260,7 +5265,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#prologue">prologue</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#prologue">prologue</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5391,7 +5396,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#pullquote">pullquote</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#pullquote">pullquote</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5513,7 +5518,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#qna">qna</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#qna">qna</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5631,7 +5636,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#subtitle">subtitle</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#subtitle">subtitle</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5755,7 +5760,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#help">help</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#help">help</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5880,7 +5885,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#toc">toc</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#toc">toc</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5975,7 +5980,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			<div class="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Note</span></div><p class="">Validation support for the roles defined in this module will be added
 				once the specification reaches recommendation.</p></div>
 			<p>For information on incorporating <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> into other grammars, refer to <a href="http://www.w3.org/TR/wai-aria-1.1/#a_schemata">Appendix A</a> of
-				[<cite><a class="bibref" href="#bib-WAI-ARIA">WAI-ARIA</a></cite>]</p>
+				[<cite><a class="bibref" href="#bib-wai-aria">WAI-ARIA</a></cite>]</p>
 		</section>
 		<section class="appendix informative" id="exit_criteria">
 			<!--OddPage--><h2 id="b-candidate-recommendation-exit-criteria"><span class="secno">B. </span>Candidate Recommendation Exit Criteria<span class="permalink"><a href="#exit_criteria" aria-label="Permalink for B. Candidate Recommendation Exit Criteria" title="Permalink for B. Candidate Recommendation Exit Criteria"><span>§</span></a></span></h2><p><em>This section is non-normative.</em></p>
@@ -5989,9 +5994,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			<ul>
 				<li>the <code>role</code> attribute value is used, as defined in this specification;
 					or, as a fallback</li>
-				<li>the <code>epub:type</code> attribute, defined for the purpose of <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-xhtml-semantic-inflection">Semantic Inflection</a> in [<cite><a class="bibref" href="#bib-EPUB-Content">EPUB-Content</a></cite>], is used with the related value
+				<li>the <code>epub:type</code> attribute, defined for the purpose of <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-xhtml-semantic-inflection">Semantic Inflection</a> in [<cite><a class="bibref" href="#bib-epub-content">EPUB-Content</a></cite>], is used with the related value
 					(when specified in the detailed specification of the role) in the <a href="https://idpf.github.io/epub-vocabs/structure/">EPUB Structural
-						Semantic Vocabulary</a> [<cite><a class="bibref" href="#bib-EPUB-SSV">EPUB-SSV</a></cite>]. </li>
+						Semantic Vocabulary</a> [<cite><a class="bibref" href="#bib-epub-ssv">EPUB-SSV</a></cite>]. </li>
 			</ul>
 
 			<p> In the case where the <code>epub:type</code> attribute is used, the author/publisher
@@ -6043,7 +6048,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							<rref>doc-qna</rref>.</li>
 					<li>12-Oct-2015: Changed the "dpub-" prefix on all roles to "doc-".</li>
 					<li>30-Sept-2015: Removed the glossterm and glossdef roles. These are replaced
-						by <rref>term</rref> and <rref>definition</rref> in [<cite><a class="bibref" href="#bib-WAI-ARIA">WAI-ARIA</a></cite>].</li>
+						by <rref>term</rref> and <rref>definition</rref> in [<cite><a class="bibref" href="#bib-wai-aria">WAI-ARIA</a></cite>].</li>
 					<li>22-Sept-2015: Added the following new roles:
 							<rref>doc-acknowledgments</rref>, <rref>doc-colophon</rref>,
 							<rref>doc-conclusion</rref>, <rref>doc-credit</rref>,
@@ -6134,19 +6139,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 		</section>
 	
 
-<section id="references" class="appendix"><!--OddPage--><h2 id="e-references"><span class="secno">E. </span>References<span class="permalink"><a href="#references" aria-label="Permalink for E. References" title="Permalink for E. References"><span>§</span></a></span></h2><section id="normative-references"><h3 id="e-1-normative-references"><span class="secno">E.1 </span>Normative references<span class="permalink"><a href="#normative-references" aria-label="Permalink for E.1 Normative references" title="Permalink for E.1 Normative references"><span>§</span></a></span></h3><dl class="bibliography"><dt id="bib-RFC2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner. IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a>
-</dd></dl></section><section id="informative-references"><h3 id="e-2-informative-references"><span class="secno">E.2 </span>Informative references<span class="permalink"><a href="#informative-references" aria-label="Permalink for E.2 Informative references" title="Permalink for E.2 Informative references"><span>§</span></a></span></h3><dl class="bibliography"><dt id="bib-AT-SPI">[AT-SPI]</dt><dd><a href="https://developer.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/libatspi/stable/">https://developer.gnome.org/libatspi/stable/</a>
-</dd><dt id="bib-ATK">[ATK]</dt><dd><a href="https://developer.gnome.org/atk/stable/"><cite>ATK - Accessibility Toolkit</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/atk/stable/">https://developer.gnome.org/atk/stable/</a>
-</dd><dt id="bib-AXAPI">[AXAPI]</dt><dd><a href="https://developer.apple.com/documentation/appkit/nsaccessibility"><cite>The NSAccessibility Protocol for macOS</cite></a>.  Apple, Inc. URL: <a href="https://developer.apple.com/documentation/appkit/nsaccessibility">https://developer.apple.com/documentation/appkit/nsaccessibility</a>
-</dd><dt id="bib-CORE-AAM-1.1">[CORE-AAM-1.1]</dt><dd><a href="https://www.w3.org/TR/core-aam-1.1/"><cite>Core Accessibility API Mappings 1.1</cite></a>. Joanmarie Diggs; Joseph Scheuhammer; Richard Schwerdtfeger; Michael Cooper; Andi Snow-Weaver; Aaron Leventhal. W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/core-aam-1.1/">https://www.w3.org/TR/core-aam-1.1/</a>
-</dd><dt id="bib-EPUB-Content">[EPUB-Content]</dt><dd><a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html"><cite>EPUB Content Documents 3.1</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html">http://www.idpf.org/epub/31/spec/epub-contentdocs.html</a>
-</dd><dt id="bib-EPUB-SSV">[EPUB-SSV]</dt><dd><a href="http://www.idpf.org/epub/vocab/structure/"><cite>EPUB Structural Semantics Vocabulary</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/vocab/structure/">http://www.idpf.org/epub/vocab/structure/</a>
-</dd><dt id="bib-HTML5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer. W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a>
-</dd><dt id="bib-IAccessible2">[IAccessible2]</dt><dd><a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2</a>
-</dd><dt id="bib-MSAA">[MSAA]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx"><cite>Microsoft Active Accessibility (MSAA) 2.0</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx">https://msdn.microsoft.com/en-us/library/ms697707.aspx</a>
-</dd><dt id="bib-SVG2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Nikos Andronikos; Rossen Atanassov; Tavmjong Bah; Amelia Bellamy-Royds; Brian Birtles; Bogdan Brinza; Cyril Concolato; Erik Dahlström; Chris Lilley; Cameron McCormack; Doug Schepers; Dirk Schulze; Richard Schwerdtfeger; Satoru Takagi; Jonathan Watt. W3C. 15 September 2016. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a>
-</dd><dt id="bib-UI-AUTOMATION">[UI-AUTOMATION]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx"><cite>UI Automation</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx">https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx</a>
-</dd><dt id="bib-UIA-EXPRESS">[UIA-EXPRESS]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx"><cite>The IAccessibleEx Interface</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx</a>
-</dd><dt id="bib-WAI-ARIA">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig. W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a>
-</dd><dt id="bib-WCAG21">[WCAG21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O Connor; Alastair Campbell; Michael Cooper. W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a>
-</dd></dl></section></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+<section id="references" class="appendix">
+      <!--OddPage--><h2 id="e-references"><span class="secno">E. </span>References<span class="permalink"><a href="#references" aria-label="Permalink for E. References" title="Permalink for E. References"><span>§</span></a></span></h2>
+      
+    <section id="normative-references">
+        <h3 id="e-1-normative-references"><span class="secno">E.1 </span>Normative references<span class="permalink"><a href="#normative-references" aria-label="Permalink for E.1 Normative references" title="Permalink for E.1 Normative references"><span>§</span></a></span></h3>
+      <dl class="bibliography">
+        <dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner. IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd>
+      </dl></section><section id="informative-references">
+        <h3 id="e-2-informative-references"><span class="secno">E.2 </span>Informative references<span class="permalink"><a href="#informative-references" aria-label="Permalink for E.2 Informative references" title="Permalink for E.2 Informative references"><span>§</span></a></span></h3>
+      <dl class="bibliography">
+        <dt id="bib-at-spi">[AT-SPI]</dt><dd><a href="https://developer.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/libatspi/stable/">https://developer.gnome.org/libatspi/stable/</a></dd><dt id="bib-atk">[ATK]</dt><dd><a href="https://developer.gnome.org/atk/stable/"><cite>ATK - Accessibility Toolkit</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/atk/stable/">https://developer.gnome.org/atk/stable/</a></dd><dt id="bib-axapi">[AXAPI]</dt><dd><a href="https://developer.apple.com/documentation/appkit/nsaccessibility"><cite>The NSAccessibility Protocol for macOS</cite></a>.  Apple, Inc. URL: <a href="https://developer.apple.com/documentation/appkit/nsaccessibility">https://developer.apple.com/documentation/appkit/nsaccessibility</a></dd><dt id="bib-core-aam-1.1">[CORE-AAM-1.1]</dt><dd><a href="https://www.w3.org/TR/core-aam-1.1/"><cite>Core Accessibility API Mappings 1.1</cite></a>. Joanmarie Diggs; Joseph Scheuhammer; Richard Schwerdtfeger; Michael Cooper; Andi Snow-Weaver; Aaron Leventhal. W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/core-aam-1.1/">https://www.w3.org/TR/core-aam-1.1/</a></dd><dt id="bib-epub-content">[EPUB-Content]</dt><dd><a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html"><cite>EPUB Content Documents 3.1</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html">http://www.idpf.org/epub/31/spec/epub-contentdocs.html</a></dd><dt id="bib-epub-ssv">[EPUB-SSV]</dt><dd><a href="http://www.idpf.org/epub/vocab/structure/"><cite>EPUB Structural Semantics Vocabulary</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/vocab/structure/">http://www.idpf.org/epub/vocab/structure/</a></dd><dt id="bib-html5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer. W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-iaccessible2">[IAccessible2]</dt><dd><a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2</a></dd><dt id="bib-msaa">[MSAA]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx"><cite>Microsoft Active Accessibility (MSAA) 2.0</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx">https://msdn.microsoft.com/en-us/library/ms697707.aspx</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Nikos Andronikos; Rossen Atanassov; Tavmjong Bah; Amelia Bellamy-Royds; Brian Birtles; Bogdan Brinza; Cyril Concolato; Erik Dahlström; Chris Lilley; Cameron McCormack; Doug Schepers; Dirk Schulze; Richard Schwerdtfeger; Satoru Takagi; Jonathan Watt. W3C. 15 September 2016. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-ui-automation">[UI-AUTOMATION]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx"><cite>UI Automation</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx">https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx</a></dd><dt id="bib-uia-express">[UIA-EXPRESS]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx"><cite>The IAccessibleEx Interface</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig. W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd><dt id="bib-wcag21">[WCAG21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O Connor; Alastair Campbell; Michael Cooper. W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd>
+      </dl></section></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
