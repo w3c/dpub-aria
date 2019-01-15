@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 23.7.4"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
 span.example-title {
     text-transform: none;
 }
@@ -118,7 +118,6 @@ input.task-list-item-checkbox {
 }
 </style>
 		<title>Digital Publishing WAI-ARIA Module 1.1</title>
-		
 		
 		<style id="respec-mainstyle">/*****************************************************************
  * ReSpec 3 CSS
@@ -461,6 +460,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 }
 </style>
 		
+		
 		<link href="common/css/common.css" rel="stylesheet" type="text/css">
 		
 		
@@ -576,9 +576,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishDate": "2018-12-17",
-  "publishISODate": "2018-12-17T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 17 December 2018"
+  "publishDate": "2019-01-15",
+  "publishISODate": "2019-01-15T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 15 January 2019"
 }</script><meta name="description" content="Enabling users of assistive technologies to find their way through Web content
 				requires embedding semantic metadata about Web document structural divisions. This
 				is particularly important for structural divisions of long-form documents and goes
@@ -586,14 +586,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				for assistive technologies. This specification defines a set of WAI-ARIA roles
 				specific to helping users of assistive technologies navigate through such long-form
 				documents."></head>
-	<body class="h-entry toc-inline"><div class="head">
-      <a href="https://www.w3.org/" class="logo">
-      <img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C">
-  </a> <h1 id="title" class="title p-name">Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Module 1.1</h1>
+	<body class="h-entry"><div class="head">
+      <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Module 1.1</h1>
       
       <h2>
         <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
-        <time class="dt-published" datetime="2018-12-17">17 December 2018</time>
+        <time class="dt-published" datetime="2019-01-15">15 January 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -634,7 +632,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <p class="copyright">
                         <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
                         ©
-                        2015-2018
+                        2015-2019
                         
                         <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
                         <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
@@ -659,7 +657,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				documents.</p>
 			<p>This document is part of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> suite described in the <a href="http://www.w3.org/WAI/intro/aria.php"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Overview</a>.</p>
 		</section>
-		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p><p>The Candidate Recommendation exit criteria are listed in the <a href="#exit_criteria">appendix</a>.</p><p>
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p>
+			<p>The Candidate Recommendation exit criteria are listed in the <a href="#exit_criteria">appendix</a>.</p>
+		<p>
                                               This document was published by
                                               the <a href="https://www.w3.org/publishing/groups/publ-wg/">Publishing Working Group</a> as an
                                               Editor's Draft.
@@ -712,9 +712,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                                       This document is governed by the
                                       <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                                     </p></section>
-		<nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a href="#target-audience" class="tocxref"><span class="secno">1.1 </span>Target Audience</a></li><li class="tocline"><a href="#ua-support" class="tocxref"><span class="secno">1.2 </span>User Agent Support</a></li><li class="tocline"><a href="#co-evolution" class="tocxref"><span class="secno">1.3 </span>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages</a></li><li class="tocline"><a href="#authoring_practices" class="tocxref"><span class="secno">1.4 </span>Authoring Practices</a><ol class="toc"><li class="tocline"><a href="#authoring_tools" class="tocxref"><span class="secno">1.4.1 </span>Authoring Tools</a></li><li class="tocline"><a href="#authoring_testing" class="tocxref"><span class="secno">1.4.2 </span>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a href="#at_support" class="tocxref"><span class="secno">1.5 </span>Assistive Technologies</a></li></ol></li><li class="tocline"><a href="#conformance" class="tocxref"><span class="secno">2. </span>Conformance</a></li><li class="tocline"><a href="#terms" class="tocxref"><span class="secno">3. </span>Important Terms</a></li><li class="tocline"><a href="#roles" class="tocxref"><span class="secno">4. </span>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a href="#role_definitions" class="tocxref"><span class="secno">4.1 </span>Definition of Roles</a><ol class="toc"></ol></li></ol></li><li class="tocline"><a href="#a_schemata" class="tocxref"><span class="secno">A. </span>Schemata</a></li><li class="tocline"><a href="#exit_criteria" class="tocxref"><span class="secno">B. </span>Candidate Recommendation Exit Criteria</a></li><li class="tocline"><a href="#changelog" class="tocxref"><span class="secno">C. </span>Change Log</a><ol class="toc"><li class="tocline"><a href="#substantive-changes-since-the-last-public-working-draft" class="tocxref"><span class="secno">C.1 </span>Substantive changes since the <span class="formerLink">last public
-						working draft</span></a></li><li class="tocline"><a href="#other-substantive-changes-since-the-first-public-working-draft" class="tocxref"><span class="secno">C.2 </span>Other substantive changes since the <span class="formerLink">First Public
-						Working Draft</span></a></li></ol></li><li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">D. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a href="#ack_dpub" class="tocxref"><span class="secno">D.1 </span>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a href="#ack_funders" class="tocxref"><span class="secno">D.2 </span>Enabling funders</a></li></ol></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">E. </span>References</a><ol class="toc"><li class="tocline"><a href="#normative-references" class="tocxref"><span class="secno">E.1 </span>Normative references</a></li><li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">E.2 </span>Informative references</a></li></ol></li></ol></nav>
+		<nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><span class="secno">1.1 </span>Target Audience</a></li><li class="tocline"><a class="tocxref" href="#ua-support"><span class="secno">1.2 </span>User Agent Support</a></li><li class="tocline"><a class="tocxref" href="#co-evolution"><span class="secno">1.3 </span>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><span class="secno">1.4 </span>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><span class="secno">1.4.1 </span>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><span class="secno">1.4.2 </span>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><span class="secno">1.5 </span>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><span class="secno">2. </span>Conformance</a></li><li class="tocline"><a class="tocxref" href="#terms"><span class="secno">3. </span>Important Terms</a></li><li class="tocline"><a class="tocxref" href="#roles"><span class="secno">4. </span>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><span class="secno">4.1 </span>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#a_schemata"><span class="secno">A. </span>Schemata</a></li><li class="tocline"><a class="tocxref" href="#exit_criteria"><span class="secno">B. </span>Candidate Recommendation Exit Criteria</a></li><li class="tocline"><a class="tocxref" href="#changelog"><span class="secno">C. </span>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#substantive-changes-since-the-last-public-working-draft"><span class="secno">C.1 </span>Substantive changes since the <span class="formerLink">last public
+						working draft</span></a></li><li class="tocline"><a class="tocxref" href="#other-substantive-changes-since-the-first-public-working-draft"><span class="secno">C.2 </span>Other substantive changes since the <span class="formerLink">First Public
+						Working Draft</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">D. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><span class="secno">D.1 </span>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">D.2 </span>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><span class="secno">E. </span>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">E.1 </span>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><span class="secno">E.2 </span>Informative references</a></li></ol></li></ol></nav>
 		<section class="informative" id="introduction">
 			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2><p><em>This section is non-normative.</em></p>
 			<p><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is a technical
@@ -1050,7 +1050,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <dd>
       <p>A hierarchical definition of how the characteristics of various <a class="termref internalDFN" data-lt="class" href="#dfn-class" data-link-type="dfn">classes</a> relate to each other, in which classes inherit the properties of superclasses in the hierarchy. A taxonomy can comprise part of the formal definition of an <a href="#dfn-ontology" class="internalDFN" data-link-type="dfn">ontology</a>.</p>
     </dd>
-    <dt><dfn data-dfn-type="dfn" id="dfn-text-node">Text node</dfn></dt>
+    <dt><dfn data-dfn-type="dfn" data-plurals="text nodes" id="dfn-text-node">Text node</dfn></dt>
     <dd>
       <p>Type of <abbr title="Document Object Model">DOM</abbr> <a class="termref internalDFN" data-lt="node" href="#dfn-node" data-link-type="dfn">node</a> that represents the textual content of an <a class="termref internalDFN" href="#dfn-attribute" data-link-type="dfn">attribute</a> or an <a class="termref internalDFN" href="#dfn-element" data-link-type="dfn">element</a>. A Text node has no child nodes.  </p>
     </dd>
