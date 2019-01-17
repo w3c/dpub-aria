@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.2.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
 span.example-title {
     text-transform: none;
 }
@@ -42,8 +42,8 @@ div.note, div.issue, div.ednote, div.warning {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.note > p:first-child, .ednote > p:first-child, .issue > p:first-child, .warning > p:first-child { margin-top: 0 }
-.issue, .note, .ednote, .warning {
+.warning > p:first-child { margin-top: 0 }
+.warning {
     padding: .5em;
     border-left-width: .5em;
     border-left-style: solid;
@@ -54,7 +54,7 @@ div.issue, div.note , div.ednote,  div.warning {
     position: relative;
     clear: both;
 }
-span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
+span.warning { padding: .1em .5em .15em; }
 
 .issue {
     border-color: #e05252;
@@ -62,11 +62,6 @@ span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
 }
 .issue.closed span.issue-number {
     text-decoration: line-through;
-}
-
-.note, .ednote {
-    border-color: #52e052;
-    background: #e9fbe9;
 }
 
 .warning {
@@ -576,9 +571,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishDate": "2019-01-16",
-  "publishISODate": "2019-01-16T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 16 January 2019"
+  "publishDate": "2019-01-17",
+  "publishISODate": "2019-01-17T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 17 January 2019"
 }</script><meta name="description" content="Enabling users of assistive technologies to find their way through Web content
 				requires embedding semantic metadata about Web document structural divisions. This
 				is particularly important for structural divisions of long-form documents and goes
@@ -591,7 +586,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       
       <h2>
         <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
-        <time class="dt-published" datetime="2019-01-16">16 January 2019</time>
+        <time class="dt-published" datetime="2019-01-17">17 January 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -630,21 +625,17 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       
       
       <p class="copyright">
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-                        ©
-                        2015-2019
-                        
-                        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-                        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-                        <a href="http://ev.buaa.edu.cn/">Beihang</a>).
-                        
-                        <abbr title="World Wide Web Consortium">W3C</abbr>
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>
-                        and
-                        <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a>
-                        rules apply.
-                      </p>
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+      ©
+      2015-2019
+      
+      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+      <a href="http://ev.buaa.edu.cn/">Beihang</a>). 
+      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
+      apply.
+    </p>
       <hr title="Separator for header">
     </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
@@ -660,58 +651,49 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p>
 			<p>The Candidate Recommendation exit criteria are listed in the <a href="#exit_criteria">appendix</a>.</p>
 		<p>
-                                              This document was published by
-                                              the <a href="https://www.w3.org/publishing/groups/publ-wg/">Publishing Working Group</a> as an
-                                              Editor's Draft.
-                                              
-                                            </p><p>
-                                                      
-                                                      Comments regarding this document are welcome.
-                                                              Please send them
-                                                              to
-                                                              <a href="mailto:public-publ-wg@w3.org">public-publ-wg@w3.org</a>
-                                                              (<a href="https://lists.w3.org/Archives/Public/public-publ-wg/">archives</a>).
-                                                            
-                                                    </p><p>
-                                              Publication as an
-                                              Editor's Draft does not imply
-                                              endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-                                              This is a draft document and may
-                                              be updated, replaced or obsoleted
-                                              by other documents at any time. It
-                                              is inappropriate to cite this
-                                              document as other than work in
-                                              progress.
-                                            </p><p>
-                                      
-                                              This document was produced by
-                                              a group
-                                              operating under the
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                                            
-                                      
-                                      
-                                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
-                                                      <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/100074/status">public list of any
-                                                        patent disclosures</a>
-                                              made in connection with the
-                                              deliverables of
-                                              the group; that page also includes
-                                              instructions for disclosing a
-                                              patent. An individual who has
-                                              actual knowledge of a patent which
-                                              the individual believes contains
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-                                              must disclose the information in
-                                              accordance with
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent
-                                                Policy</a>.
-                                            
-                                      
-                                    </p><p>
-                                      This document is governed by the
-                                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                                    </p></section>
+                              This document was published by the <a href="https://www.w3.org/publishing/groups/publ-wg/">Publishing Working Group</a> as
+                              an Editor's Draft.
+                              
+                            </p><p>
+      
+      Comments regarding this document are welcome.
+              Please send them to
+              <a href="mailto:public-publ-wg@w3.org">public-publ-wg@w3.org</a>
+              (<a href="https://lists.w3.org/Archives/Public/public-publ-wg/">archives</a>).
+            
+    </p><p>
+                              Publication as an Editor's Draft
+                              does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
+                              This is a draft document and may be updated,
+                              replaced or obsoleted by other documents at any
+                              time. It is inappropriate to cite this document as
+                              other than work in progress.
+                            </p><p>
+                      
+                              This document was produced by
+                              a group
+                              operating under the
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                      
+                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                                      <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/100074/status">public list of any patent
+                                        disclosures</a>
+                              made in connection with the deliverables of
+                              the group; that page also includes
+                              instructions for disclosing a patent. An
+                              individual who has actual knowledge of a patent
+                              which the individual believes contains
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+                              must disclose the information in accordance with
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                    </p><p>
+                      This document is governed by the
+                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                    </p></section>
 		<nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><span class="secno">1.1 </span>Target Audience</a></li><li class="tocline"><a class="tocxref" href="#ua-support"><span class="secno">1.2 </span>User Agent Support</a></li><li class="tocline"><a class="tocxref" href="#co-evolution"><span class="secno">1.3 </span>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><span class="secno">1.4 </span>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><span class="secno">1.4.1 </span>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><span class="secno">1.4.2 </span>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><span class="secno">1.5 </span>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><span class="secno">2. </span>Conformance</a></li><li class="tocline"><a class="tocxref" href="#terms"><span class="secno">3. </span>Important Terms</a></li><li class="tocline"><a class="tocxref" href="#roles"><span class="secno">4. </span>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><span class="secno">4.1 </span>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#a_schemata"><span class="secno">A. </span>Schemata</a></li><li class="tocline"><a class="tocxref" href="#exit_criteria"><span class="secno">B. </span>Candidate Recommendation Exit Criteria</a></li><li class="tocline"><a class="tocxref" href="#changelog"><span class="secno">C. </span>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#substantive-changes-since-the-last-public-working-draft"><span class="secno">C.1 </span>Substantive changes since the <span class="formerLink">last public
 						working draft</span></a></li><li class="tocline"><a class="tocxref" href="#other-substantive-changes-since-the-first-public-working-draft"><span class="secno">C.2 </span>Other substantive changes since the <span class="formerLink">First Public
 						Working Draft</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">D. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><span class="secno">D.1 </span>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">D.2 </span>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><span class="secno">E. </span>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">E.1 </span>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><span class="secno">E.2 </span>Informative references</a></li></ol></li></ol></nav>
