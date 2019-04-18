@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.5.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.17.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
 span.example-title {
     text-transform: none;
 }
@@ -99,6 +99,19 @@ input.task-list-item-checkbox {
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
 
+@keyframes pop {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1.25, 1.25);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
 /* Override code highlighter background */
 .hljs {
   background: transparent !important;
@@ -135,8 +148,34 @@ a.bibref {
   text-decoration: none;
 }
 
+.respec-offending-element:target {
+  animation: pop 0.25s ease-in-out 0s 1;
+}
+
+/* TODO: Remove once https://github.com/w3c/tr-design/pull/176 is merged. */
+.respec-offending-element a[href] {
+  margin: 0;
+}
+
+.respec-offending-element {
+  display: inline-block;
+  position: relative;
+  /* Red squiggly line */
+  background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
+    bottom repeat-x;
+}
+@supports (text-decoration-style: wavy) {
+  .respec-offending-element {
+    background: none;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+  }
+}
+
 #references :target {
   background: #eaf3ff;
+  animation: pop 0.4s ease-in-out 0s 1;
 }
 
 cite .bibref {
@@ -149,6 +188,15 @@ code {
 
 th code {
   color: inherit;
+}
+
+a[href].orcid {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+a[href].orcid > svg {
+    margin-bottom: -2px;
 }
 
 /* --- TOC --- */
@@ -205,11 +253,11 @@ table.simple {
 
 /* --- DL --- */
 
-.section dd>p:first-child {
+.section dd > p:first-child {
   margin-top: 0;
 }
 
-.section dd>p:last-child {
+.section dd > p:last-child {
   margin-bottom: 0;
 }
 
@@ -222,7 +270,7 @@ table.simple {
   margin-bottom: 0;
 }
 
-#issue-summary>ul,
+#issue-summary > ul,
 .respec-dfn-list {
   column-count: 2;
 }
@@ -238,7 +286,7 @@ details.respec-tests-details {
   vertical-align: top;
 }
 
-details.respec-tests-details>* {
+details.respec-tests-details > * {
   padding-right: 2em;
 }
 
@@ -251,19 +299,19 @@ details.respec-tests-details[open] {
   padding-bottom: 0.5em;
 }
 
-details.respec-tests-details[open]>summary {
+details.respec-tests-details[open] > summary {
   border-bottom: thin solid #cad3e2;
   padding-left: 1em;
   margin-bottom: 1em;
   line-height: 2em;
 }
 
-details.respec-tests-details>ul {
+details.respec-tests-details > ul {
   width: 100%;
   margin-top: -0.3em;
 }
 
-details.respec-tests-details>li {
+details.respec-tests-details > li {
   padding-left: 1em;
 }
 
@@ -285,30 +333,30 @@ aside.example .marker > a.self-link {
   color: inherit;
 }
 
-h2>a.self-link,
-h3>a.self-link,
-h4>a.self-link,
-h5>a.self-link,
-h6>a.self-link {
+h2 > a.self-link,
+h3 > a.self-link,
+h4 > a.self-link,
+h5 > a.self-link,
+h6 > a.self-link {
   border: none;
   color: inherit;
   font-size: 83%;
   height: 2em;
   left: -1.6em;
-  opacity: .5;
+  opacity: 0.5;
   position: absolute;
   text-align: center;
   text-decoration: none;
   top: 0;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
   width: 2em;
 }
 
-h2>a.self-link::before,
-h3>a.self-link::before,
-h4>a.self-link::before,
-h5>a.self-link::before,
-h6>a.self-link::before {
+h2 > a.self-link::before,
+h3 > a.self-link::before,
+h4 > a.self-link::before,
+h5 > a.self-link::before,
+h6 > a.self-link::before {
   content: "§";
   display: block;
 }
@@ -319,11 +367,11 @@ h6>a.self-link::before {
   }
 
   /* Don't position self-link in headings off-screen */
-  h2>a.self-link,
-  h3>a.self-link,
-  h4>a.self-link,
-  h5>a.self-link,
-  h6>a.self-link {
+  h2 > a.self-link,
+  h3 > a.self-link,
+  h4 > a.self-link,
+  h5 > a.self-link,
+  h6 > a.self-link {
     left: auto;
     top: auto;
   }
@@ -551,9 +599,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishDate": "2019-03-20",
-  "publishISODate": "2019-03-20T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 20 March 2019"
+  "publishDate": "2019-04-18",
+  "publishISODate": "2019-04-18T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 18 April 2019"
 }</script><meta name="description" content="Enabling users of assistive technologies to find their way through Web content
 				requires embedding semantic metadata about Web document structural divisions. This
 				is particularly important for structural divisions of long-form documents and goes
@@ -562,11 +610,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				specific to helping users of assistive technologies navigate through such long-form
 				documents."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry"><div class="head">
-      <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Module 1.1</h1>
+      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Digital Publishing WAI-ARIA Module 1.1</h1>
       
       <h2>
-        <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
-        <time class="dt-published" datetime="2019-03-20">20 March 2019</time>
+        W3C Editor's Draft
+        <time class="dt-published" datetime="2019-04-18">18 April 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -612,7 +660,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
       <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
       <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
-      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
       <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
       apply.
     </p>
@@ -642,33 +690,29 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             (<a href="https://lists.w3.org/Archives/Public/public-publ-wg/">archives</a>).
           
     </p><p>
-                        Publication as an Editor's Draft does not
-                        imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft
-                        document and may be updated, replaced or obsoleted by
-                        other documents at any time. It is inappropriate to cite
-                        this document as other than work in progress.
-                      </p><p>
-                  
-                        This document was produced by
-                        a group operating
-                        under the
-                        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                      
-                  
-                  
-                              <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
-                              <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/100074/status">public list of any patent disclosures</a>
-                        made in connection with the deliverables of
-                        the group; that page also includes
-                        instructions for disclosing a patent. An individual who
-                        has actual knowledge of a patent which the individual
-                        believes contains
-                        <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-                        must disclose the information in accordance with
-                        <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                      
-                  
-                </p><p>
+      Publication as an Editor's Draft does not imply endorsement by the
+      <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft document and may be updated, replaced or
+      obsoleted by other documents at any time. It is inappropriate to cite this
+      document as other than work in progress.
+    </p><p>
+      
+        This document was produced by a group
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+       
+      
+                  <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                  <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/100074/status">public list of any patent disclosures</a>
+            made in connection with the deliverables of
+            the group; that page also includes
+            instructions for disclosing a patent. An individual who has actual
+            knowledge of a patent which the individual believes contains
+            <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+            must disclose the information in accordance with
+            <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+          
+      
+    </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section>
