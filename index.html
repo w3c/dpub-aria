@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.21.7"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 24.23.6"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
 span.example-title {
     text-transform: none;
 }
@@ -491,7 +491,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </style><style>var {
   position: relative;
   cursor: pointer;
-  display: inline-block;
 }
 
 var[data-type]::before,
@@ -526,6 +525,8 @@ var[data-type]::after {
   padding: 6px;
   border-radius: 3px;
   color: #daca88;
+  text-indent: 0;
+  font-weight: normal;
 }
 
 var[data-type]:hover::after,
@@ -643,9 +644,9 @@ var[data-type]:hover::before {
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishDate": "2019-05-22",
-  "publishISODate": "2019-05-22T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 22 May 2019"
+  "publishDate": "2019-06-28",
+  "publishISODate": "2019-06-28T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 28 June 2019"
 }</script><meta name="description" content="Enabling users of assistive technologies to find their way through Web content
 				requires embedding semantic metadata about Web document structural divisions. This
 				is particularly important for structural divisions of long-form documents and goes
@@ -658,7 +659,7 @@ var[data-type]:hover::before {
       
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2019-05-22">22 May 2019</time>
+        <time class="dt-published" datetime="2019-06-28">28 June 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -774,7 +775,7 @@ var[data-type]:hover::before {
 			<p>This specification is a modular extension of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> designed for the
 				digital publishing industry. The goals of this specification include:</p>
 			<ul>
-				<li>Expanding [<cite><a class="bibref" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] to produce structural semantic extensions to accommodate
+				<li>Expanding [<cite><a class="bibref" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1" data-link-type="biblio">WAI-ARIA</a></cite>] to produce structural semantic extensions to accommodate
 					the digital publishing industry.</li>
 				<li>Align with a new governance model for modularization and extensions to <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>.</li>
 				<li>Provide structural semantics extensions that will support both assistive
@@ -816,15 +817,15 @@ var[data-type]:hover::before {
 			<section id="ua-support">
 				<h3 id="x1-2-user-agent-support"><bdi class="secno">1.2 </bdi>User Agent Support<a class="self-link" aria-label="§" href="#ua-support"></a></h3>
 				<p>This module builds on the general <a href="http://www.w3.org/TR/wai-aria-1.1/#ua-support">User Agent support
-						principles</a> defined in [<cite><a class="bibref" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] by also providing the ability for
+						principles</a> defined in [<cite><a class="bibref" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1" data-link-type="biblio">WAI-ARIA</a></cite>] by also providing the ability for
 					user agents to enhance the general user interface presented to readers.</p>
 			</section>
 
 			<section id="co-evolution">
 				<h3 id="x1-3-co-evolution-of-wai-aria-and-host-languages"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages<a class="self-link" aria-label="§" href="#co-evolution"></a></h3>
 				<p>The Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module follows the model for <a href="http://www.w3.org/TR/wai-aria-1.1/#co-evolution">co-evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and host
-						languages</a> defined in [<cite><a class="bibref" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>]. It is intended to augment semantics
-					in supporting languages like [<cite><a class="bibref" href="#bib-html5" title="HTML5">HTML5</a></cite>], [<cite><a class="bibref" href="#bib-svg2" title="Scalable Vector Graphics (SVG) 2">SVG2</a></cite>] and EPUB, or to be used as an
+						languages</a> defined in [<cite><a class="bibref" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1" data-link-type="biblio">WAI-ARIA</a></cite>]. It is intended to augment semantics
+					in supporting languages like [<cite><a class="bibref" href="#bib-html5" title="HTML5" data-link-type="biblio">HTML5</a></cite>], [<cite><a class="bibref" href="#bib-svg2" title="Scalable Vector Graphics (SVG) 2" data-link-type="biblio">SVG2</a></cite>] and EPUB, or to be used as an
 					accessibility enhancement technology in other markup-based languages that do not
 					explicitly include support for ARIA. It clarifies semantics to assistive
 					technologies when authors create new types of objects, via style and script,
@@ -894,7 +895,7 @@ var[data-type]:hover::before {
 				<h3 id="x1-5-assistive-technologies"><bdi class="secno">1.5 </bdi>Assistive Technologies<a class="self-link" aria-label="§" href="#at_support"></a></h3>
 				<p>Programmatic access to accessibility semantics is essential for assistive
 					technologies. For more information, refer to the <a href="http://www.w3.org/TR/wai-aria-1.1/#at_support">Assistive
-						Technologies</a> section in [<cite><a class="bibref" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>].</p>
+						Technologies</a> section in [<cite><a class="bibref" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1" data-link-type="biblio">WAI-ARIA</a></cite>].</p>
 			</section>
 		</section>
 		<section class="normative" id="conformance"><h2 id="x2-conformance"><bdi class="secno">2. </bdi>Conformance<a class="self-link" aria-label="§" href="#conformance"></a></h2><p>
@@ -905,8 +906,8 @@ var[data-type]:hover::before {
             The key words <em class="rfc2119">MUST</em> and <em class="rfc2119">SHOULD</em> in this document
             are to be interpreted as described in
             <a href="https://tools.ietf.org/html/bcp14">BCP 14</a>
-            [<cite><a class="bibref" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>]
-            [<cite><a class="bibref" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>] when, and only when, they appear
+            [<cite><a class="bibref" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels" data-link-type="biblio">RFC2119</a></cite>]
+            [<cite><a class="bibref" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words" data-link-type="biblio">RFC8174</a></cite>] when, and only when, they appear
             in all capitals, as shown here.
           </p>
 			<p>This specification indicates whether a section is <a href="#dfn-normative" class="internalDFN" data-link-type="dfn">normative</a> or
@@ -925,8 +926,8 @@ var[data-type]:hover::before {
 <dl class="termlist">
     <dt><dfn data-lt="accessibility api|accessibility apis" data-dfn-type="dfn" id="dfn-accessibility-api">Accessibility <abbr title="Application Programming Interface">API</abbr></dfn></dt>
     <dd>
-      <p>Operating systems and other platforms provide a set of interfaces that expose information about <a class="termref internalDFN" data-lt="object" href="#dfn-object" data-link-type="dfn">objects</a> and <a class="termref internalDFN" data-lt="event" href="#dfn-event" data-link-type="dfn">events</a> to <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a>. Assistive technologies use these interfaces to get information about and interact with those <a class="termref internalDFN" data-lt="widget" href="#dfn-widget" data-link-type="dfn">widgets</a>. Examples of accessibility APIs are <a href="https://msdn.microsoft.com/en-us/library/ms697270(VS.85).aspx">Microsoft Active Accessibility</a> [<cite><a class="bibref" href="#bib-msaa" title="Microsoft Active Accessibility (MSAA) 2.0">MSAA</a></cite>], <a href="https://msdn.microsoft.com/en-us/library/ee684013%28VS.85%29.aspx">Microsoft User Interface Automation</a> [<cite><a class="bibref" href="#bib-ui-automation" title="UI Automation">UI-AUTOMATION</a></cite>], <abbr title="Microsoft Active Accessibility">MSAA</abbr> with <cite><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898(v=vs.85).aspx"><abbr title="User Interface Automation">UIA</abbr> Express</a></cite> [<cite><a class="bibref" href="#bib-uia-express" title="The IAccessibleEx Interface">UIA-EXPRESS</a></cite>], the
-      	<a href="https://developer.apple.com/documentation/appkit/accessibility/nsaccessibility">Mac <abbr title="OS Ten">OS X</abbr> Accessibility Protocol</a> [<cite><a class="bibref" href="#bib-axapi" title="The NSAccessibility Protocol for macOS">AXAPI</a></cite>], the <cite><a href="https://developer.gnome.org/atk/unstable/">Linux/Unix Accessibility Toolkit</a></cite> [<cite><a class="bibref" href="#bib-atk" title="ATK - Accessibility Toolkit">ATK</a></cite>] and <cite><a href="https://developer.gnome.org/libatspi/stable/">Assistive Technology Service Provider Interface</a></cite> [<cite><a class="bibref" href="#bib-at-spi" title="Assistive Technology Service Provider Interface">AT-SPI</a></cite>], and <a href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/start">IAccessible2</a> [<cite><a class="bibref" href="#bib-iaccessible2" title="IAccessible2">IAccessible2</a></cite>].</p>
+      <p>Operating systems and other platforms provide a set of interfaces that expose information about <a class="termref internalDFN" data-lt="object" href="#dfn-object" data-link-type="dfn">objects</a> and <a class="termref internalDFN" data-lt="event" href="#dfn-event" data-link-type="dfn">events</a> to <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a>. Assistive technologies use these interfaces to get information about and interact with those <a class="termref internalDFN" data-lt="widget" href="#dfn-widget" data-link-type="dfn">widgets</a>. Examples of accessibility APIs are <a href="https://msdn.microsoft.com/en-us/library/ms697270(VS.85).aspx">Microsoft Active Accessibility</a> [<cite><a class="bibref" href="#bib-msaa" title="Microsoft Active Accessibility (MSAA) 2.0" data-link-type="biblio">MSAA</a></cite>], <a href="https://msdn.microsoft.com/en-us/library/ee684013%28VS.85%29.aspx">Microsoft User Interface Automation</a> [<cite><a class="bibref" href="#bib-ui-automation" title="UI Automation" data-link-type="biblio">UI-AUTOMATION</a></cite>], <abbr title="Microsoft Active Accessibility">MSAA</abbr> with <cite><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898(v=vs.85).aspx"><abbr title="User Interface Automation">UIA</abbr> Express</a></cite> [<cite><a class="bibref" href="#bib-uia-express" title="The IAccessibleEx Interface" data-link-type="biblio">UIA-EXPRESS</a></cite>], the
+      	<a href="https://developer.apple.com/documentation/appkit/accessibility/nsaccessibility">Mac <abbr title="OS Ten">OS X</abbr> Accessibility Protocol</a> [<cite><a class="bibref" href="#bib-axapi" title="The NSAccessibility Protocol for macOS" data-link-type="biblio">AXAPI</a></cite>], the <cite><a href="https://developer.gnome.org/atk/unstable/">Linux/Unix Accessibility Toolkit</a></cite> [<cite><a class="bibref" href="#bib-atk" title="ATK - Accessibility Toolkit" data-link-type="biblio">ATK</a></cite>] and <cite><a href="https://developer.gnome.org/libatspi/stable/">Assistive Technology Service Provider Interface</a></cite> [<cite><a class="bibref" href="#bib-at-spi" title="Assistive Technology Service Provider Interface" data-link-type="biblio">AT-SPI</a></cite>], and <a href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/start">IAccessible2</a> [<cite><a class="bibref" href="#bib-iaccessible2" title="IAccessible2" data-link-type="biblio">IAccessible2</a></cite>].</p>
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-accessibility-subtree">Accessibility Subtree</dfn></dt>
     <dd>
@@ -998,7 +999,7 @@ var[data-type]:hover::before {
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-expose">Expose</dfn></dt>
     <dd>
-      <p>Translated to platform-specific <a class="termref internalDFN" data-lt="accessibility api" href="#dfn-accessibility-api" data-link-type="dfn">accessibility APIs</a> as defined in the <a href="" class="core-mapping">Core Accessibility <abbr title="Application Programming Interfaces">API</abbr> Mappings</a>. [<cite><a class="bibref" href="#bib-core-aam-1.1" title="Core Accessibility API Mappings 1.1">CORE-AAM-1.1</a></cite>]</p>
+      <p>Translated to platform-specific <a class="termref internalDFN" data-lt="accessibility api" href="#dfn-accessibility-api" data-link-type="dfn">accessibility APIs</a> as defined in the <a href="" class="core-mapping">Core Accessibility <abbr title="Application Programming Interfaces">API</abbr> Mappings</a>. [<cite><a class="bibref" href="#bib-core-aam-1.1" title="Core Accessibility API Mappings 1.1" data-link-type="biblio">CORE-AAM-1.1</a></cite>]</p>
     </dd>
 	<dt><dfn data-lt="graphical document|graphical documents" data-dfn-type="dfn" id="dfn-graphical-document">Graphical Document</dfn></dt>
     <dd>
@@ -1014,7 +1015,7 @@ var[data-type]:hover::before {
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-keyboard-accessible">Keyboard Accessible</dfn></dt>
     <dd>
-    	<p>Accessible to the user using a keyboard or <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a> that mimic keyboard input, such as a sip and puff tube. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#keyboard-accessible"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Guideline 2.1: Make all functionality available from a keyboard</a></cite> [<cite><a class="bibref" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>].</p>
+    	<p>Accessible to the user using a keyboard or <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a> that mimic keyboard input, such as a sip and puff tube. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#keyboard-accessible"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Guideline 2.1: Make all functionality available from a keyboard</a></cite> [<cite><a class="bibref" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1" data-link-type="biblio">WCAG21</a></cite>].</p>
     </dd>
     <dt><dfn data-lt="landmark|landmarks" data-dfn-type="dfn" id="dfn-landmark">Landmark</dfn></dt>
     <dd>
@@ -1055,7 +1056,7 @@ var[data-type]:hover::before {
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-operable">Operable</dfn></dt>
     <dd>
-      <p>Usable by users in ways they can control. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#operable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 2: Content must be operable</a></cite> [<cite><a class="bibref" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>]. See <a href="#dfn-keyboard-accessible" class="internalDFN" data-link-type="dfn">Keyboard Accessible</a>.</p>
+      <p>Usable by users in ways they can control. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#operable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 2: Content must be operable</a></cite> [<cite><a class="bibref" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1" data-link-type="biblio">WCAG21</a></cite>]. See <a href="#dfn-keyboard-accessible" class="internalDFN" data-link-type="dfn">Keyboard Accessible</a>.</p>
     </dd>
     <dt><dfn data-lt="owned element|owned|owned element's|owned elements" data-dfn-type="dfn" id="dfn-owned-element">Owned Element</dfn></dt>
     <dd>
@@ -1067,7 +1068,7 @@ var[data-type]:hover::before {
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-perceivable">Perceivable</dfn></dt>
     <dd>
-      <p>Presentable to users in ways they can sense. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#perceivable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 1: Content must be perceivable</a></cite> [<cite><a class="bibref" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>].</p>
+      <p>Presentable to users in ways they can sense. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#perceivable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 1: Content must be perceivable</a></cite> [<cite><a class="bibref" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1" data-link-type="biblio">WCAG21</a></cite>].</p>
     </dd>
     <dt><dfn data-lt="property|properties" data-dfn-type="dfn" id="dfn-property">Property</dfn></dt>
     <dd>
@@ -1115,7 +1116,7 @@ var[data-type]:hover::before {
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-understandable">Understandable</dfn></dt>
     <dd>
-      <p>Presentable to users in ways they can construct an appropriate meaning. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#understandable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 3: Information and the operation of user interface must be understandable</a></cite> [<cite><a class="bibref" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>].</p>
+      <p>Presentable to users in ways they can construct an appropriate meaning. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#understandable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 3: Information and the operation of user interface must be understandable</a></cite> [<cite><a class="bibref" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1" data-link-type="biblio">WCAG21</a></cite>].</p>
     </dd>
     <dt><dfn data-lt="user agent|user agents" data-dfn-type="dfn" id="dfn-user-agent">User Agent</dfn></dt>
     <dd>
@@ -1306,7 +1307,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#abstract">abstract</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#abstract">abstract</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1428,7 +1429,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#acknowledgments">acknowledgments</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#acknowledgments">acknowledgments</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1552,7 +1553,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#afterword">afterword</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#afterword">afterword</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1674,7 +1675,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#appendix">appendix</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#appendix">appendix</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1798,7 +1799,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#backlink">referrer</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#backlink">referrer</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1948,7 +1949,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#biblioentry">biblioentry</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#biblioentry">biblioentry</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2075,7 +2076,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#bibliography">bibliography</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#bibliography">bibliography</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2197,7 +2198,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#biblioref">biblioref</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#biblioref">biblioref</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2323,7 +2324,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#chapter">chapter</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#chapter">chapter</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2444,7 +2445,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#colophon">colophon</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#colophon">colophon</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2566,7 +2567,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#conclusion">conclusion</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#conclusion">conclusion</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2685,7 +2686,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#cover">cover</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#cover">cover</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2808,7 +2809,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#credit">credit</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#credit">credit</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2929,7 +2930,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#credits">credits</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#credits">credits</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3048,7 +3049,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#dedication">dedication</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#dedication">dedication</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3196,7 +3197,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#rearnote">rearnote</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#rearnote">rearnote</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3327,7 +3328,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#rearnotes">rearnotes</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#rearnotes">rearnotes</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3449,7 +3450,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#epigraph">epigraph</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#epigraph">epigraph</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3575,7 +3576,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#epilogue">epilogue</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#epilogue">epilogue</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3697,7 +3698,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#errata">errata</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#errata">errata</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3944,7 +3945,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#footnote">footnote</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#footnote">footnote</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4066,7 +4067,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#foreword">foreword</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#foreword">foreword</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4195,7 +4196,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#glossary">glossary</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#glossary">glossary</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4317,7 +4318,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#glossref">glossref</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#glossref">glossref</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4453,7 +4454,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#index">index</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#index">index</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4574,7 +4575,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#introduction">introduction</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#introduction">introduction</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4694,7 +4695,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#noteref">noteref</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#noteref">noteref</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4831,7 +4832,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#notice">notice</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#notice">notice</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4950,7 +4951,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#pagebreak">pagebreak</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#pagebreak">pagebreak</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5080,7 +5081,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#page-list">page-list</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#page-list">page-list</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5207,7 +5208,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#part">part</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#part">part</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5329,7 +5330,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#preface">preface</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#preface">preface</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5455,7 +5456,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#prologue">prologue</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#prologue">prologue</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5594,7 +5595,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#pullquote">pullquote</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#pullquote">pullquote</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5720,7 +5721,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#qna">qna</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#qna">qna</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5842,7 +5843,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#subtitle">subtitle</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#subtitle">subtitle</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -5970,7 +5971,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#help">help</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#help">help</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -6099,7 +6100,7 @@ var[data-type]:hover::before {
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#toc">toc</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#toc">toc</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -6191,7 +6192,7 @@ var[data-type]:hover::before {
 			<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Note</span></div><p class="">Validation support for the roles defined in this module will be added
 				once the specification reaches recommendation.</p></div>
 			<p>For information on incorporating <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> into other grammars, refer to <a href="http://www.w3.org/TR/wai-aria-1.1/#a_schemata">Appendix A</a> of
-				[<cite><a class="bibref" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>]</p>
+				[<cite><a class="bibref" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1" data-link-type="biblio">WAI-ARIA</a></cite>]</p>
 		</section>
 		<section class="appendix informative" id="exit_criteria">
 			<h2 id="b-candidate-recommendation-exit-criteria"><bdi class="secno">B. </bdi>Candidate Recommendation Exit Criteria<a class="self-link" aria-label="§" href="#exit_criteria"></a></h2><p><em>This section is non-normative.</em></p>
@@ -6205,9 +6206,9 @@ var[data-type]:hover::before {
 			<ul>
 				<li>the <code>role</code> attribute value is used, as defined in this specification;
 					or, as a fallback</li>
-				<li>the <code>epub:type</code> attribute, defined for the purpose of <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-xhtml-semantic-inflection">Semantic Inflection</a> in [<cite><a class="bibref" href="#bib-epub-content" title="EPUB Content Documents 3.1">EPUB-Content</a></cite>], is used with the related value
+				<li>the <code>epub:type</code> attribute, defined for the purpose of <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-xhtml-semantic-inflection">Semantic Inflection</a> in [<cite><a class="bibref" href="#bib-epub-content" title="EPUB Content Documents 3.1" data-link-type="biblio">EPUB-Content</a></cite>], is used with the related value
 					(when specified in the detailed specification of the role) in the <a href="https://idpf.github.io/epub-vocabs/structure/">EPUB Structural
-						Semantic Vocabulary</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]. </li>
+						Semantic Vocabulary</a> [<cite><a class="bibref" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary" data-link-type="biblio">EPUB-SSV</a></cite>]. </li>
 			</ul>
 
 			<p> In the case where the <code>epub:type</code> attribute is used, the author/publisher
@@ -6255,7 +6256,7 @@ var[data-type]:hover::before {
 							<rref>doc-qna</rref>.</li>
 					<li>12-Oct-2015: Changed the "dpub-" prefix on all roles to "doc-".</li>
 					<li>30-Sept-2015: Removed the glossterm and glossdef roles. These are replaced
-						by <rref>term</rref> and <rref>definition</rref> in [<cite><a class="bibref" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>].</li>
+						by <rref>term</rref> and <rref>definition</rref> in [<cite><a class="bibref" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1" data-link-type="biblio">WAI-ARIA</a></cite>].</li>
 					<li>22-Sept-2015: Added the following new roles:
 							<rref>doc-acknowledgments</rref>, <rref>doc-colophon</rref>,
 							<rref>doc-conclusion</rref>, <rref>doc-credit</rref>,
