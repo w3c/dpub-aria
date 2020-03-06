@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 25.1.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 25.3.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
 span.example-title {
     text-transform: none;
 }
@@ -159,7 +159,14 @@ dfn {
 </style>
 		<title>Digital Publishing WAI-ARIA Module 1.1</title>
 		
-		<style id="respec-mainstyle">/*****************************************************************
+		
+		
+		
+		<link href="common/css/common.css" rel="stylesheet" type="text/css">
+		
+		
+		
+	<style id="respec-mainstyle">/*****************************************************************
  * ReSpec specific CSS
  *****************************************************************/
 @keyframes pop {
@@ -445,14 +452,7 @@ h6 > a.self-link::before {
     display: none;
   }
 }
-</style>
-		
-		
-		<link href="common/css/common.css" rel="stylesheet" type="text/css">
-		
-		
-		
-	<meta name="description" content="Enabling users of assistive technologies to find their way through Web content
+</style><meta name="description" content="Enabling users of assistive technologies to find their way through Web content
 				requires embedding semantic metadata about Web document structural divisions. This
 				is particularly important for structural divisions of long-form documents and goes
 				along with embedding semantic metadata about Web-application widgets and behaviors
@@ -669,62 +669,16 @@ var[data-type]:hover::before {
   "permalinkHide": false,
   "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
   "maxTocLevel": 4,
-  "localBiblio": {
-    "ACCNAME-AAM": {
-      "aliasOf": "ACCNAME-AAM-1.1"
-    },
-    "ARIA-PRACTICES": {
-      "aliasOf": "WAI-ARIA-PRACTICES-1.1"
-    },
-    "CORE-AAM": {
-      "aliasOf": "CORE-AAM-1.1"
-    },
-    "DPUB-ARIA": {
-      "aliasOf": "DPUB-ARIA-1.0"
-    },
-    "GRAPHICS-ARIA": {
-      "aliasOf": "GRAPHICS-ARIA-1.0"
-    },
-    "GRAPHICS-AAM": {
-      "aliasOf": "GRAPHICS-AAM-1.0"
-    },
-    "EPUB-Content": {
-      "href": "http://www.idpf.org/epub/31/spec/epub-contentdocs.html",
-      "title": "EPUB Content Documents 3.1",
-      "publisher": "IDPF",
-      "id": "epub-content"
-    },
-    "HTML-AAM": {
-      "aliasOf": "HTML-AAM-1.0"
-    },
-    "MathML-Core": {
-      "href": "https://mathml-refresh.github.io/mathml-core/",
-      "title": "MathML Core",
-      "authors": [
-        "David Carlisle",
-        "Frédéric Wang"
-      ]
-    },
-    "SVG-AAM": {
-      "aliasOf": "SVG-AAM-1.0"
-    },
-    "SVG1": {
-      "aliasOf": "SVG"
-    },
-    "WAI-ARIA": {
-      "aliasOf": "WAI-ARIA-1.1"
-    }
-  },
-  "publishDate": "2020-02-10",
-  "publishISODate": "2020-02-10T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 10 February 2020"
+  "publishDate": "2020-03-06",
+  "publishISODate": "2020-03-06T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 06 March 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry"><div class="head">
-      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Digital Publishing WAI-ARIA Module 1.1</h1>
+      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1>
       
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2020-02-10">10 February 2020</time>
+        <time class="dt-published" datetime="2020-03-06">06 March 2020</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -1204,132 +1158,10 @@ var[data-type]:hover::before {
 				<h3 id="x4-1-definition-of-roles"><bdi class="secno">4.1 </bdi>Definition of Roles<a class="self-link" aria-label="§" href="#role_definitions"></a></h3>
 				<p>Below is an alphabetical list of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 					<a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a> to be used by rich internet application authors.</p>
-				<dl id="index_role" class="compact"><dt><a href="#doc-abstract" class="role-reference">doc-abstract</a></dt>
-<dd>A short summary of the principal ideas, concepts and conclusions of the
-							work, or of a section or excerpt within it.</dd>
-<dt><a href="#doc-acknowledgments" class="role-reference">doc-acknowledgments</a></dt>
-<dd>A section or statement that acknowledges significant contributions by
-							persons, organizations, governments and other entities to the
-							realization of the work.</dd>
-<dt><a href="#doc-afterword" class="role-reference">doc-afterword</a></dt>
-<dd>A closing statement from the author or a person of importance, typically
-							providing insight into how the content came to be written, its
-							significance, or related events that have transpired since its
-							timeline.</dd>
-<dt><a href="#doc-appendix" class="role-reference">doc-appendix</a></dt>
-<dd>A section of supplemental information located after the primary content
-							that informs the content but is not central to it.</dd>
-<dt><a href="#doc-backlink" class="role-reference">doc-backlink</a></dt>
-<dd>A link that allows the user to return to a related location in the
-							content (e.g., from a footnote to its reference or from a glossary
-							definition to where a term is used).</dd>
-<dt><a href="#doc-biblioentry" class="role-reference">doc-biblioentry</a></dt>
-<dd>A single reference to an external source in a bibliography. A biblioentry
-							typically provides more detailed information than its reference(s) in
-							the content (e.g., full title, author(s), publisher, publication date,
-							etc.).</dd>
-<dt><a href="#doc-bibliography" class="role-reference">doc-bibliography</a></dt>
-<dd>A list of external references cited in the work, which may be to print or
-							digital sources.</dd>
-<dt><a href="#doc-biblioref" class="role-reference">doc-biblioref</a></dt>
-<dd>A reference to a bibliography entry.</dd>
-<dt><a href="#doc-chapter" class="role-reference">doc-chapter</a></dt>
-<dd>A major thematic section of content in a work.</dd>
-<dt><a href="#doc-colophon" class="role-reference">doc-colophon</a></dt>
-<dd>A short section of production notes particular to the edition (e.g.,
-							describing the typeface used), often located at the end of a work.</dd>
-<dt><a href="#doc-conclusion" class="role-reference">doc-conclusion</a></dt>
-<dd>A concluding section or statement that summarizes the work or wraps up
-							the narrative.</dd>
-<dt><a href="#doc-cover" class="role-reference">doc-cover</a></dt>
-<dd>An image that sets the mood or tone for the work and typically includes
-							the title and author.</dd>
-<dt><a href="#doc-credit" class="role-reference">doc-credit</a></dt>
-<dd>An acknowledgment of the source of integrated content from third-party
-							sources, such as photos. Typically identifies the creator, copyright and
-							any restrictions on reuse.</dd>
-<dt><a href="#doc-credits" class="role-reference">doc-credits</a></dt>
-<dd>A collection of credits.</dd>
-<dt><a href="#doc-dedication" class="role-reference">doc-dedication</a></dt>
-<dd>An inscription at the front of the work, typically addressed in tribute
-							to one or more persons close to the author.</dd>
-<dt><a href="#doc-endnote" class="role-reference">doc-endnote</a></dt>
-<dd>One of a collection of notes that occur at the end of a work, or a
-							section within it, that provides additional context to a referenced
-							passage of text.</dd>
-<dt><a href="#doc-endnotes" class="role-reference">doc-endnotes</a></dt>
-<dd>A collection of notes at the end of a work or a section within it.</dd>
-<dt><a href="#doc-epigraph" class="role-reference">doc-epigraph</a></dt>
-<dd>A quotation set at the start of the work or a section that establishes
-							the theme or sets the mood.</dd>
-<dt><a href="#doc-epilogue" class="role-reference">doc-epilogue</a></dt>
-<dd>A concluding section of narrative that wraps up or comments on the
-							actions and events of the work, typically from a future perspective.</dd>
-<dt><a href="#doc-errata" class="role-reference">doc-errata</a></dt>
-<dd>A set of corrections discovered after initial publication of the work,
-							sometimes referred to as corrigenda.</dd>
-<dt><a href="#doc-example" class="role-reference">doc-example</a></dt>
-<dd>An illustration of a key concept of the work, such as a code listing,
-							case study or problem.</dd>
-<dt><a href="#doc-footnote" class="role-reference">doc-footnote</a></dt>
-<dd>Ancillary information, such as a citation or commentary, that provides
-							additional context to a referenced passage of text.</dd>
-<dt><a href="#doc-foreword" class="role-reference">doc-foreword</a></dt>
-<dd>An introductory section that precedes the work, typically not written by
-							the author of the work.</dd>
-<dt><a href="#doc-glossary" class="role-reference">doc-glossary</a></dt>
-<dd>A brief dictionary of new, uncommon or specialized terms used in the
-							content.</dd>
-<dt><a href="#doc-glossref" class="role-reference">doc-glossref</a></dt>
-<dd>A reference to a glossary definition.</dd>
-<dt><a href="#doc-index" class="role-reference">doc-index</a></dt>
-<dd>A navigational aid that provides a detailed list of links to key
-							subjects, names and other important topics covered in the work.</dd>
-<dt><a href="#doc-introduction" class="role-reference">doc-introduction</a></dt>
-<dd>A preliminary section that typically introduces the scope or nature of
-							the work.</dd>
-<dt><a href="#doc-noteref" class="role-reference">doc-noteref</a></dt>
-<dd>A reference to a footnote or endnote, typically appearing as a
-							superscripted number or symbol in the main body of text.</dd>
-<dt><a href="#doc-notice" class="role-reference">doc-notice</a></dt>
-<dd>Notifies the user of consequences that might arise from an action or
-							event. Examples include warnings, cautions and dangers.</dd>
-<dt><a href="#doc-pagebreak" class="role-reference">doc-pagebreak</a></dt>
-<dd>A separator denoting the position before which a break occurs between two
-							contiguous pages in a statically paginated version of the content.</dd>
-<dt><a href="#doc-pagelist" class="role-reference">doc-pagelist</a></dt>
-<dd>A navigational aid that provides a list of links to the pagebreaks in the
-							content.</dd>
-<dt><a href="#doc-part" class="role-reference">doc-part</a></dt>
-<dd>A major structural division in a work that contains a set of related
-							sections dealing with a particular subject, narrative arc or similar
-							encapsulated theme.</dd>
-<dt><a href="#doc-preface" class="role-reference">doc-preface</a></dt>
-<dd>An introductory section that precedes the work, typically written by the
-							author of the work.</dd>
-<dt><a href="#doc-prologue" class="role-reference">doc-prologue</a></dt>
-<dd>An introductory section that sets the background to a work, typically
-							part of the narrative.</dd>
-<dt><a href="#doc-pullquote" class="role-reference">doc-pullquote</a></dt>
-<dd>A distinctively placed or highlighted quotation from the current content
-							designed to draw attention to a topic or highlight a key point.</dd>
-<dt><a href="#doc-qna" class="role-reference">doc-qna</a></dt>
-<dd>A section of content structured as a series of questions and answers,
-							such as an interview or list of frequently asked questions.</dd>
-<dt><a href="#doc-subtitle" class="role-reference">doc-subtitle</a></dt>
-<dd>An explanatory or alternate title for the work, or a section or component
-							within it.</dd>
-<dt><a href="#doc-tip" class="role-reference">doc-tip</a></dt>
-<dd>Helpful information that clarifies some aspect of the content or assists
-							in its comprehension.</dd>
-<dt><a href="#doc-toc" class="role-reference">doc-toc</a></dt>
-<dd>A navigational aid that provides an ordered list of links to the major
-							sectional headings in the content. A table of contents may cover an
-							entire work, or only a smaller section of it.</dd>
-</dl>
-				<section class="role notoc" id="doc-abstract">
-					<h4 class="role-name" title="doc-abstract" aria-describedby="desc-doc-abstract" id="doc-abstract-0"><code>doc-abstract</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-abstract"></a></h4>
-					<div class="role-description" id="desc-doc-abstract" role="definition">
+				<p id="index_role">Placeholder for compact list of roles</p>
+				<div class="role">
+					<rdef>doc-abstract</rdef>
+					<div class="role-description">
 						<p>A short summary of the principal ideas, concepts and conclusions of the
 							work, or of a section or excerpt within it.</p>
 						<div class="example" id="example-1">
@@ -1392,31 +1224,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -1448,10 +1256,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-acknowledgments">
-					<h4 class="role-name" title="doc-acknowledgments" aria-describedby="desc-doc-acknowledgments" id="doc-acknowledgments-0"><code>doc-acknowledgments</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-acknowledgments"></a></h4>
-					<div class="role-description" id="desc-doc-acknowledgments" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-acknowledgments</rdef>
+					<div class="role-description">
 						<p>A section or statement that acknowledges significant contributions by
 							persons, organizations, governments and other entities to the
 							realization of the work.</p>
@@ -1514,31 +1322,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -1570,10 +1354,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-afterword">
-					<h4 class="role-name" title="doc-afterword" aria-describedby="desc-doc-afterword" id="doc-afterword-0"><code>doc-afterword</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-afterword"></a></h4>
-					<div class="role-description" id="desc-doc-afterword" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-afterword</rdef>
+					<div class="role-description">
 						<p>A closing statement from the author or a person of importance, typically
 							providing insight into how the content came to be written, its
 							significance, or related events that have transpired since its
@@ -1638,31 +1422,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -1694,10 +1454,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-appendix">
-					<h4 class="role-name" title="doc-appendix" aria-describedby="desc-doc-appendix" id="doc-appendix-0"><code>doc-appendix</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-appendix"></a></h4>
-					<div class="role-description" id="desc-doc-appendix" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-appendix</rdef>
+					<div class="role-description">
 						<p>A section of supplemental information located after the primary content
 							that informs the content but is not central to it.</p>
 						<div class="example" id="example-4">
@@ -1760,31 +1520,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited"> </td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -1816,10 +1552,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-backlink">
-					<h4 class="role-name" title="doc-backlink" aria-describedby="desc-doc-backlink" id="doc-backlink-0"><code>doc-backlink</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-backlink"></a></h4>
-					<div class="role-description" id="desc-doc-backlink" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-backlink</rdef>
+					<div class="role-description">
 						<p>A link that allows the user to return to a related location in the
 							content (e.g., from a footnote to its reference or from a glossary
 							definition to where a term is used).</p>
@@ -1884,31 +1620,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -1945,10 +1657,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-biblioentry">
-					<h4 class="role-name" title="doc-biblioentry" aria-describedby="desc-doc-biblioentry" id="doc-biblioentry-0"><code>doc-biblioentry</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-biblioentry"></a></h4>
-					<div class="role-description" id="desc-doc-biblioentry" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-biblioentry</rdef>
+					<div class="role-description">
 						<p>A single reference to an external source in a bibliography. A biblioentry
 							typically provides more detailed information than its reference(s) in
 							the content (e.g., full title, author(s), publisher, publication date,
@@ -2034,34 +1746,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-level</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-posinset</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-<li><pref>aria-setsize</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -2093,10 +1778,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-bibliography">
-					<h4 class="role-name" title="doc-bibliography" aria-describedby="desc-doc-bibliography" id="doc-bibliography-0"><code>doc-bibliography</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-bibliography"></a></h4>
-					<div class="role-description" id="desc-doc-bibliography" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-bibliography</rdef>
+					<div class="role-description">
 						<p>A list of external references cited in the work, which may be to print or
 							digital sources.</p>
 						<div class="example" id="example-8">
@@ -2161,31 +1846,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -2217,10 +1878,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-biblioref">
-					<h4 class="role-name" title="doc-biblioref" aria-describedby="desc-doc-biblioref" id="doc-biblioref-0"><code>doc-biblioref</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-biblioref"></a></h4>
-					<div class="role-description" id="desc-doc-biblioref" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-biblioref</rdef>
+					<div class="role-description">
 						<p>A reference to a bibliography entry.</p>
 						<div class="example" id="example-9">
           <div class="marker">
@@ -2283,31 +1944,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -2344,10 +1981,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-chapter">
-					<h4 class="role-name" title="doc-chapter" aria-describedby="desc-doc-chapter" id="doc-chapter-0"><code>doc-chapter</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-chapter"></a></h4>
-					<div class="role-description" id="desc-doc-chapter" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-chapter</rdef>
+					<div class="role-description">
 						<p>A major thematic section of content in a work.</p>
 						<div class="example" id="example-10">
           <div class="marker">
@@ -2409,31 +2046,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -2465,10 +2078,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-colophon">
-					<h4 class="role-name" title="doc-colophon" aria-describedby="desc-doc-colophon" id="doc-colophon-0"><code>doc-colophon</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-colophon"></a></h4>
-					<div class="role-description" id="desc-doc-colophon" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-colophon</rdef>
+					<div class="role-description">
 						<p>A short section of production notes particular to the edition (e.g.,
 							describing the typeface used), often located at the end of a work.</p>
 						<div class="example" id="example-11">
@@ -2530,31 +2143,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -2586,10 +2175,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-conclusion">
-					<h4 class="role-name" title="doc-conclusion" aria-describedby="desc-doc-conclusion" id="doc-conclusion-0"><code>doc-conclusion</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-conclusion"></a></h4>
-					<div class="role-description" id="desc-doc-conclusion" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-conclusion</rdef>
+					<div class="role-description">
 						<p>A concluding section or statement that summarizes the work or wraps up
 							the narrative.</p>
 						<div class="example" id="example-12">
@@ -2652,31 +2241,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -2708,10 +2273,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-cover">
-					<h4 class="role-name" title="doc-cover" aria-describedby="desc-doc-cover" id="doc-cover-0"><code>doc-cover</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-cover"></a></h4>
-					<div class="role-description" id="desc-doc-cover" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-cover</rdef>
+					<div class="role-description">
 						<p>An image that sets the mood or tone for the work and typically includes
 							the title and author.</p>
 						<div class="example" id="example-13">
@@ -2771,31 +2336,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -2827,10 +2368,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-credit">
-					<h4 class="role-name" title="doc-credit" aria-describedby="desc-doc-credit" id="doc-credit-0"><code>doc-credit</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-credit"></a></h4>
-					<div class="role-description" id="desc-doc-credit" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-credit</rdef>
+					<div class="role-description">
 						<p>An acknowledgment of the source of integrated content from third-party
 							sources, such as photos. Typically identifies the creator, copyright and
 							any restrictions on reuse.</p>
@@ -2894,31 +2435,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -2950,10 +2467,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-credits">
-					<h4 class="role-name" title="doc-credits" aria-describedby="desc-doc-credits" id="doc-credits-0"><code>doc-credits</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-credits"></a></h4>
-					<div class="role-description" id="desc-doc-credits" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-credits</rdef>
+					<div class="role-description">
 						<p>A collection of credits.</p>
 						<div class="example" id="example-15">
           <div class="marker">
@@ -3015,31 +2532,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -3071,10 +2564,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-dedication">
-					<h4 class="role-name" title="doc-dedication" aria-describedby="desc-doc-dedication" id="doc-dedication-0"><code>doc-dedication</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-dedication"></a></h4>
-					<div class="role-description" id="desc-doc-dedication" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-dedication</rdef>
+					<div class="role-description">
 						<p>An inscription at the front of the work, typically addressed in tribute
 							to one or more persons close to the author.</p>
 						<div class="example" id="example-16">
@@ -3134,31 +2627,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -3190,10 +2659,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-endnote">
-					<h4 class="role-name" title="doc-endnote" aria-describedby="desc-doc-endnote" id="doc-endnote-0"><code>doc-endnote</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-endnote"></a></h4>
-					<div class="role-description" id="desc-doc-endnote" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-endnote</rdef>
+					<div class="role-description">
 						<p>One of a collection of notes that occur at the end of a work, or a
 							section within it, that provides additional context to a referenced
 							passage of text.</p>
@@ -3282,34 +2751,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-level</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-posinset</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-<li><pref>aria-setsize</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -3341,10 +2783,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-endnotes">
-					<h4 class="role-name" title="doc-endnotes" aria-describedby="desc-doc-endnotes" id="doc-endnotes-0"><code>doc-endnotes</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-endnotes"></a></h4>
-					<div class="role-description" id="desc-doc-endnotes" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-endnotes</rdef>
+					<div class="role-description">
 						<p>A collection of notes at the end of a work or a section within it.</p>
 						<p>Note that the <code>doc-endnotes</code>
 							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is never applied directly to the list of endnotes. See the
@@ -3413,31 +2855,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -3469,10 +2887,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-epigraph">
-					<h4 class="role-name" title="doc-epigraph" aria-describedby="desc-doc-epigraph" id="doc-epigraph-0"><code>doc-epigraph</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-epigraph"></a></h4>
-					<div class="role-description" id="desc-doc-epigraph" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-epigraph</rdef>
+					<div class="role-description">
 						<p>A quotation set at the start of the work or a section that establishes
 							the theme or sets the mood.</p>
 						<div class="example" id="example-20">
@@ -3535,31 +2953,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -3591,10 +2985,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-epilogue">
-					<h4 class="role-name" title="doc-epilogue" aria-describedby="desc-doc-epilogue" id="doc-epilogue-0"><code>doc-epilogue</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-epilogue"></a></h4>
-					<div class="role-description" id="desc-doc-epilogue" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-epilogue</rdef>
+					<div class="role-description">
 						<p>A concluding section of narrative that wraps up or comments on the
 							actions and events of the work, typically from a future perspective.</p>
 						<div class="example" id="example-21">
@@ -3661,31 +3055,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -3717,10 +3087,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-errata">
-					<h4 class="role-name" title="doc-errata" aria-describedby="desc-doc-errata" id="doc-errata-0"><code>doc-errata</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-errata"></a></h4>
-					<div class="role-description" id="desc-doc-errata" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-errata</rdef>
+					<div class="role-description">
 						<p>A set of corrections discovered after initial publication of the work,
 							sometimes referred to as corrigenda.</p>
 						<div class="example" id="example-22">
@@ -3783,31 +3153,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -3839,10 +3185,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-example">
-					<h4 class="role-name" title="doc-example" aria-describedby="desc-doc-example" id="doc-example-0"><code>doc-example</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-example"></a></h4>
-					<div class="role-description" id="desc-doc-example" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-example</rdef>
+					<div class="role-description">
 						<p>An illustration of a key concept of the work, such as a code listing,
 							case study or problem.</p>
 						<div class="example" id="example-23">
@@ -3905,31 +3251,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -3961,10 +3283,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-footnote">
-					<h4 class="role-name" title="doc-footnote" aria-describedby="desc-doc-footnote" id="doc-footnote-0"><code>doc-footnote</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-footnote"></a></h4>
-					<div class="role-description" id="desc-doc-footnote" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-footnote</rdef>
+					<div class="role-description">
 						<p>Ancillary information, such as a citation or commentary, that provides
 							additional context to a referenced passage of text.</p>
 						<p>The <code>doc-footnote</code>
@@ -4030,31 +3352,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -4086,10 +3384,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-foreword">
-					<h4 class="role-name" title="doc-foreword" aria-describedby="desc-doc-foreword" id="doc-foreword-0"><code>doc-foreword</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-foreword"></a></h4>
-					<div class="role-description" id="desc-doc-foreword" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-foreword</rdef>
+					<div class="role-description">
 						<p>An introductory section that precedes the work, typically not written by
 							the author of the work.</p>
 						<div class="example" id="example-25">
@@ -4152,31 +3450,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -4208,10 +3482,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-glossary">
-					<h4 class="role-name" title="doc-glossary" aria-describedby="desc-doc-glossary" id="doc-glossary-0"><code>doc-glossary</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-glossary"></a></h4>
-					<div class="role-description" id="desc-doc-glossary" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-glossary</rdef>
+					<div class="role-description">
 						<p>A brief dictionary of new, uncommon or specialized terms used in the
 							content.</p>
 						<div class="example" id="example-26">
@@ -4282,31 +3556,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -4338,10 +3588,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-glossref">
-					<h4 class="role-name" title="doc-glossref" aria-describedby="desc-doc-glossref" id="doc-glossref-0"><code>doc-glossref</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-glossref"></a></h4>
-					<div class="role-description" id="desc-doc-glossref" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-glossref</rdef>
+					<div class="role-description">
 						<p>A reference to a glossary definition.</p>
 						<div class="example" id="example-27">
           <div class="marker">
@@ -4403,31 +3653,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -4464,10 +3690,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-index">
-					<h4 class="role-name" title="doc-index" aria-describedby="desc-doc-index" id="doc-index-0"><code>doc-index</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-index"></a></h4>
-					<div class="role-description" id="desc-doc-index" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-index</rdef>
+					<div class="role-description">
 						<p>A navigational aid that provides a detailed list of links to key
 							subjects, names and other important topics covered in the work.</p>
 						<div class="example" id="example-28">
@@ -4539,31 +3765,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -4595,10 +3797,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-introduction">
-					<h4 class="role-name" title="doc-introduction" aria-describedby="desc-doc-introduction" id="doc-introduction-0"><code>doc-introduction</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-introduction"></a></h4>
-					<div class="role-description" id="desc-doc-introduction" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-introduction</rdef>
+					<div class="role-description">
 						<p>A preliminary section that typically introduces the scope or nature of
 							the work.</p>
 						<div class="example" id="example-29">
@@ -4660,31 +3862,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -4716,11 +3894,11 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
+				</div>
 				
-				<section class="role notoc" id="doc-noteref">
-					<h4 class="role-name" title="doc-noteref" aria-describedby="desc-doc-noteref" id="doc-noteref-0"><code>doc-noteref</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-noteref"></a></h4>
-					<div class="role-description" id="desc-doc-noteref" role="definition">
+				<div class="role">
+					<rdef>doc-noteref</rdef>
+					<div class="role-description">
 						<p>A reference to a footnote or endnote, typically appearing as a
 							superscripted number or symbol in the main body of text.</p>
 						<div class="example" id="example-30">
@@ -4780,31 +3958,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -4841,10 +3995,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-notice">
-					<h4 class="role-name" title="doc-notice" aria-describedby="desc-doc-notice" id="doc-notice-0"><code>doc-notice</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-notice"></a></h4>
-					<div class="role-description" id="desc-doc-notice" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-notice</rdef>
+					<div class="role-description">
 						<p>Notifies the user of consequences that might arise from an action or
 							event. Examples include warnings, cautions and dangers.</p>
 						<div class="example" id="example-31">
@@ -4917,31 +4071,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -4973,10 +4103,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-pagebreak">
-					<h4 class="role-name" title="doc-pagebreak" aria-describedby="desc-doc-pagebreak" id="doc-pagebreak-0"><code>doc-pagebreak</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-pagebreak"></a></h4>
-					<div class="role-description" id="desc-doc-pagebreak" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-pagebreak</rdef>
+					<div class="role-description">
 						<p>A separator denoting the position before which a break occurs between two
 							contiguous pages in a statically paginated version of the content.</p>
 						<div class="example" id="example-33">
@@ -5036,35 +4166,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-orientation</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-<li><pref>aria-valuemax</pref> <strong>(required)</strong></li>
-<li><pref>aria-valuemin</pref> <strong>(required)</strong></li>
-<li><pref>aria-valuenow</pref> <strong>(required)</strong></li>
-<li><pref>aria-valuetext</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -5096,10 +4198,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-pagelist">
-					<h4 class="role-name" title="doc-pagelist" aria-describedby="desc-doc-pagelist" id="doc-pagelist-0"><code>doc-pagelist</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-pagelist"></a></h4>
-					<div class="role-description" id="desc-doc-pagelist" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-pagelist</rdef>
+					<div class="role-description">
 						<p>A navigational aid that provides a list of links to the pagebreaks in the
 							content.</p>
 						<div class="example" id="example-34">
@@ -5166,31 +4268,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -5222,10 +4300,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-part">
-					<h4 class="role-name" title="doc-part" aria-describedby="desc-doc-part" id="doc-part-0"><code>doc-part</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-part"></a></h4>
-					<div class="role-description" id="desc-doc-part" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-part</rdef>
+					<div class="role-description">
 						<p>A major structural division in a work that contains a set of related
 							sections dealing with a particular subject, narrative arc or similar
 							encapsulated theme.</p>
@@ -5293,31 +4371,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -5349,10 +4403,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-preface">
-					<h4 class="role-name" title="doc-preface" aria-describedby="desc-doc-preface" id="doc-preface-0"><code>doc-preface</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-preface"></a></h4>
-					<div class="role-description" id="desc-doc-preface" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-preface</rdef>
+					<div class="role-description">
 						<p>An introductory section that precedes the work, typically written by the
 							author of the work.</p>
 						<div class="example" id="example-36">
@@ -5415,31 +4469,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -5471,10 +4501,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-prologue">
-					<h4 class="role-name" title="doc-prologue" aria-describedby="desc-doc-prologue" id="doc-prologue-0"><code>doc-prologue</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-prologue"></a></h4>
-					<div class="role-description" id="desc-doc-prologue" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-prologue</rdef>
+					<div class="role-description">
 						<p>An introductory section that sets the background to a work, typically
 							part of the narrative.</p>
 						<div class="example" id="example-37">
@@ -5541,31 +4571,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -5597,10 +4603,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-pullquote">
-					<h4 class="role-name" title="doc-pullquote" aria-describedby="desc-doc-pullquote" id="doc-pullquote-0"><code>doc-pullquote</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-pullquote"></a></h4>
-					<div class="role-description" id="desc-doc-pullquote" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-pullquote</rdef>
+					<div class="role-description">
 						<p>A distinctively placed or highlighted quotation from the current content
 							designed to draw attention to a topic or highlight a key point.</p>
 						<p>Unlike a passage quoted from another source, a pullquote is a direct
@@ -5680,31 +4686,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -5736,10 +4718,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-qna">
-					<h4 class="role-name" title="doc-qna" aria-describedby="desc-doc-qna" id="doc-qna-0"><code>doc-qna</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-qna"></a></h4>
-					<div class="role-description" id="desc-doc-qna" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-qna</rdef>
+					<div class="role-description">
 						<p>A section of content structured as a series of questions and answers,
 							such as an interview or list of frequently asked questions.</p>
 						<div class="example" id="example-40">
@@ -5806,31 +4788,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -5862,10 +4820,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-subtitle">
-					<h4 class="role-name" title="doc-subtitle" aria-describedby="desc-doc-subtitle" id="doc-subtitle-0"><code>doc-subtitle</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-subtitle"></a></h4>
-					<div class="role-description" id="desc-doc-subtitle" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-subtitle</rdef>
+					<div class="role-description">
 						<p>An explanatory or alternate title for the work, or a section or component
 							within it.</p>
 						<div class="example" id="example-41">
@@ -5928,31 +4886,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -5989,10 +4923,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-tip">
-					<h4 class="role-name" title="doc-tip" aria-describedby="desc-doc-tip" id="doc-tip-0"><code>doc-tip</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-tip"></a></h4>
-					<div class="role-description" id="desc-doc-tip" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-tip</rdef>
+					<div class="role-description">
 						<p>Helpful information that clarifies some aspect of the content or assists
 							in its comprehension.</p>
 						<div class="example" id="example-42">
@@ -6056,31 +4990,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -6112,10 +5022,10 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section class="role notoc" id="doc-toc">
-					<h4 class="role-name" title="doc-toc" aria-describedby="desc-doc-toc" id="doc-toc-0"><code>doc-toc</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-toc"></a></h4>
-					<div class="role-description" id="desc-doc-toc" role="definition">
+				</div>
+				<div class="role">
+					<rdef>doc-toc</rdef>
+					<div class="role-description">
 						<p>A navigational aid that provides an ordered list of links to the major
 							sectional headings in the content. A table of contents may cover an
 							entire work, or only a smaller section of it.</p>
@@ -6185,31 +5095,7 @@ var[data-type]:hover::before {
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and
 									Properties:</th>
-								<td class="role-inherited"><ul>
-<li><pref>aria-atomic</pref></li>
-<li><sref title="aria-busy">aria-busy (state)</sref></li>
-<li><pref>aria-controls</pref></li>
-<li><sref title="aria-current">aria-current (state)</sref></li>
-<li><pref>aria-describedby</pref></li>
-<li><pref>aria-details</pref></li>
-<li><sref title="aria-disabled">aria-disabled (state)</sref></li>
-<li><pref>aria-dropeffect</pref></li>
-<li><pref>aria-errormessage</pref></li>
-<li><sref title="aria-expanded">aria-expanded (state)</sref></li>
-<li><pref>aria-flowto</pref></li>
-<li><sref title="aria-grabbed">aria-grabbed (state)</sref></li>
-<li><pref>aria-haspopup</pref></li>
-<li><sref title="aria-hidden">aria-hidden (state)</sref></li>
-<li><sref title="aria-invalid">aria-invalid (state)</sref></li>
-<li><pref>aria-keyshortcuts</pref></li>
-<li><pref>aria-label</pref></li>
-<li><pref>aria-labelledby</pref></li>
-<li><pref>aria-live</pref></li>
-<li><pref>aria-owns</pref></li>
-<li><pref>aria-relevant</pref></li>
-<li><pref>aria-roledescription</pref></li>
-</ul>
-</td>
+								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
 								<th class="role-namefrom-head" scope="row">Name From:</th>
@@ -6241,7 +5127,7 @@ var[data-type]:hover::before {
 							</tr>
 						</tbody>
 					</table>
-				</section>
+				</div>
 			</section>
 		</section>
 		
