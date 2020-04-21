@@ -1,152 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 25.4.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
-span.example-title {
-    text-transform: none;
-}
-aside.example, div.example, div.illegal-example {
-    padding: 0.5em;
-    margin: 1em 0;
-    position: relative;
-    clear: both;
-}
-div.illegal-example { color: red }
-div.illegal-example p { color: black }
-aside.example, div.example {
-    padding: .5em;
-    border-left-width: .5em;
-    border-left-style: solid;
-    border-color: #e0cb52;
-    background: #fcfaee;
-}
-
-aside.example div.example {
-    border-left-width: .1em;
-    border-color: #999;
-    background: #fff;
-}
-aside.example div.example span.example-title {
-    color: #999;
-}
-</style><style>/* --- ISSUES/NOTES --- */
-.issue-label {
-    text-transform: initial;
-}
-
-.warning > p:first-child { margin-top: 0 }
-.warning {
-    padding: .5em;
-    border-left-width: .5em;
-    border-left-style: solid;
-}
-span.warning { padding: .1em .5em .15em; }
-
-.issue.closed span.issue-number {
-    text-decoration: line-through;
-}
-
-.warning {
-    border-color: #f11;
-    border-width: .2em;
-    border-style: solid;
-    background: #fbe9e9;
-}
-
-.warning-title:before{
-    content: "⚠"; /*U+26A0 WARNING SIGN*/
-    font-size: 1.3em;
-    float: left;
-    padding-right: .3em;
-    margin-top: -0.3em;
-}
-
-li.task-list-item {
-    list-style: none;
-}
-
-input.task-list-item-checkbox {
-    margin: 0 0.35em 0.25em -1.6em;
-    vertical-align: middle;
-}
-
-.issue a.respec-gh-label {
-  padding: 5px;
-  margin: 0 2px 0 2px;
-  font-size: 10px;
-  text-transform: none;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-  position: relative;
-  bottom: 2px;
-  border: none;
-  display: inline-block;
-}
-</style><style>/* dfn popup panel that list all local references to a dfn */
-dfn {
-  cursor: pointer;
-}
-
-.dfn-panel {
-  position: absolute;
-  left: var(--left); /* set via JS */
-  top: var(--top); /* set via JS */
-  z-index: 35;
-  height: auto;
-  width: max-content;
-  max-width: 300px;
-  max-height: 500px;
-  overflow: auto;
-  padding: 0.5em 0.75em;
-  font: small Helvetica Neue, sans-serif, Droid Sans Fallback;
-  background: #dddddd;
-  color: black;
-  border: outset 0.2em;
-}
-
-.dfn-panel * {
-  margin: 0;
-}
-
-.dfn-panel > b {
-  display: block;
-}
-
-.dfn-panel ul a[href] {
-  color: black;
-}
-
-.dfn-panel a:not(:hover) {
-  text-decoration: none !important;
-  border-bottom: none !important;
-}
-
-.dfn-panel a[href]:hover {
-  border-bottom-width: 1px;
-}
-
-.dfn-panel > b + b {
-  margin-top: 0.25em;
-}
-
-.dfn-panel ul {
-  padding: 0;
-}
-
-.dfn-panel li {
-  list-style: inside;
-}
-
-.dfn-panel.docked {
-  display: inline-block;
-  position: fixed;
-  left: 0.5em;
-  top: unset;
-  bottom: 2em;
-  margin: 0 auto;
-  /* 0.75em from padding (x2), 0.5em from left position, 0.2em border (x2) */
-  max-width: calc(100vw - 0.75em * 2 - 0.5em - 0.2em * 2);
-  max-height: 30vh;
-}
-</style>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 25.6.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>span.example-title{text-transform:none}aside.example,div.example,div.illegal-example{padding:.5em;margin:1em 0;position:relative;clear:both}div.illegal-example{color:red}div.illegal-example p{color:#000}aside.example,div.example{padding:.5em;border-left-width:.5em;border-left-style:solid;border-color:#e0cb52;background:#fcfaee}aside.example div.example{border-left-width:.1em;border-color:#999;background:#fff}aside.example div.example span.example-title{color:#999}</style><style>.issue-label{text-transform:initial}.warning>p:first-child{margin-top:0}.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}span.warning{padding:.1em .5em .15em}.issue.closed span.issue-number{text-decoration:line-through}.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}li.task-list-item{list-style:none}input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}</style>
 		<title>Digital Publishing WAI-ARIA Module 1.1</title>
 		
 		
@@ -156,438 +8,13 @@ dfn {
 		
 		
 		
-	<script async="" src="/cdn-cgi/bm/cv/2172558837/api.js"></script><style id="respec-mainstyle">/*****************************************************************
- * ReSpec specific CSS
- *****************************************************************/
-@keyframes pop {
-  0% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(1.25, 1.25);
-    opacity: 0.75;
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-/* Override code highlighter background */
-.hljs {
-  background: transparent !important;
-}
-
-/* --- INLINES --- */
-h1 abbr,
-h2 abbr,
-h3 abbr,
-h4 abbr,
-h5 abbr,
-h6 abbr,
-a abbr {
-  border: none;
-}
-
-dfn {
-  font-weight: bold;
-}
-
-a.internalDFN {
-  color: inherit;
-  border-bottom: 1px solid #99c;
-  text-decoration: none;
-}
-
-a.externalDFN {
-  color: inherit;
-  border-bottom: 1px dotted #ccc;
-  text-decoration: none;
-}
-
-a.bibref {
-  text-decoration: none;
-}
-
-.respec-offending-element:target {
-  animation: pop 0.25s ease-in-out 0s 1;
-}
-
-.respec-offending-element,
-a[href].respec-offending-element {
-  text-decoration: red wavy underline;
-}
-@supports not (text-decoration: red wavy underline) {
-  .respec-offending-element:not(pre) {
-    display: inline-block;
-  }
-  .respec-offending-element {
-    /* Red squiggly line */
-    background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
-      bottom repeat-x;
-  }
-}
-
-#references :target {
-  background: #eaf3ff;
-  animation: pop 0.4s ease-in-out 0s 1;
-}
-
-cite .bibref {
-  font-style: normal;
-}
-
-code {
-  color: #c63501;
-}
-
-th code {
-  color: inherit;
-}
-
-a[href].orcid {
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-a[href].orcid > svg {
-    margin-bottom: -2px;
-}
-
-/* --- TOC --- */
-
-.toc a,
-.tof a {
-  text-decoration: none;
-}
-
-a .secno,
-a .figno {
-  color: #000;
-}
-
-ul.tof,
-ol.tof {
-  list-style: none outside none;
-}
-
-.caption {
-  margin-top: 0.5em;
-  font-style: italic;
-}
-
-/* --- TABLE --- */
-
-table.simple {
-  border-spacing: 0;
-  border-collapse: collapse;
-  border-bottom: 3px solid #005a9c;
-}
-
-.simple th {
-  background: #005a9c;
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th a {
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th[scope="row"] {
-  background: inherit;
-  color: inherit;
-  border-top: 1px solid #ddd;
-}
-
-.simple td {
-  padding: 3px 10px;
-  border-top: 1px solid #ddd;
-}
-
-.simple tr:nth-child(even) {
-  background: #f0f6ff;
-}
-
-/* --- DL --- */
-
-.section dd > p:first-child {
-  margin-top: 0;
-}
-
-.section dd > p:last-child {
-  margin-bottom: 0;
-}
-
-.section dd {
-  margin-bottom: 1em;
-}
-
-.section dl.attrs dd,
-.section dl.eldef dd {
-  margin-bottom: 0;
-}
-
-#issue-summary > ul,
-.respec-dfn-list {
-  column-count: 2;
-}
-
-#issue-summary li,
-.respec-dfn-list li {
-  list-style: none;
-}
-
-details.respec-tests-details {
-  margin-left: 1em;
-  display: inline-block;
-  vertical-align: top;
-}
-
-details.respec-tests-details > * {
-  padding-right: 2em;
-}
-
-details.respec-tests-details[open] {
-  z-index: 999999;
-  position: absolute;
-  border: thin solid #cad3e2;
-  border-radius: 0.3em;
-  background-color: white;
-  padding-bottom: 0.5em;
-}
-
-details.respec-tests-details[open] > summary {
-  border-bottom: thin solid #cad3e2;
-  padding-left: 1em;
-  margin-bottom: 1em;
-  line-height: 2em;
-}
-
-details.respec-tests-details > ul {
-  width: 100%;
-  margin-top: -0.3em;
-}
-
-details.respec-tests-details > li {
-  padding-left: 1em;
-}
-
-a[href].self-link:hover {
-  opacity: 1;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  position: relative;
-}
-
-aside.example .marker > a.self-link {
-  color: inherit;
-}
-
-h2 > a.self-link,
-h3 > a.self-link,
-h4 > a.self-link,
-h5 > a.self-link,
-h6 > a.self-link {
-  border: none;
-  color: inherit;
-  font-size: 83%;
-  height: 2em;
-  left: -1.6em;
-  opacity: 0.5;
-  position: absolute;
-  text-align: center;
-  text-decoration: none;
-  top: 0;
-  transition: opacity 0.2s;
-  width: 2em;
-}
-
-h2 > a.self-link::before,
-h3 > a.self-link::before,
-h4 > a.self-link::before,
-h5 > a.self-link::before,
-h6 > a.self-link::before {
-  content: "§";
-  display: block;
-}
-
-@media (max-width: 767px) {
-  dd {
-    margin-left: 0;
-  }
-
-  /* Don't position self-link in headings off-screen */
-  h2 > a.self-link,
-  h3 > a.self-link,
-  h4 > a.self-link,
-  h5 > a.self-link,
-  h6 > a.self-link {
-    left: auto;
-    top: auto;
-  }
-}
-
-@media print {
-  .removeOnSave {
-    display: none;
-  }
-}
-</style><meta name="description" content="Enabling users of assistive technologies to find their way through Web content
+	<script async="" src="/cdn-cgi/bm/cv/2172558837/api.js"></script><style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style><meta name="description" content="Enabling users of assistive technologies to find their way through Web content
 				requires embedding semantic metadata about Web document structural divisions. This
 				is particularly important for structural divisions of long-form documents and goes
 				along with embedding semantic metadata about Web-application widgets and behaviors
 				for assistive technologies. This specification defines a set of WAI-ARIA roles
 				specific to helping users of assistive technologies navigate through such long-form
-				documents."><link rel="canonical" href="https://www.w3.org/TR/dpub-aria/"><style>/*
-Adapted from Atom One Light by Daniel Gamage for ReSpec, with better color contrast
-Original One Light Syntax theme from https://github.com/atom/one-light-syntax
-base:    #fafafa
-mono-1:  #383a42
-mono-2:  #686b77
-mono-3:  #a0a1a7
-hue-1:   #0184bb
-hue-2:   #4078f2
-hue-3:   #a626a4
-hue-4:   #50a14f
-hue-5:   #e45649
-hue-5-2: #c91243
-hue-6:   #986801
-hue-6-2: #c18401
-*/
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  color: #383a42;
-  background: #fafafa;
-}
-
-.hljs-comment,
-.hljs-quote {
-  color: #717277;
-  font-style: italic;
-}
-
-.hljs-doctag,
-.hljs-keyword,
-.hljs-formula {
-  color: #a626a4;
-}
-
-.hljs-section,
-.hljs-name,
-.hljs-selector-tag,
-.hljs-deletion,
-.hljs-subst {
-  color: #ca4706;
-  font-weight: bold;
-}
-
-.hljs-literal {
-  color: #0b76c5;
-}
-
-.hljs-string,
-.hljs-regexp,
-.hljs-addition,
-.hljs-attribute,
-.hljs-meta-string {
-  color: #42803C;
-}
-
-.hljs-built_in,
-.hljs-class .hljs-title {
-  color: #9a6a01;
-}
-
-.hljs-attr,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-type,
-.hljs-selector-class,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-number {
-  color: #986801;
-}
-
-.hljs-symbol,
-.hljs-bullet,
-.hljs-link,
-.hljs-meta,
-.hljs-selector-id,
-.hljs-title {
-  color: #336ae3;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
-}
-
-.hljs-link {
-  text-decoration: underline;
-}
-</style><style>var {
-  position: relative;
-  cursor: pointer;
-}
-
-var[data-type]::before,
-var[data-type]::after {
-  position: absolute;
-  left: 50%;
-  top: -6px;
-  opacity: 0;
-  transition: opacity 0.4s;
-  pointer-events: none;
-}
-
-/* the triangle or arrow or caret or whatever */
-var[data-type]::before {
-  content: "";
-  transform: translateX(-50%);
-  border-width: 4px 6px 0 6px;
-  border-style: solid;
-  border-color: transparent;
-  border-top-color: #000;
-}
-
-/* actual text */
-var[data-type]::after {
-  content: attr(data-type);
-  transform: translateX(-50%) translateY(-100%);
-  background: #000;
-  text-align: center;
-  /* additional styling */
-  font-family: "Dank Mono", "Fira Code", monospace;
-  font-style: normal;
-  padding: 6px;
-  border-radius: 3px;
-  color: #daca88;
-  text-indent: 0;
-  font-weight: normal;
-}
-
-var[data-type]:hover::after,
-var[data-type]:hover::before {
-  opacity: 1;
-}
-</style><script id="initialUserConfig" type="application/json">{
+				documents."><link rel="canonical" href="https://www.w3.org/TR/dpub-aria/"><style>.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}.hljs-comment,.hljs-quote{color:#717277;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}.hljs-literal{color:#0b76c5}.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}</style><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
   "wg": "Publishing Working Group",
   "specStatus": "ED",
   "shortName": "dpub-aria",
@@ -660,66 +87,58 @@ var[data-type]:hover::before {
   "permalinkHide": false,
   "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
   "maxTocLevel": 4,
-  "publishDate": "2020-03-30",
-  "publishISODate": "2020-03-30T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 30 March 2020"
+  "publishDate": "2020-04-21",
+  "publishISODate": "2020-04-21T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 21 April 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry"><div class="head">
-      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1>
-      
-      <h2>
-        W3C Editor's Draft
-        <time class="dt-published" datetime="2020-03-30">30 March 2020</time>
-      </h2>
-      <dl>
-        <dt>This version:</dt><dd>
-                <a class="u-url" href="https://w3c.github.io/dpub-aria/">https://w3c.github.io/dpub-aria/</a>
-              </dd><dt>Latest published version:</dt><dd>
-                <a href="https://www.w3.org/TR/dpub-aria/">https://www.w3.org/TR/dpub-aria/</a>
-              </dd>
-        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/dpub-aria/">https://w3c.github.io/dpub-aria/</a></dd>
-        
-        
-        
-        
-        
-        <dt>Editors:</dt>
-        <dd class="p-author h-card vcard" data-editor-id="51655"><a class="u-url url p-name fn" href="http://www.daisy.org">Matt Garrish</a>
-            (DAISY Consortium)
-          </dd><dd class="p-author h-card vcard" data-editor-id="65542"><a class="ed_mailto u-email email p-name" href="mailto:tsiegman@wiley.com">Tzviya Siegman</a>
-            (Wiley)
-          </dd><dd class="p-author h-card vcard" data-editor-id="89030"><a class="ed_mailto u-email email p-name" href="mailto:shane@spec-ops.io">Shane McCarron</a>
-            (Spec-Ops)
-          </dd>
-        <dt>
-                Former editor:
-              </dt><dd class="p-author h-card vcard" data-editor-id="21614"><a class="ed_mailto u-email email p-name" href="mailto:mgylling@daisy.org">Markus Gylling</a>
-            (DAISY Consortium)
-          </dd>
-        
-        <dt>Repository:</dt><dd>
-      <a href="https://github.com/w3c/dpub-aria">Github Repository</a>
-    </dd><dt>Changes:</dt><dd>
-      <a href="https://github.com/w3c/dpub-aria/commits/master">Commit history</a>
-    </dd>
-      </dl>
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1>
+    
+    <h2>
+      W3C Editor's Draft
+      <time class="dt-published" datetime="2020-04-21">21 April 2020</time>
+    </h2>
+    <dl>
+      <dt>This version:</dt><dd>
+              <a class="u-url" href="https://w3c.github.io/dpub-aria/">https://w3c.github.io/dpub-aria/</a>
+            </dd><dt>Latest published version:</dt><dd>
+              <a href="https://www.w3.org/TR/dpub-aria/">https://www.w3.org/TR/dpub-aria/</a>
+            </dd>
+      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/dpub-aria/">https://w3c.github.io/dpub-aria/</a></dd>
       
       
       
-      <p class="copyright">
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-      ©
-      2015-2020
       
-      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-      <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
-      W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
-      apply.
-    </p>
-      <hr title="Separator for header">
-    </div>
+      
+      <dt>Editors:</dt>
+      <dd class="p-author h-card vcard" data-editor-id="51655"><a class="u-url url p-name fn" href="http://www.daisy.org">Matt Garrish</a> (DAISY Consortium) </dd><dd class="p-author h-card vcard" data-editor-id="65542"><a class="ed_mailto u-email email p-name" href="mailto:tsiegman@wiley.com">Tzviya Siegman</a> (Wiley) </dd><dd class="p-author h-card vcard" data-editor-id="89030"><a class="ed_mailto u-email email p-name" href="mailto:shane@spec-ops.io">Shane McCarron</a> (Spec-Ops) </dd>
+      <dt>
+              Former editor:
+            </dt><dd class="p-author h-card vcard" data-editor-id="21614"><a class="ed_mailto u-email email p-name" href="mailto:mgylling@daisy.org">Markus Gylling</a> (DAISY Consortium) </dd>
+      
+      <dt>Repository:</dt><dd>
+    <a href="https://github.com/w3c/dpub-aria">Github Repository</a>
+  </dd><dt>Changes:</dt><dd>
+    <a href="https://github.com/w3c/dpub-aria/commits/master">Commit history</a>
+  </dd>
+    </dl>
+    
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2015-2020
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
+    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
+    apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
 			<p>Enabling users of assistive technologies to find their way through Web content
 				requires embedding semantic metadata about Web document structural divisions. This
@@ -730,49 +149,58 @@ var[data-type]:hover::before {
 				documents.</p>
 			<p>This document is part of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> suite described in the <a href="http://www.w3.org/WAI/intro/aria.php"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Overview</a>.</p>
 		</section>
-		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p>
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. Other documents may supersede
+      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
+      of this technical report can be found in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p>
 			<p>The Candidate Recommendation exit criteria are listed in the <a href="#exit_criteria">appendix</a>.</p>
 		<p>
-      This document was published by the <a href="https://www.w3.org/publishing/groups/publ-wg/">Publishing Working Group</a> as an
-      Editor's Draft.
-      
-    </p><p>
-      
-      Comments regarding this document are welcome.
-            Please send them to
-            <a href="mailto:public-publ-wg@w3.org">public-publ-wg@w3.org</a>
-            (<a href="https://lists.w3.org/Archives/Public/public-publ-wg/">archives</a>).
-          
-    </p><p>
-      Publication as an Editor's Draft does not imply endorsement by the
-      <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft document and may be updated, replaced or
-      obsoleted by other documents at any time. It is inappropriate to cite this
-      document as other than work in progress.
-    </p><p>
-      
+    This document was published by the <a href="https://www.w3.org/publishing/groups/publ-wg/">Publishing Working Group</a> as an
+    Editor's Draft.
+    
+  </p><p>
+    
+    Comments regarding this document are welcome.
+          Please send them to
+          <a href="mailto:public-publ-wg@w3.org">public-publ-wg@w3.org</a>
+          (<a href="https://lists.w3.org/Archives/Public/public-publ-wg/">archives</a>).
+        
+  </p><p>
+    Publication as an Editor's Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
+    Membership. This is a draft document and may be updated, replaced or
+    obsoleted by other documents at any time. It is inappropriate to cite this
+    document as other than work in progress.
+  </p><p>
+    
         This document was produced by a group
         operating under the
         <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
        
-      
-                  <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
-                  <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/100074/status">public list of any patent disclosures</a>
-            made in connection with the deliverables of
-            the group; that page also includes
-            instructions for disclosing a patent. An individual who has actual
-            knowledge of a patent which the individual believes contains
-            <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-            must disclose the information in accordance with
-            <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-          
-      
-    </p><p>
+    
+                <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/100074/status">public list of any patent disclosures</a>
+          made in connection with the deliverables of
+          the group; that page also includes
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+    
+  </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section>
 		<nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target Audience</a></li><li class="tocline"><a class="tocxref" href="#ua-support"><bdi class="secno">1.2 </bdi>User Agent Support</a></li><li class="tocline"><a class="tocxref" href="#co-evolution"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><bdi class="secno">1.4 </bdi>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><bdi class="secno">1.5 </bdi>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#terms"><bdi class="secno">3. </bdi>Important Terms</a></li><li class="tocline"><a class="tocxref" href="#roles"><bdi class="secno">4. </bdi>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><bdi class="secno">4.1 </bdi>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#a_schemata"><bdi class="secno">A. </bdi>Schemata</a></li><li class="tocline"><a class="tocxref" href="#exit_criteria"><bdi class="secno">B. </bdi>Candidate Recommendation Exit Criteria</a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">C. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#substantive-changes-since-the-last-public-working-draft"><bdi class="secno">C.1 </bdi>Substantive changes since the <span class="formerLink">last public
 						working draft</span></a></li><li class="tocline"><a class="tocxref" href="#other-substantive-changes-since-the-first-public-working-draft"><bdi class="secno">C.2 </bdi>Other substantive changes since the <span class="formerLink">First Public
-						Working Draft</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><bdi class="secno">D.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">D.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">E.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.2 </bdi>Informative references</a></li></ol></li></ol></nav>
+						Working Draft</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><bdi class="secno">D.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">D.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">E.1 </bdi>
+        Normative references
+      </a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.2 </bdi>
+        Informative references
+      </a></li></ol></li></ol></nav>
 		<section class="informative" id="introduction">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2><p><em>This section is non-normative.</em></p>
 			<p><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is a technical
@@ -910,12 +338,12 @@ var[data-type]:hover::before {
 		<section class="normative" id="conformance"><h2 id="x2-conformance"><bdi class="secno">2. </bdi>Conformance<a class="self-link" aria-label="§" href="#conformance"></a></h2><p>
       As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.
     </p><p>
-          The key words <em class="rfc2119">MUST</em> and <em class="rfc2119">SHOULD</em> in this document
-          are to be interpreted as described in
-          <a href="https://tools.ietf.org/html/bcp14">BCP 14</a>
-          [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>]
-          when, and only when, they appear in all capitals, as shown here.
-        </p>
+        The key words <em class="rfc2119">MUST</em> and <em class="rfc2119">SHOULD</em> in this document
+        are to be interpreted as described in
+        <a href="https://tools.ietf.org/html/bcp14">BCP 14</a>
+        [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>]
+        when, and only when, they appear in all capitals, as shown here.
+      </p>
 			<p>This specification indicates whether a section is <a href="#dfn-normative" class="internalDFN" data-link-type="dfn">normative</a> or
 					<a href="#dfn-informative" class="internalDFN" data-link-type="dfn">informative</a>. Classifying a section as normative or informative applies to
 				the entire section. A statement "This section is normative" or "This section is
@@ -932,7 +360,7 @@ var[data-type]:hover::before {
 <dl class="termlist">
     <dt><dfn data-lt="accessibility api|accessibility apis|Accessibility API" data-dfn-type="dfn" id="dfn-accessibility-api">Accessibility <abbr title="Application Programming Interface">API</abbr></dfn></dt>
     <dd>
-      <p>Operating systems and other platforms provide a set of interfaces that expose information about <a class="termref internalDFN" data-lt="object" href="#dfn-object" data-link-type="dfn">objects</a> and <a class="termref internalDFN" data-lt="event" href="#dfn-event" data-link-type="dfn">events</a> to <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a>. Assistive technologies use these interfaces to get information about and interact with those <a class="termref internalDFN" data-lt="widget" href="#dfn-widget" data-link-type="dfn">widgets</a>. Examples of accessibility APIs are <a href="https://msdn.microsoft.com/en-us/library/ms697270(VS.85).aspx">Microsoft Active Accessibility</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-msaa" title="Microsoft Active Accessibility (MSAA) 2.0">MSAA</a></cite>], <a href="https://msdn.microsoft.com/en-us/library/ee684013%28VS.85%29.aspx">Microsoft User Interface Automation</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-ui-automation" title="UI Automation">UI-AUTOMATION</a></cite>], <abbr title="Microsoft Active Accessibility">MSAA</abbr> with <cite><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898(v=vs.85).aspx"><abbr title="User Interface Automation">UIA</abbr> Express</a></cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-uia-express" title="The IAccessibleEx Interface">UIA-EXPRESS</a></cite>], the
+      <p>Operating systems and other platforms provide a set of interfaces that expose information about <a class="termref internalDFN" data-lt="object" href="#dfn-object" data-link-type="dfn">objects</a> and <a class="termref internalDFN" data-lt="event" href="#dfn-event" data-link-type="dfn">events</a> to <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a>. Assistive technologies use these interfaces to get information about and interact with those <a class="termref internalDFN" data-lt="widget" href="#dfn-widget" data-link-type="dfn">widgets</a>. Examples of accessibility APIs are <a href="https://msdn.microsoft.com/en-us/library/ms697270(VS.85).aspx">Microsoft Active Accessibility</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-msaa" title="Microsoft Active Accessibility (MSAA)">MSAA</a></cite>], <a href="https://msdn.microsoft.com/en-us/library/ee684013%28VS.85%29.aspx">Microsoft User Interface Automation</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-ui-automation" title="UI Automation">UI-AUTOMATION</a></cite>], <abbr title="Microsoft Active Accessibility">MSAA</abbr> with <cite><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898(v=vs.85).aspx"><abbr title="User Interface Automation">UIA</abbr> Express</a></cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-uia-express" title="The IAccessibleEx Interface">UIA-EXPRESS</a></cite>], the
       	<a href="https://developer.apple.com/documentation/appkit/accessibility/nsaccessibility">Mac <abbr title="OS Ten">OS X</abbr> Accessibility Protocol</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-axapi" title="The NSAccessibility Protocol for macOS">AXAPI</a></cite>], the <cite><a href="https://developer.gnome.org/atk/unstable/">Linux/Unix Accessibility Toolkit</a></cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-atk" title="ATK - Accessibility Toolkit">ATK</a></cite>] and <cite><a href="https://developer.gnome.org/libatspi/stable/">Assistive Technology Service Provider Interface</a></cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-at-spi" title="Assistive Technology Service Provider Interface">AT-SPI</a></cite>], and <a href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/start">IAccessible2</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-iaccessible2" title="IAccessible2">IAccessible2</a></cite>].</p>
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-accessibility-subtree">Accessibility Subtree</dfn></dt>
@@ -1156,13 +584,13 @@ var[data-type]:hover::before {
 						<p>A short summary of the principal ideas, concepts and conclusions of the
 							work, or of a section or excerpt within it.</p>
 						<div class="example" id="example-1">
-          <div class="marker">
-      <a class="self-link" href="#example-1">Example<bdi> 1</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-abstract"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Abstract"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-1">Example<bdi> 1</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-abstract"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Abstract"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Accessibility of web content requires semantic information about widgets, structures,
       and behaviors …<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -1255,12 +683,12 @@ var[data-type]:hover::before {
 							persons, organizations, governments and other entities to the
 							realization of the work.</p>
 						<div class="example" id="example-2">
-          <div class="marker">
-      <a class="self-link" href="#example-2">Example<bdi> 2</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-acknowledgments"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-2">Example<bdi> 2</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-acknowledgments"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I would like to extend my sincere gratitude to … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -1354,13 +782,13 @@ var[data-type]:hover::before {
 							significance, or related events that have transpired since its
 							timeline.</p>
 						<div class="example" id="example-3">
-          <div class="marker">
-      <a class="self-link" href="#example-3">Example<bdi> 3</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-afterword"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-3">Example<bdi> 3</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-afterword"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Afterword: Why I Wrote This Book<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -1452,13 +880,13 @@ var[data-type]:hover::before {
 						<p>A section of supplemental information located after the primary content
 							that informs the content but is not central to it.</p>
 						<div class="example" id="example-4">
-          <div class="marker">
-      <a class="self-link" href="#example-4">Example<bdi> 4</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-appendix"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-4">Example<bdi> 4</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-appendix"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Appendix A. Historical Timeline<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -1551,14 +979,14 @@ var[data-type]:hover::before {
 							content (e.g., from a footnote to its reference or from a glossary
 							definition to where a term is used).</p>
 						<div class="example" id="example-5">
-          <div class="marker">
-      <a class="self-link" href="#example-5">Example<bdi> 5</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs javascript">&lt;aside id=<span class="hljs-string">"fn01"</span> role=<span class="hljs-string">"doc-footnote"</span>&gt;
+        <div class="marker">
+    <a class="self-link" href="#example-5">Example<bdi> 5</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs javascript">&lt;aside id=<span class="hljs-string">"fn01"</span> role=<span class="hljs-string">"doc-footnote"</span>&gt;
    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-backlink"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#fnref01"</span>&gt;</span>1.<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>
    Additional results <span class="hljs-keyword">of</span> <span class="hljs-keyword">this</span> study and
    similar studies can be found at …
 &lt;<span class="hljs-regexp">/aside&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -1660,9 +1088,9 @@ var[data-type]:hover::before {
 								<code>doc-biblioentry</code> are contained in, or owned, by an
 							element with the role <rref>list</rref>.</p>
 						<div class="example" id="example-6">
-          <div class="marker">
-      <a class="self-link" href="#example-6">Example<bdi> 6</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-bibliography"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-6">Example<bdi> 6</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-bibliography"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Cited Works<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"list"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-biblioentry"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"b8cab5dd-bc24-459c-9858-7afa9da69b64"</span>&gt;</span>
@@ -1671,11 +1099,11 @@ var[data-type]:hover::before {
    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 						<div class="example" id="example-7">
-          <div class="marker">
-      <a class="self-link" href="#example-7">Example<bdi> 7</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-bibliography"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-7">Example<bdi> 7</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-bibliography"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Select Bibliography<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-biblioentry"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"faulkner-dying"</span>&gt;</span>
@@ -1684,7 +1112,7 @@ var[data-type]:hover::before {
    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -1776,15 +1204,15 @@ var[data-type]:hover::before {
 						<p>A list of external references cited in the work, which may be to print or
 							digital sources.</p>
 						<div class="example" id="example-8">
-          <div class="marker">
-      <a class="self-link" href="#example-8">Example<bdi> 8</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-bibliography"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-8">Example<bdi> 8</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-bibliography"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Select Bibliography<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
       …
    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -1875,14 +1303,14 @@ var[data-type]:hover::before {
 					<div class="role-description">
 						<p>A reference to a bibliography entry.</p>
 						<div class="example" id="example-9">
-          <div class="marker">
-      <a class="self-link" href="#example-9">Example<bdi> 9</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-9">Example<bdi> 9</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
    As <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-biblioref"</span>
       <span class="hljs-attr">href</span>=<span class="hljs-string">"#b8cab5dd-bc24-459c-9858-7afa9da69b64"</span>&gt;</span>Steinbeck<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
    says in his great novel …
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -1978,13 +1406,13 @@ var[data-type]:hover::before {
 					<div class="role-description">
 						<p>A major thematic section of content in a work.</p>
 						<div class="example" id="example-10">
-          <div class="marker">
-      <a class="self-link" href="#example-10">Example<bdi> 10</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-chapter"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-10">Example<bdi> 10</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-chapter"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Chapter 1. Loomings.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -2076,12 +1504,12 @@ var[data-type]:hover::before {
 						<p>A short section of production notes particular to the edition (e.g.,
 							describing the typeface used), often located at the end of a work.</p>
 						<div class="example" id="example-11">
-          <div class="marker">
-      <a class="self-link" href="#example-11">Example<bdi> 11</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-colophon"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"About the type"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-11">Example<bdi> 11</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-colophon"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"About the type"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This publication was set using … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -2173,13 +1601,13 @@ var[data-type]:hover::before {
 						<p>A concluding section or statement that summarizes the work or wraps up
 							the narrative.</p>
 						<div class="example" id="example-12">
-          <div class="marker">
-      <a class="self-link" href="#example-12">Example<bdi> 12</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-conclusion"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-12">Example<bdi> 12</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-conclusion"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Summary<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>A central task in feminist scholarship is to expose and dismantle the stereotypes … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -2271,10 +1699,10 @@ var[data-type]:hover::before {
 						<p>An image that sets the mood or tone for the work and typically includes
 							the title and author.</p>
 						<div class="example" id="example-13">
-          <div class="marker">
-      <a class="self-link" href="#example-13">Example<bdi> 13</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-cover"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"coverimage.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"A Room of One's Own by Virginia Woolf"</span>/&gt;</span></code></pre>
-        </div>
+        <div class="marker">
+    <a class="self-link" href="#example-13">Example<bdi> 13</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-cover"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"coverimage.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"A Room of One's Own by Virginia Woolf"</span>/&gt;</span></code></pre>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -2367,13 +1795,13 @@ var[data-type]:hover::before {
 							sources, such as photos. Typically identifies the creator, copyright and
 							any restrictions on reuse.</p>
 						<div class="example" id="example-14">
-          <div class="marker">
-      <a class="self-link" href="#example-14">Example<bdi> 14</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-credit"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-14">Example<bdi> 14</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-credit"</span>&gt;</span>
    Page 62, Table 3.1 from <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>“Economic Foundations of Cost-Effectiveness Analysis”<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
    by A. M. Garber and C. E. Phelps …
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -2464,13 +1892,13 @@ var[data-type]:hover::before {
 					<div class="role-description">
 						<p>A collection of credits.</p>
 						<div class="example" id="example-15">
-          <div class="marker">
-      <a class="self-link" href="#example-15">Example<bdi> 15</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-credits"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-15">Example<bdi> 15</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-credits"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Photo Credits<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -2562,10 +1990,10 @@ var[data-type]:hover::before {
 						<p>An inscription at the front of the work, typically addressed in tribute
 							to one or more persons close to the author.</p>
 						<div class="example" id="example-16">
-          <div class="marker">
-      <a class="self-link" href="#example-16">Example<bdi> 16</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-dedication"</span>&gt;</span>To my family, without whom this would have never been possible.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
-        </div>
+        <div class="marker">
+    <a class="self-link" href="#example-16">Example<bdi> 16</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-dedication"</span>&gt;</span>To my family, without whom this would have never been possible.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -2661,9 +2089,9 @@ var[data-type]:hover::before {
 							<code>doc-endnote</code> are contained in, or owned, by an element with
 							the role <rref>list</rref>.</p>
 						<div class="example" id="example-17">
-          <div class="marker">
-      <a class="self-link" href="#example-17">Example<bdi> 17</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnotes"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-17">Example<bdi> 17</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnotes"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Notes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"6baa07af"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnote"</span>&gt;</span>Additional results of this study can be found at … <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -2671,11 +2099,11 @@ var[data-type]:hover::before {
       …
    <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 						<div class="example" id="example-18">
-          <div class="marker">
-      <a class="self-link" href="#example-18">Example<bdi> 18</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnotes"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-18">Example<bdi> 18</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnotes"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Notes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ch1-notes"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Chapter 1<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
@@ -2689,7 +2117,7 @@ var[data-type]:hover::before {
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -2783,9 +2211,9 @@ var[data-type]:hover::before {
 							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is never applied directly to the list of endnotes. See the
 								<rref>doc-endnote</rref> role for more information.</p>
 						<div class="example" id="example-19">
-          <div class="marker">
-      <a class="self-link" href="#example-19">Example<bdi> 19</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnotes"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-19">Example<bdi> 19</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnotes"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Notes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"6baa07af"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnote"</span>&gt;</span>Additional results of this study can be found at … <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -2793,7 +2221,7 @@ var[data-type]:hover::before {
       …
    <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -2885,13 +2313,13 @@ var[data-type]:hover::before {
 						<p>A quotation set at the start of the work or a section that establishes
 							the theme or sets the mood.</p>
 						<div class="example" id="example-20">
-          <div class="marker">
-      <a class="self-link" href="#example-20">Example<bdi> 20</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-epigraph"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-20">Example<bdi> 20</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-epigraph"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>“Would you tell me please, which way I ought to go from here?”<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>“That depends a good deal on where you want to get to,” said the cat.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -2983,9 +2411,9 @@ var[data-type]:hover::before {
 						<p>A concluding section of narrative that wraps up or comments on the
 							actions and events of the work, typically from a future perspective.</p>
 						<div class="example" id="example-21">
-          <div class="marker">
-      <a class="self-link" href="#example-21">Example<bdi> 21</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-epilogue"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-21">Example<bdi> 21</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-epilogue"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Epilogue<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>SPOKEN BY PROSPERO<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -2993,7 +2421,7 @@ var[data-type]:hover::before {
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Now my charms are all o'erthrown, …<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -3085,13 +2513,13 @@ var[data-type]:hover::before {
 						<p>A set of corrections discovered after initial publication of the work,
 							sometimes referred to as corrigenda.</p>
 						<div class="example" id="example-22">
-          <div class="marker">
-      <a class="self-link" href="#example-22">Example<bdi> 22</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-errata"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-22">Example<bdi> 22</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-errata"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Corrections<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -3183,13 +2611,13 @@ var[data-type]:hover::before {
 						<p>An illustration of a key concept of the work, such as a code listing,
 							case study or problem.</p>
 						<div class="example" id="example-23">
-          <div class="marker">
-      <a class="self-link" href="#example-23">Example<bdi> 23</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-example"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-23">Example<bdi> 23</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-example"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -3285,12 +2713,12 @@ var[data-type]:hover::before {
 							the body of a work. For collections of notes that occur at the end of a
 							section, see <rref>doc-endnotes</rref>.</p>
 						<div class="example" id="example-24">
-          <div class="marker">
-      <a class="self-link" href="#example-24">Example<bdi> 24</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs javascript">&lt;aside id=<span class="hljs-string">"6baa07af"</span> role=<span class="hljs-string">"doc-footnote"</span>&gt;
+        <div class="marker">
+    <a class="self-link" href="#example-24">Example<bdi> 24</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs javascript">&lt;aside id=<span class="hljs-string">"6baa07af"</span> role=<span class="hljs-string">"doc-footnote"</span>&gt;
    * Additional results <span class="hljs-keyword">of</span> <span class="hljs-keyword">this</span> study and similar studies can be found at …
 &lt;<span class="hljs-regexp">/aside&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -3382,13 +2810,13 @@ var[data-type]:hover::before {
 						<p>An introductory section that precedes the work, typically not written by
 							the author of the work.</p>
 						<div class="example" id="example-25">
-          <div class="marker">
-      <a class="self-link" href="#example-25">Example<bdi> 25</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-foreword"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-25">Example<bdi> 25</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-foreword"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Foreword<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -3480,9 +2908,9 @@ var[data-type]:hover::before {
 						<p>A brief dictionary of new, uncommon or specialized terms used in the
 							content.</p>
 						<div class="example" id="example-26">
-          <div class="marker">
-      <a class="self-link" href="#example-26">Example<bdi> 26</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-glossary"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"glossary"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-26">Example<bdi> 26</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-glossary"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"glossary"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
       …
       <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"bcc0f155"</span>&gt;</span>Credit default swap<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
@@ -3493,7 +2921,7 @@ var[data-type]:hover::before {
       …
    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -3585,13 +3013,13 @@ var[data-type]:hover::before {
 					<div class="role-description">
 						<p>A reference to a glossary definition.</p>
 						<div class="example" id="example-27">
-          <div class="marker">
-      <a class="self-link" href="#example-27">Example<bdi> 27</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-27">Example<bdi> 27</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
    This is indicated in the cost of a
    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#bcc0f155"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-glossref"</span>&gt;</span>credit default swap<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> …
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -3688,9 +3116,9 @@ var[data-type]:hover::before {
 						<p>A navigational aid that provides a detailed list of links to key
 							subjects, names and other important topics covered in the work.</p>
 						<div class="example" id="example-28">
-          <div class="marker">
-      <a class="self-link" href="#example-28">Example<bdi> 28</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-index"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-28">Example<bdi> 28</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-index"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Index<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>A<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
@@ -3701,7 +3129,7 @@ var[data-type]:hover::before {
    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -3795,12 +3223,12 @@ var[data-type]:hover::before {
 						<p>A preliminary section that typically introduces the scope or nature of
 							the work.</p>
 						<div class="example" id="example-29">
-          <div class="marker">
-      <a class="self-link" href="#example-29">Example<bdi> 29</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-introduction"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-29">Example<bdi> 29</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-introduction"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Everyone has some experience with marketing … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -3893,10 +3321,10 @@ var[data-type]:hover::before {
 						<p>A reference to a footnote or endnote, typically appearing as a
 							superscripted number or symbol in the main body of text.</p>
 						<div class="example" id="example-30">
-          <div class="marker">
-      <a class="self-link" href="#example-30">Example<bdi> 30</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> … as studies have shown.<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fnref01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-noteref"</span>&gt;</span>[1]<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
-        </div>
+        <div class="marker">
+    <a class="self-link" href="#example-30">Example<bdi> 30</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> … as studies have shown.<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fnref01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-noteref"</span>&gt;</span>[1]<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -3993,24 +3421,24 @@ var[data-type]:hover::before {
 						<p>Notifies the user of consequences that might arise from an action or
 							event. Examples include warnings, cautions and dangers.</p>
 						<div class="example" id="example-31">
-          <div class="marker">
-      <a class="self-link" href="#example-31">Example<bdi> 31</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-notice"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-31">Example<bdi> 31</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-notice"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"warning.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"warning icon"</span>/&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Just because you can include a font doesn’t mean you should.
       Think carefully about readability. Also, be respectful of intellectual property.
       There are many excellent free open source fonts available.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<p>Authors <em class="rfc2119" title="SHOULD">SHOULD</em> include a label when the notice needs to be navigable to.</p>
 					<div class="example" id="example-32">
-          <div class="marker">
-      <a class="self-link" href="#example-32">Example<bdi> 32</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-notice"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Explosion Risk"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-32">Example<bdi> 32</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-notice"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Explosion Risk"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>Danger!<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> Mixing reactive materials may cause an explosion.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
 						<thead>
@@ -4101,10 +3529,10 @@ var[data-type]:hover::before {
 						<p>A separator denoting the position before which a break occurs between two
 							contiguous pages in a statically paginated version of the content.</p>
 						<div class="example" id="example-33">
-          <div class="marker">
-      <a class="self-link" href="#example-33">Example<bdi> 33</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pg04"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagebreak"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"4"</span>/&gt;</span></code></pre>
-        </div>
+        <div class="marker">
+    <a class="self-link" href="#example-33">Example<bdi> 33</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pg04"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagebreak"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"4"</span>/&gt;</span></code></pre>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -4196,9 +3624,9 @@ var[data-type]:hover::before {
 						<p>A navigational aid that provides a list of links to the pagebreaks in the
 							content.</p>
 						<div class="example" id="example-34">
-          <div class="marker">
-      <a class="self-link" href="#example-34">Example<bdi> 34</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagelist"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-34">Example<bdi> 34</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagelist"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Pages<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"chapter.xhtml#Page_1"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -4206,7 +3634,7 @@ var[data-type]:hover::before {
       …
    <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -4299,9 +3727,9 @@ var[data-type]:hover::before {
 							sections dealing with a particular subject, narrative arc or similar
 							encapsulated theme.</p>
 						<div class="example" id="example-35">
-          <div class="marker">
-      <a class="self-link" href="#example-35">Example<bdi> 35</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-part"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-35">Example<bdi> 35</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-part"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Part One<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-chapter"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Chapter 1<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
@@ -4309,7 +3737,7 @@ var[data-type]:hover::before {
    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -4401,13 +3829,13 @@ var[data-type]:hover::before {
 						<p>An introductory section that precedes the work, typically written by the
 							author of the work.</p>
 						<div class="example" id="example-36">
-          <div class="marker">
-      <a class="self-link" href="#example-36">Example<bdi> 36</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-preface"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-36">Example<bdi> 36</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-preface"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Introduction:A Guide to the Galaxy<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -4499,9 +3927,9 @@ var[data-type]:hover::before {
 						<p>An introductory section that sets the background to a work, typically
 							part of the narrative.</p>
 						<div class="example" id="example-37">
-          <div class="marker">
-      <a class="self-link" href="#example-37">Example<bdi> 37</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-prologue"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-37">Example<bdi> 37</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-prologue"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Prologue<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Chorus<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -4509,7 +3937,7 @@ var[data-type]:hover::before {
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Two households, both alike in dignity, …<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -4609,22 +4037,22 @@ var[data-type]:hover::before {
 							be presented elsewhere (e.g., via a script). In this case, the pullquote
 							is not hidden as the marked text is not presentational.</p>
 						<div class="example" id="example-38">
-          <div class="marker">
-      <a class="self-link" href="#example-38">Example<bdi> 38</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>… I may die, but first you, my tyrant and tormentor, shall curse the sun that gazes on your misery.
+        <div class="marker">
+    <a class="self-link" href="#example-38">Example<bdi> 38</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>… I may die, but first you, my tyrant and tormentor, shall curse the sun that gazes on your misery.
    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pq01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pullquote"</span>&gt;</span>Beware, for I am fearless and therefore powerful.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
    I will watch with the wiliness of a snake, that I may sting with its venom. … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
-        </div>
+      </div>
 						<p>The next example shows a pullquote that duplicates the text. This quote
 							is hidden because it is for presentational purposes only.</p>
 						<div class="example" id="example-39">
-          <div class="marker">
-      <a class="self-link" href="#example-39">Example<bdi> 39</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>… Better habits pave the way to growth, and growth leads to greater happiness.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-39">Example<bdi> 39</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>… Better habits pave the way to growth, and growth leads to greater happiness.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pullquote"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
    Better habits pave the way to growth, and growth leads to greater happiness.
 <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -4716,9 +4144,9 @@ var[data-type]:hover::before {
 						<p>A section of content structured as a series of questions and answers,
 							such as an interview or list of frequently asked questions.</p>
 						<div class="example" id="example-40">
-          <div class="marker">
-      <a class="self-link" href="#example-40">Example<bdi> 40</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-qna"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-40">Example<bdi> 40</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-qna"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Interview with the Author<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Q: When did you begin writing this book?<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
@@ -4726,7 +4154,7 @@ var[data-type]:hover::before {
       …
    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -4818,13 +4246,13 @@ var[data-type]:hover::before {
 						<p>An explanatory or alternate title for the work, or a section or component
 							within it.</p>
 						<div class="example" id="example-41">
-          <div class="marker">
-      <a class="self-link" href="#example-41">Example<bdi> 41</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-41">Example<bdi> 41</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Chapter 2 The Battle<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-subtitle"</span>&gt;</span>Once more unto the breach<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -4921,14 +4349,14 @@ var[data-type]:hover::before {
 						<p>Helpful information that clarifies some aspect of the content or assists
 							in its comprehension.</p>
 						<div class="example" id="example-42">
-          <div class="marker">
-      <a class="self-link" href="#example-42">Example<bdi> 42</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-tip"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-42">Example<bdi> 42</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-tip"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Tip<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You can assign a variable a new value that is the result
       of an expression involving its previous value.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -5021,9 +4449,9 @@ var[data-type]:hover::before {
 							sectional headings in the content. A table of contents may cover an
 							entire work, or only a smaller section of it.</p>
 						<div class="example" id="example-43">
-          <div class="marker">
-      <a class="self-link" href="#example-43">Example<bdi> 43</bdi></a>
-    </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-toc"</span>&gt;</span>
+        <div class="marker">
+    <a class="self-link" href="#example-43">Example<bdi> 43</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-toc"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Contents<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"directory"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"preface_001.xhtml"</span>&gt;</span>Original Transcriber’s Notes:<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -5033,7 +4461,7 @@ var[data-type]:hover::before {
       …
    <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></code></pre>
-        </div>
+      </div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -5241,14 +4669,20 @@ var[data-type]:hover::before {
 					Government.</p>
 			</section>
 		</section>
-	<script type="text/javascript">(function(){window['__CF$cv$params']={r:'57c49434dcf5ff84',m:'8318323e8e17f1acc5957ce8a516a82e254e5c2d-1585600126-1800-AWpL7dxnz6O8oJhmXfgKUZLu4B+FPB8iz4BYhLhEFf/PZyIgY7mTLzP5gsN6LNG/PcW8Y8JWUUT549OxeVSVmY4kquBUVwqpU2yLA2DMpdafXeREKqgMzaEAls/++C29N0iewaa3iQiEmHbLyY4Pg8Z/Y/wVJNP+KQpfcAWko32bn/w01qohL70krLGB2H/cYw==',s:[0x62511b580e,0xfa1567e1aa],fb:0,}})();</script>
+	<script type="text/javascript">(function(){window['__CF$cv$params']={r:'5878ec56ed2f73b9',m:'a9c3b46737f581d9f4fb8844ae6133b2bc57eda9-1587491173-1800-AYHe9GkJ5+ojIX2H59U8ZmsGPmfjzUBNXLiaUVhltsoF74JGPraV2pzxBeUYNULUqdbx3tjGQrjRcgyfim5BwPNKgCXNXK9zogyw5PxpOAB7ZsJ5O2cvPoWIaxrdx4AtLb329g1inpM/AkDqv7bLFn9O1yjwk4z/qbzJFZhJtI2mgT7Fwk+7g2PMJjxiy15GEg==',s:[0x7ed9612163,0xd657751619],fb:0,}})();</script>
 
 <section id="references" class="appendix"><h2 id="e-references"><bdi class="secno">E. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="normative-references">
-        <h3 id="e-1-normative-references"><bdi class="secno">E.1 </bdi>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
-      <dl class="bibliography">
-        <dt id="bib-epub-ssv">[EPUB-SSV]</dt><dd><a href="http://www.idpf.org/epub/vocab/structure/"><cite>EPUB Structural Semantics Vocabulary</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/vocab/structure/">http://www.idpf.org/epub/vocab/structure/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://tools.ietf.org/html/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc8174">https://tools.ietf.org/html/rfc8174</a></dd>
-      </dl></section><section id="informative-references">
-        <h3 id="e-2-informative-references"><bdi class="secno">E.2 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
-      <dl class="bibliography">
-        <dt id="bib-at-spi">[AT-SPI]</dt><dd><a href="https://developer.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/libatspi/stable/">https://developer.gnome.org/libatspi/stable/</a></dd><dt id="bib-atk">[ATK]</dt><dd><a href="https://developer.gnome.org/atk/stable/"><cite>ATK - Accessibility Toolkit</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/atk/stable/">https://developer.gnome.org/atk/stable/</a></dd><dt id="bib-axapi">[AXAPI]</dt><dd><a href="https://developer.apple.com/documentation/appkit/nsaccessibility"><cite>The NSAccessibility Protocol for macOS</cite></a>.  Apple, Inc. URL: <a href="https://developer.apple.com/documentation/appkit/nsaccessibility">https://developer.apple.com/documentation/appkit/nsaccessibility</a></dd><dt id="bib-core-aam-1.1">[CORE-AAM-1.1]</dt><dd><a href="https://www.w3.org/TR/core-aam-1.1/"><cite>Core Accessibility API Mappings 1.1</cite></a>. Joanmarie Diggs; Joseph Scheuhammer; Richard Schwerdtfeger; Michael Cooper; Andi Snow-Weaver; Aaron Leventhal.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/core-aam-1.1/">https://www.w3.org/TR/core-aam-1.1/</a></dd><dt id="bib-epub-content">[EPUB-Content]</dt><dd><a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html"><cite>EPUB Content Documents 3.1</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html">http://www.idpf.org/epub/31/spec/epub-contentdocs.html</a></dd><dt id="bib-html5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer.  W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-iaccessible2">[IAccessible2]</dt><dd><a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2</a></dd><dt id="bib-msaa">[MSAA]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx"><cite>Microsoft Active Accessibility (MSAA) 2.0</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/ms697707.aspx">https://msdn.microsoft.com/en-us/library/ms697707.aspx</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-ui-automation">[UI-AUTOMATION]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx"><cite>UI Automation</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx">https://msdn.microsoft.com/en-us/library/ee684009%28v=vs.85%29.aspx</a></dd><dt id="bib-uia-express">[UIA-EXPRESS]</dt><dd><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx"><cite>The IAccessibleEx Interface</cite></a>.  Microsoft Corporation. URL: <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/dd561898%28v=vs.85%29.aspx</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd><dt id="bib-wcag21">[WCAG21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd>
-      </dl></section></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+      <h3 id="e-1-normative-references"><bdi class="secno">E.1 </bdi>
+        Normative references
+      <a class="self-link" aria-label="§" href="#normative-references"></a></h3>
+    <dl class="bibliography">
+      <dt id="bib-epub-ssv">[EPUB-SSV]</dt><dd><a href="http://www.idpf.org/epub/vocab/structure/"><cite>EPUB Structural Semantics Vocabulary</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/vocab/structure/">http://www.idpf.org/epub/vocab/structure/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://tools.ietf.org/html/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc8174">https://tools.ietf.org/html/rfc8174</a></dd>
+    </dl></section><section id="informative-references">
+      <h3 id="e-2-informative-references"><bdi class="secno">E.2 </bdi>
+        Informative references
+      <a class="self-link" aria-label="§" href="#informative-references"></a></h3>
+    <dl class="bibliography">
+      <dt id="bib-at-spi">[AT-SPI]</dt><dd><a href="https://developer.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/libatspi/stable/">https://developer.gnome.org/libatspi/stable/</a></dd><dt id="bib-atk">[ATK]</dt><dd><a href="https://developer.gnome.org/atk/stable/"><cite>ATK - Accessibility Toolkit</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/atk/stable/">https://developer.gnome.org/atk/stable/</a></dd><dt id="bib-axapi">[AXAPI]</dt><dd><a href="https://developer.apple.com/documentation/appkit/nsaccessibility"><cite>The NSAccessibility Protocol for macOS</cite></a>.  Apple, Inc. URL: <a href="https://developer.apple.com/documentation/appkit/nsaccessibility">https://developer.apple.com/documentation/appkit/nsaccessibility</a></dd><dt id="bib-core-aam-1.1">[CORE-AAM-1.1]</dt><dd><a href="https://www.w3.org/TR/core-aam-1.1/"><cite>Core Accessibility API Mappings 1.1</cite></a>. Joanmarie Diggs; Joseph Scheuhammer; Richard Schwerdtfeger; Michael Cooper; Andi Snow-Weaver; Aaron Leventhal.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/core-aam-1.1/">https://www.w3.org/TR/core-aam-1.1/</a></dd><dt id="bib-epub-content">[EPUB-Content]</dt><dd><a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html"><cite>EPUB Content Documents 3.1</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html">http://www.idpf.org/epub/31/spec/epub-contentdocs.html</a></dd><dt id="bib-html5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer.  W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-iaccessible2">[IAccessible2]</dt><dd><a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2</a></dd><dt id="bib-msaa">[MSAA]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility"><cite>Microsoft Active Accessibility (MSAA)</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility">https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-ui-automation">[UI-AUTOMATION]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification"><cite>UI Automation</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification">https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification</a></dd><dt id="bib-uia-express">[UIA-EXPRESS]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex"><cite>The IAccessibleEx Interface</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex">https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd><dt id="bib-wcag21">[WCAG21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd>
+    </dl></section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
