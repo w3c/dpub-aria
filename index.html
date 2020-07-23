@@ -8,13 +8,298 @@
 		
 		
 		
-	<script async="" src="/cdn-cgi/bm/cv/2172558837/api.js"></script><style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style><meta name="description" content="Enabling users of assistive technologies to find their way through Web content
-				requires embedding semantic metadata about Web document structural divisions. This
-				is particularly important for structural divisions of long-form documents and goes
-				along with embedding semantic metadata about Web-application widgets and behaviors
-				for assistive technologies. This specification defines a set of WAI-ARIA roles
-				specific to helping users of assistive technologies navigate through such long-form
-				documents."><link rel="canonical" href="https://www.w3.org/TR/dpub-aria/"><style>.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}.hljs-comment,.hljs-quote{color:#717277;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}.hljs-literal{color:#0b76c5}.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}</style><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
+	<script async="" src="/cdn-cgi/bm/cv/2172558837/api.js"></script><style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style><meta name="description" content="Enabling users of assistive technologies to find their way through Web content requires embedding semantic
+				metadata about Web document structural divisions. This is particularly important for structural divisions of
+				long-form documents and goes along with embedding semantic metadata about Web-application widgets and
+				behaviors for assistive technologies. This specification defines a set of WAI-ARIA roles specific to helping
+				users of assistive technologies navigate through such long-form documents."><link rel="canonical" href="https://www.w3.org/TR/dpub-aria/"><script type="application/ld+json">{
+  "@context": [
+    "http://schema.org",
+    {
+      "@vocab": "http://schema.org/",
+      "@language": "en-US",
+      "w3p": "http://www.w3.org/2001/02pd/rec54#",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "datePublished": {
+        "@type": "http://www.w3.org/2001/XMLSchema#date"
+      },
+      "inLanguage": {
+        "@language": null
+      },
+      "isBasedOn": {
+        "@type": "@id"
+      },
+      "license": {
+        "@type": "@id"
+      }
+    }
+  ],
+  "id": "https://www.w3.org/TR/dpub-aria/",
+  "type": [
+    "TechArticle"
+  ],
+  "name": "Digital Publishing WAI-ARIA Module 1.1",
+  "inLanguage": "en-US",
+  "license": "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document",
+  "datePublished": "2020-07-23",
+  "copyrightHolder": {
+    "name": "World Wide Web Consortium",
+    "url": "https://www.w3.org/"
+  },
+  "discussionUrl": "https://github.com/w3c/dpub-aria/issues/",
+  "alternativeHeadline": "",
+  "isBasedOn": "",
+  "description": "Enabling users of assistive technologies to find their way through Web content requires embedding semantic\n\t\t\t\tmetadata about Web document structural divisions. This is particularly important for structural divisions of\n\t\t\t\tlong-form documents and goes along with embedding semantic metadata about Web-application widgets and\n\t\t\t\tbehaviors for assistive technologies. This specification defines a set of WAI-ARIA roles specific to helping\n\t\t\t\tusers of assistive technologies navigate through such long-form documents.",
+  "editor": [
+    {
+      "type": "Person",
+      "name": "Matt Garrish",
+      "url": "http://www.daisy.org",
+      "worksFor": {
+        "name": "DAISY Consortium"
+      }
+    },
+    {
+      "type": "Person",
+      "name": "Tzviya Siegman",
+      "url": "http://www.wiley.com",
+      "foaf:mbox": "tsiegman@wiley.com",
+      "worksFor": {
+        "name": "Wiley"
+      }
+    },
+    {
+      "type": "Person",
+      "name": "Shane McCarron",
+      "url": "http://blog.halindrome.com",
+      "foaf:mbox": "shane@spec-ops.io",
+      "worksFor": {
+        "name": "Spec-Ops"
+      }
+    }
+  ],
+  "citation": [
+    {
+      "id": "http://www.idpf.org/epub/vocab/structure/",
+      "type": "TechArticle",
+      "name": "EPUB Structural Semantics Vocabulary",
+      "url": "http://www.idpf.org/epub/vocab/structure/",
+      "publisher": {
+        "name": "IDPF"
+      }
+    },
+    {
+      "id": "https://tools.ietf.org/html/rfc2119",
+      "type": "TechArticle",
+      "name": "Key words for use in RFCs to Indicate Requirement Levels",
+      "url": "https://tools.ietf.org/html/rfc2119",
+      "creator": [
+        {
+          "name": "S. Bradner"
+        }
+      ],
+      "publisher": {
+        "name": "IETF"
+      }
+    },
+    {
+      "id": "https://tools.ietf.org/html/rfc8174",
+      "type": "TechArticle",
+      "name": "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words",
+      "url": "https://tools.ietf.org/html/rfc8174",
+      "creator": [
+        {
+          "name": "B. Leiba"
+        }
+      ],
+      "publisher": {
+        "name": "IETF"
+      }
+    },
+    {
+      "id": "https://www.w3.org/TR/wai-aria-1.1/",
+      "type": "TechArticle",
+      "name": "Accessible Rich Internet Applications (WAI-ARIA) 1.1",
+      "url": "https://www.w3.org/TR/wai-aria-1.1/",
+      "creator": [
+        {
+          "name": "Joanmarie Diggs"
+        },
+        {
+          "name": "Shane McCarron"
+        },
+        {
+          "name": "Michael Cooper"
+        },
+        {
+          "name": "Richard Schwerdtfeger"
+        },
+        {
+          "name": "James Craig"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://www.w3.org/TR/html5/",
+      "type": "TechArticle",
+      "name": "HTML5",
+      "url": "https://www.w3.org/TR/html5/",
+      "creator": [
+        {
+          "name": "Ian Hickson"
+        },
+        {
+          "name": "Robin Berjon"
+        },
+        {
+          "name": "Steve Faulkner"
+        },
+        {
+          "name": "Travis Leithead"
+        },
+        {
+          "name": "Erika Doyle Navara"
+        },
+        {
+          "name": "Theresa O'Connor"
+        },
+        {
+          "name": "Silvia Pfeiffer"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://www.w3.org/TR/SVG2/",
+      "type": "TechArticle",
+      "name": "Scalable Vector Graphics (SVG) 2",
+      "url": "https://www.w3.org/TR/SVG2/",
+      "creator": [
+        {
+          "name": "Amelia Bellamy-Royds"
+        },
+        {
+          "name": "Bogdan Brinza"
+        },
+        {
+          "name": "Chris Lilley"
+        },
+        {
+          "name": "Dirk Schulze"
+        },
+        {
+          "name": "David Storey"
+        },
+        {
+          "name": "Eric Willigers"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility",
+      "type": "TechArticle",
+      "name": "Microsoft Active Accessibility (MSAA)",
+      "url": "https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility",
+      "publisher": {
+        "name": "Microsoft Corporation"
+      }
+    },
+    {
+      "id": "https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification",
+      "type": "TechArticle",
+      "name": "UI Automation",
+      "url": "https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification",
+      "publisher": {
+        "name": "Microsoft Corporation"
+      }
+    },
+    {
+      "id": "https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex",
+      "type": "TechArticle",
+      "name": "The IAccessibleEx Interface",
+      "url": "https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex",
+      "publisher": {
+        "name": "Microsoft Corporation"
+      }
+    },
+    {
+      "id": "https://developer.apple.com/documentation/appkit/nsaccessibility",
+      "type": "TechArticle",
+      "name": "The NSAccessibility Protocol for macOS",
+      "url": "https://developer.apple.com/documentation/appkit/nsaccessibility",
+      "publisher": {
+        "name": "Apple, Inc."
+      }
+    },
+    {
+      "id": "https://developer.gnome.org/atk/stable/",
+      "type": "TechArticle",
+      "name": "ATK - Accessibility Toolkit",
+      "url": "https://developer.gnome.org/atk/stable/",
+      "publisher": {
+        "name": "The GNOME Project"
+      }
+    },
+    {
+      "id": "https://developer.gnome.org/libatspi/stable/",
+      "type": "TechArticle",
+      "name": "Assistive Technology Service Provider Interface",
+      "url": "https://developer.gnome.org/libatspi/stable/",
+      "publisher": {
+        "name": "The GNOME Project"
+      }
+    },
+    {
+      "id": "https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2",
+      "type": "TechArticle",
+      "name": "IAccessible2",
+      "url": "https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2",
+      "publisher": {
+        "name": "Linux Foundation"
+      }
+    },
+    {
+      "id": "https://www.w3.org/TR/WCAG21/",
+      "type": "TechArticle",
+      "name": "Web Content Accessibility Guidelines (WCAG) 2.1",
+      "url": "https://www.w3.org/TR/WCAG21/",
+      "creator": [
+        {
+          "name": "Andrew Kirkpatrick"
+        },
+        {
+          "name": "Joshue O Connor"
+        },
+        {
+          "name": "Alastair Campbell"
+        },
+        {
+          "name": "Michael Cooper"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "http://www.idpf.org/epub/31/spec/epub-contentdocs.html",
+      "type": "TechArticle",
+      "name": "EPUB Content Documents 3.1",
+      "url": "http://www.idpf.org/epub/31/spec/epub-contentdocs.html",
+      "publisher": {
+        "name": "IDPF"
+      }
+    }
+  ]
+}</script><style>.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}.hljs-comment,.hljs-quote{color:#717277;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}.hljs-literal{color:#0b76c5}.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}</style><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
   "wg": "Publishing Working Group",
   "specStatus": "ED",
   "shortName": "dpub-aria",
@@ -59,6 +344,27 @@
   "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/100074/status",
   "otherLinks": [
     {
+      "key": "Participate",
+      "data": [
+        {
+          "value": "GitHub w3c/dpub-aria",
+          "href": "https://github.com/w3c/dpub-aria/"
+        },
+        {
+          "value": "File a bug",
+          "href": "https://github.com/w3c/dpub-aria/issues/"
+        },
+        {
+          "value": "Commit history",
+          "href": "https://github.com/w3c/dpub-aria/commits/gh-pages"
+        },
+        {
+          "value": "Pull requests",
+          "href": "https://github.com/w3c/dpub-aria/pulls/"
+        }
+      ]
+    },
+    {
       "key": "Repository",
       "data": [
         {
@@ -79,24 +385,20 @@
   ],
   "copyrightStart": "2015",
   "processVersion": 2018,
+  "github": "w3c/dpub-aria",
+  "doJsonLd": true,
   "trace": true,
-  "useExperimentalStyles": true,
-  "doRDFa": "1.1",
-  "includePermalinks": true,
-  "permalinkEdge": true,
-  "permalinkHide": false,
-  "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
   "maxTocLevel": 4,
-  "publishDate": "2020-07-10",
-  "publishISODate": "2020-07-10T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 10 July 2020"
+  "publishDate": "2020-07-23",
+  "publishISODate": "2020-07-23T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 23 July 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1>
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2020-07-10">10 July 2020</time>
+      <time class="dt-published" datetime="2020-07-23">23 July 2020</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -116,7 +418,15 @@
               Former editor:
             </dt><dd class="p-author h-card vcard" data-editor-id="21614"><a class="ed_mailto u-email email p-name" href="mailto:mgylling@daisy.org">Markus Gylling</a> (DAISY Consortium) </dd>
       
-      <dt>Repository:</dt><dd>
+      <dt>Participate:</dt><dd>
+    <a href="https://github.com/w3c/dpub-aria/">GitHub w3c/dpub-aria</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/dpub-aria/issues/">File a bug</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/dpub-aria/commits/gh-pages">Commit history</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/dpub-aria/pulls/">Pull requests</a>
+  </dd><dt>Repository:</dt><dd>
     <a href="https://github.com/w3c/dpub-aria">Github Repository</a>
   </dd><dt>Changes:</dt><dd>
     <a href="https://github.com/w3c/dpub-aria/commits/master">Commit history</a>
@@ -140,13 +450,11 @@
     <hr title="Separator for header">
   </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
-			<p>Enabling users of assistive technologies to find their way through Web content
-				requires embedding semantic metadata about Web document structural divisions. This
-				is particularly important for structural divisions of long-form documents and goes
-				along with embedding semantic metadata about Web-application widgets and behaviors
-				for assistive technologies. This specification defines a set of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles
-				specific to helping users of assistive technologies navigate through such long-form
-				documents.</p>
+			<p>Enabling users of assistive technologies to find their way through Web content requires embedding semantic
+				metadata about Web document structural divisions. This is particularly important for structural divisions of
+				long-form documents and goes along with embedding semantic metadata about Web-application widgets and
+				behaviors for assistive technologies. This specification defines a set of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles specific to helping
+				users of assistive technologies navigate through such long-form documents.</p>
 			<p>This document is part of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> suite described in the <a href="http://www.w3.org/WAI/intro/aria.php"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Overview</a>.</p>
 		</section>
 		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
@@ -161,8 +469,10 @@
     Editor's Draft.
     
   </p><p>
-    
-    Comments regarding this document are welcome.
+    <a href="https://github.com/w3c/dpub-aria/issues/">GitHub Issues</a> are preferred for
+          discussion of this specification.
+        
+    Alternatively, you can send comments to our mailing list.
           Please send them to
           <a href="mailto:public-publ-wg@w3.org">public-publ-wg@w3.org</a>
           (<a href="https://lists.w3.org/Archives/Public/public-publ-wg/">archives</a>).
@@ -194,144 +504,121 @@
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section>
-		<nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target Audience</a></li><li class="tocline"><a class="tocxref" href="#ua-support"><bdi class="secno">1.2 </bdi>User Agent Support</a></li><li class="tocline"><a class="tocxref" href="#co-evolution"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><bdi class="secno">1.4 </bdi>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><bdi class="secno">1.5 </bdi>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#terms"><bdi class="secno">3. </bdi>Important Terms</a></li><li class="tocline"><a class="tocxref" href="#roles"><bdi class="secno">4. </bdi>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><bdi class="secno">4.1 </bdi>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#a_schemata"><bdi class="secno">A. </bdi>Schemata</a></li><li class="tocline"><a class="tocxref" href="#exit_criteria"><bdi class="secno">B. </bdi>Candidate Recommendation Exit Criteria</a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">C. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#substantive-changes-since-the-last-public-working-draft"><bdi class="secno">C.1 </bdi>Substantive changes since the <span class="formerLink">last public
-						working draft</span></a></li><li class="tocline"><a class="tocxref" href="#other-substantive-changes-since-the-first-public-working-draft"><bdi class="secno">C.2 </bdi>Other substantive changes since the <span class="formerLink">First Public
-						Working Draft</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><bdi class="secno">D.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">D.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">E.1 </bdi>
+		<nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target Audience</a></li><li class="tocline"><a class="tocxref" href="#ua-support"><bdi class="secno">1.2 </bdi>User Agent Support</a></li><li class="tocline"><a class="tocxref" href="#co-evolution"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host
+					Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><bdi class="secno">1.4 </bdi>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><bdi class="secno">1.5 </bdi>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#terms"><bdi class="secno">3. </bdi>Important Terms</a></li><li class="tocline"><a class="tocxref" href="#roles"><bdi class="secno">4. </bdi>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><bdi class="secno">4.1 </bdi>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#a_schemata"><bdi class="secno">A. </bdi>Schemata</a></li><li class="tocline"><a class="tocxref" href="#exit_criteria"><bdi class="secno">B. </bdi>Candidate Recommendation Exit Criteria</a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">C. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#substantive-changes-since-the-last-public-working-draft"><bdi class="secno">C.1 </bdi>Substantive changes since the <span class="formerLink">last
+						public working draft</span></a></li><li class="tocline"><a class="tocxref" href="#other-substantive-changes-since-the-first-public-working-draft"><bdi class="secno">C.2 </bdi>Other substantive changes since the <span class="formerLink">First
+						Public Working Draft</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><bdi class="secno">D.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">D.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">E.1 </bdi>
         Normative references
       </a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.2 </bdi>
         Informative references
       </a></li></ol></li></ol></nav>
 		<section class="informative" id="introduction">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2><p><em>This section is non-normative.</em></p>
-			<p><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is a technical
-				specification that defines a common host language semantic accessibility <abbr title="Application Programming Interfaces">API</abbr> and
-				framework that enables web browsers to map the accessibility semantics in web
-				content to platform-specific accessibility APIs. This enables web content to be
-				interoperable with platform assistive technologies similar to native platform
-				applications without platform dependencies.</p>
-			<p>This specification is a modular extension of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> designed for the
-				digital publishing industry. The goals of this specification include:</p>
+			<p><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is a technical specification that
+				defines a common host language semantic accessibility <abbr title="Application Programming Interfaces">API</abbr> and framework that enables web browsers to map the
+				accessibility semantics in web content to platform-specific accessibility APIs. This enables web content to
+				be interoperable with platform assistive technologies similar to native platform applications without
+				platform dependencies.</p>
+			<p>This specification is a modular extension of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> designed for the digital publishing industry. The goals of this specification
+				include:</p>
 			<ul>
-				<li>Expanding [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] to produce structural semantic extensions to accommodate
-					the digital publishing industry.</li>
+				<li>Expanding [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] to produce structural semantic extensions to accommodate the digital publishing
+					industry.</li>
 				<li>Align with a new governance model for modularization and extensions to <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>.</li>
-				<li>Provide structural semantics extensions that will support both assistive
-					technologies and enable semantic navigation, styling and interactive features
-					used by readers.</li>
+				<li>Provide structural semantics extensions that will support both assistive technologies and enable
+					semantic navigation, styling and interactive features used by readers.</li>
 			</ul>
-			<p>The roles defined in this specification are derived from the <a href="https://idpf.github.io/epub-vocabs/structure/">EPUB Structural Semantics
-					Vocabulary</a>.</p>
-			<p>For a more detailed explanation of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> please refer to
-				the <a href="http://www.w3.org/WAI/intro/aria"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Introduction</a> and how it
-				applies to Rich Internet Application Accessibility.</p>
+			<p>The roles defined in this specification are derived from the <a href="https://idpf.github.io/epub-vocabs/structure/">EPUB Structural Semantics Vocabulary</a>.</p>
+			<p>For a more detailed explanation of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
+				please refer to the <a href="http://www.w3.org/WAI/intro/aria"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Introduction</a> and how it applies
+				to Rich Internet Application Accessibility.</p>
 
 			<section id="target-audience">
 				<h3 id="x1-1-target-audience"><bdi class="secno">1.1 </bdi>Target Audience<a class="self-link" aria-label="§" href="#target-audience"></a></h3>
-				<p>This specification defines a module of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> for digital
-					publishing, including <a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>, <a data-lt="state" href="#dfn-state" class="internalDFN" data-link-type="dfn">states</a>, <a data-lt="property" href="#dfn-property" class="internalDFN" data-link-type="dfn">properties</a> and values. It impacts several
-					audiences:</p>
+				<p>This specification defines a module of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> for digital publishing, including <a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>, <a data-lt="state" href="#dfn-state" class="internalDFN" data-link-type="dfn">states</a>, <a data-lt="property" href="#dfn-property" class="internalDFN" data-link-type="dfn">properties</a> and values. It impacts several audiences:</p>
 				<ul>
-					<li><a data-lt="user agent" href="#dfn-user-agent" class="internalDFN" data-link-type="dfn">User agents</a> that process content containing
-							<abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and
-						Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> features;</li>
-					<li><a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">Assistive technologies</a> that provide specialized reading experiences
-						to users with disabilities;</li>
+					<li><a data-lt="user agent" href="#dfn-user-agent" class="internalDFN" data-link-type="dfn">User agents</a> that process content containing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> features;</li>
+					<li><a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">Assistive technologies</a> that provide specialized reading experiences to users with
+						disabilities;</li>
 					<li>Authors of digital publications;</li>
-					<li>Authoring tools that help authors create conforming digital publications;
-						and</li>
-					<li>Conformance checkers, that verify appropriate use of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and this
-						Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module.</li>
+					<li>Authoring tools that help authors create conforming digital publications; and</li>
+					<li>Conformance checkers, that verify appropriate use of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and this Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module.</li>
 				</ul>
 				<p>Each conformance requirement indicates the audience to which it applies.</p>
-				<p>Although this specification is applicable to the above audiences, it is not
-					specifically targeted to, nor is it intended to be the sole source of
-					information for, any of these audiences. In the future, additional documents
-					will be created to assist authors in applying these <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> semantics for
-					the publishing industry and to define how the information in this document is
-					mapped to platform accessibility APIs.</p>
+				<p>Although this specification is applicable to the above audiences, it is not specifically targeted to, nor
+					is it intended to be the sole source of information for, any of these audiences. In the future,
+					additional documents will be created to assist authors in applying these <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> semantics for the publishing industry
+					and to define how the information in this document is mapped to platform accessibility APIs.</p>
 			</section>
 
 			<section id="ua-support">
 				<h3 id="x1-2-user-agent-support"><bdi class="secno">1.2 </bdi>User Agent Support<a class="self-link" aria-label="§" href="#ua-support"></a></h3>
-				<p>This module builds on the general <a href="http://www.w3.org/TR/wai-aria-1.1/#ua-support">User Agent support
-						principles</a> defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] by also providing the ability for
-					user agents to enhance the general user interface presented to readers.</p>
+				<p>This module builds on the general <a href="http://www.w3.org/TR/wai-aria-1.1/#ua-support">User Agent
+						support principles</a> defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] by also providing the ability for user agents to
+					enhance the general user interface presented to readers.</p>
 			</section>
 
 			<section id="co-evolution">
-				<h3 id="x1-3-co-evolution-of-wai-aria-and-host-languages"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages<a class="self-link" aria-label="§" href="#co-evolution"></a></h3>
-				<p>The Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module follows the model for <a href="http://www.w3.org/TR/wai-aria-1.1/#co-evolution">co-evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and host
-						languages</a> defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>]. It is intended to augment semantics
-					in supporting languages like [<cite><a class="bibref" data-link-type="biblio" href="#bib-html5" title="HTML5">HTML5</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-svg2" title="Scalable Vector Graphics (SVG) 2">SVG2</a></cite>] and EPUB, or to be used as an
-					accessibility enhancement technology in other markup-based languages that do not
-					explicitly include support for ARIA. It clarifies semantics to assistive
-					technologies when authors create new types of objects, via style and script,
-					that are not yet directly supported by the language of the page, because the
-					invention of new types of objects is faster than standardized support for them
+				<h3 id="x1-3-co-evolution-of-wai-aria-and-host-languages"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host
+					Languages<a class="self-link" aria-label="§" href="#co-evolution"></a></h3>
+				<p>The Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module follows
+					the model for <a href="http://www.w3.org/TR/wai-aria-1.1/#co-evolution">co-evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and host languages</a> defined in
+					[<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>]. It is intended to augment semantics in supporting languages like [<cite><a class="bibref" data-link-type="biblio" href="#bib-html5" title="HTML5">HTML5</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-svg2" title="Scalable Vector Graphics (SVG) 2">SVG2</a></cite>] and
+					EPUB, or to be used as an accessibility enhancement technology in other markup-based languages that do
+					not explicitly include support for ARIA. It clarifies semantics to assistive technologies when authors
+					create new types of objects, via style and script, that are not yet directly supported by the language of
+					the page, because the invention of new types of objects is faster than standardized support for them
 					appears in web languages.</p>
-				<p>It is not appropriate to create objects with style and script when the host
-					language provides a semantic element for that type of objects. While <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> can improve
-					the accessibility of these objects, accessibility is best provided by allowing
-					the user agent to handle the object natively. For example, it is not better to
-					use a <rref>heading</rref> role on a <code>div</code> element than it is to use
-					a native heading element, such as an <code>h1</code>.</p>
-				<p>It is expected that, over time, host languages will evolve to provide semantics
-					for objects that currently can only be declared with this specification. This is
-					natural and desirable, as one goal of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is to help
-					stimulate the emergence of more semantic and accessible markup. When native
-					semantics for a given feature become available, it is appropriate for authors to
-					use the native feature and stop using this module for that feature. Legacy
-					content may continue to use the Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module,
-					however, so the need for user agents to support it remains.</p>
-				<p>While specific features of this module may lose importance over time, the general
-					possibility of the Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module to add
-					semantics to web pages or open web based standards, such as EPUB, is expected to
-					be a persistent need. Host languages may not implement all the semantics this
-					module provides, and various host languages may implement different subsets of
-					the features. New types of objects are continually being developed, and one goal
-					of this specification is to provide a way to make such objects accessible,
-					because authoring practices often advance faster than host language standards.
-					In this way, this module and host languages both evolve together but at
-					different rates.</p>
-				<p>Some host languages exist to create semantics for features other than the user
-					interface. For example, <abbr title="Scalable Vector Graphics">SVG</abbr> expresses the semantics behind production of
-					graphical objects, not of user interface components that those objects may
-					represent. Host languages such as these might, by design, not provide native
-					semantics that map to this specification's features. In these cases, the Digital
-					Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
-					module could be adopted as a long-term approach to add semantic information to
-					these host languages.</p>
+				<p>It is not appropriate to create objects with style and script when the host language provides a semantic
+					element for that type of objects. While <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> can improve the accessibility of these objects, accessibility is best provided by
+					allowing the user agent to handle the object natively. For example, it is not better to use a
+						<rref>heading</rref> role on a <code>div</code> element than it is to use a native heading element,
+					such as an <code>h1</code>.</p>
+				<p>It is expected that, over time, host languages will evolve to provide semantics for objects that
+					currently can only be declared with this specification. This is natural and desirable, as one goal of
+						<abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is to help stimulate the emergence
+					of more semantic and accessible markup. When native semantics for a given feature become available, it is
+					appropriate for authors to use the native feature and stop using this module for that feature. Legacy
+					content may continue to use the Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module, however, so the need for user agents to support it remains.</p>
+				<p>While specific features of this module may lose importance over time, the general possibility of the
+					Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module to add
+					semantics to web pages or open web based standards, such as EPUB, is expected to be a persistent need.
+					Host languages may not implement all the semantics this module provides, and various host languages may
+					implement different subsets of the features. New types of objects are continually being developed, and
+					one goal of this specification is to provide a way to make such objects accessible, because authoring
+					practices often advance faster than host language standards. In this way, this module and host languages
+					both evolve together but at different rates.</p>
+				<p>Some host languages exist to create semantics for features other than the user interface. For example,
+					<abbr title="Scalable Vector Graphics">SVG</abbr> expresses the semantics behind production of graphical objects, not of user interface components that
+					those objects may represent. Host languages such as these might, by design, not provide native semantics
+					that map to this specification's features. In these cases, the Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module could be adopted as a long-term
+					approach to add semantic information to these host languages.</p>
 			</section>
 
 			<section id="authoring_practices">
 				<h3 id="x1-4-authoring-practices"><bdi class="secno">1.4 </bdi>Authoring Practices<a class="self-link" aria-label="§" href="#authoring_practices"></a></h3>
 				<section id="authoring_tools">
 					<h4 id="x1-4-1-authoring-tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools<a class="self-link" aria-label="§" href="#authoring_tools"></a></h4>
-					<p>Many of the requirements in the definitions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and
-						Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
-						<a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>, <a data-lt="state" href="#dfn-state" class="internalDFN" data-link-type="dfn">states</a> and <a data-lt="property" href="#dfn-property" class="internalDFN" data-link-type="dfn">properties</a> can be checked automatically during
-						the development process, similar to other quality control processes used for
-						validating code. To assist authors who are creating digital publications,
-						such as EPUB, can compare the semantic structure of Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles from
-						the <abbr title="Document Object Model">DOM</abbr> to that defined in this
-						specification and notify the author of errors or simply create templates
-						that enforce that structure.</p>
+					<p>Many of the requirements in the definitions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
+						<a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>, <a data-lt="state" href="#dfn-state" class="internalDFN" data-link-type="dfn">states</a> and <a data-lt="property" href="#dfn-property" class="internalDFN" data-link-type="dfn">properties</a>
+						can be checked automatically during the development process, similar to other quality control
+						processes used for validating code. To assist authors who are creating digital publications, such as
+						EPUB, can compare the semantic structure of Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles from the <abbr title="Document Object Model">DOM</abbr> to that defined in this specification and notify the
+						author of errors or simply create templates that enforce that structure.</p>
 				</section>
 
 				<section id="authoring_testing">
 					<h4 id="x1-4-2-testing-practices-and-tools"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools<a class="self-link" aria-label="§" href="#authoring_testing"></a></h4>
-					<p>The accessibility of interactive content cannot be confirmed by static checks
-						alone. Developers of interactive content should test for device-independent
-						access to <a data-lt="widget" href="#dfn-widget" class="internalDFN" data-link-type="dfn">widgets</a> and applications, and should
-						verify accessibility <abbr title="application programing interface">API</abbr> access to all content and changes during user
-						interaction.</p>
+					<p>The accessibility of interactive content cannot be confirmed by static checks alone. Developers of
+						interactive content should test for device-independent access to <a data-lt="widget" href="#dfn-widget" class="internalDFN" data-link-type="dfn">widgets</a> and
+						applications, and should verify accessibility <abbr title="application programing interface">API</abbr> access to all content and changes during user interaction.</p>
 				</section>
 			</section>
 
 			<section id="at_support">
 				<h3 id="x1-5-assistive-technologies"><bdi class="secno">1.5 </bdi>Assistive Technologies<a class="self-link" aria-label="§" href="#at_support"></a></h3>
-				<p>Programmatic access to accessibility semantics is essential for assistive
-					technologies. For more information, refer to the <a href="http://www.w3.org/TR/wai-aria-1.1/#at_support">Assistive
+				<p>Programmatic access to accessibility semantics is essential for assistive technologies. For more
+					information, refer to the <a href="http://www.w3.org/TR/wai-aria-1.1/#at_support">Assistive
 						Technologies</a> section in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>].</p>
 			</section>
 		</section>
@@ -344,15 +631,14 @@
         [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>]
         when, and only when, they appear in all capitals, as shown here.
       </p>
-			<p>This specification indicates whether a section is <a href="#dfn-normative" class="internalDFN" data-link-type="dfn">normative</a> or
-					<a href="#dfn-informative" class="internalDFN" data-link-type="dfn">informative</a>. Classifying a section as normative or informative applies to
-				the entire section. A statement "This section is normative" or "This section is
-				informative" applies to all sub-sections of that section.</p>
-			<p>Normative sections provide requirements that authors, user agents and assistive
-				technologies <em class="rfc2119" title="MUST">MUST</em> follow for an implementation to conform to this specification.</p>
-			<p>Informative sections provide information useful to understanding the specification.
-				Such sections may contain examples of recommended practice, but it is not required
-				to follow such recommendations in order to conform to this specification.</p>
+			<p>This specification indicates whether a section is <a href="#dfn-normative" class="internalDFN" data-link-type="dfn">normative</a> or <a href="#dfn-informative" class="internalDFN" data-link-type="dfn">informative</a>. Classifying a
+				section as normative or informative applies to the entire section. A statement "This section is normative"
+				or "This section is informative" applies to all sub-sections of that section.</p>
+			<p>Normative sections provide requirements that authors, user agents and assistive technologies <em class="rfc2119" title="MUST">MUST</em> follow for
+				an implementation to conform to this specification.</p>
+			<p>Informative sections provide information useful to understanding the specification. Such sections may
+				contain examples of recommended practice, but it is not required to follow such recommendations in order to
+				conform to this specification.</p>
 		</section>
 		<section class="informative" id="terms">
 			<h2 id="x3-important-terms"><bdi class="secno">3. </bdi>Important Terms<a class="self-link" aria-label="§" href="#terms"></a></h2><p><em>This section is non-normative.</em></p>
@@ -571,8 +857,7 @@
 			<h2 id="x4-digital-publishing-roles"><bdi class="secno">4. </bdi>Digital Publishing Roles<a class="self-link" aria-label="§" href="#roles"></a></h2>
 			<p>This section defines additions to the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 				<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a>
-				<a href="#dfn-taxonomy" class="internalDFN" data-link-type="dfn">taxonomy</a> and describes the characteristics and properties of all <a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>. See <a href="#roles" class="specref">ARIA Roles</a>
-				for descriptions of the fields provided by this module.</p>
+				<a href="#dfn-taxonomy" class="internalDFN" data-link-type="dfn">taxonomy</a> and describes the characteristics and properties of all <a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>. See <a href="#roles" class="specref">ARIA Roles</a> for descriptions of the fields provided by this module.</p>
 			<section id="role_definitions">
 				<h3 id="x4-1-definition-of-roles"><bdi class="secno">4.1 </bdi>Definition of Roles<a class="self-link" aria-label="§" href="#role_definitions"></a></h3>
 				<p>Below is an alphabetical list of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
@@ -581,8 +866,8 @@
 				<div class="role">
 					<rdef>doc-abstract</rdef>
 					<div class="role-description">
-						<p>A short summary of the principal ideas, concepts and conclusions of the
-							work, or of a section or excerpt within it.</p>
+						<p>A short summary of the principal ideas, concepts and conclusions of the work, or of a section or
+							excerpt within it.</p>
 						<div class="example" id="example-1">
         <div class="marker">
     <a class="self-link" href="#example-1">Example<bdi> 1</bdi></a>
@@ -626,23 +911,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -650,23 +931,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -679,9 +956,8 @@
 				<div class="role">
 					<rdef>doc-acknowledgments</rdef>
 					<div class="role-description">
-						<p>A section or statement that acknowledges significant contributions by
-							persons, organizations, governments and other entities to the
-							realization of the work.</p>
+						<p>A section or statement that acknowledges significant contributions by persons, organizations,
+							governments and other entities to the realization of the work.</p>
 						<div class="example" id="example-2">
         <div class="marker">
     <a class="self-link" href="#example-2">Example<bdi> 2</bdi></a>
@@ -717,30 +993,27 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#acknowledgments">acknowledgments</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#acknowledgments">acknowledgments</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -748,23 +1021,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -777,9 +1046,8 @@
 				<div class="role">
 					<rdef>doc-afterword</rdef>
 					<div class="role-description">
-						<p>A closing statement from the author or a person of importance, typically
-							providing insight into how the content came to be written, its
-							significance, or related events that have transpired since its
+						<p>A closing statement from the author or a person of importance, typically providing insight into how
+							the content came to be written, its significance, or related events that have transpired since its
 							timeline.</p>
 						<div class="example" id="example-3">
         <div class="marker">
@@ -824,23 +1092,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -848,23 +1112,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -877,8 +1137,8 @@
 				<div class="role">
 					<rdef>doc-appendix</rdef>
 					<div class="role-description">
-						<p>A section of supplemental information located after the primary content
-							that informs the content but is not central to it.</p>
+						<p>A section of supplemental information located after the primary content that informs the content
+							but is not central to it.</p>
 						<div class="example" id="example-4">
         <div class="marker">
     <a class="self-link" href="#example-4">Example<bdi> 4</bdi></a>
@@ -922,23 +1182,19 @@
 								<td class="role-scope"> </td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"> </td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties"> </td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties"> </td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited"> </td>
 							</tr>
 							<tr>
@@ -946,23 +1202,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited"> </td>
 							</tr>
 							<tr>
@@ -975,9 +1227,8 @@
 				<div class="role">
 					<rdef>doc-backlink</rdef>
 					<div class="role-description">
-						<p>A link that allows the user to return to a related location in the
-							content (e.g., from a footnote to its reference or from a glossary
-							definition to where a term is used).</p>
+						<p>A link that allows the user to return to a related location in the content (e.g., from a footnote
+							to its reference or from a glossary definition to where a term is used).</p>
 						<div class="example" id="example-5">
         <div class="marker">
     <a class="self-link" href="#example-5">Example<bdi> 5</bdi></a>
@@ -1022,23 +1273,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1051,23 +1298,19 @@
 								</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">True</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1080,13 +1323,11 @@
 				<div class="role">
 					<rdef>doc-biblioentry</rdef>
 					<div class="role-description">
-						<p>A single reference to an external source in a bibliography. A biblioentry
-							typically provides more detailed information than its reference(s) in
-							the content (e.g., full title, author(s), publisher, publication date,
-							etc.).</p>
-						<p>Authors <em class="rfc2119" title="MUST">MUST</em> ensure that <a href="#dfn-element" class="internalDFN" data-link-type="dfn">elements</a> with role
-								<code>doc-biblioentry</code> are contained in, or owned, by an
-							element with the role <rref>list</rref>.</p>
+						<p>A single reference to an external source in a bibliography. A biblioentry typically provides more
+							detailed information than its reference(s) in the content (e.g., full title, author(s), publisher,
+							publication date, etc.).</p>
+						<p>Authors <em class="rfc2119" title="MUST">MUST</em> ensure that <a href="#dfn-element" class="internalDFN" data-link-type="dfn">elements</a> with role <code>doc-biblioentry</code> are contained in,
+							or owned, by an element with the role <rref>list</rref>.</p>
 						<div class="example" id="example-6">
         <div class="marker">
     <a class="self-link" href="#example-6">Example<bdi> 6</bdi></a>
@@ -1141,30 +1382,27 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#biblioentry">biblioentry</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#biblioentry">biblioentry</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
 								<td class="role-scope"><rref>doc-bibliography</rref></td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1172,23 +1410,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">True</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1201,8 +1435,7 @@
 				<div class="role">
 					<rdef>doc-bibliography</rdef>
 					<div class="role-description">
-						<p>A list of external references cited in the work, which may be to print or
-							digital sources.</p>
+						<p>A list of external references cited in the work, which may be to print or digital sources.</p>
 						<div class="example" id="example-8">
         <div class="marker">
     <a class="self-link" href="#example-8">Example<bdi> 8</bdi></a>
@@ -1241,30 +1474,27 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#bibliography">bibliography</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#bibliography">bibliography</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"><rref>doc-biblioentry</rref></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1272,23 +1502,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1346,23 +1572,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1375,23 +1597,19 @@
 								</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">True</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1448,23 +1666,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1472,23 +1686,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1501,8 +1711,8 @@
 				<div class="role">
 					<rdef>doc-colophon</rdef>
 					<div class="role-description">
-						<p>A short section of production notes particular to the edition (e.g.,
-							describing the typeface used), often located at the end of a work.</p>
+						<p>A short section of production notes particular to the edition (e.g., describing the typeface used),
+							often located at the end of a work.</p>
 						<div class="example" id="example-11">
         <div class="marker">
     <a class="self-link" href="#example-11">Example<bdi> 11</bdi></a>
@@ -1545,23 +1755,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1569,23 +1775,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1598,8 +1800,7 @@
 				<div class="role">
 					<rdef>doc-conclusion</rdef>
 					<div class="role-description">
-						<p>A concluding section or statement that summarizes the work or wraps up
-							the narrative.</p>
+						<p>A concluding section or statement that summarizes the work or wraps up the narrative.</p>
 						<div class="example" id="example-12">
         <div class="marker">
     <a class="self-link" href="#example-12">Example<bdi> 12</bdi></a>
@@ -1643,23 +1844,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1667,23 +1864,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1696,8 +1889,7 @@
 				<div class="role">
 					<rdef>doc-cover</rdef>
 					<div class="role-description">
-						<p>An image that sets the mood or tone for the work and typically includes
-							the title and author.</p>
+						<p>An image that sets the mood or tone for the work and typically includes the title and author.</p>
 						<div class="example" id="example-13">
         <div class="marker">
     <a class="self-link" href="#example-13">Example<bdi> 13</bdi></a>
@@ -1738,23 +1930,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1762,23 +1950,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1791,9 +1975,8 @@
 				<div class="role">
 					<rdef>doc-credit</rdef>
 					<div class="role-description">
-						<p>An acknowledgment of the source of integrated content from third-party
-							sources, such as photos. Typically identifies the creator, copyright and
-							any restrictions on reuse.</p>
+						<p>An acknowledgment of the source of integrated content from third-party sources, such as photos.
+							Typically identifies the creator, copyright and any restrictions on reuse.</p>
 						<div class="example" id="example-14">
         <div class="marker">
     <a class="self-link" href="#example-14">Example<bdi> 14</bdi></a>
@@ -1837,23 +2020,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1861,23 +2040,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1934,23 +2109,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1958,23 +2129,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -1987,8 +2154,8 @@
 				<div class="role">
 					<rdef>doc-dedication</rdef>
 					<div class="role-description">
-						<p>An inscription at the front of the work, typically addressed in tribute
-							to one or more persons close to the author.</p>
+						<p>An inscription at the front of the work, typically addressed in tribute to one or more persons
+							close to the author.</p>
 						<div class="example" id="example-16">
         <div class="marker">
     <a class="self-link" href="#example-16">Example<bdi> 16</bdi></a>
@@ -2029,23 +2196,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2053,23 +2216,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2082,12 +2241,11 @@
 				<div class="role">
 					<rdef>doc-endnote</rdef>
 					<div class="role-description">
-						<p>One of a collection of notes that occur at the end of a work, or a
-							section within it, that provides additional context to a referenced
-							passage of text.</p>
+						<p>One of a collection of notes that occur at the end of a work, or a section within it, that provides
+							additional context to a referenced passage of text.</p>
 						<p>Authors <em class="rfc2119" title="MUST">MUST</em> ensure that <a href="#dfn-element" class="internalDFN" data-link-type="dfn">elements</a> with <a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a>
-							<code>doc-endnote</code> are contained in, or owned, by an element with
-							the role <rref>list</rref>.</p>
+							<code>doc-endnote</code> are contained in, or owned, by an element with the role
+							<rref>list</rref>.</p>
 						<div class="example" id="example-17">
         <div class="marker">
     <a class="self-link" href="#example-17">Example<bdi> 17</bdi></a>
@@ -2153,23 +2311,19 @@
 								<td class="role-scope"><rref>doc-endnotes</rref></td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"> </td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2177,23 +2331,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2208,8 +2358,8 @@
 					<div class="role-description">
 						<p>A collection of notes at the end of a work or a section within it.</p>
 						<p>Note that the <code>doc-endnotes</code>
-							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is never applied directly to the list of endnotes. See the
-								<rref>doc-endnote</rref> role for more information.</p>
+							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is never applied directly to the list of endnotes. See the <rref>doc-endnote</rref>
+							role for more information.</p>
 						<div class="example" id="example-19">
         <div class="marker">
     <a class="self-link" href="#example-19">Example<bdi> 19</bdi></a>
@@ -2257,23 +2407,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"><rref>doc-endnote</rref></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2281,23 +2427,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2310,8 +2452,8 @@
 				<div class="role">
 					<rdef>doc-epigraph</rdef>
 					<div class="role-description">
-						<p>A quotation set at the start of the work or a section that establishes
-							the theme or sets the mood.</p>
+						<p>A quotation set at the start of the work or a section that establishes the theme or sets the
+							mood.</p>
 						<div class="example" id="example-20">
         <div class="marker">
     <a class="self-link" href="#example-20">Example<bdi> 20</bdi></a>
@@ -2355,23 +2497,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2379,23 +2517,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2408,8 +2542,8 @@
 				<div class="role">
 					<rdef>doc-epilogue</rdef>
 					<div class="role-description">
-						<p>A concluding section of narrative that wraps up or comments on the
-							actions and events of the work, typically from a future perspective.</p>
+						<p>A concluding section of narrative that wraps up or comments on the actions and events of the work,
+							typically from a future perspective.</p>
 						<div class="example" id="example-21">
         <div class="marker">
     <a class="self-link" href="#example-21">Example<bdi> 21</bdi></a>
@@ -2457,23 +2591,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2481,23 +2611,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2510,8 +2636,8 @@
 				<div class="role">
 					<rdef>doc-errata</rdef>
 					<div class="role-description">
-						<p>A set of corrections discovered after initial publication of the work,
-							sometimes referred to as corrigenda.</p>
+						<p>A set of corrections discovered after initial publication of the work, sometimes referred to as
+							corrigenda.</p>
 						<div class="example" id="example-22">
         <div class="marker">
     <a class="self-link" href="#example-22">Example<bdi> 22</bdi></a>
@@ -2555,23 +2681,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2579,23 +2701,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2608,8 +2726,7 @@
 				<div class="role">
 					<rdef>doc-example</rdef>
 					<div class="role-description">
-						<p>An illustration of a key concept of the work, such as a code listing,
-							case study or problem.</p>
+						<p>An illustration of a key concept of the work, such as a code listing, case study or problem.</p>
 						<div class="example" id="example-23">
         <div class="marker">
     <a class="self-link" href="#example-23">Example<bdi> 23</bdi></a>
@@ -2653,23 +2770,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2677,23 +2790,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2706,12 +2815,11 @@
 				<div class="role">
 					<rdef>doc-footnote</rdef>
 					<div class="role-description">
-						<p>Ancillary information, such as a citation or commentary, that provides
-							additional context to a referenced passage of text.</p>
+						<p>Ancillary information, such as a citation or commentary, that provides additional context to a
+							referenced passage of text.</p>
 						<p>The <code>doc-footnote</code>
-							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is only for representing individual notes that occur within
-							the body of a work. For collections of notes that occur at the end of a
-							section, see <rref>doc-endnotes</rref>.</p>
+							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is only for representing individual notes that occur within the body of a work. For
+							collections of notes that occur at the end of a section, see <rref>doc-endnotes</rref>.</p>
 						<div class="example" id="example-24">
         <div class="marker">
     <a class="self-link" href="#example-24">Example<bdi> 24</bdi></a>
@@ -2754,23 +2862,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"> </td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2778,23 +2882,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2807,8 +2907,8 @@
 				<div class="role">
 					<rdef>doc-foreword</rdef>
 					<div class="role-description">
-						<p>An introductory section that precedes the work, typically not written by
-							the author of the work.</p>
+						<p>An introductory section that precedes the work, typically not written by the author of the
+							work.</p>
 						<div class="example" id="example-25">
         <div class="marker">
     <a class="self-link" href="#example-25">Example<bdi> 25</bdi></a>
@@ -2852,23 +2952,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2876,23 +2972,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2905,8 +2997,7 @@
 				<div class="role">
 					<rdef>doc-glossary</rdef>
 					<div class="role-description">
-						<p>A brief dictionary of new, uncommon or specialized terms used in the
-							content.</p>
+						<p>A brief dictionary of new, uncommon or specialized terms used in the content.</p>
 						<div class="example" id="example-26">
         <div class="marker">
     <a class="self-link" href="#example-26">Example<bdi> 26</bdi></a>
@@ -2957,24 +3048,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
-								<td class="role-mustcontain"><rref>term</rref>,
-										<rref>definition</rref></td>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
+								<td class="role-mustcontain"><rref>term</rref>, <rref>definition</rref></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -2982,23 +3068,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3055,23 +3137,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3084,23 +3162,19 @@
 								</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">True</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3113,8 +3187,8 @@
 				<div class="role">
 					<rdef>doc-index</rdef>
 					<div class="role-description">
-						<p>A navigational aid that provides a detailed list of links to key
-							subjects, names and other important topics covered in the work.</p>
+						<p>A navigational aid that provides a detailed list of links to key subjects, names and other
+							important topics covered in the work.</p>
 						<div class="example" id="example-28">
         <div class="marker">
     <a class="self-link" href="#example-28">Example<bdi> 28</bdi></a>
@@ -3167,23 +3241,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3191,23 +3261,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3220,8 +3286,7 @@
 				<div class="role">
 					<rdef>doc-introduction</rdef>
 					<div class="role-description">
-						<p>A preliminary section that typically introduces the scope or nature of
-							the work.</p>
+						<p>A preliminary section that typically introduces the scope or nature of the work.</p>
 						<div class="example" id="example-29">
         <div class="marker">
     <a class="self-link" href="#example-29">Example<bdi> 29</bdi></a>
@@ -3257,30 +3322,27 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#introduction">introduction</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#introduction">introduction</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3288,23 +3350,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3318,12 +3376,12 @@
 				<div class="role">
 					<rdef>doc-noteref</rdef>
 					<div class="role-description">
-						<p>A reference to a footnote or endnote, typically appearing as a
-							superscripted number or symbol in the main body of text.</p>
+						<p>A reference to a footnote or endnote, typically appearing as a superscripted number or symbol in
+							the main body of text.</p>
 						<div class="example" id="example-30">
         <div class="marker">
     <a class="self-link" href="#example-30">Example<bdi> 30</bdi></a>
-  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> … as studies have shown.<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fnref01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-noteref"</span>&gt;</span>[1]<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> … as studies have shown.<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#fn01"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fnref01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-noteref"</span>&gt;</span>[1]<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
 					</div>
 					<table class="role-features">
@@ -3360,23 +3418,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3389,23 +3443,19 @@
 								</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">True</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3418,8 +3468,8 @@
 				<div class="role">
 					<rdef>doc-notice</rdef>
 					<div class="role-description">
-						<p>Notifies the user of consequences that might arise from an action or
-							event. Examples include warnings, cautions and dangers.</p>
+						<p>Notifies the user of consequences that might arise from an action or event. Examples include
+							warnings, cautions and dangers.</p>
 						<div class="example" id="example-31">
         <div class="marker">
     <a class="self-link" href="#example-31">Example<bdi> 31</bdi></a>
@@ -3473,23 +3523,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3497,23 +3543,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3526,8 +3568,8 @@
 				<div class="role">
 					<rdef>doc-pagebreak</rdef>
 					<div class="role-description">
-						<p>A separator denoting the position before which a break occurs between two
-							contiguous pages in a statically paginated version of the content.</p>
+						<p>A separator denoting the position before which a break occurs between two contiguous pages in a
+							statically paginated version of the content.</p>
 						<div class="example" id="example-33">
         <div class="marker">
     <a class="self-link" href="#example-33">Example<bdi> 33</bdi></a>
@@ -3568,23 +3610,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3592,23 +3630,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">True</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational">True</td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3621,8 +3655,7 @@
 				<div class="role">
 					<rdef>doc-pagelist</rdef>
 					<div class="role-description">
-						<p>A navigational aid that provides a list of links to the pagebreaks in the
-							content.</p>
+						<p>A navigational aid that provides a list of links to the pagebreaks in the content.</p>
 						<div class="example" id="example-34">
         <div class="marker">
     <a class="self-link" href="#example-34">Example<bdi> 34</bdi></a>
@@ -3670,23 +3703,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3694,23 +3723,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3723,9 +3748,8 @@
 				<div class="role">
 					<rdef>doc-part</rdef>
 					<div class="role-description">
-						<p>A major structural division in a work that contains a set of related
-							sections dealing with a particular subject, narrative arc or similar
-							encapsulated theme.</p>
+						<p>A major structural division in a work that contains a set of related sections dealing with a
+							particular subject, narrative arc or similar encapsulated theme.</p>
 						<div class="example" id="example-35">
         <div class="marker">
     <a class="self-link" href="#example-35">Example<bdi> 35</bdi></a>
@@ -3773,23 +3797,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3797,23 +3817,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">True</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3826,8 +3842,7 @@
 				<div class="role">
 					<rdef>doc-preface</rdef>
 					<div class="role-description">
-						<p>An introductory section that precedes the work, typically written by the
-							author of the work.</p>
+						<p>An introductory section that precedes the work, typically written by the author of the work.</p>
 						<div class="example" id="example-36">
         <div class="marker">
     <a class="self-link" href="#example-36">Example<bdi> 36</bdi></a>
@@ -3871,23 +3886,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3895,23 +3906,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3924,8 +3931,7 @@
 				<div class="role">
 					<rdef>doc-prologue</rdef>
 					<div class="role-description">
-						<p>An introductory section that sets the background to a work, typically
-							part of the narrative.</p>
+						<p>An introductory section that sets the background to a work, typically part of the narrative.</p>
 						<div class="example" id="example-37">
         <div class="marker">
     <a class="self-link" href="#example-37">Example<bdi> 37</bdi></a>
@@ -3973,23 +3979,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -3997,23 +3999,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -4026,16 +4024,14 @@
 				<div class="role">
 					<rdef>doc-pullquote</rdef>
 					<div class="role-description">
-						<p>A distinctively placed or highlighted quotation from the current content
-							designed to draw attention to a topic or highlight a key point.</p>
-						<p>Unlike a passage quoted from another source, a pullquote is a direct
-							repetition of text in the current document. As a result, authors must
-							ensure that the presentational occurrence is hidden from users of
-							assistive technologies (e.g., using the <pref>aria-hidden</pref>
-							attribute).</p>
-						<p>The following example shows the identification of a pullquote that will
-							be presented elsewhere (e.g., via a script). In this case, the pullquote
-							is not hidden as the marked text is not presentational.</p>
+						<p>A distinctively placed or highlighted quotation from the current content designed to draw attention
+							to a topic or highlight a key point.</p>
+						<p>Unlike a passage quoted from another source, a pullquote is a direct repetition of text in the
+							current document. As a result, authors must ensure that the presentational occurrence is hidden
+							from users of assistive technologies (e.g., using the <pref>aria-hidden</pref> attribute).</p>
+						<p>The following example shows the identification of a pullquote that will be presented elsewhere
+							(e.g., via a script). In this case, the pullquote is not hidden as the marked text is not
+							presentational.</p>
 						<div class="example" id="example-38">
         <div class="marker">
     <a class="self-link" href="#example-38">Example<bdi> 38</bdi></a>
@@ -4043,8 +4039,8 @@
    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pq01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pullquote"</span>&gt;</span>Beware, for I am fearless and therefore powerful.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
    I will watch with the wiliness of a snake, that I may sting with its venom. … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
-						<p>The next example shows a pullquote that duplicates the text. This quote
-							is hidden because it is for presentational purposes only.</p>
+						<p>The next example shows a pullquote that duplicates the text. This quote is hidden because it is for
+							presentational purposes only.</p>
 						<div class="example" id="example-39">
         <div class="marker">
     <a class="self-link" href="#example-39">Example<bdi> 39</bdi></a>
@@ -4088,23 +4084,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -4112,23 +4104,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -4141,8 +4129,8 @@
 				<div class="role">
 					<rdef>doc-qna</rdef>
 					<div class="role-description">
-						<p>A section of content structured as a series of questions and answers,
-							such as an interview or list of frequently asked questions.</p>
+						<p>A section of content structured as a series of questions and answers, such as an interview or list
+							of frequently asked questions.</p>
 						<div class="example" id="example-40">
         <div class="marker">
     <a class="self-link" href="#example-40">Example<bdi> 40</bdi></a>
@@ -4190,23 +4178,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -4214,23 +4198,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -4243,8 +4223,7 @@
 				<div class="role">
 					<rdef>doc-subtitle</rdef>
 					<div class="role-description">
-						<p>An explanatory or alternate title for the work, or a section or component
-							within it.</p>
+						<p>An explanatory or alternate title for the work, or a section or component within it.</p>
 						<div class="example" id="example-41">
         <div class="marker">
     <a class="self-link" href="#example-41">Example<bdi> 41</bdi></a>
@@ -4288,23 +4267,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -4317,23 +4292,19 @@
 								</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -4346,8 +4317,7 @@
 				<div class="role">
 					<rdef>doc-tip</rdef>
 					<div class="role-description">
-						<p>Helpful information that clarifies some aspect of the content or assists
-							in its comprehension.</p>
+						<p>Helpful information that clarifies some aspect of the content or assists in its comprehension.</p>
 						<div class="example" id="example-42">
         <div class="marker">
     <a class="self-link" href="#example-42">Example<bdi> 42</bdi></a>
@@ -4392,23 +4362,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -4416,23 +4382,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -4445,9 +4407,8 @@
 				<div class="role">
 					<rdef>doc-toc</rdef>
 					<div class="role-description">
-						<p>A navigational aid that provides an ordered list of links to the major
-							sectional headings in the content. A table of contents may cover an
-							entire work, or only a smaller section of it.</p>
+						<p>A navigational aid that provides an ordered list of links to the major sectional headings in the
+							content. A table of contents may cover an entire work, or only a smaller section of it.</p>
 						<div class="example" id="example-43">
         <div class="marker">
     <a class="self-link" href="#example-43">Example<bdi> 43</bdi></a>
@@ -4497,23 +4458,19 @@
 								<td class="role-scope">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-mustcontain-head" scope="row">Required Owned
-									Elements:</th>
+								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
 								<td class="role-mustcontain"></td>
 							</tr>
 							<tr>
-								<th class="role-required-properties-head">Required States and
-									Properties:</th>
+								<th class="role-required-properties-head">Required States and Properties:</th>
 								<td class="role-required-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-properties-head" scope="row">Supported States and
-									Properties:</th>
+								<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 								<td class="role-properties">&nbsp;</td>
 							</tr>
 							<tr>
-								<th class="role-inherited-head" scope="row">Inherited States and
-									Properties:</th>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -4521,23 +4478,19 @@
 								<td class="role-namefrom">author</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-head" scope="row">Accessible Name
-									Required:</th>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
 								<td class="role-namerequired">False</td>
 							</tr>
 							<tr>
-								<th class="role-namerequired-inherited-head" scope="row">Inherits
-									Name Required:</th>
+								<th class="role-namerequired-inherited-head" scope="row">Inherits Name Required:</th>
 								<td class="role-namerequired-inherited"> </td>
 							</tr>
 							<tr>
-								<th class="role-childpresentational-head" scope="row">Children
-									Presentational:</th>
+								<th class="role-childpresentational-head" scope="row">Children Presentational:</th>
 								<td class="role-childpresentational"> </td>
 							</tr>
 							<tr>
-								<th class="role-presentational-inherited-head" scope="row">Inherits
-									Presentational:</th>
+								<th class="role-presentational-inherited-head" scope="row">Inherits Presentational:</th>
 								<td class="role-presentational-inherited">&nbsp;</td>
 							</tr>
 							<tr>
@@ -4552,83 +4505,72 @@
 		
 		<section class="appendix informative" id="a_schemata">
 			<h2 id="a-schemata"><bdi class="secno">A. </bdi>Schemata<a class="self-link" aria-label="§" href="#a_schemata"></a></h2><p><em>This section is non-normative.</em></p>
-			<p>The <a href="http://www.w3.org/html/wg/"><abbr title="Hypertext Markup Language">HTML</abbr> Working Group</a> has incorporated the
-				<abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> attributes into <a href="http://www.w3.org/TR/html5/"><abbr title="Hypertext Markup Language">HTML</abbr> 5</a>. Official
-				support for <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> in <abbr title="Hypertext Markup Language">HTML</abbr> is provided in that specification.</p>
-			<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Note</span></div><p class="">Validation support for the roles defined in this module will be added
-				once the specification reaches recommendation.</p></div>
-			<p>For information on incorporating <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> into other grammars, refer to <a href="http://www.w3.org/TR/wai-aria-1.1/#a_schemata">Appendix A</a> of
-				[<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>]</p>
+			<p>The <a href="http://www.w3.org/html/wg/"><abbr title="Hypertext Markup Language">HTML</abbr> Working Group</a> has incorporated the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> attributes
+				into <a href="http://www.w3.org/TR/html5/"><abbr title="Hypertext Markup Language">HTML</abbr> 5</a>. Official support for <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> in <abbr title="Hypertext Markup Language">HTML</abbr> is provided in
+				that specification.</p>
+			<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Note</span></div><p class="">Validation support for the roles defined in this module will be added once the specification
+				reaches recommendation.</p></div>
+			<p>For information on incorporating <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> into other grammars, refer to <a href="http://www.w3.org/TR/wai-aria-1.1/#a_schemata">Appendix A</a> of [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>]</p>
 		</section>
 		<section class="appendix informative" id="exit_criteria">
 			<h2 id="b-candidate-recommendation-exit-criteria"><bdi class="secno">B. </bdi>Candidate Recommendation Exit Criteria<a class="self-link" aria-label="§" href="#exit_criteria"></a></h2><p><em>This section is non-normative.</em></p>
-			<p>For this specification to be advanced to Proposed Recommendation, it has to be proven
-				that roles defined in this specification have sufficient usage by the target
-				communities. More specifically, it has to be documented that <em>each</em>
-				<a href="#roles">Digital Publishing Role</a> is used (at least in preliminary
-				prototypes, not necessarily in full production yet) by two, independent document
-				author/publisher as a means to structure document, where “usage” means: </p>
+			<p>For this specification to be advanced to Proposed Recommendation, it has to be proven that roles defined in
+				this specification have sufficient usage by the target communities. More specifically, it has to be
+				documented that <em>each</em>
+				<a href="#roles">Digital Publishing Role</a> is used (at least in preliminary prototypes, not necessarily in
+				full production yet) by two, independent document author/publisher as a means to structure document, where
+				“usage” means: </p>
 
 			<ul>
-				<li>the <code>role</code> attribute value is used, as defined in this specification;
-					or, as a fallback</li>
-				<li>the <code>epub:type</code> attribute, defined for the purpose of <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-xhtml-semantic-inflection">Semantic Inflection</a> in [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-content" title="EPUB Content Documents 3.1">EPUB-Content</a></cite>], is used with the related value
-					(when specified in the detailed specification of the role) in the <a href="https://idpf.github.io/epub-vocabs/structure/">EPUB Structural
+				<li>the <code>role</code> attribute value is used, as defined in this specification; or, as a fallback</li>
+				<li>the <code>epub:type</code> attribute, defined for the purpose of <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-xhtml-semantic-inflection">Semantic
+						Inflection</a> in [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-content" title="EPUB Content Documents 3.1">EPUB-Content</a></cite>], is used with the related value (when specified in the detailed
+					specification of the role) in the <a href="https://idpf.github.io/epub-vocabs/structure/">EPUB Structural
 						Semantic Vocabulary</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]. </li>
 			</ul>
 
-			<p> In the case where the <code>epub:type</code> attribute is used, the author/publisher
-				should also clearly state that the plan is to replace <code>epub:type</code> by the
-				ARIA <code>role</code> attribute when this specification is published as a
-				Recommendation. Furthermore, it is also required that at least two, independent
-				authors/publishers use a comprehensive, although not necessarily complete, set of
+			<p> In the case where the <code>epub:type</code> attribute is used, the author/publisher should also clearly
+				state that the plan is to replace <code>epub:type</code> by the ARIA <code>role</code> attribute when this
+				specification is published as a Recommendation. Furthermore, it is also required that at least two,
+				independent authors/publishers use a comprehensive, although not necessarily complete, set of
 					<code>role</code> attribute (as opposed to <code>epub:type</code>). </p>
 		</section>
 		<section class="appendix informative" id="changelog">
 			<h2 id="c-change-log"><bdi class="secno">C. </bdi>Change Log<a class="self-link" aria-label="§" href="#changelog"></a></h2><p><em>This section is non-normative.</em></p>
 			<section id="substantive-changes-since-the-last-public-working-draft">
-				<h3 id="c-1-substantive-changes-since-the-last-public-working-draft"><bdi class="secno">C.1 </bdi>Substantive changes since the <a href="https://www.w3.org/TR/2016/WD-dpub-aria-1.0-20160317/">last public
-						working draft</a><a class="self-link" aria-label="§" href="#substantive-changes-since-the-last-public-working-draft"></a></h3>
+				<h3 id="c-1-substantive-changes-since-the-last-public-working-draft"><bdi class="secno">C.1 </bdi>Substantive changes since the <a href="https://www.w3.org/TR/2016/WD-dpub-aria-1.0-20160317/">last
+						public working draft</a><a class="self-link" aria-label="§" href="#substantive-changes-since-the-last-public-working-draft"></a></h3>
 				<ul>
 					
-					<li>29-Sept-2016: Updated <rref>doc-index</rref> to inherit from
-							<rref>navigation</rref> role and changed "Name from" calculation to
-						"author".</li>
+					<li>29-Sept-2016: Updated <rref>doc-index</rref> to inherit from <rref>navigation</rref> role and changed
+						"Name from" calculation to "author".</li>
 				</ul>
 			</section>
 			<section id="other-substantive-changes-since-the-first-public-working-draft">
-				<h3 id="c-2-other-substantive-changes-since-the-first-public-working-draft"><bdi class="secno">C.2 </bdi>Other substantive changes since the <a href="http://www.w3.org/TR/2015/WD-dpub-aria-1.0-20150707/">First Public
-						Working Draft</a><a class="self-link" aria-label="§" href="#other-substantive-changes-since-the-first-public-working-draft"></a></h3>
+				<h3 id="c-2-other-substantive-changes-since-the-first-public-working-draft"><bdi class="secno">C.2 </bdi>Other substantive changes since the <a href="http://www.w3.org/TR/2015/WD-dpub-aria-1.0-20150707/">First
+						Public Working Draft</a><a class="self-link" aria-label="§" href="#other-substantive-changes-since-the-first-public-working-draft"></a></h3>
 				<ul>
-					<li>10-Mar-2016: Updated superclass role to <rref>img</rref> for
-							<rref>doc-cover</rref> and revised the definition to be specific it
-						applies to an image.</li>
+					<li>10-Mar-2016: Updated superclass role to <rref>img</rref> for <rref>doc-cover</rref> and revised the
+						definition to be specific it applies to an image.</li>
 					<li>3-Mar-2016: Changed name of doc-locator to <rref>doc-backlink</rref>.</li>
-					<li>2-Mar-2016: Updated superclass role to <rref>section</rref> for
-							<rref>doc-abstract</rref>, <rref>doc-colophon</rref>,
-							<rref>doc-credit</rref>, <rref>doc-dedication</rref>,
-							<rref>doc-epigraph</rref>, <rref>doc-example</rref> and
-							<rref>doc-footnote</rref>. Changed superclass role to
-							<rref>landmark</rref> for <rref>doc-part</rref>. Removed doc-title as
-							<rref>aria-labelledby</rref> is sufficient for labelling
-						components.</li>
-					<li>1-Mar-2016: Removed doc-footnotes and added <rref>doc-endnote</rref> and
-							<rref>doc-endnotes</rref> to handle structural differences between
-						standalone footnotes and lists of endnotes. Changed superclass role to
-							<rref>landmark</rref> for <rref>doc-bibliography</rref> and added
-						guidance about using <rref>doc-biblioentry</rref> with lists.</li>
-					<li>8-Nov-2015: Updated superclass role to <rref>group</rref> for
-							<rref>doc-abstract</rref>, <rref>doc-footnote</rref> and
-							<rref>doc-qna</rref>.</li>
+					<li>2-Mar-2016: Updated superclass role to <rref>section</rref> for <rref>doc-abstract</rref>,
+							<rref>doc-colophon</rref>, <rref>doc-credit</rref>, <rref>doc-dedication</rref>,
+							<rref>doc-epigraph</rref>, <rref>doc-example</rref> and <rref>doc-footnote</rref>. Changed
+						superclass role to <rref>landmark</rref> for <rref>doc-part</rref>. Removed doc-title as
+							<rref>aria-labelledby</rref> is sufficient for labelling components.</li>
+					<li>1-Mar-2016: Removed doc-footnotes and added <rref>doc-endnote</rref> and <rref>doc-endnotes</rref> to
+						handle structural differences between standalone footnotes and lists of endnotes. Changed superclass
+						role to <rref>landmark</rref> for <rref>doc-bibliography</rref> and added guidance about using
+							<rref>doc-biblioentry</rref> with lists.</li>
+					<li>8-Nov-2015: Updated superclass role to <rref>group</rref> for <rref>doc-abstract</rref>,
+							<rref>doc-footnote</rref> and <rref>doc-qna</rref>.</li>
 					<li>12-Oct-2015: Changed the "dpub-" prefix on all roles to "doc-".</li>
-					<li>30-Sept-2015: Removed the glossterm and glossdef roles. These are replaced
-						by <rref>term</rref> and <rref>definition</rref> in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>].</li>
-					<li>22-Sept-2015: Added the following new roles:
-							<rref>doc-acknowledgments</rref>, <rref>doc-colophon</rref>,
-							<rref>doc-conclusion</rref>, <rref>doc-credit</rref>,
-							<rref>doc-credits</rref>, <rref>doc-dedication</rref>,
-							<rref>doc-epigraph</rref>, <rref>doc-errata</rref>,
-							<rref>doc-example</rref> and <rref>doc-introduction</rref>.</li>
+					<li>30-Sept-2015: Removed the glossterm and glossdef roles. These are replaced by <rref>term</rref> and
+							<rref>definition</rref> in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>].</li>
+					<li>22-Sept-2015: Added the following new roles: <rref>doc-acknowledgments</rref>,
+							<rref>doc-colophon</rref>, <rref>doc-conclusion</rref>, <rref>doc-credit</rref>,
+							<rref>doc-credits</rref>, <rref>doc-dedication</rref>, <rref>doc-epigraph</rref>,
+							<rref>doc-errata</rref>, <rref>doc-example</rref> and <rref>doc-introduction</rref>.</li>
 				</ul>
 			</section>
 		</section>
@@ -4652,24 +4594,17 @@
 					<li>Richard Schwerdtfeger (Knowbility)</li>
 					<li>Tzviya Siegman (Wiley)</li>
 				</ul>
-				<p>The group would like to thank all members of the DAISY and EPUB 3 working groups
-					who developed the structural semantics vocabulary from which this module was
-					drawn, with special thanks to Sanders Kleinfeld for his assistance analyzing the
-					initial set of semantics for inclusion.</p>
+				<p>The group would like to thank all members of the DAISY and EPUB 3 working groups who developed the
+					structural semantics vocabulary from which this module was drawn, with special thanks to Sanders
+					Kleinfeld for his assistance analyzing the initial set of semantics for inclusion.</p>
 			</section>
-			
 			<section class="section" id="ack_funders">
-				<h3 id="d-2-enabling-funders"><bdi class="secno">D.2 </bdi>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h3>
-				<p>This publication has been funded in part with Federal funds from the U.S.
-					Department of Education, National Institute on Disability, Independent Living,
-					and Rehabilitation Research (NIDILRR) under contract number ED-OSE-10-C-0067.
-					The content of this publication does not necessarily reflect the views or
-					policies of the U.S. Department of Education, nor does mention of trade names,
-					commercial products, or organizations imply endorsement by the U.S.
-					Government.</p>
-			</section>
+	<h3 id="d-2-enabling-funders"><bdi class="secno">D.2 </bdi>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h3>
+	<p>This publication has been funded in part with U.S. Federal funds from the Department of Education, National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR), initially under contract number ED-OSE-10-C-0067 and currently under contract number HHSP23301500054C. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Education, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
+</section>
+
 		</section>
-	<script type="text/javascript">(function(){window['__CF$cv$params']={r:'5b0cd95c7baff011',m:'26908b4b0fa179349b1138e34269e304986ae1e2-1594410997-1800-Adn+pulr0CfjCo1GxGy7NoIT+50JKc3UwKNqxaCzVjEmLUUYyPrSRzFaSnDGAUY7gzihJan4UmoDisex+zWf3t7FBsPTZyyzvHxxxRDAkXgQOMSvnQu+eS+EIGC/vb7gVdG5o8Hklg4t8G/C57KDJ3OsVZ+zXIMFb8n7TCUwE4Bq6nKTGrPnZUOuAGUOmvJ5+A==',s:[0xdfe86672cc,0x28b4ffd44e],}})();</script>
+	<script type="text/javascript">(function(){window['__CF$cv$params']={r:'5b74de6e89020dc6',m:'f51f2c33f1915b42df7f44e26fed2ed9c44b7183-1595501724-1800-AaCYqfCGztXQYU/wtnH4ibiWRyw2axdkFICQEb/UHvghxIOZmnpXk6BqfA1moNsLBVOSqg8Li4ScuWYLyD03fDsUM6UA2RPerXNBqFs3M1Y6hPfD9+WRxQyGTkFAko/jcDvqhk0sdOOD0GKhLW7MlZZKF5YwPgROUABsKp1y7HUWjcTwFcUBJ1pH/HeCbC0h7g==',s:[0x6b524fc28f,0xc03ecb2898],}})();</script>
 
 <section id="references" class="appendix"><h2 id="e-references"><bdi class="secno">E. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="normative-references">
       <h3 id="e-1-normative-references"><bdi class="secno">E.1 </bdi>
