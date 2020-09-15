@@ -8,11 +8,11 @@
 		
 		
 		
-	<style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style><meta name="description" content="Enabling users of assistive technologies to find their way through Web content requires embedding semantic
-				metadata about Web document structural divisions. This is particularly important for structural divisions of
-				long-form documents and goes along with embedding semantic metadata about Web-application widgets and
-				behaviors for assistive technologies. This specification defines a set of WAI-ARIA roles specific to helping
-				users of assistive technologies navigate through such long-form documents."><link rel="canonical" href="https://www.w3.org/TR/dpub-aria/"><script type="application/ld+json">{
+	<style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style><meta name="description" content="Enabling users of assistive technologies to find their way through Web content requires embedding
+				semantic metadata about Web document structural divisions. This is particularly important for structural
+				divisions of long-form documents and goes along with embedding semantic metadata about Web-application
+				widgets and behaviors for assistive technologies. This specification defines a set of WAI-ARIA roles
+				specific to helping users of assistive technologies navigate through such long-form documents."><link rel="canonical" href="https://www.w3.org/TR/dpub-aria/"><script type="application/ld+json">{
   "@context": [
     "http://schema.org",
     {
@@ -41,7 +41,7 @@
   "name": "Digital Publishing WAI-ARIA Module 1.1",
   "inLanguage": "en-US",
   "license": "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document",
-  "datePublished": "2020-07-31",
+  "datePublished": "2020-09-15",
   "copyrightHolder": {
     "name": "World Wide Web Consortium",
     "url": "https://www.w3.org/"
@@ -49,7 +49,7 @@
   "discussionUrl": "https://github.com/w3c/dpub-aria/issues/",
   "alternativeHeadline": "",
   "isBasedOn": "",
-  "description": "Enabling users of assistive technologies to find their way through Web content requires embedding semantic\n\t\t\t\tmetadata about Web document structural divisions. This is particularly important for structural divisions of\n\t\t\t\tlong-form documents and goes along with embedding semantic metadata about Web-application widgets and\n\t\t\t\tbehaviors for assistive technologies. This specification defines a set of WAI-ARIA roles specific to helping\n\t\t\t\tusers of assistive technologies navigate through such long-form documents.",
+  "description": "Enabling users of assistive technologies to find their way through Web content requires embedding\n\t\t\t\tsemantic metadata about Web document structural divisions. This is particularly important for structural\n\t\t\t\tdivisions of long-form documents and goes along with embedding semantic metadata about Web-application\n\t\t\t\twidgets and behaviors for assistive technologies. This specification defines a set of WAI-ARIA roles\n\t\t\t\tspecific to helping users of assistive technologies navigate through such long-form documents.",
   "editor": [
     {
       "type": "Person",
@@ -86,6 +86,32 @@
       "url": "http://www.idpf.org/epub/vocab/structure/",
       "publisher": {
         "name": "IDPF"
+      }
+    },
+    {
+      "id": "https://html.spec.whatwg.org/multipage/",
+      "type": "TechArticle",
+      "name": "HTML Standard",
+      "url": "https://html.spec.whatwg.org/multipage/",
+      "creator": [
+        {
+          "name": "Anne van Kesteren"
+        },
+        {
+          "name": "Domenic Denicola"
+        },
+        {
+          "name": "Ian Hickson"
+        },
+        {
+          "name": "Philip Jägenstedt"
+        },
+        {
+          "name": "Simon Pieters"
+        }
+      ],
+      "publisher": {
+        "name": "WHATWG"
       }
     },
     {
@@ -389,16 +415,16 @@
   "doJsonLd": true,
   "trace": true,
   "maxTocLevel": 4,
-  "publishDate": "2020-07-31",
-  "publishISODate": "2020-07-31T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 31 July 2020"
+  "publishDate": "2020-09-15",
+  "publishISODate": "2020-09-15T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 15 September 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1>
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2020-07-31">31 July 2020</time>
+      <time class="dt-published" datetime="2020-09-15">15 September 2020</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -450,11 +476,11 @@
     <hr title="Separator for header">
   </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
-			<p>Enabling users of assistive technologies to find their way through Web content requires embedding semantic
-				metadata about Web document structural divisions. This is particularly important for structural divisions of
-				long-form documents and goes along with embedding semantic metadata about Web-application widgets and
-				behaviors for assistive technologies. This specification defines a set of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles specific to helping
-				users of assistive technologies navigate through such long-form documents.</p>
+			<p>Enabling users of assistive technologies to find their way through Web content requires embedding
+				semantic metadata about Web document structural divisions. This is particularly important for structural
+				divisions of long-form documents and goes along with embedding semantic metadata about Web-application
+				widgets and behaviors for assistive technologies. This specification defines a set of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles
+				specific to helping users of assistive technologies navigate through such long-form documents.</p>
 			<p>This document is part of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> suite described in the <a href="http://www.w3.org/WAI/intro/aria.php"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Overview</a>.</p>
 		</section>
 		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
@@ -514,40 +540,43 @@
 		<section class="informative" id="introduction">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2><p><em>This section is non-normative.</em></p>
 			<p><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is a technical specification that
-				defines a common host language semantic accessibility <abbr title="Application Programming Interfaces">API</abbr> and framework that enables web browsers to map the
-				accessibility semantics in web content to platform-specific accessibility APIs. This enables web content to
-				be interoperable with platform assistive technologies similar to native platform applications without
-				platform dependencies.</p>
+				defines a common host language semantic accessibility <abbr title="Application Programming Interfaces">API</abbr> and framework that enables web browsers to map
+				the accessibility semantics in web content to platform-specific accessibility APIs. This enables web
+				content to be interoperable with platform assistive technologies similar to native platform applications
+				without platform dependencies.</p>
 			<p>This specification is a modular extension of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> designed for the digital publishing industry. The goals of this specification
 				include:</p>
 			<ul>
-				<li>Expanding [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] to produce structural semantic extensions to accommodate the digital publishing
-					industry.</li>
+				<li>Expanding [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] to produce structural semantic extensions to accommodate the digital
+					publishing industry.</li>
 				<li>Align with a new governance model for modularization and extensions to <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>.</li>
 				<li>Provide structural semantics extensions that will support both assistive technologies and enable
 					semantic navigation, styling and interactive features used by readers.</li>
 			</ul>
 			<p>The roles defined in this specification are derived from the <a href="https://idpf.github.io/epub-vocabs/structure/">EPUB Structural Semantics Vocabulary</a>.</p>
 			<p>For a more detailed explanation of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
-				please refer to the <a href="http://www.w3.org/WAI/intro/aria"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Introduction</a> and how it applies
-				to Rich Internet Application Accessibility.</p>
+				please refer to the <a href="http://www.w3.org/WAI/intro/aria"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Introduction</a> and how it
+				applies to Rich Internet Application Accessibility.</p>
 
 			<section id="target-audience">
 				<h3 id="x1-1-target-audience"><bdi class="secno">1.1 </bdi>Target Audience<a class="self-link" aria-label="§" href="#target-audience"></a></h3>
-				<p>This specification defines a module of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> for digital publishing, including <a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>, <a data-lt="state" href="#dfn-state" class="internalDFN" data-link-type="dfn">states</a>, <a data-lt="property" href="#dfn-property" class="internalDFN" data-link-type="dfn">properties</a> and values. It impacts several audiences:</p>
+				<p>This specification defines a module of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> for digital publishing, including <a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>, <a data-lt="state" href="#dfn-state" class="internalDFN" data-link-type="dfn">states</a>, <a data-lt="property" href="#dfn-property" class="internalDFN" data-link-type="dfn">properties</a> and values. It impacts several
+					audiences:</p>
 				<ul>
 					<li><a data-lt="user agent" href="#dfn-user-agent" class="internalDFN" data-link-type="dfn">User agents</a> that process content containing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> features;</li>
 					<li><a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">Assistive technologies</a> that provide specialized reading experiences to users with
 						disabilities;</li>
 					<li>Authors of digital publications;</li>
 					<li>Authoring tools that help authors create conforming digital publications; and</li>
-					<li>Conformance checkers, that verify appropriate use of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and this Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module.</li>
+					<li>Conformance checkers, that verify appropriate use of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and this Digital Publishing
+							<abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module.</li>
 				</ul>
 				<p>Each conformance requirement indicates the audience to which it applies.</p>
-				<p>Although this specification is applicable to the above audiences, it is not specifically targeted to, nor
-					is it intended to be the sole source of information for, any of these audiences. In the future,
-					additional documents will be created to assist authors in applying these <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> semantics for the publishing industry
-					and to define how the information in this document is mapped to platform accessibility APIs.</p>
+				<p>Although this specification is applicable to the above audiences, it is not specifically targeted to,
+					nor is it intended to be the sole source of information for, any of these audiences. In the future,
+					additional documents will be created to assist authors in applying these <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> semantics for the publishing
+					industry and to define how the information in this document is mapped to platform accessibility
+					APIs.</p>
 			</section>
 
 			<section id="ua-support">
@@ -560,38 +589,41 @@
 			<section id="co-evolution">
 				<h3 id="x1-3-co-evolution-of-wai-aria-and-host-languages"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host
 					Languages<a class="self-link" aria-label="§" href="#co-evolution"></a></h3>
-				<p>The Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module follows
-					the model for <a href="http://www.w3.org/TR/wai-aria-1.1/#co-evolution">co-evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and host languages</a> defined in
-					[<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>]. It is intended to augment semantics in supporting languages like [<cite><a class="bibref" data-link-type="biblio" href="#bib-html5" title="HTML5">HTML5</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-svg2" title="Scalable Vector Graphics (SVG) 2">SVG2</a></cite>] and
-					EPUB, or to be used as an accessibility enhancement technology in other markup-based languages that do
-					not explicitly include support for ARIA. It clarifies semantics to assistive technologies when authors
-					create new types of objects, via style and script, that are not yet directly supported by the language of
-					the page, because the invention of new types of objects is faster than standardized support for them
-					appears in web languages.</p>
-				<p>It is not appropriate to create objects with style and script when the host language provides a semantic
-					element for that type of objects. While <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> can improve the accessibility of these objects, accessibility is best provided by
-					allowing the user agent to handle the object natively. For example, it is not better to use a
-						<rref>heading</rref> role on a <code>div</code> element than it is to use a native heading element,
-					such as an <code>h1</code>.</p>
+				<p>The Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module
+					follows the model for <a href="http://www.w3.org/TR/wai-aria-1.1/#co-evolution">co-evolution of
+							<abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and host languages</a>
+					defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>]. It is intended to augment semantics in supporting languages like [<cite><a class="bibref" data-link-type="biblio" href="#bib-html5" title="HTML5">HTML5</a></cite>],
+					[<cite><a class="bibref" data-link-type="biblio" href="#bib-svg2" title="Scalable Vector Graphics (SVG) 2">SVG2</a></cite>] and EPUB, or to be used as an accessibility enhancement technology in other markup-based
+					languages that do not explicitly include support for ARIA. It clarifies semantics to assistive
+					technologies when authors create new types of objects, via style and script, that are not yet
+					directly supported by the language of the page, because the invention of new types of objects is
+					faster than standardized support for them appears in web languages.</p>
+				<p>It is not appropriate to create objects with style and script when the host language provides a
+					semantic element for that type of objects. While <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> can improve the accessibility of these objects, accessibility is best provided
+					by allowing the user agent to handle the object natively. For example, it is not better to use a
+						<rref>heading</rref> role on a <code>div</code> element than it is to use a native heading
+					element, such as an <code>h1</code>.</p>
 				<p>It is expected that, over time, host languages will evolve to provide semantics for objects that
-					currently can only be declared with this specification. This is natural and desirable, as one goal of
-						<abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is to help stimulate the emergence
-					of more semantic and accessible markup. When native semantics for a given feature become available, it is
-					appropriate for authors to use the native feature and stop using this module for that feature. Legacy
-					content may continue to use the Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module, however, so the need for user agents to support it remains.</p>
+					currently can only be declared with this specification. This is natural and desirable, as one goal
+					of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is to help stimulate the
+					emergence of more semantic and accessible markup. When native semantics for a given feature become
+					available, it is appropriate for authors to use the native feature and stop using this module for
+					that feature. Legacy content may continue to use the Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module, however, so the need for
+					user agents to support it remains.</p>
 				<p>While specific features of this module may lose importance over time, the general possibility of the
 					Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module to add
-					semantics to web pages or open web based standards, such as EPUB, is expected to be a persistent need.
-					Host languages may not implement all the semantics this module provides, and various host languages may
-					implement different subsets of the features. New types of objects are continually being developed, and
-					one goal of this specification is to provide a way to make such objects accessible, because authoring
-					practices often advance faster than host language standards. In this way, this module and host languages
-					both evolve together but at different rates.</p>
-				<p>Some host languages exist to create semantics for features other than the user interface. For example,
-					<abbr title="Scalable Vector Graphics">SVG</abbr> expresses the semantics behind production of graphical objects, not of user interface components that
-					those objects may represent. Host languages such as these might, by design, not provide native semantics
-					that map to this specification's features. In these cases, the Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module could be adopted as a long-term
-					approach to add semantic information to these host languages.</p>
+					semantics to web pages or open web based standards, such as EPUB, is expected to be a persistent
+					need. Host languages may not implement all the semantics this module provides, and various host
+					languages may implement different subsets of the features. New types of objects are continually
+					being developed, and one goal of this specification is to provide a way to make such objects
+					accessible, because authoring practices often advance faster than host language standards. In this
+					way, this module and host languages both evolve together but at different rates.</p>
+				<p>Some host languages exist to create semantics for features other than the user interface. For
+					example, <abbr title="Scalable Vector Graphics">SVG</abbr> expresses the semantics behind production of graphical objects, not of user interface
+					components that those objects may represent. Host languages such as these might, by design, not
+					provide native semantics that map to this specification's features. In these cases, the Digital
+					Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module could be
+					adopted as a long-term approach to add semantic information to these host languages.</p>
 			</section>
 
 			<section id="authoring_practices">
@@ -599,18 +631,18 @@
 				<section id="authoring_tools">
 					<h4 id="x1-4-1-authoring-tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools<a class="self-link" aria-label="§" href="#authoring_tools"></a></h4>
 					<p>Many of the requirements in the definitions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
-						<a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>, <a data-lt="state" href="#dfn-state" class="internalDFN" data-link-type="dfn">states</a> and <a data-lt="property" href="#dfn-property" class="internalDFN" data-link-type="dfn">properties</a>
-						can be checked automatically during the development process, similar to other quality control
-						processes used for validating code. To assist authors who are creating digital publications, such as
-						EPUB, can compare the semantic structure of Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles from the <abbr title="Document Object Model">DOM</abbr> to that defined in this specification and notify the
-						author of errors or simply create templates that enforce that structure.</p>
+						<a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>, <a data-lt="state" href="#dfn-state" class="internalDFN" data-link-type="dfn">states</a> and <a data-lt="property" href="#dfn-property" class="internalDFN" data-link-type="dfn">properties</a> can be checked automatically during the development process, similar to
+						other quality control processes used for validating code. To assist authors who are creating
+						digital publications, such as EPUB, can compare the semantic structure of Digital Publishing
+							<abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles from the <abbr title="Document Object Model">DOM</abbr> to that defined in this specification and notify
+						the author of errors or simply create templates that enforce that structure.</p>
 				</section>
 
 				<section id="authoring_testing">
 					<h4 id="x1-4-2-testing-practices-and-tools"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools<a class="self-link" aria-label="§" href="#authoring_testing"></a></h4>
-					<p>The accessibility of interactive content cannot be confirmed by static checks alone. Developers of
-						interactive content should test for device-independent access to <a data-lt="widget" href="#dfn-widget" class="internalDFN" data-link-type="dfn">widgets</a> and
-						applications, and should verify accessibility <abbr title="application programing interface">API</abbr> access to all content and changes during user interaction.</p>
+					<p>The accessibility of interactive content cannot be confirmed by static checks alone. Developers
+						of interactive content should test for device-independent access to <a data-lt="widget" href="#dfn-widget" class="internalDFN" data-link-type="dfn">widgets</a> and applications, and should verify accessibility <abbr title="application programing interface">API</abbr> access to all content and changes during
+						user interaction.</p>
 				</section>
 			</section>
 
@@ -631,13 +663,13 @@
         when, and only when, they appear in all capitals, as shown here.
       </p>
 			<p>This specification indicates whether a section is <a href="#dfn-normative" class="internalDFN" data-link-type="dfn">normative</a> or <a href="#dfn-informative" class="internalDFN" data-link-type="dfn">informative</a>. Classifying a
-				section as normative or informative applies to the entire section. A statement "This section is normative"
-				or "This section is informative" applies to all sub-sections of that section.</p>
-			<p>Normative sections provide requirements that authors, user agents and assistive technologies <em class="rfc2119" title="MUST">MUST</em> follow for
-				an implementation to conform to this specification.</p>
+				section as normative or informative applies to the entire section. A statement "This section is
+				normative" or "This section is informative" applies to all sub-sections of that section.</p>
+			<p>Normative sections provide requirements that authors, user agents and assistive technologies <em class="rfc2119" title="MUST">MUST</em> follow
+				for an implementation to conform to this specification.</p>
 			<p>Informative sections provide information useful to understanding the specification. Such sections may
-				contain examples of recommended practice, but it is not required to follow such recommendations in order to
-				conform to this specification.</p>
+				contain examples of recommended practice, but it is not required to follow such recommendations in order
+				to conform to this specification.</p>
 		</section>
 		<section class="informative" id="terms">
 			<h2 id="x3-important-terms"><bdi class="secno">3. </bdi>Important Terms<a class="self-link" aria-label="§" href="#terms"></a></h2><p><em>This section is non-normative.</em></p>
@@ -856,7 +888,9 @@
 			<h2 id="x4-digital-publishing-roles"><bdi class="secno">4. </bdi>Digital Publishing Roles<a class="self-link" aria-label="§" href="#roles"></a></h2>
 			<p>This section defines additions to the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 				<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a>
-				<a href="#dfn-taxonomy" class="internalDFN" data-link-type="dfn">taxonomy</a> and describes the characteristics and properties of all <a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>. See <a href="#roles" class="specref">ARIA Roles</a> for descriptions of the fields provided by this module.</p>
+				<a href="#dfn-taxonomy" class="internalDFN" data-link-type="dfn">taxonomy</a> and describes the characteristics and properties of all <a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>. See
+					<a href="#roles" class="specref">ARIA Roles</a> for descriptions of the fields provided by this
+				module.</p>
 			<section id="role_definitions">
 				<h3 id="x4-1-definition-of-roles"><bdi class="secno">4.1 </bdi>Definition of Roles<a class="self-link" aria-label="§" href="#role_definitions"></a></h3>
 				<p>Below is an alphabetical list of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
@@ -865,8 +899,8 @@
 				<div class="role">
 					<rdef>doc-abstract</rdef>
 					<div class="role-description">
-						<p>A short summary of the principal ideas, concepts and conclusions of the work, or of a section or
-							excerpt within it.</p>
+						<p>A short summary of the principal ideas, concepts and conclusions of the work, or of a section
+							or excerpt within it.</p>
 						<div class="example" id="example-1">
         <div class="marker">
     <a class="self-link" href="#example-1">Example<bdi> 1</bdi></a>
@@ -903,7 +937,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#abstract">abstract</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#abstract">abstract</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -992,8 +1027,7 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#acknowledgments">acknowledgments</a>
-									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#acknowledgments">acknowledgments</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1045,9 +1079,9 @@
 				<div class="role">
 					<rdef>doc-afterword</rdef>
 					<div class="role-description">
-						<p>A closing statement from the author or a person of importance, typically providing insight into how
-							the content came to be written, its significance, or related events that have transpired since its
-							timeline.</p>
+						<p>A closing statement from the author or a person of importance, typically providing insight
+							into how the content came to be written, its significance, or related events that have
+							transpired since its timeline.</p>
 						<div class="example" id="example-3">
         <div class="marker">
     <a class="self-link" href="#example-3">Example<bdi> 3</bdi></a>
@@ -1084,7 +1118,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#afterword">afterword</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#afterword">afterword</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1136,8 +1171,8 @@
 				<div class="role">
 					<rdef>doc-appendix</rdef>
 					<div class="role-description">
-						<p>A section of supplemental information located after the primary content that informs the content
-							but is not central to it.</p>
+						<p>A section of supplemental information located after the primary content that informs the
+							content but is not central to it.</p>
 						<div class="example" id="example-4">
         <div class="marker">
     <a class="self-link" href="#example-4">Example<bdi> 4</bdi></a>
@@ -1174,7 +1209,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#appendix">appendix</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#appendix">appendix</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1226,8 +1262,8 @@
 				<div class="role">
 					<rdef>doc-backlink</rdef>
 					<div class="role-description">
-						<p>A link that allows the user to return to a related location in the content (e.g., from a footnote
-							to its reference or from a glossary definition to where a term is used).</p>
+						<p>A link that allows the user to return to a related location in the content (e.g., from a
+							footnote to its reference or from a glossary definition to where a term is used).</p>
 						<div class="example" id="example-5">
         <div class="marker">
     <a class="self-link" href="#example-5">Example<bdi> 5</bdi></a>
@@ -1265,7 +1301,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#backlink">referrer</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#backlink">referrer</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1322,11 +1359,11 @@
 				<div class="role">
 					<rdef>doc-biblioentry</rdef>
 					<div class="role-description">
-						<p>A single reference to an external source in a bibliography. A biblioentry typically provides more
-							detailed information than its reference(s) in the content (e.g., full title, author(s), publisher,
-							publication date, etc.).</p>
-						<p>Authors <em class="rfc2119" title="MUST">MUST</em> ensure that <a href="#dfn-element" class="internalDFN" data-link-type="dfn">elements</a> with role <code>doc-biblioentry</code> are contained in,
-							or owned, by an element with the role <rref>list</rref>.</p>
+						<p>A single reference to an external source in a bibliography. A biblioentry typically provides
+							more detailed information than its reference(s) in the content (e.g., full title, author(s),
+							publisher, publication date, etc.).</p>
+						<p>Authors <em class="rfc2119" title="MUST">MUST</em> ensure that <a href="#dfn-element" class="internalDFN" data-link-type="dfn">elements</a> with role <code>doc-biblioentry</code> are contained
+							in, or owned, by an element with the role <rref>list</rref>.</p>
 						<div class="example" id="example-6">
         <div class="marker">
     <a class="self-link" href="#example-6">Example<bdi> 6</bdi></a>
@@ -1434,7 +1471,8 @@
 				<div class="role">
 					<rdef>doc-bibliography</rdef>
 					<div class="role-description">
-						<p>A list of external references cited in the work, which may be to print or digital sources.</p>
+						<p>A list of external references cited in the work, which may be to print or digital
+							sources.</p>
 						<div class="example" id="example-8">
         <div class="marker">
     <a class="self-link" href="#example-8">Example<bdi> 8</bdi></a>
@@ -1473,8 +1511,7 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#bibliography">bibliography</a>
-									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#bibliography">bibliography</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1564,7 +1601,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#biblioref">biblioref</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#biblioref">biblioref</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1658,7 +1696,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#chapter">chapter</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#chapter">chapter</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1710,8 +1749,8 @@
 				<div class="role">
 					<rdef>doc-colophon</rdef>
 					<div class="role-description">
-						<p>A short section of production notes particular to the edition (e.g., describing the typeface used),
-							often located at the end of a work.</p>
+						<p>A short section of production notes particular to the edition (e.g., describing the typeface
+							used), often located at the end of a work.</p>
 						<div class="example" id="example-11">
         <div class="marker">
     <a class="self-link" href="#example-11">Example<bdi> 11</bdi></a>
@@ -1747,7 +1786,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#colophon">colophon</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#colophon">colophon</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1836,7 +1876,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#conclusion">conclusion</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#conclusion">conclusion</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1888,7 +1929,8 @@
 				<div class="role">
 					<rdef>doc-cover</rdef>
 					<div class="role-description">
-						<p>An image that sets the mood or tone for the work and typically includes the title and author.</p>
+						<p>An image that sets the mood or tone for the work and typically includes the title and
+							author.</p>
 						<div class="example" id="example-13">
         <div class="marker">
     <a class="self-link" href="#example-13">Example<bdi> 13</bdi></a>
@@ -1922,7 +1964,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#cover">cover</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#cover">cover</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -1974,8 +2017,8 @@
 				<div class="role">
 					<rdef>doc-credit</rdef>
 					<div class="role-description">
-						<p>An acknowledgment of the source of integrated content from third-party sources, such as photos.
-							Typically identifies the creator, copyright and any restrictions on reuse.</p>
+						<p>An acknowledgment of the source of integrated content from third-party sources, such as
+							photos. Typically identifies the creator, copyright and any restrictions on reuse.</p>
 						<div class="example" id="example-14">
         <div class="marker">
     <a class="self-link" href="#example-14">Example<bdi> 14</bdi></a>
@@ -2012,7 +2055,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#credit">credit</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#credit">credit</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2101,7 +2145,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#credits">credits</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#credits">credits</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2153,8 +2198,8 @@
 				<div class="role">
 					<rdef>doc-dedication</rdef>
 					<div class="role-description">
-						<p>An inscription at the front of the work, typically addressed in tribute to one or more persons
-							close to the author.</p>
+						<p>An inscription at the front of the work, typically addressed in tribute to one or more
+							persons close to the author.</p>
 						<div class="example" id="example-16">
         <div class="marker">
     <a class="self-link" href="#example-16">Example<bdi> 16</bdi></a>
@@ -2188,7 +2233,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#dedication">dedication</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#dedication">dedication</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2240,11 +2286,11 @@
 				<div class="role">
 					<rdef>doc-endnote</rdef>
 					<div class="role-description">
-						<p>One of a collection of notes that occur at the end of a work, or a section within it, that provides
-							additional context to a referenced passage of text.</p>
+						<p>One of a collection of notes that occur at the end of a work, or a section within it, that
+							provides additional context to a referenced passage of text.</p>
 						<p>Authors <em class="rfc2119" title="MUST">MUST</em> ensure that <a href="#dfn-element" class="internalDFN" data-link-type="dfn">elements</a> with <a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a>
 							<code>doc-endnote</code> are contained in, or owned, by an element with the role
-							<rref>list</rref>.</p>
+								<rref>list</rref>.</p>
 						<div class="example" id="example-17">
         <div class="marker">
     <a class="self-link" href="#example-17">Example<bdi> 17</bdi></a>
@@ -2303,7 +2349,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#rearnote">rearnote</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#rearnote">rearnote</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2357,8 +2404,8 @@
 					<div class="role-description">
 						<p>A collection of notes at the end of a work or a section within it.</p>
 						<p>Note that the <code>doc-endnotes</code>
-							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is never applied directly to the list of endnotes. See the <rref>doc-endnote</rref>
-							role for more information.</p>
+							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is never applied directly to the list of endnotes. See the
+								<rref>doc-endnote</rref> role for more information.</p>
 						<div class="example" id="example-19">
         <div class="marker">
     <a class="self-link" href="#example-19">Example<bdi> 19</bdi></a>
@@ -2399,7 +2446,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#rearnotes">rearnotes</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#rearnotes">rearnotes</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2489,7 +2537,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#epigraph">epigraph</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#epigraph">epigraph</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2541,8 +2590,8 @@
 				<div class="role">
 					<rdef>doc-epilogue</rdef>
 					<div class="role-description">
-						<p>A concluding section of narrative that wraps up or comments on the actions and events of the work,
-							typically from a future perspective.</p>
+						<p>A concluding section of narrative that wraps up or comments on the actions and events of the
+							work, typically from a future perspective.</p>
 						<div class="example" id="example-21">
         <div class="marker">
     <a class="self-link" href="#example-21">Example<bdi> 21</bdi></a>
@@ -2583,7 +2632,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#epilogue">epilogue</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#epilogue">epilogue</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2635,8 +2685,8 @@
 				<div class="role">
 					<rdef>doc-errata</rdef>
 					<div class="role-description">
-						<p>A set of corrections discovered after initial publication of the work, sometimes referred to as
-							corrigenda.</p>
+						<p>A set of corrections discovered after initial publication of the work, sometimes referred to
+							as corrigenda.</p>
 						<div class="example" id="example-22">
         <div class="marker">
     <a class="self-link" href="#example-22">Example<bdi> 22</bdi></a>
@@ -2673,7 +2723,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#errata">errata</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#errata">errata</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2725,7 +2776,8 @@
 				<div class="role">
 					<rdef>doc-example</rdef>
 					<div class="role-description">
-						<p>An illustration of a key concept of the work, such as a code listing, case study or problem.</p>
+						<p>An illustration of a key concept of the work, such as a code listing, case study or
+							problem.</p>
 						<div class="example" id="example-23">
         <div class="marker">
     <a class="self-link" href="#example-23">Example<bdi> 23</bdi></a>
@@ -2814,11 +2866,12 @@
 				<div class="role">
 					<rdef>doc-footnote</rdef>
 					<div class="role-description">
-						<p>Ancillary information, such as a citation or commentary, that provides additional context to a
-							referenced passage of text.</p>
+						<p>Ancillary information, such as a citation or commentary, that provides additional context to
+							a referenced passage of text.</p>
 						<p>The <code>doc-footnote</code>
-							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is only for representing individual notes that occur within the body of a work. For
-							collections of notes that occur at the end of a section, see <rref>doc-endnotes</rref>.</p>
+							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is only for representing individual notes that occur within the body of a work.
+							For collections of notes that occur at the end of a section, see
+							<rref>doc-endnotes</rref>.</p>
 						<div class="example" id="example-24">
         <div class="marker">
     <a class="self-link" href="#example-24">Example<bdi> 24</bdi></a>
@@ -2854,7 +2907,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#footnote">footnote</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#footnote">footnote</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2944,7 +2998,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#foreword">foreword</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#foreword">foreword</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -2997,6 +3052,8 @@
 					<rdef>doc-glossary</rdef>
 					<div class="role-description">
 						<p>A brief dictionary of new, uncommon or specialized terms used in the content.</p>
+						<p>The structure of a glossary <em class="rfc2119" title="SHOULD">SHOULD</em> make it possible for end users to identify each term and
+							associated definition (e.g., using the [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>] <code>dl</code> or <code>dfn</code> elements).</p>
 						<div class="example" id="example-26">
         <div class="marker">
     <a class="self-link" href="#example-26">Example<bdi> 26</bdi></a>
@@ -3010,6 +3067,17 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
       …
    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
+      </div>
+						<div class="example" id="example-27">
+        <div class="marker">
+    <a class="self-link" href="#example-27">Example<bdi> 27</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-glossary"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"glosshd"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"glosshd"</span>&gt;</span>Glossay of Technical Terms<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"gtt00110001"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">dfn</span>&gt;</span>algorithm<span class="hljs-tag">&lt;/<span class="hljs-name">dfn</span>&gt;</span> A set of rules …<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      …
+   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
@@ -3040,7 +3108,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#glossary">glossary</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#glossary">glossary</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3048,7 +3117,7 @@
 							</tr>
 							<tr>
 								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
-								<td class="role-mustcontain"><rref>term</rref>, <rref>definition</rref></td>
+								<td class="role-mustcontain"> </td>
 							</tr>
 							<tr>
 								<th class="role-required-properties-head">Required States and Properties:</th>
@@ -3093,9 +3162,9 @@
 					<rdef>doc-glossref</rdef>
 					<div class="role-description">
 						<p>A reference to a glossary definition.</p>
-						<div class="example" id="example-27">
+						<div class="example" id="example-28">
         <div class="marker">
-    <a class="self-link" href="#example-27">Example<bdi> 27</bdi></a>
+    <a class="self-link" href="#example-28">Example<bdi> 28</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
    This is indicated in the cost of a
    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#bcc0f155"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-glossref"</span>&gt;</span>credit default swap<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> …
@@ -3129,7 +3198,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#glossref">glossref</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#glossref">glossref</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3188,9 +3258,9 @@
 					<div class="role-description">
 						<p>A navigational aid that provides a detailed list of links to key subjects, names and other
 							important topics covered in the work.</p>
-						<div class="example" id="example-28">
+						<div class="example" id="example-29">
         <div class="marker">
-    <a class="self-link" href="#example-28">Example<bdi> 28</bdi></a>
+    <a class="self-link" href="#example-29">Example<bdi> 29</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-index"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Index<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
@@ -3233,7 +3303,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#index">index</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#index">index</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3286,9 +3357,9 @@
 					<rdef>doc-introduction</rdef>
 					<div class="role-description">
 						<p>A preliminary section that typically introduces the scope or nature of the work.</p>
-						<div class="example" id="example-29">
+						<div class="example" id="example-30">
         <div class="marker">
-    <a class="self-link" href="#example-29">Example<bdi> 29</bdi></a>
+    <a class="self-link" href="#example-30">Example<bdi> 30</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-introduction"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Everyone has some experience with marketing … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
@@ -3321,8 +3392,7 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#introduction">introduction</a>
-									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#introduction">introduction</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3375,11 +3445,11 @@
 				<div class="role">
 					<rdef>doc-noteref</rdef>
 					<div class="role-description">
-						<p>A reference to a footnote or endnote, typically appearing as a superscripted number or symbol in
-							the main body of text.</p>
-						<div class="example" id="example-30">
+						<p>A reference to a footnote or endnote, typically appearing as a superscripted number or symbol
+							in the main body of text.</p>
+						<div class="example" id="example-31">
         <div class="marker">
-    <a class="self-link" href="#example-30">Example<bdi> 30</bdi></a>
+    <a class="self-link" href="#example-31">Example<bdi> 31</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> … as studies have shown.<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#fn01"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fnref01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-noteref"</span>&gt;</span>[1]<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
 					</div>
@@ -3410,7 +3480,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#noteref">noteref</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#noteref">noteref</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3469,9 +3540,9 @@
 					<div class="role-description">
 						<p>Notifies the user of consequences that might arise from an action or event. Examples include
 							warnings, cautions and dangers.</p>
-						<div class="example" id="example-31">
+						<div class="example" id="example-32">
         <div class="marker">
-    <a class="self-link" href="#example-31">Example<bdi> 31</bdi></a>
+    <a class="self-link" href="#example-32">Example<bdi> 32</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-notice"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"warning.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"warning icon"</span>/&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Just because you can include a font doesn’t mean you should.
@@ -3481,9 +3552,9 @@
       </div>
 					</div>
 					<p>Authors <em class="rfc2119" title="SHOULD">SHOULD</em> include a label when the notice needs to be navigable to.</p>
-					<div class="example" id="example-32">
+					<div class="example" id="example-33">
         <div class="marker">
-    <a class="self-link" href="#example-32">Example<bdi> 32</bdi></a>
+    <a class="self-link" href="#example-33">Example<bdi> 33</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-notice"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Explosion Risk"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>Danger!<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> Mixing reactive materials may cause an explosion.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
@@ -3515,7 +3586,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#notice">notice</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#notice">notice</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3567,13 +3639,28 @@
 				<div class="role">
 					<rdef>doc-pagebreak</rdef>
 					<div class="role-description">
-						<p>A separator denoting the position before which a break occurs between two contiguous pages in a
-							statically paginated version of the content.</p>
-						<div class="example" id="example-33">
-        <div class="marker">
-    <a class="self-link" href="#example-33">Example<bdi> 33</bdi></a>
-  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pg04"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagebreak"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"4"</span>/&gt;</span></code></pre>
-      </div>
+						<p>A separator denoting the position before which a break occurs between two contiguous pages in
+							a statically paginated version of the content.</p>
+						<p>Page break locators are also commonly used to provide static markers in purely digital
+							publications (i.e., where no statically paginated equivalent exists). These markers provide
+							consistent navigation regardless of differences in font and screen size that can otherwise
+							affect the dynamic pagination of the content.</p>
+						<p>The name of the page break <em class="rfc2119" title="SHOULD">SHOULD</em> be an end user-consumable page number so that assistive
+							technologies can announce the page as needed (e.g., in a command to indentify the current
+							page).</p>
+						<aside class="example" id="example-34"><div class="marker">
+    <a class="self-link" href="#example-34">Example<bdi> 34</bdi></a>
+  </div>
+							<p>The following example shows three equivalent patterns for marking up page breaks in
+								digital publications. Either the <code>aria-label</code> or <code>title</code>
+								attributes can be used to assign the accessible name when an explicit page number is not
+								provided.</p>
+							<pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pg04"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagebreak"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"4"</span>/&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pg04"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagebreak"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"4"</span>/&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pg04"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagebreak"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+						</aside>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -3602,7 +3689,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#pagebreak">pagebreak</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#pagebreak">pagebreak</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3660,9 +3748,9 @@
 					<rdef>doc-pagelist</rdef>
 					<div class="role-description">
 						<p>A navigational aid that provides a list of links to the pagebreaks in the content.</p>
-						<div class="example" id="example-34">
+						<div class="example" id="example-35">
         <div class="marker">
-    <a class="self-link" href="#example-34">Example<bdi> 34</bdi></a>
+    <a class="self-link" href="#example-35">Example<bdi> 35</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagelist"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Pages<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
@@ -3700,7 +3788,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#page-list">page-list</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#page-list">page-list</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3754,9 +3843,9 @@
 					<div class="role-description">
 						<p>A major structural division in a work that contains a set of related sections dealing with a
 							particular subject, narrative arc or similar encapsulated theme.</p>
-						<div class="example" id="example-35">
+						<div class="example" id="example-36">
         <div class="marker">
-    <a class="self-link" href="#example-35">Example<bdi> 35</bdi></a>
+    <a class="self-link" href="#example-36">Example<bdi> 36</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-part"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Part One<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-chapter"</span>&gt;</span>
@@ -3794,7 +3883,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#part">part</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#part">part</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3846,10 +3936,11 @@
 				<div class="role">
 					<rdef>doc-preface</rdef>
 					<div class="role-description">
-						<p>An introductory section that precedes the work, typically written by the author of the work.</p>
-						<div class="example" id="example-36">
+						<p>An introductory section that precedes the work, typically written by the author of the
+							work.</p>
+						<div class="example" id="example-37">
         <div class="marker">
-    <a class="self-link" href="#example-36">Example<bdi> 36</bdi></a>
+    <a class="self-link" href="#example-37">Example<bdi> 37</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-preface"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Introduction:A Guide to the Galaxy<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    …
@@ -3883,7 +3974,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#preface">preface</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#preface">preface</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -3935,10 +4027,11 @@
 				<div class="role">
 					<rdef>doc-prologue</rdef>
 					<div class="role-description">
-						<p>An introductory section that sets the background to a work, typically part of the narrative.</p>
-						<div class="example" id="example-37">
+						<p>An introductory section that sets the background to a work, typically part of the
+							narrative.</p>
+						<div class="example" id="example-38">
         <div class="marker">
-    <a class="self-link" href="#example-37">Example<bdi> 37</bdi></a>
+    <a class="self-link" href="#example-38">Example<bdi> 38</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-prologue"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Prologue<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
@@ -3976,7 +4069,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#prologue">prologue</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#prologue">prologue</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4028,26 +4122,27 @@
 				<div class="role">
 					<rdef>doc-pullquote</rdef>
 					<div class="role-description">
-						<p>A distinctively placed or highlighted quotation from the current content designed to draw attention
-							to a topic or highlight a key point.</p>
-						<p>Unlike a passage quoted from another source, a pullquote is a direct repetition of text in the
-							current document. As a result, authors must ensure that the presentational occurrence is hidden
-							from users of assistive technologies (e.g., using the <pref>aria-hidden</pref> attribute).</p>
-						<p>The following example shows the identification of a pullquote that will be presented elsewhere
-							(e.g., via a script). In this case, the pullquote is not hidden as the marked text is not
-							presentational.</p>
-						<div class="example" id="example-38">
+						<p>A distinctively placed or highlighted quotation from the current content designed to draw
+							attention to a topic or highlight a key point.</p>
+						<p>Unlike a passage quoted from another source, a pullquote is a direct repetition of text in
+							the current document. As a result, authors must ensure that the presentational occurrence is
+							hidden from users of assistive technologies (e.g., using the <pref>aria-hidden</pref>
+							attribute).</p>
+						<p>The following example shows the identification of a pullquote that will be presented
+							elsewhere (e.g., via a script). In this case, the pullquote is not hidden as the marked text
+							is not presentational.</p>
+						<div class="example" id="example-39">
         <div class="marker">
-    <a class="self-link" href="#example-38">Example<bdi> 38</bdi></a>
+    <a class="self-link" href="#example-39">Example<bdi> 39</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>… I may die, but first you, my tyrant and tormentor, shall curse the sun that gazes on your misery.
    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pq01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pullquote"</span>&gt;</span>Beware, for I am fearless and therefore powerful.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
    I will watch with the wiliness of a snake, that I may sting with its venom. … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
-						<p>The next example shows a pullquote that duplicates the text. This quote is hidden because it is for
-							presentational purposes only.</p>
-						<div class="example" id="example-39">
+						<p>The next example shows a pullquote that duplicates the text. This quote is hidden because it
+							is for presentational purposes only.</p>
+						<div class="example" id="example-40">
         <div class="marker">
-    <a class="self-link" href="#example-39">Example<bdi> 39</bdi></a>
+    <a class="self-link" href="#example-40">Example<bdi> 40</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>… Better habits pave the way to growth, and growth leads to greater happiness.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pullquote"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
    Better habits pave the way to growth, and growth leads to greater happiness.
@@ -4081,7 +4176,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#pullquote">pullquote</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#pullquote">pullquote</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4133,11 +4229,11 @@
 				<div class="role">
 					<rdef>doc-qna</rdef>
 					<div class="role-description">
-						<p>A section of content structured as a series of questions and answers, such as an interview or list
-							of frequently asked questions.</p>
-						<div class="example" id="example-40">
+						<p>A section of content structured as a series of questions and answers, such as an interview or
+							list of frequently asked questions.</p>
+						<div class="example" id="example-41">
         <div class="marker">
-    <a class="self-link" href="#example-40">Example<bdi> 40</bdi></a>
+    <a class="self-link" href="#example-41">Example<bdi> 41</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-qna"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Interview with the Author<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
@@ -4175,7 +4271,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#qna">qna</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#qna">qna</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4228,9 +4325,9 @@
 					<rdef>doc-subtitle</rdef>
 					<div class="role-description">
 						<p>An explanatory or alternate title for the work, or a section or component within it.</p>
-						<div class="example" id="example-41">
+						<div class="example" id="example-42">
         <div class="marker">
-    <a class="self-link" href="#example-41">Example<bdi> 41</bdi></a>
+    <a class="self-link" href="#example-42">Example<bdi> 42</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Chapter 2 The Battle<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-subtitle"</span>&gt;</span>Once more unto the breach<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -4264,7 +4361,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#subtitle">subtitle</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#subtitle">subtitle</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4321,10 +4419,11 @@
 				<div class="role">
 					<rdef>doc-tip</rdef>
 					<div class="role-description">
-						<p>Helpful information that clarifies some aspect of the content or assists in its comprehension.</p>
-						<div class="example" id="example-42">
+						<p>Helpful information that clarifies some aspect of the content or assists in its
+							comprehension.</p>
+						<div class="example" id="example-43">
         <div class="marker">
-    <a class="self-link" href="#example-42">Example<bdi> 42</bdi></a>
+    <a class="self-link" href="#example-43">Example<bdi> 43</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-tip"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Tip<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You can assign a variable a new value that is the result
@@ -4359,7 +4458,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#help">help</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#help">help</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4411,11 +4511,12 @@
 				<div class="role">
 					<rdef>doc-toc</rdef>
 					<div class="role-description">
-						<p>A navigational aid that provides an ordered list of links to the major sectional headings in the
-							content. A table of contents may cover an entire work, or only a smaller section of it.</p>
-						<div class="example" id="example-43">
+						<p>A navigational aid that provides an ordered list of links to the major sectional headings in
+							the content. A table of contents may cover an entire work, or only a smaller section of
+							it.</p>
+						<div class="example" id="example-44">
         <div class="marker">
-    <a class="self-link" href="#example-43">Example<bdi> 43</bdi></a>
+    <a class="self-link" href="#example-44">Example<bdi> 44</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-toc"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Contents<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"directory"</span>&gt;</span>
@@ -4455,7 +4556,8 @@
 							</tr>
 							<tr>
 								<th class="role-related-head" scope="row">Related Concepts:</th>
-								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#toc">toc</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+								<td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#toc">toc</a>
+									[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
@@ -4510,32 +4612,32 @@
 		<section class="appendix informative" id="a_schemata">
 			<h2 id="a-schemata"><bdi class="secno">A. </bdi>Schemata<a class="self-link" aria-label="§" href="#a_schemata"></a></h2><p><em>This section is non-normative.</em></p>
 			<p>The <a href="http://www.w3.org/html/wg/"><abbr title="Hypertext Markup Language">HTML</abbr> Working Group</a> has incorporated the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> attributes
-				into <a href="http://www.w3.org/TR/html5/"><abbr title="Hypertext Markup Language">HTML</abbr> 5</a>. Official support for <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> in <abbr title="Hypertext Markup Language">HTML</abbr> is provided in
-				that specification.</p>
+				into <a href="http://www.w3.org/TR/html5/"><abbr title="Hypertext Markup Language">HTML</abbr> 5</a>. Official support for <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> in <abbr title="Hypertext Markup Language">HTML</abbr> is provided
+				in that specification.</p>
 			<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Note</span></div><p class="">Validation support for the roles defined in this module will be added once the specification
 				reaches recommendation.</p></div>
 			<p>For information on incorporating <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> into other grammars, refer to <a href="http://www.w3.org/TR/wai-aria-1.1/#a_schemata">Appendix A</a> of [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>]</p>
 		</section>
 		<section class="appendix informative" id="exit_criteria">
 			<h2 id="b-candidate-recommendation-exit-criteria"><bdi class="secno">B. </bdi>Candidate Recommendation Exit Criteria<a class="self-link" aria-label="§" href="#exit_criteria"></a></h2><p><em>This section is non-normative.</em></p>
-			<p>For this specification to be advanced to Proposed Recommendation, it has to be proven that roles defined in
-				this specification have sufficient usage by the target communities. More specifically, it has to be
+			<p>For this specification to be advanced to Proposed Recommendation, it has to be proven that roles defined
+				in this specification have sufficient usage by the target communities. More specifically, it has to be
 				documented that <em>each</em>
-				<a href="#roles">Digital Publishing Role</a> is used (at least in preliminary prototypes, not necessarily in
-				full production yet) by two, independent document author/publisher as a means to structure document, where
-				“usage” means: </p>
+				<a href="#roles">Digital Publishing Role</a> is used (at least in preliminary prototypes, not
+				necessarily in full production yet) by two, independent document author/publisher as a means to
+				structure document, where “usage” means: </p>
 
 			<ul>
-				<li>the <code>role</code> attribute value is used, as defined in this specification; or, as a fallback</li>
-				<li>the <code>epub:type</code> attribute, defined for the purpose of <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-xhtml-semantic-inflection">Semantic
-						Inflection</a> in [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-content" title="EPUB Content Documents 3.1">EPUB-Content</a></cite>], is used with the related value (when specified in the detailed
-					specification of the role) in the <a href="https://idpf.github.io/epub-vocabs/structure/">EPUB Structural
-						Semantic Vocabulary</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]. </li>
+				<li>the <code>role</code> attribute value is used, as defined in this specification; or, as a
+					fallback</li>
+				<li>the <code>epub:type</code> attribute, defined for the purpose of <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-xhtml-semantic-inflection">Semantic Inflection</a> in [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-content" title="EPUB Content Documents 3.1">EPUB-Content</a></cite>], is used with the related value (when specified in
+					the detailed specification of the role) in the <a href="https://idpf.github.io/epub-vocabs/structure/">EPUB Structural Semantic Vocabulary</a>
+					[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]. </li>
 			</ul>
 
 			<p> In the case where the <code>epub:type</code> attribute is used, the author/publisher should also clearly
-				state that the plan is to replace <code>epub:type</code> by the ARIA <code>role</code> attribute when this
-				specification is published as a Recommendation. Furthermore, it is also required that at least two,
+				state that the plan is to replace <code>epub:type</code> by the ARIA <code>role</code> attribute when
+				this specification is published as a Recommendation. Furthermore, it is also required that at least two,
 				independent authors/publishers use a comprehensive, although not necessarily complete, set of
 					<code>role</code> attribute (as opposed to <code>epub:type</code>). </p>
 		</section>
@@ -4546,6 +4648,7 @@
 						Recommendation</a><a class="self-link" aria-label="§" href="#substantive-changes-since-the-dpub-aria-1-0-recommendation"></a></h3>
 				<ul>
 					
+					<li>25-July-2020: Recommend that doc-pagebreak name be end user-consumable.</li>
 				</ul>
 			</section>
 			
@@ -4587,7 +4690,7 @@
         Normative references
       <a class="self-link" aria-label="§" href="#normative-references"></a></h3>
     <dl class="bibliography">
-      <dt id="bib-epub-ssv">[EPUB-SSV]</dt><dd><a href="http://www.idpf.org/epub/vocab/structure/"><cite>EPUB Structural Semantics Vocabulary</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/vocab/structure/">http://www.idpf.org/epub/vocab/structure/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://tools.ietf.org/html/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc8174">https://tools.ietf.org/html/rfc8174</a></dd>
+      <dt id="bib-epub-ssv">[EPUB-SSV]</dt><dd><a href="http://www.idpf.org/epub/vocab/structure/"><cite>EPUB Structural Semantics Vocabulary</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/vocab/structure/">http://www.idpf.org/epub/vocab/structure/</a></dd><dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://tools.ietf.org/html/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc8174">https://tools.ietf.org/html/rfc8174</a></dd>
     </dl></section><section id="informative-references">
       <h3 id="e-2-informative-references"><bdi class="secno">E.2 </bdi>
         Informative references
