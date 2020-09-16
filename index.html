@@ -12,320 +12,7 @@
 				semantic metadata about Web document structural divisions. This is particularly important for structural
 				divisions of long-form documents and goes along with embedding semantic metadata about Web-application
 				widgets and behaviors for assistive technologies. This specification defines a set of WAI-ARIA roles
-				specific to helping users of assistive technologies navigate through such long-form documents."><link rel="canonical" href="https://www.w3.org/TR/dpub-aria/"><script type="application/ld+json">{
-  "@context": [
-    "http://schema.org",
-    {
-      "@vocab": "http://schema.org/",
-      "@language": "en-US",
-      "w3p": "http://www.w3.org/2001/02pd/rec54#",
-      "foaf": "http://xmlns.com/foaf/0.1/",
-      "datePublished": {
-        "@type": "http://www.w3.org/2001/XMLSchema#date"
-      },
-      "inLanguage": {
-        "@language": null
-      },
-      "isBasedOn": {
-        "@type": "@id"
-      },
-      "license": {
-        "@type": "@id"
-      }
-    }
-  ],
-  "id": "https://www.w3.org/TR/dpub-aria/",
-  "type": [
-    "TechArticle"
-  ],
-  "name": "Digital Publishing WAI-ARIA Module 1.1",
-  "inLanguage": "en-US",
-  "license": "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document",
-  "datePublished": "2020-09-15",
-  "copyrightHolder": {
-    "name": "World Wide Web Consortium",
-    "url": "https://www.w3.org/"
-  },
-  "discussionUrl": "https://github.com/w3c/dpub-aria/issues/",
-  "alternativeHeadline": "",
-  "isBasedOn": "",
-  "description": "Enabling users of assistive technologies to find their way through Web content requires embedding\n\t\t\t\tsemantic metadata about Web document structural divisions. This is particularly important for structural\n\t\t\t\tdivisions of long-form documents and goes along with embedding semantic metadata about Web-application\n\t\t\t\twidgets and behaviors for assistive technologies. This specification defines a set of WAI-ARIA roles\n\t\t\t\tspecific to helping users of assistive technologies navigate through such long-form documents.",
-  "editor": [
-    {
-      "type": "Person",
-      "name": "Matt Garrish",
-      "url": "http://www.daisy.org",
-      "worksFor": {
-        "name": "DAISY Consortium"
-      }
-    },
-    {
-      "type": "Person",
-      "name": "Tzviya Siegman",
-      "url": "http://www.wiley.com",
-      "foaf:mbox": "tsiegman@wiley.com",
-      "worksFor": {
-        "name": "Wiley"
-      }
-    },
-    {
-      "type": "Person",
-      "name": "Shane McCarron",
-      "url": "http://blog.halindrome.com",
-      "foaf:mbox": "shane@spec-ops.io",
-      "worksFor": {
-        "name": "Spec-Ops"
-      }
-    }
-  ],
-  "citation": [
-    {
-      "id": "http://www.idpf.org/epub/vocab/structure/",
-      "type": "TechArticle",
-      "name": "EPUB Structural Semantics Vocabulary",
-      "url": "http://www.idpf.org/epub/vocab/structure/",
-      "publisher": {
-        "name": "IDPF"
-      }
-    },
-    {
-      "id": "https://html.spec.whatwg.org/multipage/",
-      "type": "TechArticle",
-      "name": "HTML Standard",
-      "url": "https://html.spec.whatwg.org/multipage/",
-      "creator": [
-        {
-          "name": "Anne van Kesteren"
-        },
-        {
-          "name": "Domenic Denicola"
-        },
-        {
-          "name": "Ian Hickson"
-        },
-        {
-          "name": "Philip Jägenstedt"
-        },
-        {
-          "name": "Simon Pieters"
-        }
-      ],
-      "publisher": {
-        "name": "WHATWG"
-      }
-    },
-    {
-      "id": "https://tools.ietf.org/html/rfc2119",
-      "type": "TechArticle",
-      "name": "Key words for use in RFCs to Indicate Requirement Levels",
-      "url": "https://tools.ietf.org/html/rfc2119",
-      "creator": [
-        {
-          "name": "S. Bradner"
-        }
-      ],
-      "publisher": {
-        "name": "IETF"
-      }
-    },
-    {
-      "id": "https://tools.ietf.org/html/rfc8174",
-      "type": "TechArticle",
-      "name": "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words",
-      "url": "https://tools.ietf.org/html/rfc8174",
-      "creator": [
-        {
-          "name": "B. Leiba"
-        }
-      ],
-      "publisher": {
-        "name": "IETF"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/wai-aria-1.1/",
-      "type": "TechArticle",
-      "name": "Accessible Rich Internet Applications (WAI-ARIA) 1.1",
-      "url": "https://www.w3.org/TR/wai-aria-1.1/",
-      "creator": [
-        {
-          "name": "Joanmarie Diggs"
-        },
-        {
-          "name": "Shane McCarron"
-        },
-        {
-          "name": "Michael Cooper"
-        },
-        {
-          "name": "Richard Schwerdtfeger"
-        },
-        {
-          "name": "James Craig"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/html5/",
-      "type": "TechArticle",
-      "name": "HTML5",
-      "url": "https://www.w3.org/TR/html5/",
-      "creator": [
-        {
-          "name": "Ian Hickson"
-        },
-        {
-          "name": "Robin Berjon"
-        },
-        {
-          "name": "Steve Faulkner"
-        },
-        {
-          "name": "Travis Leithead"
-        },
-        {
-          "name": "Erika Doyle Navara"
-        },
-        {
-          "name": "Theresa O'Connor"
-        },
-        {
-          "name": "Silvia Pfeiffer"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/SVG2/",
-      "type": "TechArticle",
-      "name": "Scalable Vector Graphics (SVG) 2",
-      "url": "https://www.w3.org/TR/SVG2/",
-      "creator": [
-        {
-          "name": "Amelia Bellamy-Royds"
-        },
-        {
-          "name": "Bogdan Brinza"
-        },
-        {
-          "name": "Chris Lilley"
-        },
-        {
-          "name": "Dirk Schulze"
-        },
-        {
-          "name": "David Storey"
-        },
-        {
-          "name": "Eric Willigers"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    },
-    {
-      "id": "https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility",
-      "type": "TechArticle",
-      "name": "Microsoft Active Accessibility (MSAA)",
-      "url": "https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility",
-      "publisher": {
-        "name": "Microsoft Corporation"
-      }
-    },
-    {
-      "id": "https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification",
-      "type": "TechArticle",
-      "name": "UI Automation",
-      "url": "https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification",
-      "publisher": {
-        "name": "Microsoft Corporation"
-      }
-    },
-    {
-      "id": "https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex",
-      "type": "TechArticle",
-      "name": "The IAccessibleEx Interface",
-      "url": "https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex",
-      "publisher": {
-        "name": "Microsoft Corporation"
-      }
-    },
-    {
-      "id": "https://developer.apple.com/documentation/appkit/nsaccessibility",
-      "type": "TechArticle",
-      "name": "The NSAccessibility Protocol for macOS",
-      "url": "https://developer.apple.com/documentation/appkit/nsaccessibility",
-      "publisher": {
-        "name": "Apple, Inc."
-      }
-    },
-    {
-      "id": "https://developer.gnome.org/atk/stable/",
-      "type": "TechArticle",
-      "name": "ATK - Accessibility Toolkit",
-      "url": "https://developer.gnome.org/atk/stable/",
-      "publisher": {
-        "name": "The GNOME Project"
-      }
-    },
-    {
-      "id": "https://developer.gnome.org/libatspi/stable/",
-      "type": "TechArticle",
-      "name": "Assistive Technology Service Provider Interface",
-      "url": "https://developer.gnome.org/libatspi/stable/",
-      "publisher": {
-        "name": "The GNOME Project"
-      }
-    },
-    {
-      "id": "https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2",
-      "type": "TechArticle",
-      "name": "IAccessible2",
-      "url": "https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2",
-      "publisher": {
-        "name": "Linux Foundation"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/WCAG21/",
-      "type": "TechArticle",
-      "name": "Web Content Accessibility Guidelines (WCAG) 2.1",
-      "url": "https://www.w3.org/TR/WCAG21/",
-      "creator": [
-        {
-          "name": "Andrew Kirkpatrick"
-        },
-        {
-          "name": "Joshue O Connor"
-        },
-        {
-          "name": "Alastair Campbell"
-        },
-        {
-          "name": "Michael Cooper"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    },
-    {
-      "id": "http://www.idpf.org/epub/31/spec/epub-contentdocs.html",
-      "type": "TechArticle",
-      "name": "EPUB Content Documents 3.1",
-      "url": "http://www.idpf.org/epub/31/spec/epub-contentdocs.html",
-      "publisher": {
-        "name": "IDPF"
-      }
-    }
-  ]
-}</script><style>.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}.hljs-comment,.hljs-quote{color:#717277;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}.hljs-literal{color:#0b76c5}.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}</style><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
+				specific to helping users of assistive technologies navigate through such long-form documents."><link rel="canonical" href="https://www.w3.org/TR/dpub-aria/"><style>.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}.hljs-comment,.hljs-quote{color:#717277;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}.hljs-literal{color:#0b76c5}.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}</style><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
   "wg": "Publishing Working Group",
   "specStatus": "ED",
   "shortName": "dpub-aria",
@@ -345,7 +32,9 @@
       "company": "Wiley",
       "companyURI": "http://www.wiley.com",
       "w3cid": 65542
-    },
+    }
+  ],
+  "formerEditors": [
     {
       "name": "Shane McCarron",
       "url": "http://blog.halindrome.com",
@@ -353,9 +42,7 @@
       "company": "Spec-Ops",
       "companyURI": "https://www.spec-ops.io",
       "w3cid": 89030
-    }
-  ],
-  "formerEditors": [
+    },
     {
       "name": "Markus Gylling",
       "url": "http://www.daisy.org",
@@ -415,16 +102,16 @@
   "doJsonLd": true,
   "trace": true,
   "maxTocLevel": 4,
-  "publishDate": "2020-09-15",
-  "publishISODate": "2020-09-15T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 15 September 2020"
+  "publishDate": "2020-09-16",
+  "publishISODate": "2020-09-16T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 16 September 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1>
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2020-09-15">15 September 2020</time>
+      <time class="dt-published" datetime="2020-09-16">16 September 2020</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -439,10 +126,10 @@
       
       
       <dt>Editors:</dt>
-      <dd class="p-author h-card vcard" data-editor-id="51655"><a class="u-url url p-name fn" href="http://www.daisy.org">Matt Garrish</a> (DAISY Consortium) </dd><dd class="p-author h-card vcard" data-editor-id="65542"><a class="ed_mailto u-email email p-name" href="mailto:tsiegman@wiley.com">Tzviya Siegman</a> (Wiley) </dd><dd class="p-author h-card vcard" data-editor-id="89030"><a class="ed_mailto u-email email p-name" href="mailto:shane@spec-ops.io">Shane McCarron</a> (Spec-Ops) </dd>
+      <dd class="p-author h-card vcard" data-editor-id="51655"><a class="u-url url p-name fn" href="http://www.daisy.org">Matt Garrish</a> (DAISY Consortium) </dd><dd class="p-author h-card vcard" data-editor-id="65542"><a class="ed_mailto u-email email p-name" href="mailto:tsiegman@wiley.com">Tzviya Siegman</a> (Wiley) </dd>
       <dt>
-              Former editor:
-            </dt><dd class="p-author h-card vcard" data-editor-id="21614"><a class="ed_mailto u-email email p-name" href="mailto:mgylling@daisy.org">Markus Gylling</a> (DAISY Consortium) </dd>
+              Former editors:
+            </dt><dd class="p-author h-card vcard" data-editor-id="89030"><a class="ed_mailto u-email email p-name" href="mailto:shane@spec-ops.io">Shane McCarron</a> (Spec-Ops) </dd><dd class="p-author h-card vcard" data-editor-id="21614"><a class="ed_mailto u-email email p-name" href="mailto:mgylling@daisy.org">Markus Gylling</a> (DAISY Consortium) </dd>
       
       <dt>Participate:</dt><dd>
     <a href="https://github.com/w3c/dpub-aria/">GitHub w3c/dpub-aria</a>
@@ -489,7 +176,7 @@
       of this technical report can be found in the
       <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
       https://www.w3.org/TR/.</em></p>
-			<p>The Candidate Recommendation exit criteria are listed in the <a href="#exit_criteria">appendix</a>.</p>
+			<p>The Candidate Recommendation exit criteria are listed in the <a href="#exit_criteria" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured">appendix</a>.</p>
 		<p>
     This document was published by the <a href="https://www.w3.org/publishing/groups/publ-wg/">Publishing Working Group</a> as an
     Editor's Draft.
@@ -531,10 +218,10 @@
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section>
 		<nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target Audience</a></li><li class="tocline"><a class="tocxref" href="#ua-support"><bdi class="secno">1.2 </bdi>User Agent Support</a></li><li class="tocline"><a class="tocxref" href="#co-evolution"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host
-					Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><bdi class="secno">1.4 </bdi>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><bdi class="secno">1.5 </bdi>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#terms"><bdi class="secno">3. </bdi>Important Terms</a></li><li class="tocline"><a class="tocxref" href="#roles"><bdi class="secno">4. </bdi>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><bdi class="secno">4.1 </bdi>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#a_schemata"><bdi class="secno">A. </bdi>Schemata</a></li><li class="tocline"><a class="tocxref" href="#exit_criteria"><bdi class="secno">B. </bdi>Candidate Recommendation Exit Criteria</a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">C. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#substantive-changes-since-the-dpub-aria-1-0-recommendation"><bdi class="secno">C.1 </bdi>Substantive changes since the <span class="formerLink">DPUB-ARIA 1.0
-						Recommendation</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><bdi class="secno">D.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">D.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">E.1 </bdi>
+					Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><bdi class="secno">1.4 </bdi>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><bdi class="secno">1.5 </bdi>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#terms"><bdi class="secno">3. </bdi>Important Terms</a></li><li class="tocline"><a class="tocxref" href="#roles"><bdi class="secno">4. </bdi>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><bdi class="secno">4.1 </bdi>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#a_schemata"><bdi class="secno">A. </bdi>Schemata</a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">B. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#substantive-changes-since-the-dpub-aria-1-0-recommendation"><bdi class="secno">B.1 </bdi>Substantive changes since the <span class="formerLink">DPUB-ARIA 1.0
+						Recommendation</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">C. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><bdi class="secno">C.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">C.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">D. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">D.1 </bdi>
         Normative references
-      </a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.2 </bdi>
+      </a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">D.2 </bdi>
         Informative references
       </a></li></ol></li></ol></nav>
 		<section class="informative" id="introduction">
@@ -734,7 +421,7 @@
     </dd>
     <dt><dfn data-lt="deprecated|deprecate|deprecation|Deprecated" data-dfn-type="dfn" id="dfn-deprecated">Deprecated</dfn></dt>
     <dd>
-      <p>A deprecated <a class="termref" href="#dfn-role">role</a>, <a class="termref" href="#dfn-state">state</a>, or <a class="termref" href="#dfn-property">property</a> is one which has been outdated by newer constructs or changed circumstances, and which may be removed in future versions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification. <a class="termref internalDFN" data-lt="user agent" href="#dfn-user-agent" data-link-type="dfn">User agents</a> are encouraged to continue to support items identified as deprecated for backward compatibility. For more information, see <a href="#deprecated" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured">Deprecated Requirements</a> in the Conformance section.</p>
+      <p>A deprecated <a class="termref" href="#dfn-role">role</a>, <a class="termref" href="#dfn-state">state</a>, or <a class="termref" href="#dfn-property">property</a> is one which has been outdated by newer constructs or changed circumstances, and which may be removed in future versions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification. <a class="termref internalDFN" data-lt="user agent" href="#dfn-user-agent" data-link-type="dfn">User agents</a> are encouraged to continue to support items identified as deprecated for backward compatibility. For more information, see <a href="#deprecated" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-0">Deprecated Requirements</a> in the Conformance section.</p>
     </dd>
     <dt><dfn data-lt="desktop focus|desktop focus events|Desktop focus event" data-dfn-type="dfn" id="dfn-desktop-focus">Desktop focus event</dfn></dt>
     <dd>
@@ -823,7 +510,7 @@
     </dd>
     <dt><dfn data-lt="property|properties|Property" data-dfn-type="dfn" id="dfn-property">Property</dfn></dt>
     <dd>
-      <p><a class="termref internalDFN" data-lt="attribute" href="#dfn-attribute" data-link-type="dfn">Attributes</a> that are essential to the nature of a given <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, <pref>aria-multiline</pref>) are less likely to change than <a class="termref" href="#dfn-state">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as <pref>aria-activedescendant</pref>, <pref>aria-valuenow</pref>, and <pref>aria-valuetext</pref> are expected to change often. See <a class="specref respec-offending-element" href="#statevsprop" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-0">clarification of states versus properties</a>.</p>
+      <p><a class="termref internalDFN" data-lt="attribute" href="#dfn-attribute" data-link-type="dfn">Attributes</a> that are essential to the nature of a given <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, <pref>aria-multiline</pref>) are less likely to change than <a class="termref" href="#dfn-state">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as <pref>aria-activedescendant</pref>, <pref>aria-valuenow</pref>, and <pref>aria-valuetext</pref> are expected to change often. See <a class="specref respec-offending-element" href="#statevsprop" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-1">clarification of states versus properties</a>.</p>
     </dd>
     <dt><dfn data-lt="relationship|relationships|Relationship" data-dfn-type="dfn" id="dfn-relationship">Relationship</dfn></dt>
     <dd>
@@ -843,7 +530,7 @@
     </dd>
     <dt><dfn data-lt="state|states|State" data-dfn-type="dfn" id="dfn-state">State</dfn></dt>
     <dd>
-      <p>A state is a dynamic <a class="termref" href="#dfn-property">property</a> expressing characteristics of an <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a> that may change in response to user action or automated processes. States do not affect the essential nature of the object, but represent data associated with the object or user interaction possibilities. See <a class="specref respec-offending-element" href="#statevsprop" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-1">clarification of states versus properties</a>.</p>
+      <p>A state is a dynamic <a class="termref" href="#dfn-property">property</a> expressing characteristics of an <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a> that may change in response to user action or automated processes. States do not affect the essential nature of the object, but represent data associated with the object or user interaction possibilities. See <a class="specref respec-offending-element" href="#statevsprop" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-2">clarification of states versus properties</a>.</p>
     </dd>
     <dt><dfn data-dfn-type="dfn" id="dfn-sub-document">Sub-document</dfn></dt>
     <dd>
@@ -1359,37 +1046,15 @@
 				<div class="role">
 					<rdef>doc-biblioentry</rdef>
 					<div class="role-description">
-						<p>A single reference to an external source in a bibliography. A biblioentry typically provides
-							more detailed information than its reference(s) in the content (e.g., full title, author(s),
-							publisher, publication date, etc.).</p>
-						<p>Authors <em class="rfc2119" title="MUST">MUST</em> ensure that <a href="#dfn-element" class="internalDFN" data-link-type="dfn">elements</a> with role <code>doc-biblioentry</code> are contained
-							in, or owned, by an element with the role <rref>list</rref>.</p>
-						<div class="example" id="example-6">
-        <div class="marker">
-    <a class="self-link" href="#example-6">Example<bdi> 6</bdi></a>
-  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-bibliography"</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Cited Works<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"list"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-biblioentry"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"b8cab5dd-bc24-459c-9858-7afa9da69b64"</span>&gt;</span>
-         John Steinbeck, The Grapes of Wrath (New York: The Viking Press, 1939)
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-   …
-<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-      </div>
-						<div class="example" id="example-7">
-        <div class="marker">
-    <a class="self-link" href="#example-7">Example<bdi> 7</bdi></a>
-  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-bibliography"</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Select Bibliography<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-biblioentry"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"faulkner-dying"</span>&gt;</span>
-         William Faulkner, As I Lay Dying (New York: Jonathan Cape &amp; Harrison Smith, 1930)
-      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-   …
-<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-      </div>
+						<p>[Deprecated in DPUB-ARIA 1.1] A single reference to an external source in a bibliography. A
+							biblioentry typically provides more detailed information than its reference(s) in the
+							content (e.g., full title, author(s), publisher, publication date, etc.).</p>
+						<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="4"><span>Note</span></div><p class="">The <code>doc-biblioentry</code>
+							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> was designed for use as a list item, but due to clarifications in the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
+							specification, it is not valid as a child of the <rref>list</rref> role. As the
+								<rref>doc-bibliography</rref> role already identifies a section of bibliography entries,
+							authors are instead advised to use the <rref>list</rref> and <rref>listitem</rref> roles
+							when native <abbr title="Hypertext Markup Language">HTML</abbr> elements cannot be used to structure the entries.</p></div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -1406,7 +1071,7 @@
 							</tr>
 							<tr>
 								<th class="role-parent-head" scope="row">Superclass Role:</th>
-								<td class="role-parent"><rref>listitem</rref></td>
+								<td class="role-parent"> </td>
 							</tr>
 							<tr>
 								<th class="role-children-head" scope="row">Subclass Roles:</th>
@@ -1423,7 +1088,7 @@
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
-								<td class="role-scope"><rref>doc-bibliography</rref></td>
+								<td class="role-scope"> </td>
 							</tr>
 							<tr>
 								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
@@ -1473,9 +1138,9 @@
 					<div class="role-description">
 						<p>A list of external references cited in the work, which may be to print or digital
 							sources.</p>
-						<div class="example" id="example-8">
+						<div class="example" id="example-6">
         <div class="marker">
-    <a class="self-link" href="#example-8">Example<bdi> 8</bdi></a>
+    <a class="self-link" href="#example-6">Example<bdi> 6</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-bibliography"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Select Bibliography<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
@@ -1519,7 +1184,7 @@
 							</tr>
 							<tr>
 								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
-								<td class="role-mustcontain"><rref>doc-biblioentry</rref></td>
+								<td class="role-mustcontain"> </td>
 							</tr>
 							<tr>
 								<th class="role-required-properties-head">Required States and Properties:</th>
@@ -1564,9 +1229,9 @@
 					<rdef>doc-biblioref</rdef>
 					<div class="role-description">
 						<p>A reference to a bibliography entry.</p>
-						<div class="example" id="example-9">
+						<div class="example" id="example-7">
         <div class="marker">
-    <a class="self-link" href="#example-9">Example<bdi> 9</bdi></a>
+    <a class="self-link" href="#example-7">Example<bdi> 7</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
    As <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-biblioref"</span>
       <span class="hljs-attr">href</span>=<span class="hljs-string">"#b8cab5dd-bc24-459c-9858-7afa9da69b64"</span>&gt;</span>Steinbeck<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -1660,9 +1325,9 @@
 					<rdef>doc-chapter</rdef>
 					<div class="role-description">
 						<p>A major thematic section of content in a work.</p>
-						<div class="example" id="example-10">
+						<div class="example" id="example-8">
         <div class="marker">
-    <a class="self-link" href="#example-10">Example<bdi> 10</bdi></a>
+    <a class="self-link" href="#example-8">Example<bdi> 8</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-chapter"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Chapter 1. Loomings.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    …
@@ -1751,9 +1416,9 @@
 					<div class="role-description">
 						<p>A short section of production notes particular to the edition (e.g., describing the typeface
 							used), often located at the end of a work.</p>
-						<div class="example" id="example-11">
+						<div class="example" id="example-9">
         <div class="marker">
-    <a class="self-link" href="#example-11">Example<bdi> 11</bdi></a>
+    <a class="self-link" href="#example-9">Example<bdi> 9</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-colophon"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"About the type"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This publication was set using … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
@@ -1840,9 +1505,9 @@
 					<rdef>doc-conclusion</rdef>
 					<div class="role-description">
 						<p>A concluding section or statement that summarizes the work or wraps up the narrative.</p>
-						<div class="example" id="example-12">
+						<div class="example" id="example-10">
         <div class="marker">
-    <a class="self-link" href="#example-12">Example<bdi> 12</bdi></a>
+    <a class="self-link" href="#example-10">Example<bdi> 10</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-conclusion"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Summary<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>A central task in feminist scholarship is to expose and dismantle the stereotypes … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -1931,9 +1596,9 @@
 					<div class="role-description">
 						<p>An image that sets the mood or tone for the work and typically includes the title and
 							author.</p>
-						<div class="example" id="example-13">
+						<div class="example" id="example-11">
         <div class="marker">
-    <a class="self-link" href="#example-13">Example<bdi> 13</bdi></a>
+    <a class="self-link" href="#example-11">Example<bdi> 11</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-cover"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"coverimage.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"A Room of One's Own by Virginia Woolf"</span>/&gt;</span></code></pre>
       </div>
 					</div>
@@ -2019,9 +1684,9 @@
 					<div class="role-description">
 						<p>An acknowledgment of the source of integrated content from third-party sources, such as
 							photos. Typically identifies the creator, copyright and any restrictions on reuse.</p>
-						<div class="example" id="example-14">
+						<div class="example" id="example-12">
         <div class="marker">
-    <a class="self-link" href="#example-14">Example<bdi> 14</bdi></a>
+    <a class="self-link" href="#example-12">Example<bdi> 12</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-credit"</span>&gt;</span>
    Page 62, Table 3.1 from <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>“Economic Foundations of Cost-Effectiveness Analysis”<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
    by A. M. Garber and C. E. Phelps …
@@ -2109,9 +1774,9 @@
 					<rdef>doc-credits</rdef>
 					<div class="role-description">
 						<p>A collection of credits.</p>
-						<div class="example" id="example-15">
+						<div class="example" id="example-13">
         <div class="marker">
-    <a class="self-link" href="#example-15">Example<bdi> 15</bdi></a>
+    <a class="self-link" href="#example-13">Example<bdi> 13</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-credits"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Photo Credits<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    …
@@ -2200,9 +1865,9 @@
 					<div class="role-description">
 						<p>An inscription at the front of the work, typically addressed in tribute to one or more
 							persons close to the author.</p>
-						<div class="example" id="example-16">
+						<div class="example" id="example-14">
         <div class="marker">
-    <a class="self-link" href="#example-16">Example<bdi> 16</bdi></a>
+    <a class="self-link" href="#example-14">Example<bdi> 14</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-dedication"</span>&gt;</span>To my family, without whom this would have never been possible.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
 					</div>
@@ -2286,41 +1951,16 @@
 				<div class="role">
 					<rdef>doc-endnote</rdef>
 					<div class="role-description">
-						<p>One of a collection of notes that occur at the end of a work, or a section within it, that
-							provides additional context to a referenced passage of text.</p>
-						<p>Authors <em class="rfc2119" title="MUST">MUST</em> ensure that <a href="#dfn-element" class="internalDFN" data-link-type="dfn">elements</a> with <a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a>
-							<code>doc-endnote</code> are contained in, or owned, by an element with the role
-								<rref>list</rref>.</p>
-						<div class="example" id="example-17">
-        <div class="marker">
-    <a class="self-link" href="#example-17">Example<bdi> 17</bdi></a>
-  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnotes"</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Notes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"6baa07af"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnote"</span>&gt;</span>Additional results of this study can be found at … <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"7b2c0555"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnote"</span>&gt;</span>…<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      …
-   <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-      </div>
-						<div class="example" id="example-18">
-        <div class="marker">
-    <a class="self-link" href="#example-18">Example<bdi> 18</bdi></a>
-  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnotes"</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Notes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ch1-notes"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Chapter 1<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"list"</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"6baa07af"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnote"</span>&gt;</span>1. Additional results of this study can be found at … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"7b2c0555"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnote"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>2. The primary source of information …<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"note-cont"</span>&gt;</span>In the case of secondary studies …<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-         …
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
-      </div>
+						<p>[Deprecated in DPUB-ARIA 1.1] One of a collection of notes that occur at the end of a work,
+							or a section within it, that provides additional context to a referenced passage of
+							text.</p>
+						<div class="note" role="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="4"><span>Note</span></div><p class="">The <code>doc-endnote</code>
+							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> was designed for use as a list item, but due to clarifications in the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
+							specification, it is not valid as a child of the <rref>list</rref> role. As the
+								<rref>doc-endnotes</rref> role already identifies a section of endnotes, authors are
+							instead advised to use the <rref>list</rref> and <rref>listitem</rref> roles when native
+							<abbr title="Hypertext Markup Language">HTML</abbr> elements cannot be used to structure the entries. The <rref>doc-footnote</rref> role
+							can be used within each list item to identify individual notes when necessary.</p></div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -2354,7 +1994,7 @@
 							</tr>
 							<tr>
 								<th class="role-scope-head" scope="row">Required Context Role:</th>
-								<td class="role-scope"><rref>doc-endnotes</rref></td>
+								<td class="role-scope"> </td>
 							</tr>
 							<tr>
 								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
@@ -2404,16 +2044,19 @@
 					<div class="role-description">
 						<p>A collection of notes at the end of a work or a section within it.</p>
 						<p>Note that the <code>doc-endnotes</code>
-							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is never applied directly to the list of endnotes. See the
-								<rref>doc-endnote</rref> role for more information.</p>
-						<div class="example" id="example-19">
+							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is never applied directly to the list of endnotes.</p>
+						<div class="example" id="example-15">
         <div class="marker">
-    <a class="self-link" href="#example-19">Example<bdi> 19</bdi></a>
+    <a class="self-link" href="#example-15">Example<bdi> 15</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnotes"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Notes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"6baa07af"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnote"</span>&gt;</span>Additional results of this study can be found at … <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"7b2c0555"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnote"</span>&gt;</span>…<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"6baa07af"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-footnote"</span>&gt;</span>Additional results of this study can be found at … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"7b2c0555"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-footnote"</span>&gt;</span>…<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
       …
    <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
@@ -2455,7 +2098,7 @@
 							</tr>
 							<tr>
 								<th class="role-mustcontain-head" scope="row">Required Owned Elements:</th>
-								<td class="role-mustcontain"><rref>doc-endnote</rref></td>
+								<td class="role-mustcontain"> </td>
 							</tr>
 							<tr>
 								<th class="role-required-properties-head">Required States and Properties:</th>
@@ -2501,9 +2144,9 @@
 					<div class="role-description">
 						<p>A quotation set at the start of the work or a section that establishes the theme or sets the
 							mood.</p>
-						<div class="example" id="example-20">
+						<div class="example" id="example-16">
         <div class="marker">
-    <a class="self-link" href="#example-20">Example<bdi> 20</bdi></a>
+    <a class="self-link" href="#example-16">Example<bdi> 16</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-epigraph"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>“Would you tell me please, which way I ought to go from here?”<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>“That depends a good deal on where you want to get to,” said the cat.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -2592,9 +2235,9 @@
 					<div class="role-description">
 						<p>A concluding section of narrative that wraps up or comments on the actions and events of the
 							work, typically from a future perspective.</p>
-						<div class="example" id="example-21">
+						<div class="example" id="example-17">
         <div class="marker">
-    <a class="self-link" href="#example-21">Example<bdi> 21</bdi></a>
+    <a class="self-link" href="#example-17">Example<bdi> 17</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-epilogue"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Epilogue<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
@@ -2687,9 +2330,9 @@
 					<div class="role-description">
 						<p>A set of corrections discovered after initial publication of the work, sometimes referred to
 							as corrigenda.</p>
-						<div class="example" id="example-22">
+						<div class="example" id="example-18">
         <div class="marker">
-    <a class="self-link" href="#example-22">Example<bdi> 22</bdi></a>
+    <a class="self-link" href="#example-18">Example<bdi> 18</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-errata"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Corrections<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    …
@@ -2778,13 +2421,13 @@
 					<div class="role-description">
 						<p>An illustration of a key concept of the work, such as a code listing, case study or
 							problem.</p>
-						<div class="example" id="example-23">
+						<div class="example" id="example-19">
         <div class="marker">
-    <a class="self-link" href="#example-23">Example<bdi> 23</bdi></a>
-  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-example"</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <a class="self-link" href="#example-19">Example<bdi> 19</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-example"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>Example 1 — Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
    …
-<span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></code></pre>
       </div>
 					</div>
 					<table class="role-features">
@@ -2802,7 +2445,7 @@
 							</tr>
 							<tr>
 								<th class="role-parent-head" scope="row">Superclass Role:</th>
-								<td class="role-parent"><rref>section</rref></td>
+								<td class="role-parent"><rref>figure</rref></td>
 							</tr>
 							<tr>
 								<th class="role-children-head" scope="row">Subclass Roles:</th>
@@ -2872,9 +2515,9 @@
 							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is only for representing individual notes that occur within the body of a work.
 							For collections of notes that occur at the end of a section, see
 							<rref>doc-endnotes</rref>.</p>
-						<div class="example" id="example-24">
+						<div class="example" id="example-20">
         <div class="marker">
-    <a class="self-link" href="#example-24">Example<bdi> 24</bdi></a>
+    <a class="self-link" href="#example-20">Example<bdi> 20</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"6baa07af"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-footnote"</span>&gt;</span>
    * Additional results of this study and similar studies can be found at …
 <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span></code></pre>
@@ -2962,9 +2605,9 @@
 					<div class="role-description">
 						<p>An introductory section that precedes the work, typically not written by the author of the
 							work.</p>
-						<div class="example" id="example-25">
+						<div class="example" id="example-21">
         <div class="marker">
-    <a class="self-link" href="#example-25">Example<bdi> 25</bdi></a>
+    <a class="self-link" href="#example-21">Example<bdi> 21</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-foreword"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Foreword<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    …
@@ -3053,10 +2696,11 @@
 					<div class="role-description">
 						<p>A brief dictionary of new, uncommon or specialized terms used in the content.</p>
 						<p>The structure of a glossary <em class="rfc2119" title="SHOULD">SHOULD</em> make it possible for end users to identify each term and
-							associated definition (e.g., using the [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>] <code>dl</code> or <code>dfn</code> elements).</p>
-						<div class="example" id="example-26">
+							associated definition (e.g., using the [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>] <code>dl</code> or <code>dfn</code>
+							elements).</p>
+						<div class="example" id="example-22">
         <div class="marker">
-    <a class="self-link" href="#example-26">Example<bdi> 26</bdi></a>
+    <a class="self-link" href="#example-22">Example<bdi> 22</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-glossary"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"glossary"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
       …
@@ -3069,9 +2713,9 @@
    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
-						<div class="example" id="example-27">
+						<div class="example" id="example-23">
         <div class="marker">
-    <a class="self-link" href="#example-27">Example<bdi> 27</bdi></a>
+    <a class="self-link" href="#example-23">Example<bdi> 23</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-glossary"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"glosshd"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"glosshd"</span>&gt;</span>Glossay of Technical Terms<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
@@ -3162,9 +2806,9 @@
 					<rdef>doc-glossref</rdef>
 					<div class="role-description">
 						<p>A reference to a glossary definition.</p>
-						<div class="example" id="example-28">
+						<div class="example" id="example-24">
         <div class="marker">
-    <a class="self-link" href="#example-28">Example<bdi> 28</bdi></a>
+    <a class="self-link" href="#example-24">Example<bdi> 24</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
    This is indicated in the cost of a
    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#bcc0f155"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-glossref"</span>&gt;</span>credit default swap<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> …
@@ -3258,9 +2902,9 @@
 					<div class="role-description">
 						<p>A navigational aid that provides a detailed list of links to key subjects, names and other
 							important topics covered in the work.</p>
-						<div class="example" id="example-29">
+						<div class="example" id="example-25">
         <div class="marker">
-    <a class="self-link" href="#example-29">Example<bdi> 29</bdi></a>
+    <a class="self-link" href="#example-25">Example<bdi> 25</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-index"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Index<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
@@ -3357,9 +3001,9 @@
 					<rdef>doc-introduction</rdef>
 					<div class="role-description">
 						<p>A preliminary section that typically introduces the scope or nature of the work.</p>
-						<div class="example" id="example-30">
+						<div class="example" id="example-26">
         <div class="marker">
-    <a class="self-link" href="#example-30">Example<bdi> 30</bdi></a>
+    <a class="self-link" href="#example-26">Example<bdi> 26</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-introduction"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Everyone has some experience with marketing … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
@@ -3447,9 +3091,9 @@
 					<div class="role-description">
 						<p>A reference to a footnote or endnote, typically appearing as a superscripted number or symbol
 							in the main body of text.</p>
-						<div class="example" id="example-31">
+						<div class="example" id="example-27">
         <div class="marker">
-    <a class="self-link" href="#example-31">Example<bdi> 31</bdi></a>
+    <a class="self-link" href="#example-27">Example<bdi> 27</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> … as studies have shown.<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#fn01"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fnref01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-noteref"</span>&gt;</span>[1]<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
 					</div>
@@ -3540,9 +3184,9 @@
 					<div class="role-description">
 						<p>Notifies the user of consequences that might arise from an action or event. Examples include
 							warnings, cautions and dangers.</p>
-						<div class="example" id="example-32">
+						<div class="example" id="example-28">
         <div class="marker">
-    <a class="self-link" href="#example-32">Example<bdi> 32</bdi></a>
+    <a class="self-link" href="#example-28">Example<bdi> 28</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-notice"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"warning.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"warning icon"</span>/&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Just because you can include a font doesn’t mean you should.
@@ -3552,9 +3196,9 @@
       </div>
 					</div>
 					<p>Authors <em class="rfc2119" title="SHOULD">SHOULD</em> include a label when the notice needs to be navigable to.</p>
-					<div class="example" id="example-33">
+					<div class="example" id="example-29">
         <div class="marker">
-    <a class="self-link" href="#example-33">Example<bdi> 33</bdi></a>
+    <a class="self-link" href="#example-29">Example<bdi> 29</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-notice"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Explosion Risk"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>Danger!<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> Mixing reactive materials may cause an explosion.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
@@ -3648,8 +3292,8 @@
 						<p>The name of the page break <em class="rfc2119" title="SHOULD">SHOULD</em> be an end user-consumable page number so that assistive
 							technologies can announce the page as needed (e.g., in a command to indentify the current
 							page).</p>
-						<aside class="example" id="example-34"><div class="marker">
-    <a class="self-link" href="#example-34">Example<bdi> 34</bdi></a>
+						<aside class="example" id="example-30"><div class="marker">
+    <a class="self-link" href="#example-30">Example<bdi> 30</bdi></a>
   </div>
 							<p>The following example shows three equivalent patterns for marking up page breaks in
 								digital publications. Either the <code>aria-label</code> or <code>title</code>
@@ -3748,9 +3392,9 @@
 					<rdef>doc-pagelist</rdef>
 					<div class="role-description">
 						<p>A navigational aid that provides a list of links to the pagebreaks in the content.</p>
-						<div class="example" id="example-35">
+						<div class="example" id="example-31">
         <div class="marker">
-    <a class="self-link" href="#example-35">Example<bdi> 35</bdi></a>
+    <a class="self-link" href="#example-31">Example<bdi> 31</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagelist"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Pages<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
@@ -3843,9 +3487,9 @@
 					<div class="role-description">
 						<p>A major structural division in a work that contains a set of related sections dealing with a
 							particular subject, narrative arc or similar encapsulated theme.</p>
-						<div class="example" id="example-36">
+						<div class="example" id="example-32">
         <div class="marker">
-    <a class="self-link" href="#example-36">Example<bdi> 36</bdi></a>
+    <a class="self-link" href="#example-32">Example<bdi> 32</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-part"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Part One<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-chapter"</span>&gt;</span>
@@ -3938,9 +3582,9 @@
 					<div class="role-description">
 						<p>An introductory section that precedes the work, typically written by the author of the
 							work.</p>
-						<div class="example" id="example-37">
+						<div class="example" id="example-33">
         <div class="marker">
-    <a class="self-link" href="#example-37">Example<bdi> 37</bdi></a>
+    <a class="self-link" href="#example-33">Example<bdi> 33</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-preface"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Introduction:A Guide to the Galaxy<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    …
@@ -4029,9 +3673,9 @@
 					<div class="role-description">
 						<p>An introductory section that sets the background to a work, typically part of the
 							narrative.</p>
-						<div class="example" id="example-38">
+						<div class="example" id="example-34">
         <div class="marker">
-    <a class="self-link" href="#example-38">Example<bdi> 38</bdi></a>
+    <a class="self-link" href="#example-34">Example<bdi> 34</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-prologue"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Prologue<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
@@ -4131,18 +3775,18 @@
 						<p>The following example shows the identification of a pullquote that will be presented
 							elsewhere (e.g., via a script). In this case, the pullquote is not hidden as the marked text
 							is not presentational.</p>
-						<div class="example" id="example-39">
+						<div class="example" id="example-35">
         <div class="marker">
-    <a class="self-link" href="#example-39">Example<bdi> 39</bdi></a>
+    <a class="self-link" href="#example-35">Example<bdi> 35</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>… I may die, but first you, my tyrant and tormentor, shall curse the sun that gazes on your misery.
    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pq01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pullquote"</span>&gt;</span>Beware, for I am fearless and therefore powerful.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
    I will watch with the wiliness of a snake, that I may sting with its venom. … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
 						<p>The next example shows a pullquote that duplicates the text. This quote is hidden because it
 							is for presentational purposes only.</p>
-						<div class="example" id="example-40">
+						<div class="example" id="example-36">
         <div class="marker">
-    <a class="self-link" href="#example-40">Example<bdi> 40</bdi></a>
+    <a class="self-link" href="#example-36">Example<bdi> 36</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>… Better habits pave the way to growth, and growth leads to greater happiness.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pullquote"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
    Better habits pave the way to growth, and growth leads to greater happiness.
@@ -4231,9 +3875,9 @@
 					<div class="role-description">
 						<p>A section of content structured as a series of questions and answers, such as an interview or
 							list of frequently asked questions.</p>
-						<div class="example" id="example-41">
+						<div class="example" id="example-37">
         <div class="marker">
-    <a class="self-link" href="#example-41">Example<bdi> 41</bdi></a>
+    <a class="self-link" href="#example-37">Example<bdi> 37</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-qna"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Interview with the Author<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
@@ -4325,9 +3969,9 @@
 					<rdef>doc-subtitle</rdef>
 					<div class="role-description">
 						<p>An explanatory or alternate title for the work, or a section or component within it.</p>
-						<div class="example" id="example-42">
+						<div class="example" id="example-38">
         <div class="marker">
-    <a class="self-link" href="#example-42">Example<bdi> 42</bdi></a>
+    <a class="self-link" href="#example-38">Example<bdi> 38</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Chapter 2 The Battle<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-subtitle"</span>&gt;</span>Once more unto the breach<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -4421,9 +4065,9 @@
 					<div class="role-description">
 						<p>Helpful information that clarifies some aspect of the content or assists in its
 							comprehension.</p>
-						<div class="example" id="example-43">
+						<div class="example" id="example-39">
         <div class="marker">
-    <a class="self-link" href="#example-43">Example<bdi> 43</bdi></a>
+    <a class="self-link" href="#example-39">Example<bdi> 39</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-tip"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Tip<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You can assign a variable a new value that is the result
@@ -4514,9 +4158,9 @@
 						<p>A navigational aid that provides an ordered list of links to the major sectional headings in
 							the content. A table of contents may cover an entire work, or only a smaller section of
 							it.</p>
-						<div class="example" id="example-44">
+						<div class="example" id="example-40">
         <div class="marker">
-    <a class="self-link" href="#example-44">Example<bdi> 44</bdi></a>
+    <a class="self-link" href="#example-40">Example<bdi> 40</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-toc"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Contents<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"directory"</span>&gt;</span>
@@ -4608,95 +4252,72 @@
 				</div>
 			</section>
 		</section>
-		
 		<section class="appendix informative" id="a_schemata">
 			<h2 id="a-schemata"><bdi class="secno">A. </bdi>Schemata<a class="self-link" aria-label="§" href="#a_schemata"></a></h2><p><em>This section is non-normative.</em></p>
 			<p>The <a href="http://www.w3.org/html/wg/"><abbr title="Hypertext Markup Language">HTML</abbr> Working Group</a> has incorporated the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> attributes
 				into <a href="http://www.w3.org/TR/html5/"><abbr title="Hypertext Markup Language">HTML</abbr> 5</a>. Official support for <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> in <abbr title="Hypertext Markup Language">HTML</abbr> is provided
 				in that specification.</p>
-			<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Note</span></div><p class="">Validation support for the roles defined in this module will be added once the specification
+			<div class="note" role="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-1" aria-level="3"><span>Note</span></div><p class="">Validation support for the roles defined in this module will be added once the specification
 				reaches recommendation.</p></div>
 			<p>For information on incorporating <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> into other grammars, refer to <a href="http://www.w3.org/TR/wai-aria-1.1/#a_schemata">Appendix A</a> of [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>]</p>
 		</section>
-		<section class="appendix informative" id="exit_criteria">
-			<h2 id="b-candidate-recommendation-exit-criteria"><bdi class="secno">B. </bdi>Candidate Recommendation Exit Criteria<a class="self-link" aria-label="§" href="#exit_criteria"></a></h2><p><em>This section is non-normative.</em></p>
-			<p>For this specification to be advanced to Proposed Recommendation, it has to be proven that roles defined
-				in this specification have sufficient usage by the target communities. More specifically, it has to be
-				documented that <em>each</em>
-				<a href="#roles">Digital Publishing Role</a> is used (at least in preliminary prototypes, not
-				necessarily in full production yet) by two, independent document author/publisher as a means to
-				structure document, where “usage” means: </p>
-
-			<ul>
-				<li>the <code>role</code> attribute value is used, as defined in this specification; or, as a
-					fallback</li>
-				<li>the <code>epub:type</code> attribute, defined for the purpose of <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html#sec-xhtml-semantic-inflection">Semantic Inflection</a> in [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-content" title="EPUB Content Documents 3.1">EPUB-Content</a></cite>], is used with the related value (when specified in
-					the detailed specification of the role) in the <a href="https://idpf.github.io/epub-vocabs/structure/">EPUB Structural Semantic Vocabulary</a>
-					[<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]. </li>
-			</ul>
-
-			<p> In the case where the <code>epub:type</code> attribute is used, the author/publisher should also clearly
-				state that the plan is to replace <code>epub:type</code> by the ARIA <code>role</code> attribute when
-				this specification is published as a Recommendation. Furthermore, it is also required that at least two,
-				independent authors/publishers use a comprehensive, although not necessarily complete, set of
-					<code>role</code> attribute (as opposed to <code>epub:type</code>). </p>
-		</section>
+		
 		<section class="appendix informative" id="changelog">
-			<h2 id="c-change-log"><bdi class="secno">C. </bdi>Change Log<a class="self-link" aria-label="§" href="#changelog"></a></h2><p><em>This section is non-normative.</em></p>
+			<h2 id="b-change-log"><bdi class="secno">B. </bdi>Change Log<a class="self-link" aria-label="§" href="#changelog"></a></h2><p><em>This section is non-normative.</em></p>
 			<section id="substantive-changes-since-the-dpub-aria-1-0-recommendation">
-				<h3 id="c-1-substantive-changes-since-the-dpub-aria-1-0-recommendation"><bdi class="secno">C.1 </bdi>Substantive changes since the <a href="https://www.w3.org/TR/dpub-aria-1.0/">DPUB-ARIA 1.0
+				<h3 id="b-1-substantive-changes-since-the-dpub-aria-1-0-recommendation"><bdi class="secno">B.1 </bdi>Substantive changes since the <a href="https://www.w3.org/TR/dpub-aria-1.0/">DPUB-ARIA 1.0
 						Recommendation</a><a class="self-link" aria-label="§" href="#substantive-changes-since-the-dpub-aria-1-0-recommendation"></a></h3>
 				<ul>
 					
-					<li>25-July-2020: Recommend that doc-pagebreak name be end user-consumable.</li>
+					<li>31-July-2020: Removed <rref>term</rref> and <rref>definition</rref> as required children of
+							<rref>doc-glossary</rref> to accommodate various ways glossaries can be constructed. See <a href="https://github.com/w3c/dpub-aria/issues/9">issue 9</a>.</li>
+					<li>25-July-2020: Recommend that <rref>doc-pagebreak</rref> name be end user-consumable. See <a href="https://github.com/w3c/dpub-aria/issues/17">issue 17</a>.</li>
+					<li>24-July-2020: Changed the superclass of <rref>doc-example</rref> to <rref>figure</rref> to make
+						compatible with use on <abbr title="Hypertext Markup Language">HTML</abbr> figure. See <a href="https://github.com/w3c/dpub-aria/issues/19">issue 19</a>.</li>
+					<li>23-July-2020: Deprecated the <rref>doc-biblioentry</rref> and <rref>doc-endnote</rref> roles due
+						to the inability of them to be recognized as children of <rref>list</rref>. See <a href="https://github.com/w3c/dpub-aria/issues/15">issue 15</a>.</li>
+					<li>23-July-2020: Updated <rref>doc-pagebreak</rref> to allow name from contents. See <a href="https://github.com/w3c/dpub-aria/issues/12">issue 12</a>.</li>
+					<li>15-Mar-2018: Fixed superclass of <rref>doc-pullquote</rref> to <rref>section</rref> to match the
+						mapping in the [<cite><a class="bibref" data-link-type="biblio" href="#bib-dpub-aria-aam">dpub-aria-aam</a></cite>]. See <a href="https://github.com/w3c/dpub-aria/issues/7">issue
+							7</a>.</li>
+					<li>15-Mar-2018: Updated <rref>doc-subtitle</rref> to allow name from contents. See <a href="https://github.com/w3c/dpub-aria/issues/6">issue 6</a>.</li>
 				</ul>
 			</section>
 			
 		</section>
 		<section class="appendix informative section" id="acknowledgements">
-			<h2 id="d-acknowledgments"><bdi class="secno">D. </bdi>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2><p><em>This section is non-normative.</em></p>
+			<h2 id="c-acknowledgments"><bdi class="secno">C. </bdi>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2><p><em>This section is non-normative.</em></p>
 			<p>The following people contributed to the development of this document.</p>
 			<section class="section" id="ack_dpub">
-				<h3 id="d-1-participants-active-in-the-dpub-aria-task-force-at-the-time-of-publication"><bdi class="secno">D.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication<a class="self-link" aria-label="§" href="#ack_dpub"></a></h3>
+				<h3 id="c-1-participants-active-in-the-dpub-aria-task-force-at-the-time-of-publication"><bdi class="secno">C.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication<a class="self-link" aria-label="§" href="#ack_dpub"></a></h3>
 				<ul>
 					<li>Michael Cooper (<abbr title="World Wide Web Consortium">W3C</abbr> Staff)</li>
-					<li>Heather Flanagan (Invited expert)</li>
+					<li>Joanmarie Diggs (Igalia, S.L.)</li>
 					<li>Matt Garrish (DAISY Consortium)</li>
-					<li>Markus Gylling (DAISY Consortium)</li>
-					<li>Ivan Herman (<abbr title="World Wide Web Consortium">W3C</abbr> Staff)</li>
-					<li>Deborah Kaplan (Invited expert)</li>
-					<li>George Kerscher (DAISY Consortium)</li>
-					<li>Peter Krautzberger (<abbr title="World Wide Web Consortium">W3C</abbr> Invited Experts)</li>
-					<li>Charles LaPierre (Benetech)</li>
-					<li>Shane McCarron (<abbr title="World Wide Web Consortium">W3C</abbr> Invited Experts)</li>
-					<li>Janina Sajka (Invited Expert, The Linux Foundation)</li>
-					<li>Richard Schwerdtfeger (Knowbility)</li>
+					<li>James Nurthen (Adobe)</li>
 					<li>Tzviya Siegman (Wiley)</li>
 				</ul>
-				<p>The group would like to thank all members of the DAISY and EPUB 3 working groups who developed the
-					structural semantics vocabulary from which this module was drawn, with special thanks to Sanders
-					Kleinfeld for his assistance analyzing the initial set of semantics for inclusion.</p>
 			</section>
 			<section class="section" id="ack_funders">
-	<h3 id="d-2-enabling-funders"><bdi class="secno">D.2 </bdi>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h3>
+	<h3 id="c-2-enabling-funders"><bdi class="secno">C.2 </bdi>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h3>
 	<p>This publication has been funded in part with U.S. Federal funds from the Department of Education, National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR), initially under contract number ED-OSE-10-C-0067 and currently under contract number HHSP23301500054C. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Education, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
 </section>
 
 		</section>
 	
 
-<section id="references" class="appendix"><h2 id="e-references"><bdi class="secno">E. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="normative-references">
-      <h3 id="e-1-normative-references"><bdi class="secno">E.1 </bdi>
+<section id="references" class="appendix"><h2 id="d-references"><bdi class="secno">D. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="normative-references">
+      <h3 id="d-1-normative-references"><bdi class="secno">D.1 </bdi>
         Normative references
       <a class="self-link" aria-label="§" href="#normative-references"></a></h3>
     <dl class="bibliography">
       <dt id="bib-epub-ssv">[EPUB-SSV]</dt><dd><a href="http://www.idpf.org/epub/vocab/structure/"><cite>EPUB Structural Semantics Vocabulary</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/vocab/structure/">http://www.idpf.org/epub/vocab/structure/</a></dd><dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://tools.ietf.org/html/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc8174">https://tools.ietf.org/html/rfc8174</a></dd>
     </dl></section><section id="informative-references">
-      <h3 id="e-2-informative-references"><bdi class="secno">E.2 </bdi>
+      <h3 id="d-2-informative-references"><bdi class="secno">D.2 </bdi>
         Informative references
       <a class="self-link" aria-label="§" href="#informative-references"></a></h3>
     <dl class="bibliography">
-      <dt id="bib-at-spi">[AT-SPI]</dt><dd><a href="https://developer.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/libatspi/stable/">https://developer.gnome.org/libatspi/stable/</a></dd><dt id="bib-atk">[ATK]</dt><dd><a href="https://developer.gnome.org/atk/stable/"><cite>ATK - Accessibility Toolkit</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/atk/stable/">https://developer.gnome.org/atk/stable/</a></dd><dt id="bib-axapi">[AXAPI]</dt><dd><a href="https://developer.apple.com/documentation/appkit/nsaccessibility"><cite>The NSAccessibility Protocol for macOS</cite></a>.  Apple, Inc. URL: <a href="https://developer.apple.com/documentation/appkit/nsaccessibility">https://developer.apple.com/documentation/appkit/nsaccessibility</a></dd><dt id="bib-epub-content">[EPUB-Content]</dt><dd><a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html"><cite>EPUB Content Documents 3.1</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/31/spec/epub-contentdocs.html">http://www.idpf.org/epub/31/spec/epub-contentdocs.html</a></dd><dt id="bib-html5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer.  W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-iaccessible2">[IAccessible2]</dt><dd><a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2</a></dd><dt id="bib-msaa">[MSAA]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility"><cite>Microsoft Active Accessibility (MSAA)</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility">https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-ui-automation">[UI-AUTOMATION]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification"><cite>UI Automation</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification">https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification</a></dd><dt id="bib-uia-express">[UIA-EXPRESS]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex"><cite>The IAccessibleEx Interface</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex">https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd><dt id="bib-wcag21">[WCAG21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd>
+      <dt id="bib-at-spi">[AT-SPI]</dt><dd><a href="https://developer.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/libatspi/stable/">https://developer.gnome.org/libatspi/stable/</a></dd><dt id="bib-atk">[ATK]</dt><dd><a href="https://developer.gnome.org/atk/stable/"><cite>ATK - Accessibility Toolkit</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/atk/stable/">https://developer.gnome.org/atk/stable/</a></dd><dt id="bib-axapi">[AXAPI]</dt><dd><a href="https://developer.apple.com/documentation/appkit/nsaccessibility"><cite>The NSAccessibility Protocol for macOS</cite></a>.  Apple, Inc. URL: <a href="https://developer.apple.com/documentation/appkit/nsaccessibility">https://developer.apple.com/documentation/appkit/nsaccessibility</a></dd><dt id="bib-dpub-aria-aam">[dpub-aria-aam]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-html5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer.  W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-iaccessible2">[IAccessible2]</dt><dd><a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2</a></dd><dt id="bib-msaa">[MSAA]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility"><cite>Microsoft Active Accessibility (MSAA)</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility">https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-ui-automation">[UI-AUTOMATION]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification"><cite>UI Automation</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification">https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification</a></dd><dt id="bib-uia-express">[UIA-EXPRESS]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex"><cite>The IAccessibleEx Interface</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex">https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd><dt id="bib-wcag21">[WCAG21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd>
     </dl></section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
