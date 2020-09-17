@@ -117,6 +117,319 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
 				widgets and behaviors for assistive technologies. This specification defines a set of WAI-ARIA roles
 				specific to helping users of assistive technologies navigate through such long-form documents.">
 <link rel="canonical" href="https://www.w3.org/TR/dpub-aria/">
+<script type="application/ld+json">{
+  "@context": [
+    "http://schema.org",
+    {
+      "@vocab": "http://schema.org/",
+      "@language": "en-US",
+      "w3p": "http://www.w3.org/2001/02pd/rec54#",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "datePublished": {
+        "@type": "http://www.w3.org/2001/XMLSchema#date"
+      },
+      "inLanguage": {
+        "@language": null
+      },
+      "isBasedOn": {
+        "@type": "@id"
+      },
+      "license": {
+        "@type": "@id"
+      }
+    }
+  ],
+  "id": "https://www.w3.org/TR/dpub-aria/",
+  "type": [
+    "TechArticle"
+  ],
+  "name": "Digital Publishing WAI-ARIA Module 1.1",
+  "inLanguage": "en-US",
+  "license": "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document",
+  "datePublished": "2020-09-17",
+  "copyrightHolder": {
+    "name": "World Wide Web Consortium",
+    "url": "https://www.w3.org/"
+  },
+  "discussionUrl": "https://github.com/w3c/dpub-aria/issues/",
+  "alternativeHeadline": "",
+  "isBasedOn": "",
+  "description": "Enabling users of assistive technologies to find their way through Web content requires embedding\n\t\t\t\tsemantic metadata about Web document structural divisions. This is particularly important for structural\n\t\t\t\tdivisions of long-form documents and goes along with embedding semantic metadata about Web-application\n\t\t\t\twidgets and behaviors for assistive technologies. This specification defines a set of WAI-ARIA roles\n\t\t\t\tspecific to helping users of assistive technologies navigate through such long-form documents.",
+  "editor": [
+    {
+      "type": "Person",
+      "name": "Matt Garrish",
+      "url": "http://www.daisy.org",
+      "worksFor": {
+        "name": "DAISY Consortium"
+      }
+    },
+    {
+      "type": "Person",
+      "name": "Tzviya Siegman",
+      "url": "http://www.wiley.com",
+      "foaf:mbox": "tsiegman@wiley.com",
+      "worksFor": {
+        "name": "Wiley"
+      }
+    }
+  ],
+  "citation": [
+    {
+      "id": "http://www.idpf.org/epub/vocab/structure/",
+      "type": "TechArticle",
+      "name": "EPUB Structural Semantics Vocabulary",
+      "url": "http://www.idpf.org/epub/vocab/structure/",
+      "publisher": {
+        "name": "IDPF"
+      }
+    },
+    {
+      "id": "https://html.spec.whatwg.org/multipage/",
+      "type": "TechArticle",
+      "name": "HTML Standard",
+      "url": "https://html.spec.whatwg.org/multipage/",
+      "creator": [
+        {
+          "name": "Anne van Kesteren"
+        },
+        {
+          "name": "Domenic Denicola"
+        },
+        {
+          "name": "Ian Hickson"
+        },
+        {
+          "name": "Philip Jägenstedt"
+        },
+        {
+          "name": "Simon Pieters"
+        }
+      ],
+      "publisher": {
+        "name": "WHATWG"
+      }
+    },
+    {
+      "id": "https://tools.ietf.org/html/rfc2119",
+      "type": "TechArticle",
+      "name": "Key words for use in RFCs to Indicate Requirement Levels",
+      "url": "https://tools.ietf.org/html/rfc2119",
+      "creator": [
+        {
+          "name": "S. Bradner"
+        }
+      ],
+      "publisher": {
+        "name": "IETF"
+      }
+    },
+    {
+      "id": "https://tools.ietf.org/html/rfc8174",
+      "type": "TechArticle",
+      "name": "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words",
+      "url": "https://tools.ietf.org/html/rfc8174",
+      "creator": [
+        {
+          "name": "B. Leiba"
+        }
+      ],
+      "publisher": {
+        "name": "IETF"
+      }
+    },
+    {
+      "id": "https://www.w3.org/TR/wai-aria-1.1/",
+      "type": "TechArticle",
+      "name": "Accessible Rich Internet Applications (WAI-ARIA) 1.1",
+      "url": "https://www.w3.org/TR/wai-aria-1.1/",
+      "creator": [
+        {
+          "name": "Joanmarie Diggs"
+        },
+        {
+          "name": "Shane McCarron"
+        },
+        {
+          "name": "Michael Cooper"
+        },
+        {
+          "name": "Richard Schwerdtfeger"
+        },
+        {
+          "name": "James Craig"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://www.w3.org/TR/html5/",
+      "type": "TechArticle",
+      "name": "HTML5",
+      "url": "https://www.w3.org/TR/html5/",
+      "creator": [
+        {
+          "name": "Ian Hickson"
+        },
+        {
+          "name": "Robin Berjon"
+        },
+        {
+          "name": "Steve Faulkner"
+        },
+        {
+          "name": "Travis Leithead"
+        },
+        {
+          "name": "Erika Doyle Navara"
+        },
+        {
+          "name": "Theresa O'Connor"
+        },
+        {
+          "name": "Silvia Pfeiffer"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://www.w3.org/TR/SVG2/",
+      "type": "TechArticle",
+      "name": "Scalable Vector Graphics (SVG) 2",
+      "url": "https://www.w3.org/TR/SVG2/",
+      "creator": [
+        {
+          "name": "Amelia Bellamy-Royds"
+        },
+        {
+          "name": "Bogdan Brinza"
+        },
+        {
+          "name": "Chris Lilley"
+        },
+        {
+          "name": "Dirk Schulze"
+        },
+        {
+          "name": "David Storey"
+        },
+        {
+          "name": "Eric Willigers"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility",
+      "type": "TechArticle",
+      "name": "Microsoft Active Accessibility (MSAA)",
+      "url": "https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility",
+      "publisher": {
+        "name": "Microsoft Corporation"
+      }
+    },
+    {
+      "id": "https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification",
+      "type": "TechArticle",
+      "name": "UI Automation",
+      "url": "https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification",
+      "publisher": {
+        "name": "Microsoft Corporation"
+      }
+    },
+    {
+      "id": "https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex",
+      "type": "TechArticle",
+      "name": "The IAccessibleEx Interface",
+      "url": "https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex",
+      "publisher": {
+        "name": "Microsoft Corporation"
+      }
+    },
+    {
+      "id": "https://developer.apple.com/documentation/appkit/nsaccessibility",
+      "type": "TechArticle",
+      "name": "The NSAccessibility Protocol for macOS",
+      "url": "https://developer.apple.com/documentation/appkit/nsaccessibility",
+      "publisher": {
+        "name": "Apple, Inc."
+      }
+    },
+    {
+      "id": "https://developer.gnome.org/atk/stable/",
+      "type": "TechArticle",
+      "name": "ATK - Accessibility Toolkit",
+      "url": "https://developer.gnome.org/atk/stable/",
+      "publisher": {
+        "name": "The GNOME Project"
+      }
+    },
+    {
+      "id": "https://developer.gnome.org/libatspi/stable/",
+      "type": "TechArticle",
+      "name": "Assistive Technology Service Provider Interface",
+      "url": "https://developer.gnome.org/libatspi/stable/",
+      "publisher": {
+        "name": "The GNOME Project"
+      }
+    },
+    {
+      "id": "https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2",
+      "type": "TechArticle",
+      "name": "IAccessible2",
+      "url": "https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2",
+      "publisher": {
+        "name": "Linux Foundation"
+      }
+    },
+    {
+      "id": "https://www.w3.org/TR/WCAG21/",
+      "type": "TechArticle",
+      "name": "Web Content Accessibility Guidelines (WCAG) 2.1",
+      "url": "https://www.w3.org/TR/WCAG21/",
+      "creator": [
+        {
+          "name": "Andrew Kirkpatrick"
+        },
+        {
+          "name": "Joshue O Connor"
+        },
+        {
+          "name": "Alastair Campbell"
+        },
+        {
+          "name": "Michael Cooper"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://www.w3.org/TR/dpub-aam-1.0/",
+      "type": "TechArticle",
+      "name": "Digital Publishing Accessibility API Mappings",
+      "url": "https://www.w3.org/TR/dpub-aam-1.0/",
+      "creator": [
+        {
+          "name": "Richard Schwerdtfeger"
+        },
+        {
+          "name": "Joanmarie Diggs"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    }
+  ]
+}</script>
 <style>
 .hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
 .hljs-comment,.hljs-quote{color:#717277;font-style:italic}
@@ -303,9 +616,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
       of this technical report can be found in the
       <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
-      https://www.w3.org/TR/.</em></p>
-			<p>The Candidate Recommendation exit criteria are listed in the <a href="#exit_criteria" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured">appendix</a>.</p>
-		<p>
+      https://www.w3.org/TR/.</em></p><p>
     This document was published by the <a href="https://www.w3.org/publishing/groups/publ-wg/">Publishing Working Group</a> as an
     Editor's Draft. 
     
@@ -473,12 +784,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>]
         when, and only when, they appear in all capitals, as shown here.
       </p>
-			<p>This specification indicates whether a section is <a href="#dfn-normative" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-normative-1">normative</a> or <a href="#dfn-informative" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-informative-1">informative</a>. Classifying a
-				section as normative or informative applies to the entire section. A statement "This section is
-				normative" or "This section is informative" applies to all sub-sections of that section.</p>
 			<p>Normative sections provide requirements that authors, user agents and assistive technologies <em class="rfc2119">MUST</em> follow
 				for an implementation to conform to this specification.</p>
-			<p>Informative sections provide information useful to understanding the specification. Such sections may
+			<p>Non-normative sections provide information useful to understanding the specification. Such sections may
 				contain examples of recommended practice, but it is not required to follow such recommendations in order
 				to conform to this specification.</p>
 		</section>
@@ -545,7 +853,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </dd>
     <dt><dfn data-lt="deprecated|deprecate|deprecation|Deprecated" id="dfn-deprecated">Deprecated</dfn></dt>
     <dd>
-      <p>A deprecated <a class="termref" href="#dfn-role" id="ref-for-dfn-role-3">role</a>, <a class="termref" href="#dfn-state" id="ref-for-dfn-state-5">state</a>, or <a class="termref" href="#dfn-property" id="ref-for-dfn-property-5">property</a> is one which has been outdated by newer constructs or changed circumstances, and which may be removed in future versions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification. <a class="termref internalDFN" data-lt="user agent" href="#dfn-user-agent" data-link-type="dfn" id="ref-for-dfn-user-agent-3">User agents</a> are encouraged to continue to support items identified as deprecated for backward compatibility. For more information, see <a href="#deprecated" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-0">Deprecated Requirements</a> in the Conformance section.</p>
+      <p>A deprecated <a class="termref" href="#dfn-role" id="ref-for-dfn-role-3">role</a>, <a class="termref" href="#dfn-state" id="ref-for-dfn-state-5">state</a>, or <a class="termref" href="#dfn-property" id="ref-for-dfn-property-5">property</a> is one which has been outdated by newer constructs or changed circumstances, and which may be removed in future versions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification. <a class="termref internalDFN" data-lt="user agent" href="#dfn-user-agent" data-link-type="dfn" id="ref-for-dfn-user-agent-3">User agents</a> are encouraged to continue to support items identified as deprecated for backward compatibility. For more information, see <a href="#deprecated" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured">Deprecated Requirements</a> in the Conformance section.</p>
     </dd>
     <dt><dfn data-lt="desktop focus|desktop focus events|Desktop focus event" id="dfn-desktop-focus">Desktop focus event</dfn></dt>
     <dd>
@@ -573,7 +881,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </dd>
     <dt><dfn data-lt="informative|non-normative|Informative" id="dfn-informative">Informative</dfn></dt>
     <dd>
-      <p>Content provided for information purposes and not required for conformance. Content required for conformance is referred to as <a href="#dfn-normative" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-normative-2">normative</a>.</p>
+      <p>Content provided for information purposes and not required for conformance. Content required for conformance is referred to as <a href="#dfn-normative" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-normative-1">normative</a>.</p>
     </dd>
     <dt><dfn id="dfn-keyboard-accessible">Keyboard Accessible</dfn></dt>
     <dd>
@@ -605,7 +913,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </dd>
     <dt><dfn id="dfn-normative">Normative</dfn></dt>
     <dd>
-      <p>Required for conformance. By contrast, content identified as <a href="#dfn-informative" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-informative-2">informative</a> or "non-normative" is not required for conformance.</p>
+      <p>Required for conformance. By contrast, content identified as <a href="#dfn-informative" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-informative-1">informative</a> or "non-normative" is not required for conformance.</p>
     </dd>
     <dt><dfn data-lt="object|objects|Object" id="dfn-object">Object</dfn></dt>
     <dd>
@@ -634,7 +942,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </dd>
     <dt><dfn data-lt="property|properties|Property" id="dfn-property">Property</dfn></dt>
     <dd>
-      <p><a class="termref internalDFN" data-lt="attribute" href="#dfn-attribute" data-link-type="dfn" id="ref-for-dfn-attribute-2">Attributes</a> that are essential to the nature of a given <a href="#dfn-object" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-object-7">object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, <pref>aria-multiline</pref>) are less likely to change than <a class="termref" href="#dfn-state" id="ref-for-dfn-state-8">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as <pref>aria-activedescendant</pref>, <pref>aria-valuenow</pref>, and <pref>aria-valuetext</pref> are expected to change often. See <a class="specref respec-offending-element" href="#statevsprop" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-1">clarification of states versus properties</a>.</p>
+      <p><a class="termref internalDFN" data-lt="attribute" href="#dfn-attribute" data-link-type="dfn" id="ref-for-dfn-attribute-2">Attributes</a> that are essential to the nature of a given <a href="#dfn-object" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-object-7">object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, <pref>aria-multiline</pref>) are less likely to change than <a class="termref" href="#dfn-state" id="ref-for-dfn-state-8">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as <pref>aria-activedescendant</pref>, <pref>aria-valuenow</pref>, and <pref>aria-valuetext</pref> are expected to change often. See <a class="specref respec-offending-element" href="#statevsprop" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-0">clarification of states versus properties</a>.</p>
     </dd>
     <dt><dfn data-lt="relationship|relationships|Relationship" id="dfn-relationship">Relationship</dfn></dt>
     <dd>
@@ -654,7 +962,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </dd>
     <dt><dfn data-lt="state|states|State" id="dfn-state">State</dfn></dt>
     <dd>
-      <p>A state is a dynamic <a class="termref" href="#dfn-property" id="ref-for-dfn-property-6">property</a> expressing characteristics of an <a href="#dfn-object" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-object-10">object</a> that may change in response to user action or automated processes. States do not affect the essential nature of the object, but represent data associated with the object or user interaction possibilities. See <a class="specref respec-offending-element" href="#statevsprop" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-2">clarification of states versus properties</a>.</p>
+      <p>A state is a dynamic <a class="termref" href="#dfn-property" id="ref-for-dfn-property-6">property</a> expressing characteristics of an <a href="#dfn-object" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-object-10">object</a> that may change in response to user action or automated processes. States do not affect the essential nature of the object, but represent data associated with the object or user interaction possibilities. See <a class="specref respec-offending-element" href="#statevsprop" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-1">clarification of states versus properties</a>.</p>
     </dd>
     <dt><dfn id="dfn-sub-document">Sub-document</dfn></dt>
     <dd>
@@ -4402,7 +4710,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						to the inability of them to be recognized as children of <rref>list</rref>. See <a href="https://github.com/w3c/dpub-aria/issues/15">issue 15</a>.</li>
 					<li>23-July-2020: Updated <rref>doc-pagebreak</rref> to allow name from contents. See <a href="https://github.com/w3c/dpub-aria/issues/12">issue 12</a>.</li>
 					<li>15-Mar-2018: Fixed superclass of <rref>doc-pullquote</rref> to <rref>section</rref> to match the
-						mapping in the [<cite><a class="bibref" data-link-type="biblio" href="#bib-dpub-aria-aam">dpub-aria-aam</a></cite>]. See <a href="https://github.com/w3c/dpub-aria/issues/7">issue
+						mapping in the [<cite><a class="bibref" data-link-type="biblio" href="#bib-dpub-aam-1.0" title="Digital Publishing Accessibility API Mappings">dpub-aam-1.0</a></cite>]. See <a href="https://github.com/w3c/dpub-aria/issues/7">issue
 							7</a>.</li>
 					<li>15-Mar-2018: Updated <rref>doc-subtitle</rref> to allow name from contents. See <a href="https://github.com/w3c/dpub-aria/issues/6">issue 6</a>.</li>
 				</ul>
@@ -4435,7 +4743,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <dl class="bibliography"><dt id="bib-epub-ssv">[EPUB-SSV]</dt><dd><a href="http://www.idpf.org/epub/vocab/structure/"><cite>EPUB Structural Semantics Vocabulary</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/vocab/structure/">http://www.idpf.org/epub/vocab/structure/</a></dd><dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://tools.ietf.org/html/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc8174">https://tools.ietf.org/html/rfc8174</a></dd></dl>
   </section><section id="informative-references">
     <h3 id="d-2-informative-references"><bdi class="secno">D.2 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
-    <dl class="bibliography"><dt id="bib-at-spi">[AT-SPI]</dt><dd><a href="https://developer.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/libatspi/stable/">https://developer.gnome.org/libatspi/stable/</a></dd><dt id="bib-atk">[ATK]</dt><dd><a href="https://developer.gnome.org/atk/stable/"><cite>ATK - Accessibility Toolkit</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/atk/stable/">https://developer.gnome.org/atk/stable/</a></dd><dt id="bib-axapi">[AXAPI]</dt><dd><a href="https://developer.apple.com/documentation/appkit/nsaccessibility"><cite>The NSAccessibility Protocol for macOS</cite></a>.  Apple, Inc. URL: <a href="https://developer.apple.com/documentation/appkit/nsaccessibility">https://developer.apple.com/documentation/appkit/nsaccessibility</a></dd><dt id="bib-dpub-aria-aam">[dpub-aria-aam]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-html5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer.  W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-iaccessible2">[IAccessible2]</dt><dd><a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2</a></dd><dt id="bib-msaa">[MSAA]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility"><cite>Microsoft Active Accessibility (MSAA)</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility">https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-ui-automation">[UI-AUTOMATION]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification"><cite>UI Automation</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification">https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification</a></dd><dt id="bib-uia-express">[UIA-EXPRESS]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex"><cite>The IAccessibleEx Interface</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex">https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd><dt id="bib-wcag21">[WCAG21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd></dl>
+    <dl class="bibliography"><dt id="bib-at-spi">[AT-SPI]</dt><dd><a href="https://developer.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/libatspi/stable/">https://developer.gnome.org/libatspi/stable/</a></dd><dt id="bib-atk">[ATK]</dt><dd><a href="https://developer.gnome.org/atk/stable/"><cite>ATK - Accessibility Toolkit</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/atk/stable/">https://developer.gnome.org/atk/stable/</a></dd><dt id="bib-axapi">[AXAPI]</dt><dd><a href="https://developer.apple.com/documentation/appkit/nsaccessibility"><cite>The NSAccessibility Protocol for macOS</cite></a>.  Apple, Inc. URL: <a href="https://developer.apple.com/documentation/appkit/nsaccessibility">https://developer.apple.com/documentation/appkit/nsaccessibility</a></dd><dt id="bib-dpub-aam-1.0">[dpub-aam-1.0]</dt><dd><a href="https://www.w3.org/TR/dpub-aam-1.0/"><cite>Digital Publishing Accessibility API Mappings</cite></a>. Richard Schwerdtfeger; Joanmarie Diggs.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/dpub-aam-1.0/">https://www.w3.org/TR/dpub-aam-1.0/</a></dd><dt id="bib-html5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer.  W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-iaccessible2">[IAccessible2]</dt><dd><a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2</a></dd><dt id="bib-msaa">[MSAA]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility"><cite>Microsoft Active Accessibility (MSAA)</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility">https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-ui-automation">[UI-AUTOMATION]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification"><cite>UI Automation</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification">https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification</a></dd><dt id="bib-uia-express">[UIA-EXPRESS]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex"><cite>The IAccessibleEx Interface</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex">https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd><dt id="bib-wcag21">[WCAG21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-accessibility-api">
@@ -4639,9 +4947,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <b>Referenced in:</b>
       <ul>
     <li>
-    <a href="#ref-for-dfn-informative-1">2. Conformance</a> 
-  </li><li>
-    <a href="#ref-for-dfn-informative-2">3. Important Terms</a> 
+    <a href="#ref-for-dfn-informative-1">3. Important Terms</a> 
   </li>
   </ul>
     </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-keyboard-accessible">
@@ -4727,9 +5033,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <b>Referenced in:</b>
       <ul>
     <li>
-    <a href="#ref-for-dfn-normative-1">2. Conformance</a> 
-  </li><li>
-    <a href="#ref-for-dfn-normative-2">3. Important Terms</a> 
+    <a href="#ref-for-dfn-normative-1">3. Important Terms</a> 
   </li>
   </ul>
     </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-object">
