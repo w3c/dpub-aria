@@ -888,7 +888,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </dd>
     <dt><dfn id="dfn-accessibility-subtree">Accessibility Subtree</dfn></dt>
     <dd>
-      <p>An <a href="#dfn-accessible-object" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-accessible-object-1">accessible object</a> in the <a href="#dfn-accessibility-tree" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-accessibility-tree-1">accessibility tree</a> and its descendants in that tree. It does not include objects which have relationships other than parent-child in that tree. For example, it does not include objects linked via <pref>aria-flowto</pref> unless those objects are also descendants in the <a href="#dfn-accessibility-tree" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-accessibility-tree-2">accessibility tree</a>.</p>
+      <p>An <a href="#dfn-accessible-object" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-accessible-object-1">accessible object</a> in the <a href="#dfn-accessibility-tree" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-accessibility-tree-1">accessibility tree</a> and its descendants in that tree. It does not include objects which have relationships other than parent-child in that tree. For example, it does not include objects linked via <a href="https://w3c.github.io/aria/#aria-flowto" class="property-reference"><code>aria-flowto</code></a> unless those objects are also descendants in the <a href="#dfn-accessibility-tree" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-accessibility-tree-2">accessibility tree</a>.</p>
     </dd>
     <dt><dfn id="dfn-accessibility-tree">Accessibility Tree</dfn></dt>
     <dd>
@@ -1017,11 +1017,11 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </dd>
     <dt><dfn data-lt="owned element|owned|owned element's|owned elements|Owned Element" id="dfn-owned-element">Owned Element</dfn></dt>
     <dd>
-      <p>An 'owned element' is any <abbr title="Document Object Model">DOM</abbr> descendant of the <a href="#dfn-element" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-element-6">element</a>, any element specified as a child via <pref>aria-owns</pref>, or any <abbr title="Document Object Model">DOM</abbr> descendant of the owned child.</p>
+      <p>An 'owned element' is any <abbr title="Document Object Model">DOM</abbr> descendant of the <a href="#dfn-element" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-element-6">element</a>, any element specified as a child via <a href="https://w3c.github.io/aria/#aria-owns" class="property-reference"><code>aria-owns</code></a>, or any <abbr title="Document Object Model">DOM</abbr> descendant of the owned child.</p>
     </dd>
     <dt><dfn data-lt="owning element|owning|Owning Element" id="dfn-owning-element">Owning Element</dfn></dt>
     <dd>
-      <p>An 'owning element' is any <abbr title="Document Object Model">DOM</abbr> ancestor of the <a href="#dfn-element" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-element-7">element</a>, or any element with an <pref>aria-owns</pref> attribute which references the ID of the   element. </p>
+      <p>An 'owning element' is any <abbr title="Document Object Model">DOM</abbr> ancestor of the <a href="#dfn-element" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-element-7">element</a>, or any element with an <a href="https://w3c.github.io/aria/#aria-owns" class="property-reference"><code>aria-owns</code></a> attribute which references the ID of the   element. </p>
     </dd>
     <dt><dfn id="dfn-perceivable">Perceivable</dfn></dt>
     <dd>
@@ -1029,7 +1029,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </dd>
     <dt><dfn data-lt="property|properties|Property" id="dfn-property">Property</dfn></dt>
     <dd>
-      <p><a class="termref internalDFN" data-lt="attribute" href="#dfn-attribute" data-link-type="dfn" id="ref-for-dfn-attribute-2">Attributes</a> that are essential to the nature of a given <a href="#dfn-object" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-object-7">object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, <pref>aria-multiline</pref>) are less likely to change than <a class="termref" href="#dfn-state" id="ref-for-dfn-state-8">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as <pref>aria-activedescendant</pref>, <pref>aria-valuenow</pref>, and <pref>aria-valuetext</pref> are expected to change often. See <a class="specref respec-offending-element" href="#statevsprop" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-0">clarification of states versus properties</a>.</p>
+      <p><a class="termref internalDFN" data-lt="attribute" href="#dfn-attribute" data-link-type="dfn" id="ref-for-dfn-attribute-2">Attributes</a> that are essential to the nature of a given <a href="#dfn-object" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-object-7">object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, <a href="https://w3c.github.io/aria/#aria-multiline" class="property-reference"><code>aria-multiline</code></a>) are less likely to change than <a class="termref" href="#dfn-state" id="ref-for-dfn-state-8">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as <a href="https://w3c.github.io/aria/#aria-activedescendant" class="property-reference"><code>aria-activedescendant</code></a>, <a href="https://w3c.github.io/aria/#aria-valuenow" class="property-reference"><code>aria-valuenow</code></a>, and <a href="https://w3c.github.io/aria/#aria-valuetext" class="property-reference"><code>aria-valuetext</code></a> are expected to change often. See <a class="specref respec-offending-element" href="#statevsprop" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured-0">clarification of states versus properties</a>.</p>
     </dd>
     <dt><dfn data-lt="relationship|relationships|Relationship" id="dfn-relationship">Relationship</dfn></dt>
     <dd>
@@ -1063,7 +1063,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <dd>
       <p>A hierarchical definition of how the characteristics of various <a class="termref internalDFN" data-lt="class" href="#dfn-class" data-link-type="dfn" id="ref-for-dfn-class-3">classes</a> relate to each other, in which classes inherit the properties of superclasses in the hierarchy. A taxonomy can comprise part of the formal definition of an <a href="#dfn-ontology" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-ontology-1">ontology</a>.</p>
     </dd>
-    <dt><dfn data-plurals="text nodes" id="dfn-text-node">Text node</dfn></dt>
+    <dt><dfn id="dfn-text-node" data-plurals="text nodes">Text node</dfn></dt>
     <dd>
       <p>Type of <abbr title="Document Object Model">DOM</abbr> <a class="termref internalDFN" data-lt="node" href="#dfn-node" data-link-type="dfn" id="ref-for-dfn-node-2">node</a> that represents the textual content of an <a class="termref internalDFN" href="#dfn-attribute" data-link-type="dfn" id="ref-for-dfn-attribute-4">attribute</a> or an <a class="termref internalDFN" href="#dfn-element" data-link-type="dfn" id="ref-for-dfn-element-9">element</a>. A Text node has no child nodes.  </p>
     </dd>
