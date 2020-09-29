@@ -42,7 +42,7 @@
   "name": "Digital Publishing WAI-ARIA Module 1.1",
   "inLanguage": "en-US",
   "license": "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document",
-  "datePublished": "2020-09-21",
+  "datePublished": "2020-09-29",
   "copyrightHolder": {
     "name": "World Wide Web Consortium",
     "url": "https://www.w3.org/"
@@ -500,16 +500,16 @@
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishDate": "2020-09-21",
-  "publishISODate": "2020-09-21T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 21 September 2020"
+  "publishDate": "2020-09-29",
+  "publishISODate": "2020-09-29T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 29 September 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1>
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2020-09-21">21 September 2020</time>
+      <time class="dt-published" datetime="2020-09-29">29 September 2020</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -3431,9 +3431,9 @@
 							publications (i.e., where no statically paginated equivalent exists). These markers provide
 							consistent navigation regardless of differences in font and screen size that can otherwise
 							affect the dynamic pagination of the content.</p>
-						<p>The name of the page break <em class="rfc2119" title="SHOULD">SHOULD</em> be an end user-consumable page number so that assistive
-							technologies can announce the page as needed (e.g., in a command to indentify the current
-							page).</p>
+						<p>Authors <em class="rfc2119" title="MUST">MUST</em> ensure the name of the page break is an end user-consumable page number that
+							identifies the page that is beginning so that assistive technologies can announce the page
+							as needed (e.g., in a command to indentify the current page).</p>
 						<aside class="example" id="example-30"><div class="marker">
     <a class="self-link" href="#example-30">Example<bdi> 30</bdi></a>
   </div>
@@ -4328,6 +4328,8 @@
 						Recommendation</a><a class="self-link" aria-label="§" href="#substantive-changes-since-the-dpub-aria-1-0-recommendation"></a></h3>
 				<ul>
 					
+					<li>31-July-2020: Clarified that the name of <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a> is the page number of the
+						page that is beginning.</li>
 					<li>31-July-2020: Removed <a href="https://w3c.github.io/aria/#term" class="role-reference"><code>term</code></a> and <a href="https://w3c.github.io/aria/#definition" class="role-reference"><code>definition</code></a> as required children of
 							<a href="#doc-glossary" class="role-reference"><code>doc-glossary</code></a> to accommodate various ways glossaries can be constructed. See <a href="https://github.com/w3c/dpub-aria/issues/9">issue 9</a>.</li>
 					<li>25-July-2020: Recommend that <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a> name be end user-consumable. See <a href="https://github.com/w3c/dpub-aria/issues/17">issue 17</a>.</li>
