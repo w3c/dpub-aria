@@ -42,7 +42,7 @@
   "name": "Digital Publishing WAI-ARIA Module 1.1",
   "inLanguage": "en-US",
   "license": "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document",
-  "datePublished": "2020-09-29",
+  "datePublished": "2020-10-02",
   "copyrightHolder": {
     "name": "World Wide Web Consortium",
     "url": "https://www.w3.org/"
@@ -500,16 +500,16 @@
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishDate": "2020-09-29",
-  "publishISODate": "2020-09-29T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 29 September 2020"
+  "publishDate": "2020-10-02",
+  "publishISODate": "2020-10-02T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 02 October 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1>
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2020-09-29">29 September 2020</time>
+      <time class="dt-published" datetime="2020-10-02">02 October 2020</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -739,7 +739,7 @@
 		<section class="normative" id="conformance"><h2 id="x2-conformance"><bdi class="secno">2. </bdi>Conformance<a class="self-link" aria-label="§" href="#conformance"></a></h2><p>
       As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.
     </p><p>
-        The key words <em class="rfc2119">MUST</em> and <em class="rfc2119">SHOULD</em> in this document
+        The key words <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, <em class="rfc2119">MUST NOT</em>, and <em class="rfc2119">SHOULD</em> in this document
         are to be interpreted as described in
         <a href="https://tools.ietf.org/html/bcp14">BCP 14</a>
         [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>]
@@ -997,6 +997,10 @@
 							a statically paginated version of the content.</dd>
 <dt><a href="#doc-pagelist" class="role-reference">doc-pagelist</a></dt>
 <dd>A navigational aid that provides a list of links to the pagebreaks in the content.</dd>
+<dt><a href="#doc-pagefooter" class="role-reference">doc-pagefooter</a></dt>
+<dd>A section of text appearing at the bottom of a page that provides context about the current work and location within it. The page footer is distinct from the body text and normally follows a repeating template that contains (possibly truncated) items such as the document title, current section, author name(s), and page number.</dd>
+<dt><a href="#doc-pageheader" class="role-reference">doc-pageheader</a></dt>
+<dd>A section of text appearing at the top of a page that provides context about the current work and location within it. The page header is distinct from the body text and normally follows a repeating template that contains (possibly truncated) items such as the document title, current section, author name(s), and page number.</dd>
 <dt><a href="#doc-part" class="role-reference">doc-part</a></dt>
 <dd>A major structural division in a work that contains a set of related sections dealing with a
 							particular subject, narrative arc or similar encapsulated theme.</dd>
@@ -3613,14 +3617,177 @@
 						</tbody>
 					</table>
 				</section>
+        <section class="role notoc" id="doc-pagefooter">
+          <h4 class="role-name" title="doc-pagefooter" aria-describedby="desc-doc-pagefooter" id="doc-pagefooter-0"><code>doc-pagefooter</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-pagefooter"></a></h4>
+          <div class="role-description" id="desc-doc-pagefooter" role="definition">
+            <p>A section of text appearing at the bottom of a page that provides context about the current work and location within it. The page footer is distinct from the body text and normally follows a repeating template that contains (possibly truncated) items such as the document title, current section, author name(s), and page number.</p>
+            <p>The <code>doc-pagefooter</code> role <em class="rfc2119" title="MUST">MUST</em> be used on every instance of the page footer.</p>
+            <p>The <code>doc-pagefooter</code> <em class="rfc2119" title="MUST NOT">MUST NOT</em> contain the <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a>.</p>
+            <p>The <code>doc-pagefooter</code> <em class="rfc2119" title="MUST NOT">MUST NOT</em> contain footnotes (<a href="#doc-footnote" class="role-reference"><code>doc-footnote</code></a>).</p>
+            <p>Assistive technologies <em class="rfc2119" title="MAY">MAY</em> allow the user to read the document content continuously without interruption from the page footer.</p>
+            <div class="example" id="example-32">
+        <div class="marker">
+    <a class="self-link" href="#example-32">Example<bdi> 32</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagefooter"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Leo Tolstoy<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>321<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+   …
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
+      </div>
+          </div>
+          <table class="role-features">
+            <caption>Characteristics:</caption>
+            <thead>
+              <tr>
+                <th scope="col">Characteristic</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <th class="role-parent-head" scope="row">Superclass Role:</th>
+                <td class="role-parent"><a href="https://w3c.github.io/aria/#section" class="role-reference"><code>section</code></a></td>
+              </tr>
+              
+              
+              
+              
+              
+              
+              
+              <tr>
+                <th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
+                <td class="role-inherited"><ul>
+<li><a href="https://w3c.github.io/aria/#aria-atomic" class="property-reference"><code>aria-atomic</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-busy" class="state-reference"><code>aria-busy (state)</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-controls" class="property-reference"><code>aria-controls</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-current" class="state-reference"><code>aria-current (state)</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-describedby" class="property-reference"><code>aria-describedby</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-details" class="property-reference"><code>aria-details</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-disabled" class="state-reference"><code>aria-disabled (state)</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-dropeffect" class="property-reference"><code>aria-dropeffect</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-errormessage" class="property-reference"><code>aria-errormessage</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-expanded" class="state-reference"><code>aria-expanded (state)</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-flowto" class="property-reference"><code>aria-flowto</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-grabbed" class="state-reference"><code>aria-grabbed (state)</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-haspopup" class="property-reference"><code>aria-haspopup</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-hidden" class="state-reference"><code>aria-hidden (state)</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-invalid" class="state-reference"><code>aria-invalid (state)</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-keyshortcuts" class="property-reference"><code>aria-keyshortcuts</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-label" class="property-reference"><code>aria-label</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-labelledby" class="property-reference"><code>aria-labelledby</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-live" class="property-reference"><code>aria-live</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-owns" class="property-reference"><code>aria-owns</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-relevant" class="property-reference"><code>aria-relevant</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-roledescription" class="property-reference"><code>aria-roledescription</code></a></li>
+</ul>
+</td>
+              </tr>
+              <tr>
+                <th class="role-namefrom-head" scope="row">Name From:</th>
+                <td class="role-namefrom">prohibited</td>
+              </tr>
+              <tr>
+                <th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
+                <td class="role-namerequired">False</td>
+              </tr>
+              
+              
+              
+              
+            </tbody>
+          </table>
+        </section>
+        <section class="role notoc" id="doc-pageheader">
+          <h4 class="role-name" title="doc-pageheader" aria-describedby="desc-doc-pageheader" id="doc-pageheader-0"><code>doc-pageheader</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-pageheader"></a></h4>
+          <div class="role-description" id="desc-doc-pageheader" role="definition">
+            <p>A section of text appearing at the top of a page that provides context about the current work and location within it. The page header is distinct from the body text and normally follows a repeating template that contains (possibly truncated) items such as the document title, current section, author name(s), and page number.</p>
+            <p>The <code>doc-pageheader</code> role <em class="rfc2119" title="MUST">MUST</em> be used on every instance of the page header.</p>
+            <p>The <code>doc-pagefooter</code> <em class="rfc2119" title="MUST NOT">MUST NOT</em> contain the <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a>.</p>
+            <p>Assistive technologies <em class="rfc2119" title="MAY">MAY</em> allow the user to read the document content continuously without interruption from the page header.</p>
+            <div class="example" id="example-33">
+        <div class="marker">
+    <a class="self-link" href="#example-33">Example<bdi> 33</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pageheader"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>War and Peace<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>321<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+   …
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
+      </div>
+          </div>
+          <table class="role-features">
+            <caption>Characteristics:</caption>
+            <thead>
+              <tr>
+                <th scope="col">Characteristic</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <th class="role-parent-head" scope="row">Superclass Role:</th>
+                <td class="role-parent"><a href="https://w3c.github.io/aria/#section" class="role-reference"><code>section</code></a></td>
+              </tr>
+              
+              
+              
+              
+              
+              
+              
+              <tr>
+                <th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
+                <td class="role-inherited"><ul>
+<li><a href="https://w3c.github.io/aria/#aria-atomic" class="property-reference"><code>aria-atomic</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-busy" class="state-reference"><code>aria-busy (state)</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-controls" class="property-reference"><code>aria-controls</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-current" class="state-reference"><code>aria-current (state)</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-describedby" class="property-reference"><code>aria-describedby</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-details" class="property-reference"><code>aria-details</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-disabled" class="state-reference"><code>aria-disabled (state)</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-dropeffect" class="property-reference"><code>aria-dropeffect</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-errormessage" class="property-reference"><code>aria-errormessage</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-expanded" class="state-reference"><code>aria-expanded (state)</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-flowto" class="property-reference"><code>aria-flowto</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-grabbed" class="state-reference"><code>aria-grabbed (state)</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-haspopup" class="property-reference"><code>aria-haspopup</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-hidden" class="state-reference"><code>aria-hidden (state)</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-invalid" class="state-reference"><code>aria-invalid (state)</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-keyshortcuts" class="property-reference"><code>aria-keyshortcuts</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-label" class="property-reference"><code>aria-label</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-labelledby" class="property-reference"><code>aria-labelledby</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-live" class="property-reference"><code>aria-live</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-owns" class="property-reference"><code>aria-owns</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-relevant" class="property-reference"><code>aria-relevant</code></a></li>
+<li><a href="https://w3c.github.io/aria/#aria-roledescription" class="property-reference"><code>aria-roledescription</code></a></li>
+</ul>
+</td>
+              </tr>
+              <tr>
+                <th class="role-namefrom-head" scope="row">Name From:</th>
+                <td class="role-namefrom">prohibited</td>
+              </tr>
+              <tr>
+                <th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
+                <td class="role-namerequired">False</td>
+              </tr>
+              
+              
+              
+              
+            </tbody>
+          </table>
+        </section>
 				<section class="role notoc" id="doc-part">
 					<h4 class="role-name" title="doc-part" aria-describedby="desc-doc-part" id="doc-part-0"><code>doc-part</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-part"></a></h4>
 					<div class="role-description" id="desc-doc-part" role="definition">
 						<p>A major structural division in a work that contains a set of related sections dealing with a
 							particular subject, narrative arc or similar encapsulated theme.</p>
-						<div class="example" id="example-32">
+						<div class="example" id="example-34">
         <div class="marker">
-    <a class="self-link" href="#example-32">Example<bdi> 32</bdi></a>
+    <a class="self-link" href="#example-34">Example<bdi> 34</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-part"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Part One<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-chapter"</span>&gt;</span>
@@ -3704,9 +3871,9 @@
 					<div class="role-description" id="desc-doc-preface" role="definition">
 						<p>An introductory section that precedes the work, typically written by the author of the
 							work.</p>
-						<div class="example" id="example-33">
+						<div class="example" id="example-35">
         <div class="marker">
-    <a class="self-link" href="#example-33">Example<bdi> 33</bdi></a>
+    <a class="self-link" href="#example-35">Example<bdi> 35</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-preface"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Introduction:A Guide to the Galaxy<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    …
@@ -3786,9 +3953,9 @@
 					<div class="role-description" id="desc-doc-prologue" role="definition">
 						<p>An introductory section that sets the background to a work, typically part of the
 							narrative.</p>
-						<div class="example" id="example-34">
+						<div class="example" id="example-36">
         <div class="marker">
-    <a class="self-link" href="#example-34">Example<bdi> 34</bdi></a>
+    <a class="self-link" href="#example-36">Example<bdi> 36</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-prologue"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Prologue<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
@@ -3879,18 +4046,18 @@
 						<p>The following example shows the identification of a pullquote that will be presented
 							elsewhere (e.g., via a script). In this case, the pullquote is not hidden as the marked text
 							is not presentational.</p>
-						<div class="example" id="example-35">
+						<div class="example" id="example-37">
         <div class="marker">
-    <a class="self-link" href="#example-35">Example<bdi> 35</bdi></a>
+    <a class="self-link" href="#example-37">Example<bdi> 37</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>… I may die, but first you, my tyrant and tormentor, shall curse the sun that gazes on your misery.
    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pq01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pullquote"</span>&gt;</span>Beware, for I am fearless and therefore powerful.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
    I will watch with the wiliness of a snake, that I may sting with its venom. … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
 						<p>The next example shows a pullquote that duplicates the text. This quote is hidden because it
 							is for presentational purposes only.</p>
-						<div class="example" id="example-36">
+						<div class="example" id="example-38">
         <div class="marker">
-    <a class="self-link" href="#example-36">Example<bdi> 36</bdi></a>
+    <a class="self-link" href="#example-38">Example<bdi> 38</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>… Better habits pave the way to growth, and growth leads to greater happiness.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pullquote"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
    Better habits pave the way to growth, and growth leads to greater happiness.
@@ -3970,9 +4137,9 @@
 					<div class="role-description" id="desc-doc-qna" role="definition">
 						<p>A section of content structured as a series of questions and answers, such as an interview or
 							list of frequently asked questions.</p>
-						<div class="example" id="example-37">
+						<div class="example" id="example-39">
         <div class="marker">
-    <a class="self-link" href="#example-37">Example<bdi> 37</bdi></a>
+    <a class="self-link" href="#example-39">Example<bdi> 39</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-qna"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Interview with the Author<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
@@ -4055,9 +4222,9 @@
 					<h4 class="role-name" title="doc-subtitle" aria-describedby="desc-doc-subtitle" id="doc-subtitle-0"><code>doc-subtitle</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-subtitle"></a></h4>
 					<div class="role-description" id="desc-doc-subtitle" role="definition">
 						<p>An explanatory or alternate title for the work, or a section or component within it.</p>
-						<div class="example" id="example-38">
+						<div class="example" id="example-40">
         <div class="marker">
-    <a class="self-link" href="#example-38">Example<bdi> 38</bdi></a>
+    <a class="self-link" href="#example-40">Example<bdi> 40</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Chapter 2 The Battle<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-subtitle"</span>&gt;</span>Once more unto the breach<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -4142,9 +4309,9 @@
 					<div class="role-description" id="desc-doc-tip" role="definition">
 						<p>Helpful information that clarifies some aspect of the content or assists in its
 							comprehension.</p>
-						<div class="example" id="example-39">
+						<div class="example" id="example-41">
         <div class="marker">
-    <a class="self-link" href="#example-39">Example<bdi> 39</bdi></a>
+    <a class="self-link" href="#example-41">Example<bdi> 41</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-tip"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Tip<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You can assign a variable a new value that is the result
@@ -4226,9 +4393,9 @@
 						<p>A navigational aid that provides an ordered list of links to the major sectional headings in
 							the content. A table of contents may cover an entire work, or only a smaller section of
 							it.</p>
-						<div class="example" id="example-40">
+						<div class="example" id="example-42">
         <div class="marker">
-    <a class="self-link" href="#example-40">Example<bdi> 40</bdi></a>
+    <a class="self-link" href="#example-42">Example<bdi> 42</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-toc"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Contents<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"directory"</span>&gt;</span>
