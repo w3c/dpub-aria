@@ -1,19 +1,128 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 25.6.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>span.example-title{text-transform:none}aside.example,div.example,div.illegal-example{padding:.5em;margin:1em 0;position:relative;clear:both}div.illegal-example{color:red}div.illegal-example p{color:#000}aside.example,div.example{padding:.5em;border-left-width:.5em;border-left-style:solid;border-color:#e0cb52;background:#fcfaee}aside.example div.example{border-left-width:.1em;border-color:#999;background:#fff}aside.example div.example span.example-title{color:#999}</style><style>.issue-label{text-transform:initial}.warning>p:first-child{margin-top:0}.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}span.warning{padding:.1em .5em .15em}.issue.closed span.issue-number{text-decoration:line-through}.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}li.task-list-item{list-style:none}input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}</style>
-		<title>Digital Publishing WAI-ARIA Module 1.1</title>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
+<meta charset="UTF-8">
+<meta name="generator" content="ReSpec 26.9.4">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+span.example-title{text-transform:none}
+aside.example,div.example,div.illegal-example{padding:.5em;margin:1em 0;position:relative;clear:both}
+div.illegal-example{color:red}
+div.illegal-example p{color:#000}
+aside.example,div.example{padding:.5em;border-left-width:.5em;border-left-style:solid;border-color:#e0cb52;background:#fcfaee}
+aside.example div.example{border-left-width:.1em;border-color:#999;background:#fff}
+aside.example div.example span.example-title{color:#999}
+.example pre{background-color:rgba(0,0,0,.03)}
+</style>
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
 		
-		<style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style>
+<title>Digital Publishing WAI-ARIA Module 1.1</title>
+		
+		
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+.hljs{background:0 0!important}
+a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+h2,h3,h4,h5,h6{position:relative}
+aside.example .marker>a.self-link{color:inherit}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+@media (max-width:767px){
+dd{margin-left:0}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
 		
 		
 		
-		<link href="common/css/common.css" rel="stylesheet" type="text/css">
+		
+<link href="common/css/common.css" rel="stylesheet" type="text/css">
 		
 		
 		
-	<meta name="description" content="Enabling users of assistive technologies to find their way through Web content requires embedding
+	
+<meta name="description" content="Enabling users of assistive technologies to find their way through Web content requires embedding
 				semantic metadata about Web document structural divisions. This is particularly important for structural
 				divisions of long-form documents and goes along with embedding semantic metadata about Web-application
 				widgets and behaviors for assistive technologies. This specification defines a set of WAI-ARIA roles
-				specific to helping users of assistive technologies navigate through such long-form documents."><link rel="canonical" href="https://www.w3.org/TR/dpub-aria-1.1/"><script type="application/ld+json">{
+				specific to helping users of assistive technologies navigate through such long-form documents.">
+<link rel="canonical" href="https://www.w3.org/TR/dpub-aria-1.1/">
+<script type="application/ld+json">{
   "@context": [
     "http://schema.org",
     {
@@ -42,7 +151,7 @@
   "name": "Digital Publishing WAI-ARIA Module 1.1",
   "inLanguage": "en-US",
   "license": "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document",
-  "datePublished": "2021-04-23",
+  "datePublished": "2021-07-21",
   "copyrightHolder": {
     "name": "World Wide Web Consortium",
     "url": "https://www.w3.org/"
@@ -63,7 +172,7 @@
     {
       "type": "Person",
       "name": "Tzviya Siegman",
-      "url": "http://www.wiley.com",
+      "url": "mailto:tsiegman@wiley.com",
       "foaf:mbox": "tsiegman@wiley.com",
       "worksFor": {
         "name": "Wiley"
@@ -107,10 +216,10 @@
       }
     },
     {
-      "id": "https://datatracker.ietf.org/doc/html/rfc2119",
+      "id": "https://www.rfc-editor.org/rfc/rfc2119",
       "type": "TechArticle",
       "name": "Key words for use in RFCs to Indicate Requirement Levels",
-      "url": "https://datatracker.ietf.org/doc/html/rfc2119",
+      "url": "https://www.rfc-editor.org/rfc/rfc2119",
       "creator": [
         {
           "name": "S. Bradner"
@@ -121,10 +230,10 @@
       }
     },
     {
-      "id": "https://datatracker.ietf.org/doc/html/rfc8174",
+      "id": "https://www.rfc-editor.org/rfc/rfc8174",
       "type": "TechArticle",
       "name": "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words",
-      "url": "https://datatracker.ietf.org/doc/html/rfc8174",
+      "url": "https://www.rfc-editor.org/rfc/rfc8174",
       "creator": [
         {
           "name": "B. Leiba"
@@ -222,92 +331,6 @@
       }
     },
     {
-      "id": "https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility",
-      "type": "TechArticle",
-      "name": "Microsoft Active Accessibility (MSAA)",
-      "url": "https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility",
-      "publisher": {
-        "name": "Microsoft Corporation"
-      }
-    },
-    {
-      "id": "https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification",
-      "type": "TechArticle",
-      "name": "UI Automation",
-      "url": "https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification",
-      "publisher": {
-        "name": "Microsoft Corporation"
-      }
-    },
-    {
-      "id": "https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex",
-      "type": "TechArticle",
-      "name": "The IAccessibleEx Interface",
-      "url": "https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex",
-      "publisher": {
-        "name": "Microsoft Corporation"
-      }
-    },
-    {
-      "id": "https://developer.apple.com/documentation/appkit/nsaccessibility",
-      "type": "TechArticle",
-      "name": "The NSAccessibility Protocol for macOS",
-      "url": "https://developer.apple.com/documentation/appkit/nsaccessibility",
-      "publisher": {
-        "name": "Apple, Inc."
-      }
-    },
-    {
-      "id": "https://developer.gnome.org/atk/stable/",
-      "type": "TechArticle",
-      "name": "ATK - Accessibility Toolkit",
-      "url": "https://developer.gnome.org/atk/stable/",
-      "publisher": {
-        "name": "The GNOME Project"
-      }
-    },
-    {
-      "id": "https://developer.gnome.org/libatspi/stable/",
-      "type": "TechArticle",
-      "name": "Assistive Technology Service Provider Interface",
-      "url": "https://developer.gnome.org/libatspi/stable/",
-      "publisher": {
-        "name": "The GNOME Project"
-      }
-    },
-    {
-      "id": "https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2",
-      "type": "TechArticle",
-      "name": "IAccessible2",
-      "url": "https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2",
-      "publisher": {
-        "name": "Linux Foundation"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/WCAG21/",
-      "type": "TechArticle",
-      "name": "Web Content Accessibility Guidelines (WCAG) 2.1",
-      "url": "https://www.w3.org/TR/WCAG21/",
-      "creator": [
-        {
-          "name": "Andrew Kirkpatrick"
-        },
-        {
-          "name": "Joshue O Connor"
-        },
-        {
-          "name": "Alastair Campbell"
-        },
-        {
-          "name": "Michael Cooper"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    },
-    {
       "id": "https://www.w3.org/TR/dpub-aam-1.0/",
       "type": "TechArticle",
       "name": "Digital Publishing Accessibility API Mappings",
@@ -325,8 +348,29 @@
       }
     }
   ]
-}</script><style>.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}.hljs-comment,.hljs-quote{color:#717277;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}.hljs-literal{color:#0b76c5}.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}</style><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
-  "wg": "Accessible Rich Internet Applications Working Group",
+}</script>
+<style>
+.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
+.hljs-comment,.hljs-quote{color:#717277;font-style:italic}
+.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}
+.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}
+.hljs-literal{color:#0b76c5}
+.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}
+.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}
+.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}
+.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}
+.hljs-emphasis{font-style:italic}
+.hljs-strong{font-weight:700}
+.hljs-link{text-decoration:underline}
+</style>
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
   "specStatus": "ED",
   "shortName": "dpub-aria-1.1",
   "edDraftURI": "https://w3c.github.io/dpub-aria/",
@@ -340,7 +384,7 @@
     },
     {
       "name": "Tzviya Siegman",
-      "url": "http://www.wiley.com",
+      "url": "mailto:tsiegman@wiley.com",
       "mailto": "tsiegman@wiley.com",
       "company": "Wiley",
       "companyURI": "http://www.wiley.com",
@@ -350,7 +394,7 @@
   "formerEditors": [
     {
       "name": "Shane McCarron",
-      "url": "http://blog.halindrome.com",
+      "url": "mailto:shane@spec-ops.io",
       "mailto": "shane@spec-ops.io",
       "company": "Spec-Ops",
       "companyURI": "https://www.spec-ops.io",
@@ -358,26 +402,24 @@
     },
     {
       "name": "Markus Gylling",
-      "url": "http://www.daisy.org",
+      "url": "mailto:mgylling@daisy.org",
       "mailto": "mgylling@daisy.org",
       "company": "DAISY Consortium",
       "companyURI": "http://www.daisy.org",
       "w3cid": 21614
     }
   ],
-  "wgURI": "https://www.w3.org/WAI/ARIA/",
-  "wgPublicList": "public-aria",
-  "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/83726/status",
+  "group": "aria",
   "otherLinks": [
     {
-      "key": "Participate",
+      "key": "Participate:",
       "data": [
         {
           "value": "GitHub w3c/dpub-aria",
           "href": "https://github.com/w3c/dpub-aria/"
         },
         {
-          "value": "File a bug",
+          "value": "File an issue",
           "href": "https://github.com/w3c/dpub-aria/issues/"
         },
         {
@@ -455,6 +497,11 @@
     null
   ],
   "definitionMap": [],
+  "xref": [
+    "core-aam",
+    "accname",
+    "wai-aria"
+  ],
   "localBiblio": {
     "ACCNAME-AAM": {
       "aliasOf": "ACCNAME-AAM-1.1"
@@ -500,16 +547,18 @@
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishDate": "2021-04-23",
-  "publishISODate": "2021-04-23T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 23 April 2021"
-}</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
-	<body class="h-entry"><div class="head">
-    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1>
+  "publishDate": "2021-07-21",
+  "publishISODate": "2021-07-21T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 21 July 2021"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
+	<body class="h-entry" data-cite="core-aam accname wai-aria"><div class="head">
+    <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72">
+  </a> <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1>
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2021-04-23">23 April 2021</time>
+      <time class="dt-published" datetime="2021-07-21">21 July 2021</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -524,22 +573,30 @@
       
       
       <dt>Editors:</dt>
-      <dd class="p-author h-card vcard" data-editor-id="51655"><a class="u-url url p-name fn" href="http://www.daisy.org">Matt Garrish</a> (DAISY Consortium) </dd><dd class="p-author h-card vcard" data-editor-id="65542"><a class="ed_mailto u-email email p-name" href="mailto:tsiegman@wiley.com">Tzviya Siegman</a> (Wiley) </dd>
+      <dd class="editor p-author h-card vcard" data-editor-id="51655">
+    <a class="u-url url p-name fn" href="http://www.daisy.org">Matt Garrish</a> (<span class="p-org org h-org">DAISY Consortium</span>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="65542">
+    <a class="ed_mailto u-email email p-name" href="mailto:tsiegman@wiley.com">Tzviya Siegman</a> (<span class="p-org org h-org">Wiley</span>)
+  </dd>
       <dt>
               Former editors:
-            </dt><dd class="p-author h-card vcard" data-editor-id="89030"><a class="ed_mailto u-email email p-name" href="mailto:shane@spec-ops.io">Shane McCarron</a> (Spec-Ops) </dd><dd class="p-author h-card vcard" data-editor-id="21614"><a class="ed_mailto u-email email p-name" href="mailto:mgylling@daisy.org">Markus Gylling</a> (DAISY Consortium) </dd>
+            </dt><dd class="editor p-author h-card vcard" data-editor-id="89030">
+    <a class="ed_mailto u-email email p-name" href="mailto:shane@spec-ops.io">Shane McCarron</a> (<span class="p-org org h-org">Spec-Ops</span>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="21614">
+    <a class="ed_mailto u-email email p-name" href="mailto:mgylling@daisy.org">Markus Gylling</a> (<span class="p-org org h-org">DAISY Consortium</span>)
+  </dd>
       
       <dt>Participate:</dt><dd>
     <a href="https://github.com/w3c/dpub-aria/">GitHub w3c/dpub-aria</a>
   </dd><dd>
-    <a href="https://github.com/w3c/dpub-aria/issues/">File a bug</a>
+    <a href="https://github.com/w3c/dpub-aria/issues/">File an issue</a>
   </dd><dd>
     <a href="https://github.com/w3c/dpub-aria/commits/gh-pages">Commit history</a>
   </dd><dd>
     <a href="https://github.com/w3c/dpub-aria/pulls/">Pull requests</a>
-  </dd><dt>Repository:</dt><dd>
+  </dd><dt>Repository</dt><dd>
     <a href="https://github.com/w3c/dpub-aria">Github Repository</a>
-  </dd><dt>Changes:</dt><dd>
+  </dd><dt>Changes</dt><dd>
     <a href="https://github.com/w3c/dpub-aria/commits/master">Commit history</a>
   </dd>
     </dl>
@@ -575,55 +632,49 @@
       <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
       https://www.w3.org/TR/.</em></p><p>
     This document was published by the <a href="https://www.w3.org/WAI/ARIA/">Accessible Rich Internet Applications Working Group</a> as an
-    Editor's Draft.
+    Editor's Draft. 
     
   </p><p>
     <a href="https://github.com/w3c/dpub-aria/issues/">GitHub Issues</a> are preferred for
           discussion of this specification.
         
-    Alternatively, you can send comments to our mailing list.
-          Please send them to
-          <a href="mailto:public-aria@w3.org">public-aria@w3.org</a>
-          (<a href="https://lists.w3.org/Archives/Public/public-aria/">archives</a>).
-        
+    
   </p><p>
-    Publication as an Editor's Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
-    Membership. This is a draft document and may be updated, replaced or
-    obsoleted by other documents at any time. It is inappropriate to cite this
-    document as other than work in progress.
-  </p><p>
+      Publication as an Editor's Draft does not imply endorsement
+      by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. 
+    </p><p>This is a draft document and may be updated, replaced
+  or obsoleted by other documents at any time. It is inappropriate to cite this
+  document as other than work in progress.
+  </p><p></p><p>
     
         This document was produced by a group
         operating under the
-        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/">1 August 2017 <abbr title="World Wide Web Consortium">W3C</abbr> Patent
+          Policy</a>.
        
     
                 <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
-                <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83726/status">public list of any patent disclosures</a>
+                <a rel="disclosure" href="https://www.w3.org/groups/wg/aria/ipr">public list of any patent disclosures</a>
           made in connection with the deliverables of
           the group; that page also includes
           instructions for disclosing a patent. An individual who has actual
           knowledge of a patent which the individual believes contains
-          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/#def-essential">Essential Claim(s)</a>
           must disclose the information in accordance with
-          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+          <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
         
     
   </p><p>
                   This document is governed by the
-                  <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                  <a id="w3c_process_revision" href="https://www.w3.org/2020/Process-20200915/">15 September 2020 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section>
-		<nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target Audience</a></li><li class="tocline"><a class="tocxref" href="#ua-support"><bdi class="secno">1.2 </bdi>User Agent Support</a></li><li class="tocline"><a class="tocxref" href="#co-evolution"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host
-					Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><bdi class="secno">1.4 </bdi>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><bdi class="secno">1.5 </bdi>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#terms"><bdi class="secno">3. </bdi>Important Terms</a></li><li class="tocline"><a class="tocxref" href="#roles"><bdi class="secno">4. </bdi>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><bdi class="secno">4.1 </bdi>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#a_schemata"><bdi class="secno">A. </bdi>Schemata</a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">B. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#substantive-changes-since-the-dpub-aria-1-0-recommendation"><bdi class="secno">B.1 </bdi>Substantive changes since the <span class="formerLink">DPUB-ARIA 1.0
-						Recommendation</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">C. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><bdi class="secno">C.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">C.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">D. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">D.1 </bdi>
-        Normative references
-      </a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">D.2 </bdi>
-        Informative references
-      </a></li></ol></li></ol></nav>
+		<nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target Audience</a></li><li class="tocline"><a class="tocxref" href="#ua-support"><bdi class="secno">1.2 </bdi>User Agent Support</a></li><li class="tocline"><a class="tocxref" href="#co-evolution"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host
+					Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><bdi class="secno">1.4 </bdi>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><bdi class="secno">1.5 </bdi>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#roles"><bdi class="secno">3. </bdi>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><bdi class="secno">3.1 </bdi>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#a_schemata"><bdi class="secno">A. </bdi>Schemata</a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">B. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#substantive-changes-since-the-dpub-aria-1-0-recommendation"><bdi class="secno">B.1 </bdi>Substantive changes since the <span class="formerLink">DPUB-ARIA 1.0
+						Recommendation</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">C. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><bdi class="secno">C.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">C.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">D. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">D.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">D.2 </bdi>Informative references</a></li></ol></li></ol></nav>
 		<section class="informative" id="introduction">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2><p><em>This section is non-normative.</em></p>
 			<p><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is a technical specification that
-				defines a common host language semantic accessibility <abbr title="Application Programming Interfaces">API</abbr> and framework that enables web browsers to map
+				defines a common host language semantic accessibility <abbr title="application programing interface">API</abbr> and framework that enables web browsers to map
 				the accessibility semantics in web content to platform-specific accessibility APIs. This enables web
 				content to be interoperable with platform assistive technologies similar to native platform applications
 				without platform dependencies.</p>
@@ -643,11 +694,11 @@
 
 			<section id="target-audience">
 				<h3 id="x1-1-target-audience"><bdi class="secno">1.1 </bdi>Target Audience<a class="self-link" aria-label="§" href="#target-audience"></a></h3>
-				<p>This specification defines a module of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> for digital publishing, including <a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>, <a data-lt="state" href="#dfn-state" class="internalDFN" data-link-type="dfn">states</a>, <a data-lt="property" href="#dfn-property" class="internalDFN" data-link-type="dfn">properties</a> and values. It impacts several
+				<p>This specification defines a module of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> for digital publishing, including <a data-lt="role" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-lt="state" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a>, <a data-lt="property" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a> and values. It impacts several
 					audiences:</p>
 				<ul>
-					<li><a data-lt="user agent" href="#dfn-user-agent" class="internalDFN" data-link-type="dfn">User agents</a> that process content containing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> features;</li>
-					<li><a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">Assistive technologies</a> that provide specialized reading experiences to users with
+					<li><a data-lt="user agent" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-user-agent">User agents</a> that process content containing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> features;</li>
+					<li><a data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-assistive-technology">Assistive technologies</a> that provide specialized reading experiences to users with
 						disabilities;</li>
 					<li>Authors of digital publications;</li>
 					<li>Authoring tools that help authors create conforming digital publications; and</li>
@@ -702,7 +753,7 @@
 					accessible, because authoring practices often advance faster than host language standards. In this
 					way, this module and host languages both evolve together but at different rates.</p>
 				<p>Some host languages exist to create semantics for features other than the user interface. For
-					example, <abbr title="Scalable Vector Graphics">SVG</abbr> expresses the semantics behind production of graphical objects, not of user interface
+					example, SVG expresses the semantics behind production of graphical objects, not of user interface
 					components that those objects may represent. Host languages such as these might, by design, not
 					provide native semantics that map to this specification's features. In these cases, the Digital
 					Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module could be
@@ -714,7 +765,7 @@
 				<section id="authoring_tools">
 					<h4 id="x1-4-1-authoring-tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools<a class="self-link" aria-label="§" href="#authoring_tools"></a></h4>
 					<p>Many of the requirements in the definitions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
-						<a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>, <a data-lt="state" href="#dfn-state" class="internalDFN" data-link-type="dfn">states</a> and <a data-lt="property" href="#dfn-property" class="internalDFN" data-link-type="dfn">properties</a> can be checked automatically during the development process, similar to
+						<a data-lt="role" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-lt="state" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a> and <a data-lt="property" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a> can be checked automatically during the development process, similar to
 						other quality control processes used for validating code. To assist authors who are creating
 						digital publications, such as EPUB, can compare the semantic structure of Digital Publishing
 							<abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles from the <abbr title="Document Object Model">DOM</abbr> to that defined in this specification and notify
@@ -724,7 +775,7 @@
 				<section id="authoring_testing">
 					<h4 id="x1-4-2-testing-practices-and-tools"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools<a class="self-link" aria-label="§" href="#authoring_testing"></a></h4>
 					<p>The accessibility of interactive content cannot be confirmed by static checks alone. Developers
-						of interactive content should test for device-independent access to <a data-lt="widget" href="#dfn-widget" class="internalDFN" data-link-type="dfn">widgets</a> and applications, and should verify accessibility <abbr title="application programing interface">API</abbr> access to all content and changes during
+						of interactive content should test for device-independent access to <a data-lt="widget" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-widget">widgets</a> and applications, and should verify accessibility <abbr title="application programing interface">API</abbr> access to all content and changes during
 						user interaction.</p>
 				</section>
 			</section>
@@ -736,251 +787,30 @@
 						Technologies</a> section in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>].</p>
 			</section>
 		</section>
-		<section class="normative" id="conformance"><h2 id="x2-conformance"><bdi class="secno">2. </bdi>Conformance<a class="self-link" aria-label="§" href="#conformance"></a></h2><p>
-      As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.
-    </p><p>
+		<section class="normative" id="conformance"><h2 id="x2-conformance"><bdi class="secno">2. </bdi>Conformance<a class="self-link" aria-label="§" href="#conformance"></a></h2><p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.</p><p>
         The key words <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, <em class="rfc2119">MUST NOT</em>, and <em class="rfc2119">SHOULD</em> in this document
         are to be interpreted as described in
-        <a href="https://tools.ietf.org/html/bcp14">BCP 14</a>
+        <a href="https://datatracker.ietf.org/doc/html/bcp14">BCP 14</a>
         [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>]
         when, and only when, they appear in all capitals, as shown here.
       </p>
-			<p>Normative sections provide requirements that authors, user agents and assistive technologies <em class="rfc2119" title="MUST">MUST</em> follow
+			<p>Normative sections provide requirements that authors, user agents and assistive technologies <em class="rfc2119">MUST</em> follow
 				for an implementation to conform to this specification.</p>
 			<p>Non-normative sections provide information useful to understanding the specification. Such sections may
 				contain examples of recommended practice, but it is not required to follow such recommendations in order
 				to conform to this specification.</p>
 		</section>
-		<section class="informative" id="terms">
-			<h2 id="x3-important-terms"><bdi class="secno">3. </bdi>Important Terms<a class="self-link" aria-label="§" href="#terms"></a></h2><p><em>This section is non-normative.</em></p>
-			<div data-oninclude="restrictReferences"><p>While some terms are defined in place, the following definitions are used throughout this document. </p>
-<dl class="termlist">
-    <dt><dfn data-lt="accessibility api|accessibility apis|Accessibility API" id="dfn-accessibility-api" data-dfn-type="dfn">Accessibility <abbr title="Application Programming Interface">API</abbr></dfn></dt>
-    <dd>
-      <p>Operating systems and other platforms provide a set of interfaces that expose information about <a class="termref internalDFN" data-lt="object" href="#dfn-object" data-link-type="dfn">objects</a> and <a class="termref internalDFN" data-lt="event" href="#dfn-event" data-link-type="dfn">events</a> to <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a>. Assistive technologies use these interfaces to get information about and interact with those <a class="termref internalDFN" data-lt="widget" href="#dfn-widget" data-link-type="dfn">widgets</a>. Examples of accessibility APIs are <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility">Microsoft Active Accessibility</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-msaa" title="Microsoft Active Accessibility (MSAA)">MSAA</a></cite>], <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/entry-uiauto-win32">Microsoft User Interface Automation</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-ui-automation" title="UI Automation">UI-AUTOMATION</a></cite>], <abbr title="Microsoft Active Accessibility">MSAA</abbr> with <cite><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex"><abbr title="User Interface Automation">UIA</abbr> Express</a></cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-uia-express" title="The IAccessibleEx Interface">UIA-EXPRESS</a></cite>], the
-      	<a href="https://developer.apple.com/documentation/appkit/nsaccessibility">Mac <abbr title="OS Ten">OS X</abbr> Accessibility Protocol</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-axapi" title="The NSAccessibility Protocol for macOS">AXAPI</a></cite>], the <cite><a href="https://developer.gnome.org/atk/unstable/">Linux/Unix Accessibility Toolkit</a></cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-atk" title="ATK - Accessibility Toolkit">ATK</a></cite>] and <cite><a href="https://developer.gnome.org/libatspi/stable/">Assistive Technology Service Provider Interface</a></cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-at-spi" title="Assistive Technology Service Provider Interface">AT-SPI</a></cite>], and <a href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/start">IAccessible2</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-iaccessible2" title="IAccessible2">IAccessible2</a></cite>].</p>
-    </dd>
-    <dt><dfn id="dfn-accessibility-subtree" data-dfn-type="dfn">Accessibility Subtree</dfn></dt>
-    <dd>
-      <p>An <a href="#dfn-accessible-object" class="internalDFN" data-link-type="dfn">accessible object</a> in the <a href="#dfn-accessibility-tree" class="internalDFN" data-link-type="dfn">accessibility tree</a> and its descendants in that tree. It does not include objects which have relationships other than parent-child in that tree. For example, it does not include objects linked via <a href="https://w3c.github.io/aria/#aria-flowto" class="property-reference"><code>aria-flowto</code></a> unless those objects are also descendants in the <a href="#dfn-accessibility-tree" class="internalDFN" data-link-type="dfn">accessibility tree</a>.</p>
-    </dd>
-    <dt><dfn id="dfn-accessibility-tree" data-dfn-type="dfn">Accessibility Tree</dfn></dt>
-    <dd>
-      <p>Tree of <a class="termref internalDFN" data-lt="accessible object" href="#dfn-accessible-object" data-link-type="dfn">accessible objects</a> that represents the structure of the user interface (<abbr title="user interface">UI</abbr>). Each node in the accessibility tree represents an element in the <abbr title="user interface">UI</abbr> as exposed through the <a href="#dfn-accessibility-api" class="internalDFN" data-link-type="dfn">accessibility <abbr title="Application Programming Interface">API</abbr></a>; for example, a push button, a check box, or container.</p>
-    </dd>
-    <dt><dfn id="dfn-accessible-description" data-dfn-type="dfn">Accessible Description</dfn></dt>
-    <dd>
-      <p>An accessible description provides additional information, related to an interface element, that complements the <a href="#dfn-accessible-name" class="internalDFN" data-link-type="dfn">accessible name</a>. The accessible description might or might not be visually perceivable. </p>
-    </dd>
-	<dt><dfn data-lt="accessible name|accessible names|Accessible Name" id="dfn-accessible-name" data-dfn-type="dfn">Accessible Name</dfn></dt>
-    <dd>
-      <p>The accessible name is the name of a user interface element. Each platform <a href="#dfn-accessibility-api" class="internalDFN" data-link-type="dfn">accessibility <abbr title="application programming interface">API</abbr></a> provides the accessible name property. The value of the accessible name may be derived from a visible (e.g., the visible text on a button) or invisible (e.g., the text alternative that describes an icon) property of the user interface element.  See related <a href="#dfn-accessible-description" class="internalDFN" data-link-type="dfn">accessible description</a>.</p>
-      <p>A simple use for the accessible name property may be illustrated by an "OK" button. The text "OK" is the accessible name. When the button receives focus, assistive technologies may concatenate the platform's role description with the accessible name. For example, a screen reader may speak "push-button OK" or "OK button". The order of concatenation and specifics of the role description (e.g., "button", "push-button", "clickable button") are determined by platform <a class="termref internalDFN" data-lt="accessibility api" href="#dfn-accessibility-api" data-link-type="dfn">accessibility <abbr title="Application Programming Interfaces">API</abbr></a>s or <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a>.</p>
-    </dd>
-	<dt><dfn data-lt="accessible object|accessible objects|Accessible object" id="dfn-accessible-object" data-dfn-type="dfn">Accessible object</dfn></dt>
-    <dd>
-      <p>A <a href="#dfn-node" class="internalDFN" data-link-type="dfn">node</a> in the <a href="#dfn-accessibility-tree" class="internalDFN" data-link-type="dfn">accessibility tree</a> of a platform <a href="#dfn-accessibility-api" class="internalDFN" data-link-type="dfn">accessibility <abbr title="application programming interface">API</abbr></a>. Accessible objects expose various <a class="termref internalDFN" data-lt="state" href="#dfn-state" data-link-type="dfn">states</a>, <a class="termref internalDFN" data-lt="property" href="#dfn-property" data-link-type="dfn">properties</a>, and <a class="termref internalDFN" data-lt="event" href="#dfn-event" data-link-type="dfn">events</a> for use by <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a>.  In the context of markup languages (e.g., <abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="Scalable Vector Graphics">SVG</abbr>) in general, and of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> in particular, markup <a class="termref internalDFN" data-lt="element" href="#dfn-element" data-link-type="dfn">elements</a> and their <a class="termref internalDFN" data-lt="attribute" href="#dfn-attribute" data-link-type="dfn">attributes</a> are represented as accessible objects.  </p>
-    </dd>
-    <dt><dfn id="dfn-activation-behavior" data-dfn-type="dfn">Activation behavior</dfn></dt>
-    <dd>
-      <p>The action taken when an <a href="#dfn-event" class="internalDFN" data-link-type="dfn">event</a>, typically initiated by users through an input device, causes an element to fulfill a defined role. The role may be defined for that element by the host language, or by author-defined variables, or both. The role for any given element may be a generic action, or may be unique to that element. For example, the activation behavior of an <abbr title="Hypertext Markup Language">HTML</abbr> or <abbr title="Scalable Vector Graphics">SVG</abbr> <code>&lt;a&gt;</code> element shall be to cause the user agent to traverse the link specified in the <code>href</code> attribute, with the further optional parameter of specifying the browsing context for the traversal (such as the current window or tab, a named window, or a new window); the activation behavior of an <abbr title="Hypertext Markup Language">HTML</abbr> <code>&lt;input&gt;</code> element with the <code>type</code> attribute value <code>submit</code> shall be to send the values of the form elements to an author-defined <abbr title="Internationalized Resource Identifiers">IRI</abbr> by the author-defined <abbr title="Hypertext Transfer Protocol">HTTP</abbr> method.</p>
-    </dd>
-    <dt><dfn data-lt="assistive technology|Assistive Technologies" id="dfn-assistive-technology" data-dfn-type="dfn">Assistive Technologies</dfn></dt>
-    <dd><p>Hardware and/or software that:</p>
-			<ul>
-				<li>relies on services provided by a <a href="#dfn-user-agent" class="internalDFN" data-link-type="dfn">user agent</a> to retrieve and render Web content </li>
-				<li>works with a user agent or web content itself through the use of APIs, and</li>
-				<li>provides services beyond those offered by the user agent to facilitate user interaction with web content by people with disabilities</li>
-			</ul>
-      <p>This definition may differ from that used in other documents.</p>
-    <p>Examples of assistive technologies that are important in the context
-      of this document include the following:</p>
-    <ul>
-      <li>screen magnifiers, which are used to enlarge and improve the visual readability of rendered text and images;</li>
-      <li>screen readers, which are most-often used to convey information through synthesized speech or a refreshable Braille display;</li>
-      <li>text-to-speech software, which is used to convert text into synthetic speech;</li>
-      <li>speech recognition software, which is used to allow spoken control and dictation;</li>
-      <li>alternate input technologies (including head pointers, on-screen keyboards, single switches, and sip/puff devices), which are used to simulate the keyboard;</li>
-      <li>alternate pointing devices, which are used to simulate mouse pointing and clicking.</li>
-    </ul>
-    </dd>
-    <dt><dfn data-lt="attribute|attributes|Attribute" id="dfn-attribute" data-dfn-type="dfn">Attribute</dfn></dt>
-    <dd>
-      <p>In this specification, attribute is used as it is in markup languages. Attributes are structural features added to <a class="termref" href="#dfn-element">elements</a> to provide information about the <a class="termref" href="#dfn-state">states</a> and <a class="termref" href="#dfn-property">properties</a> of the <a class="termref" href="#dfn-object">object</a> represented by the element.</p>
-    </dd>
-    <dt><dfn data-lt="class|classes|Class" id="dfn-class" data-dfn-type="dfn">Class</dfn></dt>
-    <dd>
-      <p>A set of instance <a class="termref" href="#dfn-object">objects</a> that share similar characteristics.</p>
-    </dd>
-    <dt><dfn data-lt="deprecated|deprecate|deprecation|Deprecated" id="dfn-deprecated" data-dfn-type="dfn">Deprecated</dfn></dt>
-    <dd>
-      <p>A deprecated <a class="termref" href="#dfn-role">role</a>, <a class="termref" href="#dfn-state">state</a>, or <a class="termref" href="#dfn-property">property</a> is one which has been outdated by newer constructs or changed circumstances, and which may be removed in future versions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification. <a class="termref internalDFN" data-lt="user agent" href="#dfn-user-agent" data-link-type="dfn">User agents</a> are encouraged to continue to support items identified as deprecated for backward compatibility. For more information, see <a href="https://www.w3.org/TR/wai-aria-1.1/#deprecated" class="specref">Deprecated Requirements</a> in the Conformance section.</p>
-    </dd>
-    <dt><dfn data-lt="desktop focus|desktop focus events|Desktop focus event" id="dfn-desktop-focus" data-dfn-type="dfn">Desktop focus event</dfn></dt>
-    <dd>
-      <p>Event from/to the host operating system via the accessibility <abbr title="application programming interface">API</abbr>, notifying of a change of input focus.</p>
-    </dd>
-	<dt><dfn id="dfn-domstring" data-dfn-type="dfn">DOMString</dfn>
-	</dt><dd>Sequence of 16-bit unsigned integers, typically interpreted as UTF-16 code units. This corresponds to the JavaScript primitive String type.</dd>
-    <dt><dfn data-lt="element|elements|element's|Element" id="dfn-element" data-dfn-type="dfn">Element</dfn></dt>
-    <dd>
-      <p>In this specification, element is used as it is in markup languages. Elements are the structural elements in markup language that contains the data profile for <a class="termref internalDFN" data-lt="object" href="#dfn-object" data-link-type="dfn">objects</a>.</p>
-    </dd>
-    <dt><dfn data-lt="event|events|Event" id="dfn-event" data-dfn-type="dfn">Event</dfn></dt>
-    <dd>
-      <p>A programmatic message used to communicate discrete changes in the <a href="#dfn-state" class="internalDFN" data-link-type="dfn">state</a> of an <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a> to other objects in a computational system. User input to a web page is commonly mediated through abstract events that describe the interaction and can provide notice of changes to the state of a document object. In some programming languages, events are more commonly known as notifications.</p>
-    </dd>
-    <dt><dfn id="dfn-expose" data-dfn-type="dfn">Expose</dfn></dt>
-    <dd>
-      <p>Translated to platform-specific <a class="termref internalDFN" data-lt="accessibility api" href="#dfn-accessibility-api" data-link-type="dfn">accessibility APIs</a> as defined in the <a href="" class="core-mapping">Core Accessibility <abbr title="Application Programming Interfaces">API</abbr> Mappings</a>.</p>
-    </dd>
-	<dt><dfn data-lt="graphical document|graphical documents|Graphical Document" id="dfn-graphical-document" data-dfn-type="dfn">Graphical Document</dfn></dt>
-    <dd>
-      <p>A document containing graphic representations with user-navigable parts. Charts, maps, diagrams, blueprints, and dashboards are examples of graphical documents. A graphical document is composed using any combination of symbols, images, text, and graphic primitives (shapes such as circles, points, lines, paths, rectangles, etc).</p>
-    </dd>
-    <dt><dfn id="dfn-hidden" data-dfn-type="dfn">Hidden</dfn></dt>
-    <dd>
-        <p>Indicates that the <a href="#dfn-element" class="internalDFN" data-link-type="dfn">element</a> is not visible, <a href="#dfn-perceivable" class="internalDFN" data-link-type="dfn">perceivable</a>, or interactive to <em>any</em> user. An element is considered <em>hidden</em> if it or any one of its ancestor elements is not rendered or is explicitly hidden.</p>
-    </dd>
-    <dt><dfn data-lt="informative|non-normative|Informative" id="dfn-informative" data-dfn-type="dfn">Informative</dfn></dt>
-    <dd>
-      <p>Content provided for information purposes and not required for conformance. Content required for conformance is referred to as <a href="#dfn-normative" class="internalDFN" data-link-type="dfn">normative</a>.</p>
-    </dd>
-    <dt><dfn id="dfn-keyboard-accessible" data-dfn-type="dfn">Keyboard Accessible</dfn></dt>
-    <dd>
-    	<p>Accessible to the user using a keyboard or <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a> that mimic keyboard input, such as a sip and puff tube. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#keyboard-accessible"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Guideline 2.1: Make all functionality available from a keyboard</a></cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>].</p>
-    </dd>
-    <dt><dfn data-lt="landmark|landmarks|Landmark" id="dfn-landmark" data-dfn-type="dfn">Landmark</dfn></dt>
-    <dd>
-      <p>A type of region on a page to which the user may want quick access. Content in such a region is different from that of other regions on the page and relevant to a specific user purpose, such as navigating, searching, perusing the primary content, etc.</p>
-    </dd>
-    <dt><dfn data-lt="live region|live regions|Live Region" id="dfn-live-region" data-dfn-type="dfn">Live Region</dfn></dt>
-    <dd>
-      <p>Live regions are perceivable regions of a web page that are typically updated as a result of an external event when user focus may be elsewhere. These regions are not always updated as a result of a user interaction. Examples of live regions include a chat log, stock ticker, or a sport scoring section that updates periodically to reflect game statistics. Since these asynchronous areas are expected to update outside the user's area of focus, assistive technologies such as screen readers have either been unaware of their existence or unable to process them for the user. <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> has provided a collection of properties that allow the author to identify these live regions and process them: aria-live, aria-relevant, aria-atomic, and aria-busy.</p>
-    </dd>
-    <dt><dfn id="dfn-primary-content-element" data-dfn-type="dfn">Primary Content Element</dfn></dt>
-    <dd>
-      <p>An implementing host language's primary content element, such as the <code>body</code> element in <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
-    </dd>
-    <dt><dfn data-lt="managed state|managed states|Managed State" id="dfn-managed-state" data-dfn-type="dfn">Managed State</dfn></dt>
-    <dd>
-      <p><a href="#dfn-accessibility-api" class="internalDFN" data-link-type="dfn">Accessibility <abbr title="Application Programming Interfaces">API</abbr></a> <a href="#dfn-state" class="internalDFN" data-link-type="dfn">state</a> that is controlled by the user agent, such as focus and selection. These are contrasted with "unmanaged states" that are typically controlled by the author. Nevertheless, authors can override some managed states, such as aria-posinset and aria-setsize. Many managed states have corresponding CSS pseudo-classes, such as :focus, and pseudo-elements, such as ::selection, that are also updated by the user agent.</p>
-    </dd>
-    <dt><dfn id="dfn-nemeth-braille" data-dfn-type="dfn">Nemeth Braille</dfn></dt>
-    <dd>
-        <p>The Nemeth Braille Code for Mathematics is a braille code for encoding mathematical and scientific notation. See <cite><a href="https://en.wikipedia.org/wiki/Nemeth_Braille">Nemeth Braille on Wikipedia</a>.</cite></p>
-    </dd>
-    <dt><dfn id="dfn-node" data-dfn-type="dfn">Node</dfn></dt>
-    <dd>
-      <p>Basic type of <a class="termref internalDFN" href="#dfn-object" data-link-type="dfn">object</a> in the <abbr title="Document Object Model">DOM</abbr> tree or <a class="termref internalDFN" href="#dfn-accessibility-tree" data-link-type="dfn">accessibility tree</a>. <abbr title="Document Object Model">DOM</abbr> nodes are further specified as <a class="termref internalDFN" href="#dfn-element" data-link-type="dfn">Element</a> or <a class="termref internalDFN" data-lt="Text node" href="#dfn-text-node" data-link-type="dfn">Text nodes</a>, among other types. The nodes of an <a class="termref internalDFN" href="#dfn-accessibility-tree" data-link-type="dfn">accessibility tree</a> are <a class="termref internalDFN" data-lt="accessible object" href="#dfn-accessible-object" data-link-type="dfn">accessible objects</a>.  </p>
-    </dd>
-    <dt><dfn id="dfn-normative" data-dfn-type="dfn">Normative</dfn></dt>
-    <dd>
-      <p>Required for conformance. By contrast, content identified as <a href="#dfn-informative" class="internalDFN" data-link-type="dfn">informative</a> or "non-normative" is not required for conformance.</p>
-    </dd>
-    <dt><dfn data-lt="object|objects|Object" id="dfn-object" data-dfn-type="dfn">Object</dfn></dt>
-    <dd>
-      <p>In the context of user interfaces,  an item in the   perceptual user experience, represented in markup languages by one or   more <a class="termref internalDFN" data-lt="element" href="#dfn-element" data-link-type="dfn">elements</a>, and rendered by <a class="termref internalDFN" data-lt="user agent" href="#dfn-user-agent" data-link-type="dfn">user agents</a>.</p>
-    In the context of programming, the instantiation of one or more <a class="termref internalDFN" data-lt="class" href="#dfn-class" data-link-type="dfn">classes</a> and interfaces which define the general characteristics of similar objects. An object in an <a href="#dfn-accessibility-api" class="internalDFN" data-link-type="dfn">accessibility <abbr title="Application Programming Interfaces">API</abbr></a> may represent one or more <abbr title="Document Object Model">DOM</abbr> objects. <a class="termref internalDFN" data-lt="accessibility api" href="#dfn-accessibility-api" data-link-type="dfn">Accessibility APIs</a> have defined interfaces that are distinct from <abbr title="Document Object Model">DOM</abbr> interfaces.</dd>
-  
-    <dt><dfn id="dfn-ontology" data-dfn-type="dfn">Ontology</dfn></dt>
-    <dd>
-      <p>A description of the characteristics of <a class="termref internalDFN" data-lt="class" href="#dfn-class" data-link-type="dfn">classes</a> and how they relate to each other.</p>
-    </dd>
-    <dt><dfn id="dfn-operable" data-dfn-type="dfn">Operable</dfn></dt>
-    <dd>
-      <p>Usable by users in ways they can control. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#operable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 2: Content must be operable</a></cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>]. See <a href="#dfn-keyboard-accessible" class="internalDFN" data-link-type="dfn">Keyboard Accessible</a>.</p>
-    </dd>
-    <dt><dfn data-lt="owned element|owned|owned element's|owned elements|Owned Element" id="dfn-owned-element" data-dfn-type="dfn">Owned Element</dfn></dt>
-    <dd>
-      <p>An 'owned element' is any <abbr title="Document Object Model">DOM</abbr> descendant of the <a href="#dfn-element" class="internalDFN" data-link-type="dfn">element</a>, any element specified as a child via <a href="https://w3c.github.io/aria/#aria-owns" class="property-reference"><code>aria-owns</code></a>, or any <abbr title="Document Object Model">DOM</abbr> descendant of the owned child.</p>
-    </dd>
-    <dt><dfn data-lt="owning element|owning|Owning Element" id="dfn-owning-element" data-dfn-type="dfn">Owning Element</dfn></dt>
-    <dd>
-      <p>An 'owning element' is any <abbr title="Document Object Model">DOM</abbr> ancestor of the <a href="#dfn-element" class="internalDFN" data-link-type="dfn">element</a>, or any element with an <a href="https://w3c.github.io/aria/#aria-owns" class="property-reference"><code>aria-owns</code></a> attribute which references the ID of the   element. </p>
-    </dd>
-    <dt><dfn id="dfn-perceivable" data-dfn-type="dfn">Perceivable</dfn></dt>
-    <dd>
-      <p>Presentable to users in ways they can sense. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#perceivable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 1: Content must be perceivable</a></cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>].</p>
-    </dd>
-    <dt><dfn data-lt="property|properties|Property" id="dfn-property" data-dfn-type="dfn">Property</dfn></dt>
-    <dd>
-      <p><a class="termref internalDFN" data-lt="attribute" href="#dfn-attribute" data-link-type="dfn">Attributes</a> that are essential to the nature of a given <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a>, or that represent a data value associated with the object. A change of a property may significantly impact the meaning or presentation of an object. Certain properties (for example, <a href="https://w3c.github.io/aria/#aria-multiline" class="property-reference"><code>aria-multiline</code></a>) are less likely to change than <a class="termref" href="#dfn-state">states</a>, but note that the frequency of change difference is not a rule. A few properties, such as <a href="https://w3c.github.io/aria/#aria-activedescendant" class="property-reference"><code>aria-activedescendant</code></a>, <a href="https://w3c.github.io/aria/#aria-valuenow" class="property-reference"><code>aria-valuenow</code></a>, and <a href="https://w3c.github.io/aria/#aria-valuetext" class="property-reference"><code>aria-valuetext</code></a> are expected to change often. See <a class="specref" href="https://www.w3.org/TR/wai-aria-1.1/#statevsprop">clarification of states versus properties</a>.</p>
-    </dd>
-    <dt><dfn data-lt="relationship|relationships|Relationship" id="dfn-relationship" data-dfn-type="dfn">Relationship</dfn></dt>
-    <dd>
-      <p>A connection between two distinct things. Relationships may be of various types to indicate which <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a> labels another, controls another, etc.</p>
-    </dd>
-    <dt><dfn data-lt="role|roles|Role" id="dfn-role" data-dfn-type="dfn">Role</dfn></dt>
-    <dd>
-      <p>Main indicator of type.  This <a class="termref internalDFN" data-lt="semantics" href="#dfn-semantics" data-link-type="dfn">semantic</a> association allows tools to present and support interaction with the object in a manner that is consistent with user expectations about other objects of that type.</p>
-    </dd>
-    <dt><dfn id="dfn-root-wai-aria-node" data-dfn-type="dfn">Root <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> node</dfn></dt>
-    <dd>
-      <p> The primary element containing non-metadata content. In many languages, this is  the document element but in <abbr title="Hypertext Markup Language">HTML</abbr>, it is the <code>&lt;body&gt;</code>.</p>
-    </dd>
-    <dt><dfn data-lt="semantics|semantic|semantically|Semantics" id="dfn-semantics" data-dfn-type="dfn">Semantics</dfn></dt>
-    <dd>
-      <p>The meaning of something as understood by a human, defined in a way that computers can process a representation of an <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a>, such as <a class="termref internalDFN" data-lt="element" href="#dfn-element" data-link-type="dfn">elements</a> and <a class="termref internalDFN" data-lt="attribute" href="#dfn-attribute" data-link-type="dfn">attributes</a>, and reliably represent the object in a way that various humans will achieve a mutually consistent understanding of the object.</p>
-    </dd>
-    <dt><dfn data-lt="state|states|State" id="dfn-state" data-dfn-type="dfn">State</dfn></dt>
-    <dd>
-      <p>A state is a dynamic <a class="termref" href="#dfn-property">property</a> expressing characteristics of an <a href="#dfn-object" class="internalDFN" data-link-type="dfn">object</a> that may change in response to user action or automated processes. States do not affect the essential nature of the object, but represent data associated with the object or user interaction possibilities. See <a class="specref" href="https://www.w3.org/TR/wai-aria-1.1/#statevsprop">clarification of states versus properties</a>.</p>
-    </dd>
-    <dt><dfn id="dfn-sub-document" data-dfn-type="dfn">Sub-document</dfn></dt>
-    <dd>
-      <p>Any document created from a <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code> or similar mechanism. A sub-document may contain a document, an application or any widget such as a calendar pulled in from another server. In the <a href="#dfn-accessibility-tree" class="internalDFN" data-link-type="dfn">accessibility tree</a> there are two <a class="termref internalDFN" data-lt="accessible object" href="#dfn-accessible-object" data-link-type="dfn">accessible objects</a> for this situation—one represents the <code>&lt;frame&gt;</code>/<code>&lt;iframe&gt;</code> element in the parent document, which parents a single <a href="#dfn-accessible-object" class="internalDFN" data-link-type="dfn">accessible object</a> child representing the spawned document contents.</p>
-    </dd>
-    <dt><dfn id="dfn-target-element" data-dfn-type="dfn">Target Element</dfn></dt>
-    <dd>
-      <p>An element specified in a <abbr title="Accessible Rich Internet Application">WAI-ARIA</abbr> relation. For example, in <code> &lt;div aria-controls=”elem1”&gt;</code>, where <code>“elem1”</code> is the ID for the target element.</p>
-    </dd>
-    <dt><dfn id="dfn-taxonomy" data-dfn-type="dfn">Taxonomy</dfn></dt>
-    <dd>
-      <p>A hierarchical definition of how the characteristics of various <a class="termref internalDFN" data-lt="class" href="#dfn-class" data-link-type="dfn">classes</a> relate to each other, in which classes inherit the properties of superclasses in the hierarchy. A taxonomy can comprise part of the formal definition of an <a href="#dfn-ontology" class="internalDFN" data-link-type="dfn">ontology</a>.</p>
-    </dd>
-    <dt><dfn id="dfn-text-node" data-dfn-type="dfn" data-plurals="text nodes">Text node</dfn></dt>
-    <dd>
-      <p>Type of <abbr title="Document Object Model">DOM</abbr> <a class="termref internalDFN" data-lt="node" href="#dfn-node" data-link-type="dfn">node</a> that represents the textual content of an <a class="termref internalDFN" href="#dfn-attribute" data-link-type="dfn">attribute</a> or an <a class="termref internalDFN" href="#dfn-element" data-link-type="dfn">element</a>. A Text node has no child nodes.  </p>
-    </dd>
-    <dt><dfn id="dfn-tooltip-attribute" data-dfn-type="dfn">Tooltip attribute</dfn></dt>
-    <dd>
-      <p>Any host language attribute that would result in a user agent generating a tooltip such as in response to a mouse hover in desktop user agents.</p>
-    </dd>
-    <dt><dfn id="dfn-understandable" data-dfn-type="dfn">Understandable</dfn></dt>
-    <dd>
-      <p>Presentable to users in ways they can construct an appropriate meaning. References in this document relate to <cite><a href="https://www.w3.org/TR/WCAG21/#understandable"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 Principle 3: Information and the operation of user interface must be understandable</a></cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>].</p>
-    </dd>
-	<dt><dfn data-lt="unicode braille|Unicode Braille Patterns" id="dfn-unicode-braille" data-dfn-type="dfn">Unicode Braille Patterns</dfn></dt>
-	<dd>
-		<p>In Unicode, braille is represented in a block called Braille Patterns (U+2800..U+28FF). The block contains all 256 possible patterns of an 8-dot braille cell; this includes the complete 6-dot cell range which is represented by U+2800..U+283F. In all braille systems, the braille pattern dots-0 (U+2800) is used to represent a space or the lack of content; it is also called a blank Braille pattern. See <cite><a href="https://en.wikipedia.org/wiki/Braille_Patterns">Braille Patterns on Wikipedia</a>.</cite></p>
-	</dd>
-	<dt><dfn data-lt="user agent|user agents|User Agent" id="dfn-user-agent" data-dfn-type="dfn">User Agent</dfn></dt>
-    <dd>
-      <p>Any software that retrieves, renders and facilitates end user interaction with Web content. This definition may differ from that used in other documents.</p>
-    </dd>
-    <dt><dfn id="dfn-valid-idref" data-dfn-type="dfn">Valid IDREF</dfn></dt>
-    <dd>
-      <p>A reference to a target element in the same document that has a matching ID</p>
-    </dd>
-    <dt><dfn data-lt="widget|widgets|Widget" id="dfn-widget" data-dfn-type="dfn">Widget</dfn></dt>
-    <dd>
-      <p>Discrete user interface <a class="termref" href="#dfn-object">object</a> with which the user can interact. Widgets range from simple objects that have one value or operation (e.g., check boxes and menu items), to complex objects that contain many managed sub-objects (e.g., trees and grids).</p>
-    </dd>
-  </dl>
-</div>
-		</section>
 		<section class="normative" id="roles">
-			<h2 id="x4-digital-publishing-roles"><bdi class="secno">4. </bdi>Digital Publishing Roles<a class="self-link" aria-label="§" href="#roles"></a></h2>
+			<h2 id="x3-digital-publishing-roles"><bdi class="secno">3. </bdi>Digital Publishing Roles<a class="self-link" aria-label="§" href="#roles"></a></h2>
 			<p>This section defines additions to the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
-				<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a>
-				<a href="#dfn-taxonomy" class="internalDFN" data-link-type="dfn">taxonomy</a> and describes the characteristics and properties of all <a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a>. See
+				<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a>
+				<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-taxonomy">taxonomy</a> and describes the characteristics and properties of all <a data-lt="role" class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>. See
 					<a href="https://w3c.github.io/aria/#roles" class="specref">ARIA Roles</a> for descriptions of the fields provided by this
 				module.</p>
 			<section id="role_definitions">
-				<h3 id="x4-1-definition-of-roles"><bdi class="secno">4.1 </bdi>Definition of Roles<a class="self-link" aria-label="§" href="#role_definitions"></a></h3>
+				<h3 id="x3-1-definition-of-roles"><bdi class="secno">3.1 </bdi>Definition of Roles<a class="self-link" aria-label="§" href="#role_definitions"></a></h3>
 				<p>Below is an alphabetical list of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
-					<a data-lt="role" href="#dfn-role" class="internalDFN" data-link-type="dfn">roles</a> to be used by rich internet application authors.</p>
+					<a data-lt="role" class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a> to be used by rich internet application authors.</p>
 				<dl id="index_role" class="compact"><dt><a href="#doc-abstract" class="role-reference">doc-abstract</a></dt>
 <dd>A short summary of the principal ideas, concepts and conclusions of the work, or of a section
 							or excerpt within it.</dd>
@@ -1098,7 +928,7 @@
 							it.</dd>
 </dl>
 				<section class="role notoc" id="doc-abstract">
-					<h4 class="role-name" title="doc-abstract" aria-describedby="desc-doc-abstract" id="doc-abstract-0"><code>doc-abstract</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-abstract"></a></h4>
+					<h3 class="role-name" title="doc-abstract" aria-describedby="desc-doc-abstract"><code>doc-abstract</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-abstract" role="definition">
 						<p>A short summary of the principal ideas, concepts and conclusions of the work, or of a section
 							or excerpt within it.</p>
@@ -1182,7 +1012,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-acknowledgments">
-					<h4 class="role-name" title="doc-acknowledgments" aria-describedby="desc-doc-acknowledgments" id="doc-acknowledgments-0"><code>doc-acknowledgments</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-acknowledgments"></a></h4>
+					<h3 class="role-name" title="doc-acknowledgments" aria-describedby="desc-doc-acknowledgments"><code>doc-acknowledgments</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-acknowledgments" role="definition">
 						<p>A section or statement that acknowledges significant contributions by persons, organizations,
 							governments and other entities to the realization of the work.</p>
@@ -1264,7 +1094,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-afterword">
-					<h4 class="role-name" title="doc-afterword" aria-describedby="desc-doc-afterword" id="doc-afterword-0"><code>doc-afterword</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-afterword"></a></h4>
+					<h3 class="role-name" title="doc-afterword" aria-describedby="desc-doc-afterword"><code>doc-afterword</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-afterword" role="definition">
 						<p>A closing statement from the author or a person of importance, typically providing insight
 							into how the content came to be written, its significance, or related events that have
@@ -1349,7 +1179,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-appendix">
-					<h4 class="role-name" title="doc-appendix" aria-describedby="desc-doc-appendix" id="doc-appendix-0"><code>doc-appendix</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-appendix"></a></h4>
+					<h3 class="role-name" title="doc-appendix" aria-describedby="desc-doc-appendix"><code>doc-appendix</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-appendix" role="definition">
 						<p>A section of supplemental information located after the primary content that informs the
 							content but is not central to it.</p>
@@ -1433,7 +1263,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-backlink">
-					<h4 class="role-name" title="doc-backlink" aria-describedby="desc-doc-backlink" id="doc-backlink-0"><code>doc-backlink</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-backlink"></a></h4>
+					<h3 class="role-name" title="doc-backlink" aria-describedby="desc-doc-backlink"><code>doc-backlink</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-backlink" role="definition">
 						<p>A link that allows the user to return to a related location in the content (e.g., from a
 							footnote to its reference or from a glossary definition to where a term is used).</p>
@@ -1526,17 +1356,17 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-biblioentry">
-					<h4 class="role-name" title="doc-biblioentry" aria-describedby="desc-doc-biblioentry" id="doc-biblioentry-0"><code>doc-biblioentry</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-biblioentry"></a></h4>
+					<h3 class="role-name" title="doc-biblioentry" aria-describedby="desc-doc-biblioentry"><code>doc-biblioentry</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-biblioentry" role="definition">
 						<p>[Deprecated in DPUB-ARIA 1.1] A single reference to an external source in a bibliography. A
 							biblioentry typically provides more detailed information than its reference(s) in the
 							content (e.g., full title, author(s), publisher, publication date, etc.).</p>
-						<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="5"><span>Note</span></div><p class="">The <code>doc-biblioentry</code>
-							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> was designed for use as a list item, but due to clarifications in the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
+						<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="4"><span>Note</span></div><p class="">The <code>doc-biblioentry</code>
+							<a data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> was designed for use as a list item, but due to clarifications in the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 							specification, it is not valid as a child of the <a href="https://w3c.github.io/aria/#list" class="role-reference"><code>list</code></a> role. As the
 								<a href="#doc-bibliography" class="role-reference"><code>doc-bibliography</code></a> role already identifies a section of bibliography entries,
 							authors are instead advised to use the <a href="https://w3c.github.io/aria/#list" class="role-reference"><code>list</code></a> and <a href="https://w3c.github.io/aria/#listitem" class="role-reference"><code>listitem</code></a> roles
-							when native <abbr title="Hypertext Markup Language">HTML</abbr> elements cannot be used to structure the entries.</p></div>
+							when native HTML elements cannot be used to structure the entries.</p></div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics:</caption>
@@ -1577,7 +1407,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-bibliography">
-					<h4 class="role-name" title="doc-bibliography" aria-describedby="desc-doc-bibliography" id="doc-bibliography-0"><code>doc-bibliography</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-bibliography"></a></h4>
+					<h3 class="role-name" title="doc-bibliography" aria-describedby="desc-doc-bibliography"><code>doc-bibliography</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-bibliography" role="definition">
 						<p>A list of external references cited in the work, which may be to print or digital
 							sources.</p>
@@ -1662,7 +1492,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-biblioref">
-					<h4 class="role-name" title="doc-biblioref" aria-describedby="desc-doc-biblioref" id="doc-biblioref-0"><code>doc-biblioref</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-biblioref"></a></h4>
+					<h3 class="role-name" title="doc-biblioref" aria-describedby="desc-doc-biblioref"><code>doc-biblioref</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-biblioref" role="definition">
 						<p>A reference to a bibliography entry.</p>
 						<div class="example" id="example-7">
@@ -1754,7 +1584,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-chapter">
-					<h4 class="role-name" title="doc-chapter" aria-describedby="desc-doc-chapter" id="doc-chapter-0"><code>doc-chapter</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-chapter"></a></h4>
+					<h3 class="role-name" title="doc-chapter" aria-describedby="desc-doc-chapter"><code>doc-chapter</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-chapter" role="definition">
 						<p>A major thematic section of content in a work.</p>
 						<div class="example" id="example-8">
@@ -1837,7 +1667,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-colophon">
-					<h4 class="role-name" title="doc-colophon" aria-describedby="desc-doc-colophon" id="doc-colophon-0"><code>doc-colophon</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-colophon"></a></h4>
+					<h3 class="role-name" title="doc-colophon" aria-describedby="desc-doc-colophon"><code>doc-colophon</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-colophon" role="definition">
 						<p>A short section of production notes particular to the edition (e.g., describing the typeface
 							used), often located at the end of a work.</p>
@@ -1920,7 +1750,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-conclusion">
-					<h4 class="role-name" title="doc-conclusion" aria-describedby="desc-doc-conclusion" id="doc-conclusion-0"><code>doc-conclusion</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-conclusion"></a></h4>
+					<h3 class="role-name" title="doc-conclusion" aria-describedby="desc-doc-conclusion"><code>doc-conclusion</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-conclusion" role="definition">
 						<p>A concluding section or statement that summarizes the work or wraps up the narrative.</p>
 						<div class="example" id="example-10">
@@ -2003,7 +1833,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-cover">
-					<h4 class="role-name" title="doc-cover" aria-describedby="desc-doc-cover" id="doc-cover-0"><code>doc-cover</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-cover"></a></h4>
+					<h3 class="role-name" title="doc-cover" aria-describedby="desc-doc-cover"><code>doc-cover</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-cover" role="definition">
 						<p>An image that sets the mood or tone for the work and typically includes the title and
 							author.</p>
@@ -2084,7 +1914,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-credit">
-					<h4 class="role-name" title="doc-credit" aria-describedby="desc-doc-credit" id="doc-credit-0"><code>doc-credit</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-credit"></a></h4>
+					<h3 class="role-name" title="doc-credit" aria-describedby="desc-doc-credit"><code>doc-credit</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-credit" role="definition">
 						<p>An acknowledgment of the source of integrated content from third-party sources, such as
 							photos. Typically identifies the creator, copyright and any restrictions on reuse.</p>
@@ -2168,7 +1998,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-credits">
-					<h4 class="role-name" title="doc-credits" aria-describedby="desc-doc-credits" id="doc-credits-0"><code>doc-credits</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-credits"></a></h4>
+					<h3 class="role-name" title="doc-credits" aria-describedby="desc-doc-credits"><code>doc-credits</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-credits" role="definition">
 						<p>A collection of credits.</p>
 						<div class="example" id="example-13">
@@ -2251,7 +2081,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-dedication">
-					<h4 class="role-name" title="doc-dedication" aria-describedby="desc-doc-dedication" id="doc-dedication-0"><code>doc-dedication</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-dedication"></a></h4>
+					<h3 class="role-name" title="doc-dedication" aria-describedby="desc-doc-dedication"><code>doc-dedication</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-dedication" role="definition">
 						<p>An inscription at the front of the work, typically addressed in tribute to one or more
 							persons close to the author.</p>
@@ -2332,17 +2162,17 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-endnote">
-					<h4 class="role-name" title="doc-endnote" aria-describedby="desc-doc-endnote" id="doc-endnote-0"><code>doc-endnote</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-endnote"></a></h4>
+					<h3 class="role-name" title="doc-endnote" aria-describedby="desc-doc-endnote"><code>doc-endnote</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-endnote" role="definition">
 						<p>[Deprecated in DPUB-ARIA 1.1] One of a collection of notes that occur at the end of a work,
 							or a section within it, that provides additional context to a referenced passage of
 							text.</p>
-						<div class="note" role="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="5"><span>Note</span></div><p class="">The <code>doc-endnote</code>
-							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> was designed for use as a list item, but due to clarifications in the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
+						<div class="note" role="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="4"><span>Note</span></div><p class="">The <code>doc-endnote</code>
+							<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> was designed for use as a list item, but due to clarifications in the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 							specification, it is not valid as a child of the <a href="https://w3c.github.io/aria/#list" class="role-reference"><code>list</code></a> role. As the
 								<a href="#doc-endnotes" class="role-reference"><code>doc-endnotes</code></a> role already identifies a section of endnotes, authors are
 							instead advised to use the <a href="https://w3c.github.io/aria/#list" class="role-reference"><code>list</code></a> and <a href="https://w3c.github.io/aria/#listitem" class="role-reference"><code>listitem</code></a> roles when native
-							<abbr title="Hypertext Markup Language">HTML</abbr> elements cannot be used to structure the entries. The <a href="#doc-footnote" class="role-reference"><code>doc-footnote</code></a> role
+							HTML elements cannot be used to structure the entries. The <a href="#doc-footnote" class="role-reference"><code>doc-footnote</code></a> role
 							can be used within each list item to identify individual notes when necessary.</p></div>
 					</div>
 					<table class="role-features">
@@ -2416,11 +2246,11 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-endnotes">
-					<h4 class="role-name" title="doc-endnotes" aria-describedby="desc-doc-endnotes" id="doc-endnotes-0"><code>doc-endnotes</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-endnotes"></a></h4>
+					<h3 class="role-name" title="doc-endnotes" aria-describedby="desc-doc-endnotes"><code>doc-endnotes</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-endnotes" role="definition">
 						<p>A collection of notes at the end of a work or a section within it.</p>
 						<p>Note that the <code>doc-endnotes</code>
-							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is never applied directly to the list of endnotes.</p>
+							<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> is never applied directly to the list of endnotes.</p>
 						<div class="example" id="example-15">
         <div class="marker">
     <a class="self-link" href="#example-15">Example<bdi> 15</bdi></a>
@@ -2509,7 +2339,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-epigraph">
-					<h4 class="role-name" title="doc-epigraph" aria-describedby="desc-doc-epigraph" id="doc-epigraph-0"><code>doc-epigraph</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-epigraph"></a></h4>
+					<h3 class="role-name" title="doc-epigraph" aria-describedby="desc-doc-epigraph"><code>doc-epigraph</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-epigraph" role="definition">
 						<p>A quotation set at the start of the work or a section that establishes the theme or sets the
 							mood.</p>
@@ -2593,7 +2423,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-epilogue">
-					<h4 class="role-name" title="doc-epilogue" aria-describedby="desc-doc-epilogue" id="doc-epilogue-0"><code>doc-epilogue</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-epilogue"></a></h4>
+					<h3 class="role-name" title="doc-epilogue" aria-describedby="desc-doc-epilogue"><code>doc-epilogue</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-epilogue" role="definition">
 						<p>A concluding section of narrative that wraps up or comments on the actions and events of the
 							work, typically from a future perspective.</p>
@@ -2681,7 +2511,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-errata">
-					<h4 class="role-name" title="doc-errata" aria-describedby="desc-doc-errata" id="doc-errata-0"><code>doc-errata</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-errata"></a></h4>
+					<h3 class="role-name" title="doc-errata" aria-describedby="desc-doc-errata"><code>doc-errata</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-errata" role="definition">
 						<p>A set of corrections discovered after initial publication of the work, sometimes referred to
 							as corrigenda.</p>
@@ -2765,7 +2595,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-example">
-					<h4 class="role-name" title="doc-example" aria-describedby="desc-doc-example" id="doc-example-0"><code>doc-example</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-example"></a></h4>
+					<h3 class="role-name" title="doc-example" aria-describedby="desc-doc-example"><code>doc-example</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-example" role="definition">
 						<p>An illustration of a key concept of the work, such as a code listing, case study or
 							problem.</p>
@@ -2845,12 +2675,12 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-footnote">
-					<h4 class="role-name" title="doc-footnote" aria-describedby="desc-doc-footnote" id="doc-footnote-0"><code>doc-footnote</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-footnote"></a></h4>
+					<h3 class="role-name" title="doc-footnote" aria-describedby="desc-doc-footnote"><code>doc-footnote</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-footnote" role="definition">
 						<p>Ancillary information, such as a citation or commentary, that provides additional context to
 							a referenced passage of text.</p>
 						<p>The <code>doc-footnote</code>
-							<a href="#dfn-role" class="internalDFN" data-link-type="dfn">role</a> is only for representing individual notes that occur within the body of a work.
+							<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> is only for representing individual notes that occur within the body of a work.
 							For collections of notes that occur at the end of a section, see
 							<a href="#doc-endnotes" class="role-reference"><code>doc-endnotes</code></a>.</p>
 						<div class="example" id="example-20">
@@ -2929,7 +2759,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-foreword">
-					<h4 class="role-name" title="doc-foreword" aria-describedby="desc-doc-foreword" id="doc-foreword-0"><code>doc-foreword</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-foreword"></a></h4>
+					<h3 class="role-name" title="doc-foreword" aria-describedby="desc-doc-foreword"><code>doc-foreword</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-foreword" role="definition">
 						<p>An introductory section that precedes the work, typically not written by the author of the
 							work.</p>
@@ -3013,10 +2843,10 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-glossary">
-					<h4 class="role-name" title="doc-glossary" aria-describedby="desc-doc-glossary" id="doc-glossary-0"><code>doc-glossary</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-glossary"></a></h4>
+					<h3 class="role-name" title="doc-glossary" aria-describedby="desc-doc-glossary"><code>doc-glossary</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-glossary" role="definition">
 						<p>A brief dictionary of new, uncommon or specialized terms used in the content.</p>
-						<p>The structure of a glossary <em class="rfc2119" title="SHOULD">SHOULD</em> make it possible for end users to identify each term and
+						<p>The structure of a glossary <em class="rfc2119">SHOULD</em> make it possible for end users to identify each term and
 							associated definition (e.g., using the [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>] <code>dl</code> or <code>dfn</code>
 							elements).</p>
 						<div class="example" id="example-22">
@@ -3117,7 +2947,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-glossref">
-					<h4 class="role-name" title="doc-glossref" aria-describedby="desc-doc-glossref" id="doc-glossref-0"><code>doc-glossref</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-glossref"></a></h4>
+					<h3 class="role-name" title="doc-glossref" aria-describedby="desc-doc-glossref"><code>doc-glossref</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-glossref" role="definition">
 						<p>A reference to a glossary definition.</p>
 						<div class="example" id="example-24">
@@ -3208,7 +3038,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-index">
-					<h4 class="role-name" title="doc-index" aria-describedby="desc-doc-index" id="doc-index-0"><code>doc-index</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-index"></a></h4>
+					<h3 class="role-name" title="doc-index" aria-describedby="desc-doc-index"><code>doc-index</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-index" role="definition">
 						<p>A navigational aid that provides a detailed list of links to key subjects, names and other
 							important topics covered in the work.</p>
@@ -3301,7 +3131,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-introduction">
-					<h4 class="role-name" title="doc-introduction" aria-describedby="desc-doc-introduction" id="doc-introduction-0"><code>doc-introduction</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-introduction"></a></h4>
+					<h3 class="role-name" title="doc-introduction" aria-describedby="desc-doc-introduction"><code>doc-introduction</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-introduction" role="definition">
 						<p>A preliminary section that typically introduces the scope or nature of the work.</p>
 						<div class="example" id="example-26">
@@ -3383,7 +3213,7 @@
 				</section>
 				
 				<section class="role notoc" id="doc-noteref">
-					<h4 class="role-name" title="doc-noteref" aria-describedby="desc-doc-noteref" id="doc-noteref-0"><code>doc-noteref</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-noteref"></a></h4>
+					<h3 class="role-name" title="doc-noteref" aria-describedby="desc-doc-noteref"><code>doc-noteref</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-noteref" role="definition">
 						<p>A reference to a footnote or endnote, typically appearing as a superscripted number or symbol
 							in the main body of text.</p>
@@ -3472,7 +3302,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-notice">
-					<h4 class="role-name" title="doc-notice" aria-describedby="desc-doc-notice" id="doc-notice-0"><code>doc-notice</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-notice"></a></h4>
+					<h3 class="role-name" title="doc-notice" aria-describedby="desc-doc-notice"><code>doc-notice</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-notice" role="definition">
 						<p>Notifies the user of consequences that might arise from an action or event. Examples include
 							warnings, cautions and dangers.</p>
@@ -3487,7 +3317,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
-					<p>Authors <em class="rfc2119" title="SHOULD">SHOULD</em> include a label when the notice needs to be navigable to.</p>
+					<p>Authors <em class="rfc2119">SHOULD</em> include a label when the notice needs to be navigable to.</p>
 					<div class="example" id="example-29">
         <div class="marker">
     <a class="self-link" href="#example-29">Example<bdi> 29</bdi></a>
@@ -3566,7 +3396,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-pagebreak">
-					<h4 class="role-name" title="doc-pagebreak" aria-describedby="desc-doc-pagebreak" id="doc-pagebreak-0"><code>doc-pagebreak</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-pagebreak"></a></h4>
+					<h3 class="role-name" title="doc-pagebreak" aria-describedby="desc-doc-pagebreak"><code>doc-pagebreak</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-pagebreak" role="definition">
 						<p>A separator denoting the position before which a break occurs between two contiguous pages in
 							a statically paginated version of the content.</p>
@@ -3574,7 +3404,7 @@
 							publications (i.e., where no statically paginated equivalent exists). These markers provide
 							consistent navigation regardless of differences in font and screen size that can otherwise
 							affect the dynamic pagination of the content.</p>
-						<p>Authors <em class="rfc2119" title="MUST">MUST</em> ensure the name of the page break is an end user-consumable page number that
+						<p>Authors <em class="rfc2119">MUST</em> ensure the name of the page break is an end user-consumable page number that
 							identifies the page that is beginning so that assistive technologies can announce the page
 							as needed (e.g., in a command to indentify the current page).</p>
 						<aside class="example" id="example-30"><div class="marker">
@@ -3700,7 +3530,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-pagelist">
-					<h4 class="role-name" title="doc-pagelist" aria-describedby="desc-doc-pagelist" id="doc-pagelist-0"><code>doc-pagelist</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-pagelist"></a></h4>
+					<h3 class="role-name" title="doc-pagelist" aria-describedby="desc-doc-pagelist"><code>doc-pagelist</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-pagelist" role="definition">
 						<p>A navigational aid that provides a list of links to the pagebreaks in the content.</p>
 						<div class="example" id="example-31">
@@ -3787,13 +3617,13 @@
 					</table>
 				</section>
         <section class="role notoc" id="doc-pagefooter">
-          <h4 class="role-name" title="doc-pagefooter" aria-describedby="desc-doc-pagefooter" id="doc-pagefooter-0"><code>doc-pagefooter</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-pagefooter"></a></h4>
+          <h3 class="role-name" title="doc-pagefooter" aria-describedby="desc-doc-pagefooter"><code>doc-pagefooter</code> <span class="type-indicator">(role)</span></h3>
           <div class="role-description" id="desc-doc-pagefooter" role="definition">
             <p>A section of text appearing at the bottom of a page that provides context about the current work and location within it. The page footer is distinct from the body text and normally follows a repeating template that contains (possibly truncated) items such as the document title, current section, author name(s), and page number.</p>
-            <p>The <code>doc-pagefooter</code> role <em class="rfc2119" title="MUST">MUST</em> be used on every instance of the page footer.</p>
-            <p>The <code>doc-pagefooter</code> <em class="rfc2119" title="MUST NOT">MUST NOT</em> contain the <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a>.</p>
-            <p>The <code>doc-pagefooter</code> <em class="rfc2119" title="MUST NOT">MUST NOT</em> contain footnotes (<a href="#doc-footnote" class="role-reference"><code>doc-footnote</code></a>).</p>
-            <p>Assistive technologies <em class="rfc2119" title="MAY">MAY</em> allow the user to read the document content continuously without interruption from the page footer.</p>
+            <p>The <code>doc-pagefooter</code> role <em class="rfc2119">MUST</em> be used on every instance of the page footer.</p>
+            <p>The <code>doc-pagefooter</code> <em class="rfc2119">MUST NOT</em> contain the <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a>.</p>
+            <p>The <code>doc-pagefooter</code> <em class="rfc2119">MUST NOT</em> contain footnotes (<a href="#doc-footnote" class="role-reference"><code>doc-footnote</code></a>).</p>
+            <p>Assistive technologies <em class="rfc2119">MAY</em> allow the user to read the document content continuously without interruption from the page footer.</p>
             <div class="example" id="example-32">
         <div class="marker">
     <a class="self-link" href="#example-32">Example<bdi> 32</bdi></a>
@@ -3871,12 +3701,12 @@
           </table>
         </section>
         <section class="role notoc" id="doc-pageheader">
-          <h4 class="role-name" title="doc-pageheader" aria-describedby="desc-doc-pageheader" id="doc-pageheader-0"><code>doc-pageheader</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-pageheader"></a></h4>
+          <h3 class="role-name" title="doc-pageheader" aria-describedby="desc-doc-pageheader"><code>doc-pageheader</code> <span class="type-indicator">(role)</span></h3>
           <div class="role-description" id="desc-doc-pageheader" role="definition">
             <p>A section of text appearing at the top of a page that provides context about the current work and location within it. The page header is distinct from the body text and normally follows a repeating template that contains (possibly truncated) items such as the document title, current section, author name(s), and page number.</p>
-            <p>The <code>doc-pageheader</code> role <em class="rfc2119" title="MUST">MUST</em> be used on every instance of the page header.</p>
-            <p>The <code>doc-pageheader</code> <em class="rfc2119" title="MUST NOT">MUST NOT</em> contain the <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a>.</p>
-            <p>Assistive technologies <em class="rfc2119" title="MAY">MAY</em> allow the user to read the document content continuously without interruption from the page header.</p>
+            <p>The <code>doc-pageheader</code> role <em class="rfc2119">MUST</em> be used on every instance of the page header.</p>
+            <p>The <code>doc-pageheader</code> <em class="rfc2119">MUST NOT</em> contain the <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a>.</p>
+            <p>Assistive technologies <em class="rfc2119">MAY</em> allow the user to read the document content continuously without interruption from the page header.</p>
             <div class="example" id="example-33">
         <div class="marker">
     <a class="self-link" href="#example-33">Example<bdi> 33</bdi></a>
@@ -3954,7 +3784,7 @@
           </table>
         </section>
 				<section class="role notoc" id="doc-part">
-					<h4 class="role-name" title="doc-part" aria-describedby="desc-doc-part" id="doc-part-0"><code>doc-part</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-part"></a></h4>
+					<h3 class="role-name" title="doc-part" aria-describedby="desc-doc-part"><code>doc-part</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-part" role="definition">
 						<p>A major structural division in a work that contains a set of related sections dealing with a
 							particular subject, narrative arc or similar encapsulated theme.</p>
@@ -4042,7 +3872,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-preface">
-					<h4 class="role-name" title="doc-preface" aria-describedby="desc-doc-preface" id="doc-preface-0"><code>doc-preface</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-preface"></a></h4>
+					<h3 class="role-name" title="doc-preface" aria-describedby="desc-doc-preface"><code>doc-preface</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-preface" role="definition">
 						<p>An introductory section that precedes the work, typically written by the author of the
 							work.</p>
@@ -4126,7 +3956,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-prologue">
-					<h4 class="role-name" title="doc-prologue" aria-describedby="desc-doc-prologue" id="doc-prologue-0"><code>doc-prologue</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-prologue"></a></h4>
+					<h3 class="role-name" title="doc-prologue" aria-describedby="desc-doc-prologue"><code>doc-prologue</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-prologue" role="definition">
 						<p>An introductory section that sets the background to a work, typically part of the
 							narrative.</p>
@@ -4214,7 +4044,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-pullquote">
-					<h4 class="role-name" title="doc-pullquote" aria-describedby="desc-doc-pullquote" id="doc-pullquote-0"><code>doc-pullquote</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-pullquote"></a></h4>
+					<h3 class="role-name" title="doc-pullquote" aria-describedby="desc-doc-pullquote"><code>doc-pullquote</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-pullquote" role="definition">
 						<p>A distinctively placed or highlighted quotation from the current content designed to draw
 							attention to a topic or highlight a key point.</p>
@@ -4314,7 +4144,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-qna">
-					<h4 class="role-name" title="doc-qna" aria-describedby="desc-doc-qna" id="doc-qna-0"><code>doc-qna</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-qna"></a></h4>
+					<h3 class="role-name" title="doc-qna" aria-describedby="desc-doc-qna"><code>doc-qna</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-qna" role="definition">
 						<p>A section of content structured as a series of questions and answers, such as an interview or
 							list of frequently asked questions.</p>
@@ -4402,7 +4232,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-subtitle">
-					<h4 class="role-name" title="doc-subtitle" aria-describedby="desc-doc-subtitle" id="doc-subtitle-0"><code>doc-subtitle</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-subtitle"></a></h4>
+					<h3 class="role-name" title="doc-subtitle" aria-describedby="desc-doc-subtitle"><code>doc-subtitle</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-subtitle" role="definition">
 						<p>An explanatory or alternate title for the work, or a section or component within it.</p>
 						<div class="example" id="example-40">
@@ -4490,7 +4320,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-tip">
-					<h4 class="role-name" title="doc-tip" aria-describedby="desc-doc-tip" id="doc-tip-0"><code>doc-tip</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-tip"></a></h4>
+					<h3 class="role-name" title="doc-tip" aria-describedby="desc-doc-tip"><code>doc-tip</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-tip" role="definition">
 						<p>Helpful information that clarifies some aspect of the content or assists in its
 							comprehension.</p>
@@ -4575,7 +4405,7 @@
 					</table>
 				</section>
 				<section class="role notoc" id="doc-toc">
-					<h4 class="role-name" title="doc-toc" aria-describedby="desc-doc-toc" id="doc-toc-0"><code>doc-toc</code> <span class="type-indicator">(role)</span><a class="self-link" aria-label="§" href="#doc-toc"></a></h4>
+					<h3 class="role-name" title="doc-toc" aria-describedby="desc-doc-toc"><code>doc-toc</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-toc" role="definition">
 						<p>A navigational aid that provides an ordered list of links to the major sectional headings in
 							the content. A table of contents may cover an entire work, or only a smaller section of
@@ -4669,8 +4499,8 @@
 		</section>
 		<section class="appendix informative" id="a_schemata">
 			<h2 id="a-schemata"><bdi class="secno">A. </bdi>Schemata<a class="self-link" aria-label="§" href="#a_schemata"></a></h2><p><em>This section is non-normative.</em></p>
-			<p>The <a href="http://www.w3.org/html/wg/"><abbr title="Hypertext Markup Language">HTML</abbr> Working Group</a> has incorporated the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> attributes
-				into <a href="http://www.w3.org/TR/html5/"><abbr title="Hypertext Markup Language">HTML</abbr> 5</a>. Official support for <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> in <abbr title="Hypertext Markup Language">HTML</abbr> is provided
+			<p>The <a href="http://www.w3.org/html/wg/">HTML Working Group</a> has incorporated the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> attributes
+				into <a href="http://www.w3.org/TR/html5/">HTML 5</a>. Official support for <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> in HTML is provided
 				in that specification.</p>
 			<div class="note" role="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-1" aria-level="3"><span>Note</span></div><p class="">Validation support for the roles defined in this module will be added once the specification
 				reaches recommendation.</p></div>
@@ -4692,7 +4522,7 @@
 							<a href="#doc-glossary" class="role-reference"><code>doc-glossary</code></a> to accommodate various ways glossaries can be constructed. See <a href="https://github.com/w3c/dpub-aria/issues/9">issue 9</a>.</li>
 					<li>25-July-2020: Recommend that <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a> name be end user-consumable. See <a href="https://github.com/w3c/dpub-aria/issues/17">issue 17</a>.</li>
 					<li>24-July-2020: Changed the superclass of <a href="#doc-example" class="role-reference"><code>doc-example</code></a> to <a href="https://w3c.github.io/aria/#figure" class="role-reference"><code>figure</code></a> to make
-						compatible with use on <abbr title="Hypertext Markup Language">HTML</abbr> figure. See <a href="https://github.com/w3c/dpub-aria/issues/19">issue 19</a>.</li>
+						compatible with use on HTML figure. See <a href="https://github.com/w3c/dpub-aria/issues/19">issue 19</a>.</li>
 					<li>23-July-2020: Deprecated the <a href="#doc-biblioentry" class="role-reference"><code>doc-biblioentry</code></a> and <a href="#doc-endnote" class="role-reference"><code>doc-endnote</code></a> roles due
 						to the inability of them to be recognized as children of <a href="https://w3c.github.io/aria/#list" class="role-reference"><code>list</code></a>. See <a href="https://github.com/w3c/dpub-aria/issues/15">issue 15</a>.</li>
 					<li>23-July-2020: Updated <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a> to allow name from contents. See <a href="https://github.com/w3c/dpub-aria/issues/12">issue 12</a>.</li>
@@ -4723,21 +4553,236 @@
 </section>
 
 		</section>
-		
 	
 
 <section id="references" class="appendix"><h2 id="d-references"><bdi class="secno">D. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="normative-references">
-      <h3 id="d-1-normative-references"><bdi class="secno">D.1 </bdi>
-        Normative references
-      <a class="self-link" aria-label="§" href="#normative-references"></a></h3>
-    <dl class="bibliography">
-      <dt id="bib-epub-ssv">[EPUB-SSV]</dt><dd><a href="http://www.idpf.org/epub/vocab/structure/"><cite>EPUB Structural Semantics Vocabulary</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/vocab/structure/">http://www.idpf.org/epub/vocab/structure/</a></dd><dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://datatracker.ietf.org/doc/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://datatracker.ietf.org/doc/html/rfc2119">https://datatracker.ietf.org/doc/html/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://datatracker.ietf.org/doc/html/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://datatracker.ietf.org/doc/html/rfc8174">https://datatracker.ietf.org/doc/html/rfc8174</a></dd>
-    </dl></section><section id="informative-references">
-      <h3 id="d-2-informative-references"><bdi class="secno">D.2 </bdi>
-        Informative references
-      <a class="self-link" aria-label="§" href="#informative-references"></a></h3>
-    <dl class="bibliography">
-      <dt id="bib-at-spi">[AT-SPI]</dt><dd><a href="https://developer.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/libatspi/stable/">https://developer.gnome.org/libatspi/stable/</a></dd><dt id="bib-atk">[ATK]</dt><dd><a href="https://developer.gnome.org/atk/stable/"><cite>ATK - Accessibility Toolkit</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/atk/stable/">https://developer.gnome.org/atk/stable/</a></dd><dt id="bib-axapi">[AXAPI]</dt><dd><a href="https://developer.apple.com/documentation/appkit/nsaccessibility"><cite>The NSAccessibility Protocol for macOS</cite></a>.  Apple, Inc. URL: <a href="https://developer.apple.com/documentation/appkit/nsaccessibility">https://developer.apple.com/documentation/appkit/nsaccessibility</a></dd><dt id="bib-dpub-aam-1.0">[dpub-aam-1.0]</dt><dd><a href="https://www.w3.org/TR/dpub-aam-1.0/"><cite>Digital Publishing Accessibility API Mappings</cite></a>. Richard Schwerdtfeger; Joanmarie Diggs.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/dpub-aam-1.0/">https://www.w3.org/TR/dpub-aam-1.0/</a></dd><dt id="bib-html5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer.  W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-iaccessible2">[IAccessible2]</dt><dd><a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2</a></dd><dt id="bib-msaa">[MSAA]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility"><cite>Microsoft Active Accessibility (MSAA)</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility">https://docs.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-ui-automation">[UI-AUTOMATION]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification"><cite>UI Automation</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification">https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-specification</a></dd><dt id="bib-uia-express">[UIA-EXPRESS]</dt><dd><a href="https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex"><cite>The IAccessibleEx Interface</cite></a>.  Microsoft Corporation. URL: <a href="https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex">https://docs.microsoft.com/en-us/windows/win32/winauto/iaccessibleex</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd><dt id="bib-wcag21">[WCAG21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd>
-    </dl></section></section><p role="navigation" id="back-to-top">
+    <h3 id="d-1-normative-references"><bdi class="secno">D.1 </bdi>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
+    <dl class="bibliography"><dt id="bib-epub-ssv">[EPUB-SSV]</dt><dd><a href="http://www.idpf.org/epub/vocab/structure/"><cite>EPUB Structural Semantics Vocabulary</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/vocab/structure/">http://www.idpf.org/epub/vocab/structure/</a></dd><dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a></dd></dl>
+  </section><section id="informative-references">
+    <h3 id="d-2-informative-references"><bdi class="secno">D.2 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
+    <dl class="bibliography"><dt id="bib-dpub-aam-1.0">[dpub-aam-1.0]</dt><dd><a href="https://www.w3.org/TR/dpub-aam-1.0/"><cite>Digital Publishing Accessibility API Mappings</cite></a>. Richard Schwerdtfeger; Joanmarie Diggs.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/dpub-aam-1.0/">https://www.w3.org/TR/dpub-aam-1.0/</a></dd><dt id="bib-html5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer.  W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd></dl>
+  </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
-  </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+  </p><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
