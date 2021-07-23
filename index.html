@@ -151,7 +151,7 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
   "name": "Digital Publishing WAI-ARIA Module 1.1",
   "inLanguage": "en-US",
   "license": "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document",
-  "datePublished": "2021-07-21",
+  "datePublished": "2021-07-23",
   "copyrightHolder": {
     "name": "World Wide Web Consortium",
     "url": "https://www.w3.org/"
@@ -547,9 +547,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishDate": "2021-07-21",
-  "publishISODate": "2021-07-21T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 21 July 2021"
+  "publishDate": "2021-07-23",
+  "publishISODate": "2021-07-23T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 23 July 2021"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry" data-cite="core-aam accname wai-aria"><div class="head">
@@ -558,7 +558,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2021-07-21">21 July 2021</time>
+      <time class="dt-published" datetime="2021-07-23">23 July 2021</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -899,9 +899,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <dt><a href="#doc-pagelist" class="role-reference">doc-pagelist</a></dt>
 <dd>A navigational aid that provides a list of links to the pagebreaks in the content.</dd>
 <dt><a href="#doc-pagefooter" class="role-reference">doc-pagefooter</a></dt>
-<dd>A section of text appearing at the bottom of a page that provides context about the current work and location within it. The page footer is distinct from the body text and normally follows a repeating template that contains (possibly truncated) items such as the document title, current section, author name(s), and page number.</dd>
+<dd>A section of text appearing at the bottom of a page that provides context about the current
+							work and location within it. The page footer is distinct from the body text and normally
+							follows a repeating template that contains (possibly truncated) items such as the document
+							title, current section, author name(s), and page number.</dd>
 <dt><a href="#doc-pageheader" class="role-reference">doc-pageheader</a></dt>
-<dd>A section of text appearing at the top of a page that provides context about the current work and location within it. The page header is distinct from the body text and normally follows a repeating template that contains (possibly truncated) items such as the document title, current section, author name(s), and page number.</dd>
+<dd>A section of text appearing at the top of a page that provides context about the current work
+							and location within it. The page header is distinct from the body text and normally follows
+							a repeating template that contains (possibly truncated) items such as the document title,
+							current section, author name(s), and page number.</dd>
 <dt><a href="#doc-part" class="role-reference">doc-part</a></dt>
 <dd>A major structural division in a work that contains a set of related sections dealing with a
 							particular subject, narrative arc or similar encapsulated theme.</dd>
@@ -3616,15 +3622,19 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
-        <section class="role notoc" id="doc-pagefooter">
-          <h3 class="role-name" title="doc-pagefooter" aria-describedby="desc-doc-pagefooter"><code>doc-pagefooter</code> <span class="type-indicator">(role)</span></h3>
-          <div class="role-description" id="desc-doc-pagefooter" role="definition">
-            <p>A section of text appearing at the bottom of a page that provides context about the current work and location within it. The page footer is distinct from the body text and normally follows a repeating template that contains (possibly truncated) items such as the document title, current section, author name(s), and page number.</p>
-            <p>The <code>doc-pagefooter</code> role <em class="rfc2119">MUST</em> be used on every instance of the page footer.</p>
-            <p>The <code>doc-pagefooter</code> <em class="rfc2119">MUST NOT</em> contain the <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a>.</p>
-            <p>The <code>doc-pagefooter</code> <em class="rfc2119">MUST NOT</em> contain footnotes (<a href="#doc-footnote" class="role-reference"><code>doc-footnote</code></a>).</p>
-            <p>Assistive technologies <em class="rfc2119">MAY</em> allow the user to read the document content continuously without interruption from the page footer.</p>
-            <div class="example" id="example-32">
+				<section class="role notoc" id="doc-pagefooter">
+					<h3 class="role-name" title="doc-pagefooter" aria-describedby="desc-doc-pagefooter"><code>doc-pagefooter</code> <span class="type-indicator">(role)</span></h3>
+					<div class="role-description" id="desc-doc-pagefooter" role="definition">
+						<p>A section of text appearing at the bottom of a page that provides context about the current
+							work and location within it. The page footer is distinct from the body text and normally
+							follows a repeating template that contains (possibly truncated) items such as the document
+							title, current section, author name(s), and page number.</p>
+						<p>The <code>doc-pagefooter</code> role <em class="rfc2119">MUST</em> be used on every instance of the page footer.</p>
+						<p>The <code>doc-pagefooter</code> <em class="rfc2119">MUST NOT</em> contain the <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a>.</p>
+						<p>The <code>doc-pagefooter</code> <em class="rfc2119">MUST NOT</em> contain footnotes (<a href="#doc-footnote" class="role-reference"><code>doc-footnote</code></a>).</p>
+						<p>Assistive technologies <em class="rfc2119">MAY</em> allow the user to read the document content continuously without
+							interruption from the page footer.</p>
+						<div class="example" id="example-32">
         <div class="marker">
     <a class="self-link" href="#example-32">Example<bdi> 32</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagefooter"</span>&gt;</span>
@@ -3633,31 +3643,31 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
-          </div>
-          <table class="role-features">
-            <caption>Characteristics:</caption>
-            <thead>
-              <tr>
-                <th scope="col">Characteristic</th>
-                <th scope="col">Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-              <tr>
-                <th class="role-parent-head" scope="row">Superclass Role:</th>
-                <td class="role-parent"><a href="https://w3c.github.io/aria/#section" class="role-reference"><code>section</code></a></td>
-              </tr>
-              
-              
-              
-              
-              
-              
-              
-              <tr>
-                <th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
-                <td class="role-inherited"><ul>
+					</div>
+					<table class="role-features">
+						<caption>Characteristics:</caption>
+						<thead>
+							<tr>
+								<th scope="col">Characteristic</th>
+								<th scope="col">Value</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+							<tr>
+								<th class="role-parent-head" scope="row">Superclass Role:</th>
+								<td class="role-parent"><a href="https://w3c.github.io/aria/#section" class="role-reference"><code>section</code></a></td>
+							</tr>
+							
+							
+							
+							
+							
+							
+							
+							<tr>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
+								<td class="role-inherited"><ul>
 <li><a href="https://w3c.github.io/aria/#aria-atomic" class="property-reference"><code>aria-atomic</code></a></li>
 <li><a href="https://w3c.github.io/aria/#aria-braillelabel" class="property-reference"><code>aria-braillelabel</code></a></li>
 <li><a href="https://w3c.github.io/aria/#aria-brailleroledescription" class="property-reference"><code>aria-brailleroledescription</code></a></li>
@@ -3684,30 +3694,34 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <li><a href="https://w3c.github.io/aria/#aria-roledescription" class="property-reference"><code>aria-roledescription</code></a></li>
 </ul>
 </td>
-              </tr>
-              <tr>
-                <th class="role-namefrom-head" scope="row">Name From:</th>
-                <td class="role-namefrom">prohibited</td>
-              </tr>
-              <tr>
-                <th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
-                <td class="role-namerequired">False</td>
-              </tr>
-              
-              
-              
-              
-            </tbody>
-          </table>
-        </section>
-        <section class="role notoc" id="doc-pageheader">
-          <h3 class="role-name" title="doc-pageheader" aria-describedby="desc-doc-pageheader"><code>doc-pageheader</code> <span class="type-indicator">(role)</span></h3>
-          <div class="role-description" id="desc-doc-pageheader" role="definition">
-            <p>A section of text appearing at the top of a page that provides context about the current work and location within it. The page header is distinct from the body text and normally follows a repeating template that contains (possibly truncated) items such as the document title, current section, author name(s), and page number.</p>
-            <p>The <code>doc-pageheader</code> role <em class="rfc2119">MUST</em> be used on every instance of the page header.</p>
-            <p>The <code>doc-pageheader</code> <em class="rfc2119">MUST NOT</em> contain the <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a>.</p>
-            <p>Assistive technologies <em class="rfc2119">MAY</em> allow the user to read the document content continuously without interruption from the page header.</p>
-            <div class="example" id="example-33">
+							</tr>
+							<tr>
+								<th class="role-namefrom-head" scope="row">Name From:</th>
+								<td class="role-namefrom">prohibited</td>
+							</tr>
+							<tr>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
+								<td class="role-namerequired">False</td>
+							</tr>
+							
+							
+							
+							
+						</tbody>
+					</table>
+				</section>
+				<section class="role notoc" id="doc-pageheader">
+					<h3 class="role-name" title="doc-pageheader" aria-describedby="desc-doc-pageheader"><code>doc-pageheader</code> <span class="type-indicator">(role)</span></h3>
+					<div class="role-description" id="desc-doc-pageheader" role="definition">
+						<p>A section of text appearing at the top of a page that provides context about the current work
+							and location within it. The page header is distinct from the body text and normally follows
+							a repeating template that contains (possibly truncated) items such as the document title,
+							current section, author name(s), and page number.</p>
+						<p>The <code>doc-pageheader</code> role <em class="rfc2119">MUST</em> be used on every instance of the page header.</p>
+						<p>The <code>doc-pageheader</code> <em class="rfc2119">MUST NOT</em> contain the <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a>.</p>
+						<p>Assistive technologies <em class="rfc2119">MAY</em> allow the user to read the document content continuously without
+							interruption from the page header.</p>
+						<div class="example" id="example-33">
         <div class="marker">
     <a class="self-link" href="#example-33">Example<bdi> 33</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pageheader"</span>&gt;</span>
@@ -3716,31 +3730,31 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
    …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
-          </div>
-          <table class="role-features">
-            <caption>Characteristics:</caption>
-            <thead>
-              <tr>
-                <th scope="col">Characteristic</th>
-                <th scope="col">Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-              <tr>
-                <th class="role-parent-head" scope="row">Superclass Role:</th>
-                <td class="role-parent"><a href="https://w3c.github.io/aria/#section" class="role-reference"><code>section</code></a></td>
-              </tr>
-              
-              
-              
-              
-              
-              
-              
-              <tr>
-                <th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
-                <td class="role-inherited"><ul>
+					</div>
+					<table class="role-features">
+						<caption>Characteristics:</caption>
+						<thead>
+							<tr>
+								<th scope="col">Characteristic</th>
+								<th scope="col">Value</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+							<tr>
+								<th class="role-parent-head" scope="row">Superclass Role:</th>
+								<td class="role-parent"><a href="https://w3c.github.io/aria/#section" class="role-reference"><code>section</code></a></td>
+							</tr>
+							
+							
+							
+							
+							
+							
+							
+							<tr>
+								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
+								<td class="role-inherited"><ul>
 <li><a href="https://w3c.github.io/aria/#aria-atomic" class="property-reference"><code>aria-atomic</code></a></li>
 <li><a href="https://w3c.github.io/aria/#aria-braillelabel" class="property-reference"><code>aria-braillelabel</code></a></li>
 <li><a href="https://w3c.github.io/aria/#aria-brailleroledescription" class="property-reference"><code>aria-brailleroledescription</code></a></li>
@@ -3767,22 +3781,22 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <li><a href="https://w3c.github.io/aria/#aria-roledescription" class="property-reference"><code>aria-roledescription</code></a></li>
 </ul>
 </td>
-              </tr>
-              <tr>
-                <th class="role-namefrom-head" scope="row">Name From:</th>
-                <td class="role-namefrom">prohibited</td>
-              </tr>
-              <tr>
-                <th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
-                <td class="role-namerequired">False</td>
-              </tr>
-              
-              
-              
-              
-            </tbody>
-          </table>
-        </section>
+							</tr>
+							<tr>
+								<th class="role-namefrom-head" scope="row">Name From:</th>
+								<td class="role-namefrom">prohibited</td>
+							</tr>
+							<tr>
+								<th class="role-namerequired-head" scope="row">Accessible Name Required:</th>
+								<td class="role-namerequired">False</td>
+							</tr>
+							
+							
+							
+							
+						</tbody>
+					</table>
+				</section>
 				<section class="role notoc" id="doc-part">
 					<h3 class="role-name" title="doc-part" aria-describedby="desc-doc-part"><code>doc-part</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-part" role="definition">
@@ -4514,10 +4528,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						Recommendation</a><a class="self-link" aria-label="§" href="#substantive-changes-since-the-dpub-aria-1-0-recommendation"></a></h3>
 				<ul>
 					
-					<li>24-Feb-2021: Changed required accessible name for <a href="#doc-part" class="role-reference"><code>doc-part</code></a> to false to match
-						the other landmark roles. See <a href="https://github.com/w3c/dpub-aria/issues/34">issue 34</a>.</li>
+					<li>24-Feb-2021: Changed required accessible name for <a href="#doc-part" class="role-reference"><code>doc-part</code></a> to false to match the
+						other landmark roles. See <a href="https://github.com/w3c/dpub-aria/issues/34">issue
+						34</a>.</li>
+					<li>02-Oct-2020: Added new <a href="#doc-pageheader" class="role-reference"><code>doc-pageheader</code></a> and <a href="#doc-pagefooter" class="role-reference"><code>doc-pagefooter</code></a> roles. See <a href="https://github.com/w3c/dpub-aria/issues/28">issue 28</a>.</li>
 					<li>31-July-2020: Clarified that the name of <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a> is the page number of the
-						page that is beginning.</li>
+						page that is beginning. See <a href="https://github.com/w3c/dpub-aria/issues/27">issue
+						27</a>.</li>
 					<li>31-July-2020: Removed <a href="https://w3c.github.io/aria/#term" class="role-reference"><code>term</code></a> and <a href="https://w3c.github.io/aria/#definition" class="role-reference"><code>definition</code></a> as required children of
 							<a href="#doc-glossary" class="role-reference"><code>doc-glossary</code></a> to accommodate various ways glossaries can be constructed. See <a href="https://github.com/w3c/dpub-aria/issues/9">issue 9</a>.</li>
 					<li>25-July-2020: Recommend that <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a> name be end user-consumable. See <a href="https://github.com/w3c/dpub-aria/issues/17">issue 17</a>.</li>
