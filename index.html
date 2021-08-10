@@ -11,112 +11,111 @@
 		<script class="remove" src="common/script/ariaChild.js"></script>
 		<script class="remove" src="common/script/roleInfo.js"></script>
 		<script class="remove">
-			var respecConfig = {
-				// wg: "Publishing Working Group",
-				specStatus: "FPWD",
-				publishDate: "2021-08-05",
-				shortName: "dpub-aria-1.1",
-				edDraftURI: "https://w3c.github.io/dpub-aria/",
-				prevRecURI: "https://www.w3.org/TR/2017/REC-dpub-aria-1.0-20171214/",
-				editors:[ {
-					name: "Matt Garrish",
-					url: 'http://www.daisy.org',
-					company: "DAISY Consortium",
-					companyURI: "http://www.daisy.org",
-					w3cid: 51655
-				}, {
-					name: "Tzviya Siegman",
-					url: 'http://www.wiley.com',
-					company: "Wiley",
-					companyURI: "http://www.wiley.com",
-					w3cid: 65542
-				}],
-				
-				formerEditors:[ {
-					name: "Shane McCarron",
-					url: 'http://blog.halindrome.com',
-					company: "Spec-Ops",
-					companyURI: "https://www.spec-ops.io",
-					w3cid: 89030
-				}, {
-					name: "Markus Gylling",
-					url: 'http://www.daisy.org',
-					company: "DAISY Consortium",
-					companyURI: "http://www.daisy.org",
-					w3cid: 21614,
-				}],
-				
-				group: "aria",
-				
-				otherLinks:[ {
-					key: "Repository",
-					data:[ {
-						value: "Github Repository",
-						href: "https://github.com/w3c/dpub-aria"
-					}]
-				}, {
-					key: "Changes",
-					data:[
-					// {
-					//   value: "Diff to previous version",
-					//   href: "diff.html"
-					// },
-					{
-						value: "Change log",
-						href: "#changelog"
-					},
-					{
-						value: "Commit history",
-						href: "https://github.com/w3c/dpub-aria/commits/master"
-					}]
-				}],
-				
-				
-				copyrightStart: "2015",
-				//processVersion: 2018,
-				github: "w3c/dpub-aria",
-				doJsonLd: true,
-				trace: true,
-				maxTocLevel: 4,
-				
-				dpubModURLs: {
-					"ED": "",
-					"WD": "",
-					"CR": "",
-					"REC": ""
-				},
-				ariaSpecURLs: {
-					"ED": "https://w3c.github.io/aria/",
-					"WD": "https://www.w3.org/TR/wai-aria-1.1/",
-					"CR": "https://www.w3.org/TR/wai-aria-1.1/",
-					"REC": "https://www.w3.org/TR/wai-aria-1.1/"
-				},
-				accNameURLs: {
-					"ED": "https://w3c.github.io/accname/",
-					"WD": "https://www.w3.org/TR/accname-aam-1.2/",
-					"FPWD": "https://www.w3.org/TR/accname-aam-1.2/",
-					"CR": "https://www.w3.org/TR/accname-aam-1.2/",
-					"REC": "https://www.w3.org/TR/accname-aam-1.2/"
-				},
-				coreMappingURLs: {
-					"ED": "https://w3c.github.io/core-aam/",
-					"WD": "https://www.w3.org/TR/core-aam-1.2/",
-					"FPWD": "https://www.w3.org/TR/core-aam-1.2/",
-					"CR": "https://www.w3.org/TR/core-aam-1.2/",
-					"REC": "https://www.w3.org/TR/core-aam-1.2/"
-				},
-				practicesURLs: {
-					"ED": "https://w3c.github.io/aria-practices/",
-					"WD": "https://www.w3.org/TR/wai-aria-practices-1.2/",
-					"FPWD": "https://www.w3.org/TR/wai-aria-practices-1.2/",
-					"CR": "https://www.w3.org/TR/wai-aria-practices-1.2/",
-					"REC": "https://www.w3.org/TR/wai-aria-practices-1.2/"
-				},
-				preProcess:[linkCrossReferences],
-				postProcess:[ariaAttributeReferences],
-				definitionMap:[],
-				xref: ["core-aam", "accname", "wai-aria"]
-			};</script>
+	var respecConfig = {
+		// wg: "Publishing Working Group",
+		specStatus: "FPWD",
+		publishDate: "2021-08-12",
+		shortName: "dpub-aria-1.1",
+		edDraftURI: "https://w3c.github.io/dpub-aria/",
+		prevRecURI: "https://www.w3.org/TR/2017/REC-dpub-aria-1.0-20171214/",
+		editors:[ {
+			name: "Matt Garrish",
+			url: 'http://www.daisy.org',
+			company: "DAISY Consortium",
+			companyURI: "http://www.daisy.org",
+			w3cid: 51655
+		}, {
+			name: "Tzviya Siegman",
+			url: 'http://www.wiley.com',
+			company: "Wiley",
+			companyURI: "http://www.wiley.com",
+			w3cid: 65542
+		}],
+		
+		formerEditors:[ {
+			name: "Shane McCarron",
+			url: 'http://blog.halindrome.com',
+			company: "Spec-Ops",
+			companyURI: "https://www.spec-ops.io",
+			w3cid: 89030
+		}, {
+			name: "Markus Gylling",
+			url: 'http://www.daisy.org',
+			company: "DAISY Consortium",
+			companyURI: "http://www.daisy.org",
+			w3cid: 21614,
+		}],
+		
+		group: "aria",
+		
+		otherLinks:[ {
+			key: "Repository",
+			data:[ {
+				value: "Github Repository",
+				href: "https://github.com/w3c/dpub-aria"
+			}]
+		}, {
+			key: "Changes",
+			data:[
+			// {
+			//   value: "Diff to previous version",
+			//   href: "diff.html"
+			// },
+			{
+				value: "Change log",
+				href: "#changelog"
+			}, {
+				value: "Commit history",
+				href: "https://github.com/w3c/dpub-aria/commits/master"
+			}]
+		}],
+		
+		
+		copyrightStart: "2015",
+		//processVersion: 2018,
+		github: "w3c/dpub-aria",
+		doJsonLd: true,
+		trace: true,
+		maxTocLevel: 4,
+		
+		dpubModURLs: {
+			"ED": "",
+			"WD": "",
+			"CR": "",
+			"REC": ""
+		},
+		ariaSpecURLs: {
+			"ED": "https://w3c.github.io/aria/",
+			"WD": "https://www.w3.org/TR/wai-aria-1.1/",
+			"CR": "https://www.w3.org/TR/wai-aria-1.1/",
+			"REC": "https://www.w3.org/TR/wai-aria-1.1/"
+		},
+		accNameURLs: {
+			"ED": "https://w3c.github.io/accname/",
+			"WD": "https://www.w3.org/TR/accname-aam-1.2/",
+			"FPWD": "https://www.w3.org/TR/accname-aam-1.2/",
+			"CR": "https://www.w3.org/TR/accname-aam-1.2/",
+			"REC": "https://www.w3.org/TR/accname-aam-1.2/"
+		},
+		coreMappingURLs: {
+			"ED": "https://w3c.github.io/core-aam/",
+			"WD": "https://www.w3.org/TR/core-aam-1.2/",
+			"FPWD": "https://www.w3.org/TR/core-aam-1.2/",
+			"CR": "https://www.w3.org/TR/core-aam-1.2/",
+			"REC": "https://www.w3.org/TR/core-aam-1.2/"
+		},
+		practicesURLs: {
+			"ED": "https://w3c.github.io/aria-practices/",
+			"WD": "https://www.w3.org/TR/wai-aria-practices-1.2/",
+			"FPWD": "https://www.w3.org/TR/wai-aria-practices-1.2/",
+			"CR": "https://www.w3.org/TR/wai-aria-practices-1.2/",
+			"REC": "https://www.w3.org/TR/wai-aria-practices-1.2/"
+		},
+		preProcess:[linkCrossReferences],
+		postProcess:[ariaAttributeReferences],
+		definitionMap:[],
+		xref:[ "core-aam", "accname", "wai-aria"]
+	};</script>
 	</head>
 	<body>
 		<section id="abstract">
