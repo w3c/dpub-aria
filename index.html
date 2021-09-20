@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="UTF-8">
-<meta name="generator" content="ReSpec 26.13.1">
+<meta name="generator" content="ReSpec 26.13.4">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -151,7 +151,7 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
   "name": "Digital Publishing WAI-ARIA Module 1.1",
   "inLanguage": "en-US",
   "license": "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document",
-  "datePublished": "2021-08-23",
+  "datePublished": "2021-09-20",
   "copyrightHolder": {
     "name": "World Wide Web Consortium",
     "url": "https://www.w3.org/"
@@ -388,7 +388,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         },
         {
           "value": "Commit history",
-          "href": "https://github.com/w3c/dpub-aria/commits/gh-pages"
+          "href": "https://github.com/w3c/dpub-aria/commits/"
         },
         {
           "value": "Pull requests",
@@ -511,9 +511,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishDate": "2021-08-23",
-  "publishISODate": "2021-08-23T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 23 August 2021"
+  "publishDate": "2021-09-20",
+  "publishISODate": "2021-09-20T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 20 September 2021"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry" data-cite="core-aam accname wai-aria"><div class="head">
@@ -522,7 +522,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2021-08-23">23 August 2021</time>
+      <time class="dt-published" datetime="2021-09-20">20 September 2021</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -555,7 +555,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </dd><dd>
     <a href="https://github.com/w3c/dpub-aria/issues/">File an issue</a>
   </dd><dd>
-    <a href="https://github.com/w3c/dpub-aria/commits/gh-pages">Commit history</a>
+    <a href="https://github.com/w3c/dpub-aria/commits/">Commit history</a>
   </dd><dd>
     <a href="https://github.com/w3c/dpub-aria/pulls/">Pull requests</a>
   </dd><dt>Repository</dt><dd>
@@ -1380,6 +1380,16 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<div class="role-description" id="desc-doc-bibliography" role="definition">
 						<p>A list of external references cited in the work, which may be to print or digital
 							sources.</p>
+						<p>The element carrying the <code>doc-bibliography</code>
+							<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> <em class="rfc2119">MUST</em> contain at least one descendant list containing the
+							bibliography entries (if the entries are subdivided, for example alphabetically, the element
+							would contain more than one list).</p>
+						<p>User Agents <em class="rfc2119">MUST</em> expose the list items in these lists using the platform accessibility <abbr title="application programing interface">API</abbr>
+							mappings for an individual entry.</p>
+						<p>Lists nested within an entry have no special significance. User Agents <em class="rfc2119">MUST NOT</em> expose these
+							list items using the platform accessibility <abbr title="application programing interface">API</abbr> mappings for an individual entry.</p>
+						<p>Authors <em class="rfc2119">MUST NOT</em> apply the <code>doc-bibliography</code> role directly to the list containing
+							the entries.</p>
 						<div class="example" id="example-6">
         <div class="marker">
     <a class="self-link" href="#example-6">Example<bdi> 6</bdi></a>
@@ -2141,8 +2151,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							in the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification, it is not valid as a child of the <a href="https://w3c.github.io/aria/#list" class="role-reference"><code>list</code></a> role. As
 							the <a href="#doc-endnotes" class="role-reference"><code>doc-endnotes</code></a> role already identifies a section of endnotes, authors are
 							instead advised to use the <a href="https://w3c.github.io/aria/#list" class="role-reference"><code>list</code></a> and <a href="https://w3c.github.io/aria/#listitem" class="role-reference"><code>listitem</code></a> roles when native
-							HTML elements cannot be used to structure the entries. The <a href="#doc-footnote" class="role-reference"><code>doc-footnote</code></a> role
-							can be used within each list item to identify individual notes when necessary.</p></div>
+							HTML elements cannot be used to structure the entries.</p></div>
 					</div>
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-endnote</code>:</caption>
@@ -2218,8 +2227,19 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<h3 class="role-name" title="doc-endnotes" aria-describedby="desc-doc-endnotes"><code>doc-endnotes</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-endnotes" role="definition">
 						<p>A collection of notes at the end of a work or a section within it.</p>
-						<p>Note that the <code>doc-endnotes</code>
-							<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> is never applied directly to the list of endnotes.</p>
+						<p>The element carrying the <code>doc-endnotes</code>
+							<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> <em class="rfc2119">MUST</em> contain at least one descendant list containing the
+							endnotes (if the notes are subdivided, for example by chapter, the element would contain
+							more than one list).</p>
+						<p>User Agents <em class="rfc2119">MUST</em> expose the list items in these lists using the platform accessibility <abbr title="application programing interface">API</abbr>
+							mappings for an individual endnote.</p>
+						<p>Lists nested within an endnote have no special significance. User Agents <em class="rfc2119">MUST NOT</em> expose
+							these list items using the platform accessibility <abbr title="application programing interface">API</abbr> mappings for an individual
+							endnote.</p>
+						<p>Authors <em class="rfc2119">MUST NOT</em> declare elements with the role <a href="#doc-footnote" class="role-reference"><code>doc-footnote</code></a> within the endnotes
+							as it is redundant with the implied role.</p>
+						<p>Authors <em class="rfc2119">MUST NOT</em> apply the <code>doc-endnotes</code> role directly to the list containing the
+							endnotes.</p>
 						<div class="example" id="example-15">
         <div class="marker">
     <a class="self-link" href="#example-15">Example<bdi> 15</bdi></a>
@@ -2227,13 +2247,30 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Notes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"6baa07af"</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-footnote"</span>&gt;</span>Additional results of this study can be found at … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Additional results of this study can be found at … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"7b2c0555"</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-footnote"</span>&gt;</span>…<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>…<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
       …
    <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
+      </div>
+						<div class="example" id="example-16">
+        <div class="marker">
+    <a class="self-link" href="#example-16">Example<bdi> 16</bdi></a>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-endnotes"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Notes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Canto I<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"list&gt;
+         &lt;div role="</span><span class="hljs-attr">listitem</span>"&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>1. The use of alliteration here … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+         …
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+   …
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
@@ -2312,9 +2349,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<div class="role-description" id="desc-doc-epigraph" role="definition">
 						<p>A quotation set at the start of the work or a section that establishes the theme or sets the
 							mood.</p>
-						<div class="example" id="example-16">
+						<div class="example" id="example-17">
         <div class="marker">
-    <a class="self-link" href="#example-16">Example<bdi> 16</bdi></a>
+    <a class="self-link" href="#example-17">Example<bdi> 17</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-epigraph"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>“Would you tell me please, which way I ought to go from here?”<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>“That depends a good deal on where you want to get to,” said the cat.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -2396,9 +2433,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<div class="role-description" id="desc-doc-epilogue" role="definition">
 						<p>A concluding section of narrative that wraps up or comments on the actions and events of the
 							work, typically from a future perspective.</p>
-						<div class="example" id="example-17">
+						<div class="example" id="example-18">
         <div class="marker">
-    <a class="self-link" href="#example-17">Example<bdi> 17</bdi></a>
+    <a class="self-link" href="#example-18">Example<bdi> 18</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-epilogue"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Epilogue<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
@@ -2484,9 +2521,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<div class="role-description" id="desc-doc-errata" role="definition">
 						<p>A set of corrections discovered after initial publication of the work, sometimes referred to
 							as corrigenda.</p>
-						<div class="example" id="example-18">
+						<div class="example" id="example-19">
         <div class="marker">
-    <a class="self-link" href="#example-18">Example<bdi> 18</bdi></a>
+    <a class="self-link" href="#example-19">Example<bdi> 19</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-errata"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Corrections<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    …
@@ -2568,9 +2605,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<div class="role-description" id="desc-doc-example" role="definition">
 						<p>An illustration of a key concept of the work, such as a code listing, case study or
 							problem.</p>
-						<div class="example" id="example-19">
+						<div class="example" id="example-20">
         <div class="marker">
-    <a class="self-link" href="#example-19">Example<bdi> 19</bdi></a>
+    <a class="self-link" href="#example-20">Example<bdi> 20</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-example"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>Example 1 — Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
    …
@@ -2652,9 +2689,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> is only for representing individual notes that occur within the
 							body of a work. For collections of notes that occur at the end of a section, see
 								<a href="#doc-endnotes" class="role-reference"><code>doc-endnotes</code></a>.</p>
-						<div class="example" id="example-20">
+						<div class="example" id="example-21">
         <div class="marker">
-    <a class="self-link" href="#example-20">Example<bdi> 20</bdi></a>
+    <a class="self-link" href="#example-21">Example<bdi> 21</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"6baa07af"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-footnote"</span>&gt;</span>
    * Additional results of this study and similar studies can be found at …
 <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span></code></pre>
@@ -2732,9 +2769,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<div class="role-description" id="desc-doc-foreword" role="definition">
 						<p>An introductory section that precedes the work, typically not written by the author of the
 							work.</p>
-						<div class="example" id="example-21">
+						<div class="example" id="example-22">
         <div class="marker">
-    <a class="self-link" href="#example-21">Example<bdi> 21</bdi></a>
+    <a class="self-link" href="#example-22">Example<bdi> 22</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-foreword"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Foreword<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    …
@@ -2818,9 +2855,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						<p>The structure of a glossary <em class="rfc2119">SHOULD</em> make it possible for end users to identify each term and
 							associated definition (e.g., using the [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>] <code>dl</code> or <code>dfn</code>
 							elements).</p>
-						<div class="example" id="example-22">
+						<div class="example" id="example-23">
         <div class="marker">
-    <a class="self-link" href="#example-22">Example<bdi> 22</bdi></a>
+    <a class="self-link" href="#example-23">Example<bdi> 23</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-glossary"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"glossary"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
       …
@@ -2833,9 +2870,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
-						<div class="example" id="example-23">
+						<div class="example" id="example-24">
         <div class="marker">
-    <a class="self-link" href="#example-23">Example<bdi> 23</bdi></a>
+    <a class="self-link" href="#example-24">Example<bdi> 24</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-glossary"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"glosshd"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"glosshd"</span>&gt;</span>Glossay of Technical Terms<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
@@ -2919,9 +2956,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<h3 class="role-name" title="doc-glossref" aria-describedby="desc-doc-glossref"><code>doc-glossref</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-glossref" role="definition">
 						<p>A reference to a glossary definition.</p>
-						<div class="example" id="example-24">
+						<div class="example" id="example-25">
         <div class="marker">
-    <a class="self-link" href="#example-24">Example<bdi> 24</bdi></a>
+    <a class="self-link" href="#example-25">Example<bdi> 25</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
    This is indicated in the cost of a
    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#bcc0f155"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-glossref"</span>&gt;</span>credit default swap<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> …
@@ -3011,9 +3048,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<div class="role-description" id="desc-doc-index" role="definition">
 						<p>A navigational aid that provides a detailed list of links to key subjects, names and other
 							important topics covered in the work.</p>
-						<div class="example" id="example-25">
+						<div class="example" id="example-26">
         <div class="marker">
-    <a class="self-link" href="#example-25">Example<bdi> 25</bdi></a>
+    <a class="self-link" href="#example-26">Example<bdi> 26</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-index"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Index<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
@@ -3103,9 +3140,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<h3 class="role-name" title="doc-introduction" aria-describedby="desc-doc-introduction"><code>doc-introduction</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-introduction" role="definition">
 						<p>A preliminary section that typically introduces the scope or nature of the work.</p>
-						<div class="example" id="example-26">
+						<div class="example" id="example-27">
         <div class="marker">
-    <a class="self-link" href="#example-26">Example<bdi> 26</bdi></a>
+    <a class="self-link" href="#example-27">Example<bdi> 27</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-introduction"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Everyone has some experience with marketing … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
@@ -3185,9 +3222,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<div class="role-description" id="desc-doc-noteref" role="definition">
 						<p>A reference to a footnote or endnote, typically appearing as a superscripted number or symbol
 							in the main body of text.</p>
-						<div class="example" id="example-27">
+						<div class="example" id="example-28">
         <div class="marker">
-    <a class="self-link" href="#example-27">Example<bdi> 27</bdi></a>
+    <a class="self-link" href="#example-28">Example<bdi> 28</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> … as studies have shown.<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#fn01"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fnref01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-noteref"</span>&gt;</span>[1]<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
 					</div>
@@ -3274,9 +3311,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<div class="role-description" id="desc-doc-notice" role="definition">
 						<p>Notifies the user of consequences that might arise from an action or event. Examples include
 							warnings, cautions and dangers.</p>
-						<div class="example" id="example-28">
+						<div class="example" id="example-29">
         <div class="marker">
-    <a class="self-link" href="#example-28">Example<bdi> 28</bdi></a>
+    <a class="self-link" href="#example-29">Example<bdi> 29</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-notice"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"warning.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"warning icon"</span>/&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Just because you can include a font doesn’t mean you should.
@@ -3286,9 +3323,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       </div>
 					</div>
 					<p>Authors <em class="rfc2119">SHOULD</em> include a label when the notice needs to be navigable to.</p>
-					<div class="example" id="example-29">
+					<div class="example" id="example-30">
         <div class="marker">
-    <a class="self-link" href="#example-29">Example<bdi> 29</bdi></a>
+    <a class="self-link" href="#example-30">Example<bdi> 30</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-notice"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Explosion Risk"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>Danger!<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> Mixing reactive materials may cause an explosion.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
@@ -3375,8 +3412,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						<p>Authors <em class="rfc2119">MUST</em> ensure the name of the page break is an end user-consumable page number that
 							identifies the page that is beginning so that assistive technologies can announce the page
 							as needed (e.g., in a command to identify the current page).</p>
-						<aside class="example" id="example-30"><div class="marker">
-    <a class="self-link" href="#example-30">Example<bdi> 30</bdi></a>
+						<aside class="example" id="example-31"><div class="marker">
+    <a class="self-link" href="#example-31">Example<bdi> 31</bdi></a>
   </div>
 							<p>The following example shows three equivalent patterns for marking up page breaks in
 								digital publications. Either the <code>aria-label</code> or <code>title</code>
@@ -3501,9 +3538,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<h3 class="role-name" title="doc-pagelist" aria-describedby="desc-doc-pagelist"><code>doc-pagelist</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-pagelist" role="definition">
 						<p>A navigational aid that provides a list of links to the page breaks in the content.</p>
-						<div class="example" id="example-31">
+						<div class="example" id="example-32">
         <div class="marker">
-    <a class="self-link" href="#example-31">Example<bdi> 31</bdi></a>
+    <a class="self-link" href="#example-32">Example<bdi> 32</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagelist"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Pages<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
@@ -3596,9 +3633,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						<p>The <code>doc-pagefooter</code> <em class="rfc2119">MUST NOT</em> contain footnotes (<a href="#doc-footnote" class="role-reference"><code>doc-footnote</code></a>).</p>
 						<p>Assistive technologies <em class="rfc2119">MAY</em> allow the user to read the document content continuously without
 							interruption from the page footer.</p>
-						<div class="example" id="example-32">
+						<div class="example" id="example-33">
         <div class="marker">
-    <a class="self-link" href="#example-32">Example<bdi> 32</bdi></a>
+    <a class="self-link" href="#example-33">Example<bdi> 33</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagefooter"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Leo Tolstoy<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>321<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -3683,9 +3720,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						<p>The <code>doc-pageheader</code> <em class="rfc2119">MUST NOT</em> contain the <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a>.</p>
 						<p>Assistive technologies <em class="rfc2119">MAY</em> allow the user to read the document content continuously without
 							interruption from the page header.</p>
-						<div class="example" id="example-33">
+						<div class="example" id="example-34">
         <div class="marker">
-    <a class="self-link" href="#example-33">Example<bdi> 33</bdi></a>
+    <a class="self-link" href="#example-34">Example<bdi> 34</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pageheader"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>War and Peace<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>321<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -3764,9 +3801,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<div class="role-description" id="desc-doc-part" role="definition">
 						<p>A major structural division in a work that contains a set of related sections dealing with a
 							particular subject, narrative arc, or similar encapsulated theme.</p>
-						<div class="example" id="example-34">
+						<div class="example" id="example-35">
         <div class="marker">
-    <a class="self-link" href="#example-34">Example<bdi> 34</bdi></a>
+    <a class="self-link" href="#example-35">Example<bdi> 35</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-part"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Part One<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-chapter"</span>&gt;</span>
@@ -3852,9 +3889,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<div class="role-description" id="desc-doc-preface" role="definition">
 						<p>An introductory section that precedes the work, typically written by the author of the
 							work.</p>
-						<div class="example" id="example-35">
+						<div class="example" id="example-36">
         <div class="marker">
-    <a class="self-link" href="#example-35">Example<bdi> 35</bdi></a>
+    <a class="self-link" href="#example-36">Example<bdi> 36</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-preface"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Introduction:A Guide to the Galaxy<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    …
@@ -3936,9 +3973,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<div class="role-description" id="desc-doc-prologue" role="definition">
 						<p>An introductory section that sets the background to a work, typically part of the
 							narrative.</p>
-						<div class="example" id="example-36">
+						<div class="example" id="example-37">
         <div class="marker">
-    <a class="self-link" href="#example-36">Example<bdi> 36</bdi></a>
+    <a class="self-link" href="#example-37">Example<bdi> 37</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-prologue"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Prologue<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
@@ -4031,18 +4068,18 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						<p>The following example shows the identification of a pullquote that will be presented
 							elsewhere (e.g., via a script). In this case, the pullquote is not hidden as the marked text
 							is not presentational.</p>
-						<div class="example" id="example-37">
+						<div class="example" id="example-38">
         <div class="marker">
-    <a class="self-link" href="#example-37">Example<bdi> 37</bdi></a>
+    <a class="self-link" href="#example-38">Example<bdi> 38</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>… I may die, but first you, my tyrant and tormentor, shall curse the sun that gazes on your misery.
    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pq01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pullquote"</span>&gt;</span>Beware, for I am fearless and therefore powerful.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
    I will watch with the wiliness of a snake, that I may sting with its venom. … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
 						<p>The next example shows a pullquote that duplicates the text. This quote is hidden because it
 							is for presentational purposes only.</p>
-						<div class="example" id="example-38">
+						<div class="example" id="example-39">
         <div class="marker">
-    <a class="self-link" href="#example-38">Example<bdi> 38</bdi></a>
+    <a class="self-link" href="#example-39">Example<bdi> 39</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>… Better habits pave the way to growth, and growth leads to greater happiness.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pullquote"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
    Better habits pave the way to growth, and growth leads to greater happiness.
@@ -4124,9 +4161,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<div class="role-description" id="desc-doc-qna" role="definition">
 						<p>A section of content structured as a series of questions and answers, such as an interview or
 							list of frequently asked questions.</p>
-						<div class="example" id="example-39">
+						<div class="example" id="example-40">
         <div class="marker">
-    <a class="self-link" href="#example-39">Example<bdi> 39</bdi></a>
+    <a class="self-link" href="#example-40">Example<bdi> 40</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-qna"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Interview with the Author<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
@@ -4211,9 +4248,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<h3 class="role-name" title="doc-subtitle" aria-describedby="desc-doc-subtitle"><code>doc-subtitle</code> <span class="type-indicator">(role)</span></h3>
 					<div class="role-description" id="desc-doc-subtitle" role="definition">
 						<p>An explanatory or alternate title for the work, or a section or component within it.</p>
-						<div class="example" id="example-40">
+						<div class="example" id="example-41">
         <div class="marker">
-    <a class="self-link" href="#example-40">Example<bdi> 40</bdi></a>
+    <a class="self-link" href="#example-41">Example<bdi> 41</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Chapter 2 The Battle<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-subtitle"</span>&gt;</span>Once more unto the breach<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -4300,9 +4337,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<div class="role-description" id="desc-doc-tip" role="definition">
 						<p>Helpful information that clarifies some aspect of the content or assists in its
 							comprehension.</p>
-						<div class="example" id="example-41">
+						<div class="example" id="example-42">
         <div class="marker">
-    <a class="self-link" href="#example-41">Example<bdi> 41</bdi></a>
+    <a class="self-link" href="#example-42">Example<bdi> 42</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-tip"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Tip<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You can assign a variable a new value that is the result
@@ -4386,9 +4423,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						<p>A navigational aid that provides an ordered list of links to the major sectional headings in
 							the content. A table of contents may cover an entire work, or only a smaller section of
 							it.</p>
-						<div class="example" id="example-42">
+						<div class="example" id="example-43">
         <div class="marker">
-    <a class="self-link" href="#example-42">Example<bdi> 42</bdi></a>
+    <a class="self-link" href="#example-43">Example<bdi> 43</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-toc"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Contents<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"directory"</span>&gt;</span>
