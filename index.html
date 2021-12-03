@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="UTF-8">
-<meta name="generator" content="ReSpec 28.0.4">
+<meta name="generator" content="ReSpec 28.0.6">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -150,7 +150,7 @@ dd{margin-left:0}
   "name": "Digital Publishing WAI-ARIA Module 1.1",
   "inLanguage": "en-US",
   "license": "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document",
-  "datePublished": "2021-11-19",
+  "datePublished": "2021-12-03",
   "copyrightHolder": {
     "name": "World Wide Web Consortium",
     "url": "https://www.w3.org/"
@@ -489,15 +489,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishISODate": "2021-11-19T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 19 November 2021"
+  "publishISODate": "2021-12-03T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 03 December 2021"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 	<body class="h-entry" data-cite="core-aam accname wai-aria"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a> <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1>
     
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2021-11-19">19 November 2021</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2021-12-03">03 December 2021</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -561,7 +561,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </p>
     <hr title="Separator for header">
   </div>
-		<section id="abstract" class="introductory"><h2>Abstract</h2>
+		<section id="abstract" class="introductory"><h2 id="abstract-0">Abstract<a class="self-link" href="#abstract" aria-label="Permalink for Section"></a></h2>
 			<p>Enabling users of assistive technologies to find their way through web content requires embedding
 				semantic metadata about web document structural divisions. This is particularly important for structural
 				divisions of long-form documents and goes along with embedding semantic metadata about web-application
@@ -569,7 +569,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				specific to helping users of assistive technologies navigate through such long-form documents.</p>
 			<p>This document is part of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> suite described in the <a href="http://www.w3.org/WAI/intro/aria.php"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Overview</a>.</p>
 		</section>
-		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+		<section id="sotd" class="introductory"><h2 id="status-of-this-document">Status of This Document<a class="self-link" href="#sotd" aria-label="Permalink for Section"></a></h2><p><em>This section describes the status of this
       document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
       publications and the latest revision of this technical report can be found
       in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
@@ -609,7 +609,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						Public Working Draft</span></a></li><li class="tocline"><a class="tocxref" href="#changelog-older"><bdi class="secno">B.2 </bdi>Substantive changes since the <span class="formerLink">DPUB-ARIA 1.0
 						Recommendation</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">C. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><bdi class="secno">C.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">C.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">D. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">D.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">D.2 </bdi>Informative references</a></li></ol></li></ol></nav>
 		<section class="informative" id="introduction">
-			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2><p><em>This section is non-normative.</em></p>
+			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></h2><p><em>This section is non-normative.</em></p>
 			<p><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is a technical specification that
 				defines a common host language semantic accessibility <abbr title="application programing interface">API</abbr> and framework that enables web browsers to map
 				the accessibility semantics in web content to platform-specific accessibility APIs. This enables web
@@ -630,7 +630,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				applies to Rich Internet Application Accessibility.</p>
 
 			<section id="target-audience">
-				<h3 id="x1-1-target-audience"><bdi class="secno">1.1 </bdi>Target Audience<a class="self-link" aria-label="§" href="#target-audience"></a></h3>
+				<h3 id="x1-1-target-audience"><bdi class="secno">1.1 </bdi>Target Audience<a class="self-link" href="#target-audience" aria-label="Permalink for Section 1.1"></a></h3>
 				<p>This specification defines a module of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> for digital publishing, including <a data-lt="role" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-lt="state" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a>, <a data-lt="property" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a> and values. It impacts several
 					audiences:</p>
 				<ul>
@@ -651,7 +651,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			</section>
 
 			<section id="ua-support">
-				<h3 id="x1-2-user-agent-support"><bdi class="secno">1.2 </bdi>User Agent Support<a class="self-link" aria-label="§" href="#ua-support"></a></h3>
+				<h3 id="x1-2-user-agent-support"><bdi class="secno">1.2 </bdi>User Agent Support<a class="self-link" href="#ua-support" aria-label="Permalink for Section 1.2"></a></h3>
 				<p>This module builds on the general <a href="http://www.w3.org/TR/wai-aria-1.1/#ua-support">User Agent
 						support principles</a> defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] by also providing the ability for user agents to
 					enhance the general user interface presented to readers.</p>
@@ -659,7 +659,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 			<section id="co-evolution">
 				<h3 id="x1-3-co-evolution-of-wai-aria-and-host-languages"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host
-					Languages<a class="self-link" aria-label="§" href="#co-evolution"></a></h3>
+					Languages<a class="self-link" href="#co-evolution" aria-label="Permalink for Section 1.3"></a></h3>
 				<p>The Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module
 					follows the model for <a href="http://www.w3.org/TR/wai-aria-1.1/#co-evolution">co-evolution of
 							<abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and host languages</a>
@@ -698,9 +698,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			</section>
 
 			<section id="authoring_practices">
-				<h3 id="x1-4-authoring-practices"><bdi class="secno">1.4 </bdi>Authoring Practices<a class="self-link" aria-label="§" href="#authoring_practices"></a></h3>
+				<h3 id="x1-4-authoring-practices"><bdi class="secno">1.4 </bdi>Authoring Practices<a class="self-link" href="#authoring_practices" aria-label="Permalink for Section 1.4"></a></h3>
 				<section id="authoring_tools">
-					<h4 id="x1-4-1-authoring-tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools<a class="self-link" aria-label="§" href="#authoring_tools"></a></h4>
+					<h4 id="x1-4-1-authoring-tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools<a class="self-link" href="#authoring_tools" aria-label="Permalink for Section 1.4.1"></a></h4>
 					<p>Many of the requirements in the definitions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 						<a data-lt="role" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-lt="state" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a> and <a data-lt="property" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a> can be checked automatically during the development process, similar to
 						other quality control processes used for validating code. To assist authors who are creating
@@ -710,7 +710,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				</section>
 
 				<section id="authoring_testing">
-					<h4 id="x1-4-2-testing-practices-and-tools"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools<a class="self-link" aria-label="§" href="#authoring_testing"></a></h4>
+					<h4 id="x1-4-2-testing-practices-and-tools"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools<a class="self-link" href="#authoring_testing" aria-label="Permalink for Section 1.4.2"></a></h4>
 					<p>The accessibility of interactive content cannot be confirmed by static checks alone. Developers
 						of interactive content should test for device-independent access to <a data-lt="widget" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-widget">widgets</a> and applications, and should verify accessibility <abbr title="application programing interface">API</abbr> access to all content and changes during
 						user interaction.</p>
@@ -718,13 +718,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			</section>
 
 			<section id="at_support">
-				<h3 id="x1-5-assistive-technologies"><bdi class="secno">1.5 </bdi>Assistive Technologies<a class="self-link" aria-label="§" href="#at_support"></a></h3>
+				<h3 id="x1-5-assistive-technologies"><bdi class="secno">1.5 </bdi>Assistive Technologies<a class="self-link" href="#at_support" aria-label="Permalink for Section 1.5"></a></h3>
 				<p>Programmatic access to accessibility semantics is essential for assistive technologies. For more
 					information, refer to the <a href="http://www.w3.org/TR/wai-aria-1.1/#at_support">Assistive
 						Technologies</a> section in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>].</p>
 			</section>
 		</section>
-		<section class="normative" id="conformance"><h2 id="x2-conformance"><bdi class="secno">2. </bdi>Conformance<a class="self-link" aria-label="§" href="#conformance"></a></h2><p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.</p><p>
+		<section class="normative" id="conformance"><h2 id="x2-conformance"><bdi class="secno">2. </bdi>Conformance<a class="self-link" href="#conformance" aria-label="Permalink for Section 2."></a></h2><p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.</p><p>
         The key words <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, <em class="rfc2119">MUST NOT</em>, and <em class="rfc2119">SHOULD</em> in this document
         are to be interpreted as described in
         <a href="https://datatracker.ietf.org/doc/html/bcp14">BCP 14</a>
@@ -738,13 +738,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				conform to this specification.</p>
 		</section>
 		<section class="normative" id="roles">
-			<h2 id="x3-digital-publishing-roles"><bdi class="secno">3. </bdi>Digital Publishing Roles<a class="self-link" aria-label="§" href="#roles"></a></h2>
+			<h2 id="x3-digital-publishing-roles"><bdi class="secno">3. </bdi>Digital Publishing Roles<a class="self-link" href="#roles" aria-label="Permalink for Section 3."></a></h2>
 			<p>This section defines additions to the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 				<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a>
 				<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-taxonomy">taxonomy</a> and describes the characteristics and properties of all <a data-lt="role" class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>. See <a href="https://w3c.github.io/aria/#roles" class="specref">ARIA Roles</a> for
 				descriptions of the fields provided by this module.</p>
 			<section id="role_definitions">
-				<h3 id="x3-1-definition-of-roles"><bdi class="secno">3.1 </bdi>Definition of Roles<a class="self-link" aria-label="§" href="#role_definitions"></a></h3>
+				<h3 id="x3-1-definition-of-roles"><bdi class="secno">3.1 </bdi>Definition of Roles<a class="self-link" href="#role_definitions" aria-label="Permalink for Section 3.1"></a></h3>
 				<p>Below is an alphabetical list of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 					<a data-lt="role" class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a> to be used by rich internet application authors.</p>
 				<dl id="index_role" class="compact"><dt><a href="#doc-abstract" class="role-reference">doc-abstract</a></dt>
@@ -2154,7 +2154,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							<tr>
 								<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
 								<td class="role-inherited"><ul>
-<li><a href="https://w3c.github.io/aria/#aria-level" class="property-reference"><code>aria-level</code></a></li>
 <li><a href="https://w3c.github.io/aria/#aria-posinset" class="property-reference"><code>aria-posinset</code></a></li>
 <li><a href="https://w3c.github.io/aria/#aria-setsize" class="property-reference"><code>aria-setsize</code></a></li>
 <li><a href="https://w3c.github.io/aria/#aria-atomic" class="property-reference"><code>aria-atomic</code></a></li>
@@ -4484,7 +4483,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			</section>
 		</section>
 		<section class="appendix informative" id="a_schemata">
-			<h2 id="a-schemata"><bdi class="secno">A. </bdi>Schemata<a class="self-link" aria-label="§" href="#a_schemata"></a></h2><p><em>This section is non-normative.</em></p>
+			<h2 id="a-schemata"><bdi class="secno">A. </bdi>Schemata<a class="self-link" href="#a_schemata" aria-label="Permalink for Appendix A."></a></h2><p><em>This section is non-normative.</em></p>
 			<p>The <a href="http://www.w3.org/html/wg/">HTML Working Group</a> has incorporated the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> attributes
 				into <a href="http://www.w3.org/TR/html5/">HTML 5</a>. Official support for <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> in HTML is provided
 				in that specification.</p>
@@ -4494,10 +4493,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 		</section>
 		
 		<section class="appendix informative" id="changelog">
-			<h2 id="b-change-log"><bdi class="secno">B. </bdi>Change Log<a class="self-link" aria-label="§" href="#changelog"></a></h2><p><em>This section is non-normative.</em></p>
+			<h2 id="b-change-log"><bdi class="secno">B. </bdi>Change Log<a class="self-link" href="#changelog" aria-label="Permalink for Appendix B."></a></h2><p><em>This section is non-normative.</em></p>
 			<section id="changelog-recent">
 				<h3 id="b-1-substantive-changes-since-the-first-public-working-draft"><bdi class="secno">B.1 </bdi>Substantive changes since the <a href="https://www.w3.org/TR/2021/WD-dpub-aria-1.1-20210826/">First
-						Public Working Draft</a><a class="self-link" aria-label="§" href="#changelog-recent"></a></h3>
+						Public Working Draft</a><a class="self-link" href="#changelog-recent" aria-label="Permalink for Appendix B.1"></a></h3>
 				<ul>
 					
 					<li>20-Sep-2021: Clarified ambiguities in the formatting and processing of endnote and bibliography
@@ -4506,7 +4505,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			</section>
 			<section id="changelog-older">
 				<h3 id="b-2-substantive-changes-since-the-dpub-aria-1-0-recommendation"><bdi class="secno">B.2 </bdi>Substantive changes since the <a href="https://www.w3.org/TR/dpub-aria-1.0/">DPUB-ARIA 1.0
-						Recommendation</a><a class="self-link" aria-label="§" href="#changelog-older"></a></h3>
+						Recommendation</a><a class="self-link" href="#changelog-older" aria-label="Permalink for Appendix B.2"></a></h3>
 				<ul>
 					<li>24-Feb-2021: Changed required accessible name for <a href="#doc-part" class="role-reference"><code>doc-part</code></a> to false to match the
 						other landmark roles. See <a href="https://github.com/w3c/dpub-aria/issues/34">issue
@@ -4531,10 +4530,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			</section>
 		</section>
 		<section class="appendix informative section" id="acknowledgements">
-			<h2 id="c-acknowledgments"><bdi class="secno">C. </bdi>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2><p><em>This section is non-normative.</em></p>
+			<h2 id="c-acknowledgments"><bdi class="secno">C. </bdi>Acknowledgments<a class="self-link" href="#acknowledgements" aria-label="Permalink for Appendix C."></a></h2><p><em>This section is non-normative.</em></p>
 			<p>The following people contributed to the development of this document.</p>
 			<section class="section" id="ack_dpub">
-				<h3 id="c-1-participants-active-in-the-dpub-aria-task-force-at-the-time-of-publication"><bdi class="secno">C.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication<a class="self-link" aria-label="§" href="#ack_dpub"></a></h3>
+				<h3 id="c-1-participants-active-in-the-dpub-aria-task-force-at-the-time-of-publication"><bdi class="secno">C.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication<a class="self-link" href="#ack_dpub" aria-label="Permalink for Appendix C.1"></a></h3>
 				<ul>
 					<li>Michael Cooper (<abbr title="World Wide Web Consortium">W3C</abbr> Staff)</li>
 					<li>Joanmarie Diggs (Igalia, S.L.)</li>
@@ -4544,18 +4543,18 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				</ul>
 			</section>
 			<section class="section" id="ack_funders">
-	<h3 id="c-2-enabling-funders"><bdi class="secno">C.2 </bdi>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h3>
+	<h3 id="c-2-enabling-funders"><bdi class="secno">C.2 </bdi>Enabling funders<a class="self-link" href="#ack_funders" aria-label="Permalink for Appendix C.2"></a></h3>
 	<p>This publication has been funded in part with U.S. Federal funds from the Department of Education, National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR), initially under contract number ED-OSE-10-C-0067 and currently under contract number HHSP23301500054C. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Education, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
 </section>
 
 		</section>
 	
 
-<section id="references" class="appendix"><h2 id="d-references"><bdi class="secno">D. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="normative-references">
-    <h3 id="d-1-normative-references"><bdi class="secno">D.1 </bdi>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
+<section id="references" class="appendix"><h2 id="d-references"><bdi class="secno">D. </bdi>References<a class="self-link" href="#references" aria-label="Permalink for Appendix D."></a></h2><section id="normative-references">
+    <h3 id="d-1-normative-references"><bdi class="secno">D.1 </bdi>Normative references<a class="self-link" href="#normative-references" aria-label="Permalink for Appendix D.1"></a></h3>
     <dl class="bibliography"><dt id="bib-epub-ssv">[EPUB-SSV]</dt><dd><a href="http://www.idpf.org/epub/vocab/structure/"><cite>EPUB Structural Semantics Vocabulary</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/vocab/structure/">http://www.idpf.org/epub/vocab/structure/</a></dd><dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a></dd></dl>
   </section><section id="informative-references">
-    <h3 id="d-2-informative-references"><bdi class="secno">D.2 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
+    <h3 id="d-2-informative-references"><bdi class="secno">D.2 </bdi>Informative references<a class="self-link" href="#informative-references" aria-label="Permalink for Appendix D.2"></a></h3>
     <dl class="bibliography"><dt id="bib-dpub-aam-1.0">[dpub-aam-1.0]</dt><dd><a href="https://www.w3.org/TR/dpub-aam-1.0/"><cite>Digital Publishing Accessibility API Mappings</cite></a>. Richard Schwerdtfeger; Joanmarie Diggs.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/dpub-aam-1.0/">https://www.w3.org/TR/dpub-aam-1.0/</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
