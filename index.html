@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="UTF-8">
-<meta name="generator" content="ReSpec 28.0.6">
+<meta name="generator" content="ReSpec 28.2.2">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -53,7 +53,6 @@ dfn{cursor:pointer}
 25%{transform:scale(1.25,1.25);opacity:.75}
 100%{transform:scale(1,1)}
 }
-.hljs{background:0 0!important}
 :is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
 dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
@@ -120,201 +119,6 @@ dd{margin-left:0}
 				divisions of long-form documents and goes along with embedding semantic metadata about web-application
 				widgets and behaviors for assistive technologies. This specification defines a set of WAI-ARIA roles
 				specific to helping users of assistive technologies navigate through such long-form documents.">
-<link rel="canonical" href="https://www.w3.org/TR/dpub-aria-1.1/">
-<script type="application/ld+json">{
-  "@context": [
-    "http://schema.org",
-    {
-      "@vocab": "http://schema.org/",
-      "@language": "en-US",
-      "w3p": "http://www.w3.org/2001/02pd/rec54#",
-      "foaf": "http://xmlns.com/foaf/0.1/",
-      "datePublished": {
-        "@type": "http://www.w3.org/2001/XMLSchema#date"
-      },
-      "inLanguage": {
-        "@language": null
-      },
-      "isBasedOn": {
-        "@type": "@id"
-      },
-      "license": {
-        "@type": "@id"
-      }
-    }
-  ],
-  "id": "https://www.w3.org/TR/dpub-aria-1.1/",
-  "type": [
-    "TechArticle"
-  ],
-  "name": "Digital Publishing WAI-ARIA Module 1.1",
-  "inLanguage": "en-US",
-  "license": "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document",
-  "datePublished": "2021-12-03",
-  "copyrightHolder": {
-    "name": "World Wide Web Consortium",
-    "url": "https://www.w3.org/"
-  },
-  "discussionUrl": "https://github.com/w3c/dpub-aria/issues/",
-  "alternativeHeadline": "",
-  "isBasedOn": "",
-  "description": "Enabling users of assistive technologies to find their way through web content requires embedding\n\t\t\t\tsemantic metadata about web document structural divisions. This is particularly important for structural\n\t\t\t\tdivisions of long-form documents and goes along with embedding semantic metadata about web-application\n\t\t\t\twidgets and behaviors for assistive technologies. This specification defines a set of WAI-ARIA roles\n\t\t\t\tspecific to helping users of assistive technologies navigate through such long-form documents.",
-  "editor": [
-    {
-      "type": "Person",
-      "name": "Matt Garrish",
-      "url": "http://www.daisy.org",
-      "worksFor": {
-        "name": "DAISY Consortium"
-      }
-    },
-    {
-      "type": "Person",
-      "name": "Tzviya Siegman",
-      "url": "http://www.wiley.com",
-      "worksFor": {
-        "name": "Wiley"
-      }
-    }
-  ],
-  "citation": [
-    {
-      "id": "http://www.idpf.org/epub/vocab/structure/",
-      "type": "TechArticle",
-      "name": "EPUB Structural Semantics Vocabulary",
-      "url": "http://www.idpf.org/epub/vocab/structure/",
-      "publisher": {
-        "name": "IDPF"
-      }
-    },
-    {
-      "id": "https://html.spec.whatwg.org/multipage/",
-      "type": "TechArticle",
-      "name": "HTML Standard",
-      "url": "https://html.spec.whatwg.org/multipage/",
-      "creator": [
-        {
-          "name": "Anne van Kesteren"
-        },
-        {
-          "name": "Domenic Denicola"
-        },
-        {
-          "name": "Ian Hickson"
-        },
-        {
-          "name": "Philip Jägenstedt"
-        },
-        {
-          "name": "Simon Pieters"
-        }
-      ],
-      "publisher": {
-        "name": "WHATWG"
-      }
-    },
-    {
-      "id": "https://www.rfc-editor.org/rfc/rfc2119",
-      "type": "TechArticle",
-      "name": "Key words for use in RFCs to Indicate Requirement Levels",
-      "url": "https://www.rfc-editor.org/rfc/rfc2119",
-      "creator": [
-        {
-          "name": "S. Bradner"
-        }
-      ],
-      "publisher": {
-        "name": "IETF"
-      }
-    },
-    {
-      "id": "https://www.rfc-editor.org/rfc/rfc8174",
-      "type": "TechArticle",
-      "name": "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words",
-      "url": "https://www.rfc-editor.org/rfc/rfc8174",
-      "creator": [
-        {
-          "name": "B. Leiba"
-        }
-      ],
-      "publisher": {
-        "name": "IETF"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/wai-aria-1.1/",
-      "type": "TechArticle",
-      "name": "Accessible Rich Internet Applications (WAI-ARIA) 1.1",
-      "url": "https://www.w3.org/TR/wai-aria-1.1/",
-      "creator": [
-        {
-          "name": "Joanmarie Diggs"
-        },
-        {
-          "name": "Shane McCarron"
-        },
-        {
-          "name": "Michael Cooper"
-        },
-        {
-          "name": "Richard Schwerdtfeger"
-        },
-        {
-          "name": "James Craig"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/SVG2/",
-      "type": "TechArticle",
-      "name": "Scalable Vector Graphics (SVG) 2",
-      "url": "https://www.w3.org/TR/SVG2/",
-      "creator": [
-        {
-          "name": "Amelia Bellamy-Royds"
-        },
-        {
-          "name": "Bogdan Brinza"
-        },
-        {
-          "name": "Chris Lilley"
-        },
-        {
-          "name": "Dirk Schulze"
-        },
-        {
-          "name": "David Storey"
-        },
-        {
-          "name": "Eric Willigers"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/dpub-aam-1.0/",
-      "type": "TechArticle",
-      "name": "Digital Publishing Accessibility API Mappings",
-      "url": "https://www.w3.org/TR/dpub-aam-1.0/",
-      "creator": [
-        {
-          "name": "Richard Schwerdtfeger"
-        },
-        {
-          "name": "Joanmarie Diggs"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    }
-  ]
-}</script>
 <style>
 .hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
 .hljs-comment,.hljs-quote{color:#717277;font-style:italic}
@@ -449,7 +253,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "aliasOf": "ACCNAME-AAM-1.1"
     },
     "ARIA-PRACTICES": {
-      "aliasOf": "WAI-ARIA-PRACTICES-1.1"
+      "aliasOf": "WAI-ARIA-PRACTICES-1.2"
     },
     "CORE-AAM": {
       "aliasOf": "CORE-AAM-1.1"
@@ -489,15 +293,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishISODate": "2021-12-03T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 03 December 2021"
+  "publishISODate": "2022-01-20T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 20 January 2022"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 	<body class="h-entry" data-cite="core-aam accname wai-aria"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a> <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1>
     
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2021-12-03">03 December 2021</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2022-01-20">20 January 2022</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -550,7 +354,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <p class="copyright">
     <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
     ©
-    2015-2021
+    2015-2022
     
     <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
     <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
