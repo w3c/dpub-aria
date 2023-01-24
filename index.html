@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="UTF-8">
-<meta name="generator" content="ReSpec 32.1.7">
+<meta name="generator" content="ReSpec 32.6.1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -17,6 +17,7 @@ aside.example div.example{border-left-width:.1em;border-color:#999;background:#f
 .warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
 span.warning{padding:.1em .5em .15em}
 .issue.closed span.issue-number{text-decoration:line-through}
+.issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
 .warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
 .warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
 li.task-list-item{list-style:none}
@@ -66,8 +67,6 @@ a.bibref{text-decoration:none}
 }
 #references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
 cite .bibref{font-style:normal}
-code{color:#c63501}
-th code{color:inherit}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
 .toc a,.tof a{text-decoration:none}
@@ -297,15 +296,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishISODate": "2022-05-30T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 30 May 2022"
+  "publishISODate": "2023-01-24T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 24 January 2023"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 	<body class="h-entry" data-cite="core-aam accname wai-aria dom infra"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2022-05-30">30 May 2022</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-01-24">24 January 2023</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -358,11 +357,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <p class="copyright">
     <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
     ©
-    2015-2022
+    2015-2023
     
-    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-    <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C
+    <a href="https://www.w3.org/">World Wide Web Consortium</a>.
+    <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
     <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
     <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
     <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
@@ -375,6 +373,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				divisions of long-form documents and goes along with embedding semantic metadata about web-application
 				widgets and behaviors for assistive technologies. This specification defines a set of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles
 				specific to helping users of assistive technologies navigate through such long-form documents.</p>
+
 			<p>This document is part of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> suite described in the <a href="http://www.w3.org/WAI/intro/aria.php"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Overview</a>.</p>
 		</section>
 		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
@@ -418,13 +417,16 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						Recommendation</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">C. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><bdi class="secno">C.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">C.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">D. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">D.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">D.2 </bdi>Informative references</a></li></ol></li></ol></nav>
 		<section class="informative" id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div><p><em>This section is non-normative.</em></p>
 			
+
 			<p><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is a technical specification that
 				defines a common host language semantic accessibility <abbr title="application programing interface">API</abbr> and framework that enables web browsers to map
 				the accessibility semantics in web content to platform-specific accessibility APIs. This enables web
 				content to be interoperable with platform assistive technologies similar to native platform applications
 				without platform dependencies.</p>
+
 			<p>This specification is a modular extension of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> designed for the digital publishing industry. The goals of this specification
 				include:</p>
+
 			<ul>
 				<li>Expanding [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] to produce structural semantic extensions to accommodate the digital
 					publishing industry.</li>
@@ -432,15 +434,19 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<li>Provide structural semantics extensions that will support both assistive technologies and enable
 					semantic navigation, styling and interactive features used by readers.</li>
 			</ul>
+
 			<p>The roles defined in this specification are derived from the <a href="https://idpf.github.io/epub-vocabs/structure/">EPUB Structural Semantics Vocabulary</a>.</p>
+
 			<p>For a more detailed explanation of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 				please refer to the <a href="http://www.w3.org/WAI/intro/aria"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Introduction</a> and how it
 				applies to Rich Internet Application Accessibility.</p>
 
 			<section id="target-audience"><div class="header-wrapper"><h3 id="x1-1-target-audience"><bdi class="secno">1.1 </bdi>Target Audience</h3><a class="self-link" href="#target-audience" aria-label="Permalink for Section 1.1"></a></div>
 				
-				<p>This specification defines a module of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> for digital publishing, including <a data-link-type="dfn" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-link-type="dfn" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a>, <a data-link-type="dfn" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a> and values. It impacts several
-					audiences:</p>
+
+				<p>This specification defines a module of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> for digital publishing, including <a data-link-type="dfn" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-link-type="dfn" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a>, <a data-link-type="dfn" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a>
+					and values. It impacts several audiences:</p>
+
 				<ul>
 					<li><a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> that process content containing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> features;</li>
 					<li><a data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-assistive-technologies">Assistive technologies</a> that provide specialized reading experiences to users with
@@ -450,7 +456,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					<li>Conformance checkers, that verify appropriate use of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and this Digital Publishing
 							<abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module.</li>
 				</ul>
+
 				<p>Each conformance requirement indicates the audience to which it applies.</p>
+
 				<p>Although this specification is applicable to the above audiences, it is not specifically targeted to,
 					nor is it intended to be the sole source of information for, any of these audiences. In the future,
 					additional documents will be created to assist authors in applying these <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> semantics for the publishing
@@ -460,6 +468,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 			<section id="ua-support"><div class="header-wrapper"><h3 id="x1-2-user-agent-support"><bdi class="secno">1.2 </bdi>User Agent Support</h3><a class="self-link" href="#ua-support" aria-label="Permalink for Section 1.2"></a></div>
 				
+
 				<p>This module builds on the general <a href="http://www.w3.org/TR/wai-aria-1.1/#ua-support">User Agent
 						support principles</a> defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] by also providing the ability for user agents to
 					enhance the general user interface presented to readers.</p>
@@ -468,6 +477,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			<section id="co-evolution"><div class="header-wrapper"><h3 id="x1-3-co-evolution-of-wai-aria-and-host-languages"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host
 					Languages</h3><a class="self-link" href="#co-evolution" aria-label="Permalink for Section 1.3"></a></div>
 				
+
 				<p>The Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module
 					follows the model for <a href="http://www.w3.org/TR/wai-aria-1.1/#co-evolution">co-evolution of
 							<abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and host languages</a>
@@ -477,11 +487,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					technologies when authors create new types of objects, via style and script, that are not yet
 					directly supported by the language of the page, because the invention of new types of objects is
 					faster than standardized support for them appears in web languages.</p>
+
 				<p>It is not appropriate to create objects with style and script when the host language provides a
 					semantic element for that type of objects. While <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> can improve the accessibility of these objects, accessibility is best provided
 					by allowing the user agent to handle the object natively. For example, it is not better to use a
 						<a href="https://w3c.github.io/aria/#heading" class="role-reference"><code>heading</code></a> role on a <code>div</code> element than it is to use a native heading
 					element, such as an <code>h1</code>.</p>
+
 				<p>It is expected that, over time, host languages will evolve to provide semantics for objects that
 					currently can only be declared with this specification. This is natural and desirable, as one goal
 					of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is to help stimulate the
@@ -489,6 +501,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					available, it is appropriate for authors to use the native feature and stop using this module for
 					that feature. Legacy content may continue to use the Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module, however, so the need for
 					user agents to support it remains.</p>
+
 				<p>While specific features of this module may lose importance over time, the general possibility of the
 					Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module to add
 					semantics to web pages or open web-based standards, such as EPUB, is expected to be a persistent
@@ -497,6 +510,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					being developed, and one goal of this specification is to provide a way to make such objects
 					accessible, because authoring practices often advance faster than host language standards. In this
 					way, this module and host languages both evolve together but at different rates.</p>
+
 				<p>Some host languages exist to create semantics for features other than the user interface. For
 					example, SVG expresses the semantics behind production of graphical objects, not of user interface
 					components that those objects may represent. Host languages such as these might, by design, not
@@ -507,11 +521,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 			<section id="authoring_practices"><div class="header-wrapper"><h3 id="x1-4-authoring-practices"><bdi class="secno">1.4 </bdi>Authoring Practices</h3><a class="self-link" href="#authoring_practices" aria-label="Permalink for Section 1.4"></a></div>
 				
+
 				<section id="authoring_tools"><div class="header-wrapper"><h4 id="x1-4-1-authoring-tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools</h4><a class="self-link" href="#authoring_tools" aria-label="Permalink for Section 1.4.1"></a></div>
 					
-					<p>Many of the requirements in the definitions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
-						<a data-link-type="dfn" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-link-type="dfn" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a> and 
-							<a data-link-type="dfn" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a> can be checked automatically during the development process, similar to
+
+					<p>Many of the requirements in the definitions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> <a data-link-type="dfn" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-link-type="dfn" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a> and
+						<a data-link-type="dfn" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a> can be checked automatically during the development process, similar to
 						other quality control processes used for validating code. To assist authors who are creating
 						digital publications, such as EPUB, can compare the semantic structure of Digital Publishing
 							<abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles from the <abbr title="Document Object Model">DOM</abbr> to that defined in this specification and notify
@@ -520,6 +535,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 				<section id="authoring_testing"><div class="header-wrapper"><h4 id="x1-4-2-testing-practices-and-tools"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools</h4><a class="self-link" href="#authoring_testing" aria-label="Permalink for Section 1.4.2"></a></div>
 					
+
 					<p>The accessibility of interactive content cannot be confirmed by static checks alone. Developers
 						of interactive content should test for device-independent access to <a data-lt="widget" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-widget">widgets</a> and applications, and should verify accessibility <abbr title="application programing interface">API</abbr> access to all content and changes during
 						user interaction.</p>
@@ -528,6 +544,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 			<section id="at_support"><div class="header-wrapper"><h3 id="x1-5-assistive-technologies"><bdi class="secno">1.5 </bdi>Assistive Technologies</h3><a class="self-link" href="#at_support" aria-label="Permalink for Section 1.5"></a></div>
 				
+
 				<p>Programmatic access to accessibility semantics is essential for assistive technologies. For more
 					information, refer to the <a href="http://www.w3.org/TR/wai-aria-1.1/#at_support">Assistive
 						Technologies</a> section in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>].</p>
@@ -542,20 +559,24 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       </p>
 			<p>Normative sections provide requirements that authors, user agents and assistive technologies <em class="rfc2119">MUST</em> follow
 				for an implementation to conform to this specification.</p>
+
 			<p>Non-normative sections provide information useful to understanding the specification. Such sections may
 				contain examples of recommended practice, but it is not required to follow such recommendations to
 				conform to this specification.</p>
 		</section>
 		<section class="normative" id="roles"><div class="header-wrapper"><h2 id="x3-digital-publishing-roles"><bdi class="secno">3. </bdi>Digital Publishing Roles</h2><a class="self-link" href="#roles" aria-label="Permalink for Section 3."></a></div>
 			
+
 			<p>This section defines additions to the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
-				<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a> model
-				 and describes the characteristics and properties of all <a data-lt="role" class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>. See <a href="https://w3c.github.io/aria/#roles" class="specref">ARIA Roles</a> for
+				<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a> model and describes the characteristics and properties of all <a data-lt="role" class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>. See <a href="https://w3c.github.io/aria/#roles" class="specref">ARIA Roles</a> for
 				descriptions of the fields provided by this module.</p>
+
 			<section id="role_definitions"><div class="header-wrapper"><h3 id="x3-1-definition-of-roles"><bdi class="secno">3.1 </bdi>Definition of Roles</h3><a class="self-link" href="#role_definitions" aria-label="Permalink for Section 3.1"></a></div>
 				
+
 				<p>Below is an alphabetical list of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 					<a data-lt="role" class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a> to be used by rich internet application authors.</p>
+
 				<dl id="index_role" class="compact"><dt><a href="#doc-abstract" class="role-reference">doc-abstract</a></dt>
 <dd>A short summary of the principal ideas, concepts, and conclusions of the work, or of a
 							section or excerpt within it.</dd>
@@ -678,11 +699,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							the content. A table of contents may cover an entire work, or only a smaller section of
 							it.</dd>
 </dl>
+
 				<section class="role notoc" id="doc-abstract">
 					<h3 class="role-name" title="doc-abstract" aria-describedby="desc-doc-abstract"><code>doc-abstract</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-abstract" role="definition">
 						<p>A short summary of the principal ideas, concepts, and conclusions of the work, or of a
 							section or excerpt within it.</p>
+
 						<div class="example" id="example-1">
         <div class="marker">
     <a class="self-link" href="#example-1">Example<bdi> 1</bdi></a>
@@ -692,6 +716,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-abstract</code>:</caption>
 						<thead>
@@ -762,11 +787,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-acknowledgments">
 					<h3 class="role-name" title="doc-acknowledgments" aria-describedby="desc-doc-acknowledgments"><code>doc-acknowledgments</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-acknowledgments" role="definition">
 						<p>A section or statement that acknowledges significant contributions by persons, organizations,
 							governments, and other entities to the realization of the work.</p>
+
 						<div class="example" id="example-2">
         <div class="marker">
     <a class="self-link" href="#example-2">Example<bdi> 2</bdi></a>
@@ -775,6 +803,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-acknowledgments</code>:</caption>
 						<thead>
@@ -844,12 +873,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-afterword">
 					<h3 class="role-name" title="doc-afterword" aria-describedby="desc-doc-afterword"><code>doc-afterword</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-afterword" role="definition">
 						<p>A closing statement from the author or a person of importance, typically providing insight
 							into how the content came to be written, its significance, or related events that have
 							transpired since its timeline.</p>
+
 						<div class="example" id="example-3">
         <div class="marker">
     <a class="self-link" href="#example-3">Example<bdi> 3</bdi></a>
@@ -859,6 +891,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-afterword</code>:</caption>
 						<thead>
@@ -929,11 +962,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-appendix">
 					<h3 class="role-name" title="doc-appendix" aria-describedby="desc-doc-appendix"><code>doc-appendix</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-appendix" role="definition">
 						<p>A section of supplemental information located after the primary content that informs the
 							content but is not central to it.</p>
+
 						<div class="example" id="example-4">
         <div class="marker">
     <a class="self-link" href="#example-4">Example<bdi> 4</bdi></a>
@@ -943,6 +979,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-appendix</code>:</caption>
 						<thead>
@@ -1013,11 +1050,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-backlink">
 					<h3 class="role-name" title="doc-backlink" aria-describedby="desc-doc-backlink"><code>doc-backlink</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-backlink" role="definition">
 						<p>A link that allows the user to return to a related location in the content (e.g., from a
 							footnote to its reference or from a glossary definition to where a term is used).</p>
+
 						<div class="example" id="example-5">
         <div class="marker">
     <a class="self-link" href="#example-5">Example<bdi> 5</bdi></a>
@@ -1028,6 +1068,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-backlink</code>:</caption>
 						<thead>
@@ -1106,12 +1147,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-biblioentry">
 					<h3 class="role-name" title="doc-biblioentry" aria-describedby="desc-doc-biblioentry"><code>doc-biblioentry</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-biblioentry" role="definition">
 						<p>[Deprecated in DPUB-ARIA 1.1] A single reference to an external source in a bibliography. A
 							biblioentry typically provides more detailed information than its reference(s) in the
 							content (e.g., full title, author(s), publisher, publication date, etc.).</p>
+
 						<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="4"><span>Note</span></div><p class="">The <code>doc-biblioentry</code>
 							<a data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> was designed for use as a list item, but due to clarifications in the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>
 							specification, it is not valid as a child of the <a href="https://w3c.github.io/aria/#list" class="role-reference"><code>list</code></a> role. As the
@@ -1119,6 +1163,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							authors are instead advised to use the <a href="https://w3c.github.io/aria/#list" class="role-reference"><code>list</code></a> and <a href="https://w3c.github.io/aria/#listitem" class="role-reference"><code>listitem</code></a> roles
 							when native HTML elements cannot be used to structure the entries.</p></div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-biblioentry</code>:</caption>
 						<thead>
@@ -1157,21 +1202,28 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-bibliography">
 					<h3 class="role-name" title="doc-bibliography" aria-describedby="desc-doc-bibliography"><code>doc-bibliography</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-bibliography" role="definition">
 						<p>A list of external references cited in the work, which may be to print or digital
 							sources.</p>
+
 						<p>The element carrying the <code>doc-bibliography</code>
 							<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> <em class="rfc2119">MUST</em> contain at least one descendant list containing the
 							bibliography entries (if the entries are subdivided, for example alphabetically, the element
 							would contain more than one list).</p>
+
 						<p>User Agents <em class="rfc2119">MUST</em> expose the list items in these lists using the platform accessibility <abbr title="application programing interface">API</abbr>
 							mappings for an individual entry.</p>
+
 						<p>Lists nested within an entry have no special significance. User Agents <em class="rfc2119">MUST NOT</em> expose these
 							list items using the platform accessibility <abbr title="application programing interface">API</abbr> mappings for an individual entry.</p>
+
 						<p>Authors <em class="rfc2119">MUST NOT</em> apply the <code>doc-bibliography</code> role directly to the list containing
 							the entries.</p>
+
 						<div class="example" id="example-6">
         <div class="marker">
     <a class="self-link" href="#example-6">Example<bdi> 6</bdi></a>
@@ -1183,6 +1235,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-bibliography</code>:</caption>
 						<thead>
@@ -1252,10 +1305,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-biblioref">
 					<h3 class="role-name" title="doc-biblioref" aria-describedby="desc-doc-biblioref"><code>doc-biblioref</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-biblioref" role="definition">
 						<p>A reference to a bibliography entry.</p>
+
 						<div class="example" id="example-7">
         <div class="marker">
     <a class="self-link" href="#example-7">Example<bdi> 7</bdi></a>
@@ -1266,6 +1322,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-biblioref</code>:</caption>
 						<thead>
@@ -1344,10 +1401,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-chapter">
 					<h3 class="role-name" title="doc-chapter" aria-describedby="desc-doc-chapter"><code>doc-chapter</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-chapter" role="definition">
 						<p>A major thematic section of content in a work.</p>
+
 						<div class="example" id="example-8">
         <div class="marker">
     <a class="self-link" href="#example-8">Example<bdi> 8</bdi></a>
@@ -1357,6 +1417,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-chapter</code>:</caption>
 						<thead>
@@ -1427,11 +1488,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-colophon">
 					<h3 class="role-name" title="doc-colophon" aria-describedby="desc-doc-colophon"><code>doc-colophon</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-colophon" role="definition">
 						<p>A short section of production notes particular to the edition (e.g., describing the typeface
 							used), often located at the end of a work.</p>
+
 						<div class="example" id="example-9">
         <div class="marker">
     <a class="self-link" href="#example-9">Example<bdi> 9</bdi></a>
@@ -1440,6 +1504,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-colophon</code>:</caption>
 						<thead>
@@ -1510,10 +1575,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-conclusion">
 					<h3 class="role-name" title="doc-conclusion" aria-describedby="desc-doc-conclusion"><code>doc-conclusion</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-conclusion" role="definition">
 						<p>A concluding section or statement that summarizes the work or wraps up the narrative.</p>
+
 						<div class="example" id="example-10">
         <div class="marker">
     <a class="self-link" href="#example-10">Example<bdi> 10</bdi></a>
@@ -1523,6 +1591,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-conclusion</code>:</caption>
 						<thead>
@@ -1593,17 +1662,21 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-cover">
 					<h3 class="role-name" title="doc-cover" aria-describedby="desc-doc-cover"><code>doc-cover</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-cover" role="definition">
 						<p>An image that sets the mood or tone for the work and typically includes the title and
 							author.</p>
+
 						<div class="example" id="example-11">
         <div class="marker">
     <a class="self-link" href="#example-11">Example<bdi> 11</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-cover"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"coverimage.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"A Room of One's Own by Virginia Woolf"</span>/&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-cover</code>:</caption>
 						<thead>
@@ -1674,11 +1747,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-credit">
 					<h3 class="role-name" title="doc-credit" aria-describedby="desc-doc-credit"><code>doc-credit</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-credit" role="definition">
 						<p>An acknowledgment of the source of integrated content from third-party sources, such as
 							photos. Typically identifies the creator, copyright, and any restrictions on reuse.</p>
+
 						<div class="example" id="example-12">
         <div class="marker">
     <a class="self-link" href="#example-12">Example<bdi> 12</bdi></a>
@@ -1688,6 +1764,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-credit</code>:</caption>
 						<thead>
@@ -1758,10 +1835,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-credits">
 					<h3 class="role-name" title="doc-credits" aria-describedby="desc-doc-credits"><code>doc-credits</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-credits" role="definition">
 						<p>A collection of credits.</p>
+
 						<div class="example" id="example-13">
         <div class="marker">
     <a class="self-link" href="#example-13">Example<bdi> 13</bdi></a>
@@ -1771,6 +1851,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-credits</code>:</caption>
 						<thead>
@@ -1841,17 +1922,21 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-dedication">
 					<h3 class="role-name" title="doc-dedication" aria-describedby="desc-doc-dedication"><code>doc-dedication</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-dedication" role="definition">
 						<p>An inscription at the front of the work, typically addressed in tribute to one or more
 							persons close to the author.</p>
+
 						<div class="example" id="example-14">
         <div class="marker">
     <a class="self-link" href="#example-14">Example<bdi> 14</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-dedication"</span>&gt;</span>To my family, without whom this would have never been possible.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-dedication</code>:</caption>
 						<thead>
@@ -1922,12 +2007,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-endnote">
 					<h3 class="role-name" title="doc-endnote" aria-describedby="desc-doc-endnote"><code>doc-endnote</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-endnote" role="definition">
 						<p>[Deprecated in DPUB-ARIA 1.1] One of a collection of notes that occur at the end of a work,
 							or a section within it, that provides additional context to a referenced passage of
 							text.</p>
+
 						<div class="note" role="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="4"><span>Note</span></div><p class="">The <code>doc-endnote</code>
 							<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> was designed for use as a list item, but due to clarifications
 							in the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification, it is not valid as a child of the <a href="https://w3c.github.io/aria/#list" class="role-reference"><code>list</code></a> role. As
@@ -1935,6 +2023,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							instead advised to use the <a href="https://w3c.github.io/aria/#list" class="role-reference"><code>list</code></a> and <a href="https://w3c.github.io/aria/#listitem" class="role-reference"><code>listitem</code></a> roles when native
 							HTML elements cannot be used to structure the entries.</p></div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-endnote</code>:</caption>
 						<thead>
@@ -2004,23 +2093,31 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-endnotes">
 					<h3 class="role-name" title="doc-endnotes" aria-describedby="desc-doc-endnotes"><code>doc-endnotes</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-endnotes" role="definition">
 						<p>A collection of notes at the end of a work or a section within it.</p>
+
 						<p>The element carrying the <code>doc-endnotes</code>
 							<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> <em class="rfc2119">MUST</em> contain at least one descendant list containing the
 							endnotes (if the notes are subdivided, for example by chapter, the element would contain
 							more than one list).</p>
+
 						<p>User Agents <em class="rfc2119">MUST</em> expose the list items in these lists using the platform accessibility <abbr title="application programing interface">API</abbr>
 							mappings for an individual endnote.</p>
+
 						<p>Lists nested within an endnote have no special significance. User Agents <em class="rfc2119">MUST NOT</em> expose
 							these list items using the platform accessibility <abbr title="application programing interface">API</abbr> mappings for an individual
 							endnote.</p>
+
 						<p>Authors <em class="rfc2119">MUST NOT</em> declare elements with the role <a href="#doc-footnote" class="role-reference"><code>doc-footnote</code></a> within the endnotes
 							as it is redundant with the implied role.</p>
+
 						<p>Authors <em class="rfc2119">MUST NOT</em> apply the <code>doc-endnotes</code> role directly to the list containing the
 							endnotes.</p>
+
 						<div class="example" id="example-15">
         <div class="marker">
     <a class="self-link" href="#example-15">Example<bdi> 15</bdi></a>
@@ -2037,6 +2134,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
    <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
+
 						<div class="example" id="example-16">
         <div class="marker">
     <a class="self-link" href="#example-16">Example<bdi> 16</bdi></a>
@@ -2055,6 +2153,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-endnotes</code>:</caption>
 						<thead>
@@ -2125,11 +2224,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-epigraph">
 					<h3 class="role-name" title="doc-epigraph" aria-describedby="desc-doc-epigraph"><code>doc-epigraph</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-epigraph" role="definition">
 						<p>A quotation set at the start of the work or a section that establishes the theme or sets the
 							mood.</p>
+
 						<div class="example" id="example-17">
         <div class="marker">
     <a class="self-link" href="#example-17">Example<bdi> 17</bdi></a>
@@ -2139,6 +2241,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-epigraph</code>:</caption>
 						<thead>
@@ -2209,11 +2312,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-epilogue">
 					<h3 class="role-name" title="doc-epilogue" aria-describedby="desc-doc-epilogue"><code>doc-epilogue</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-epilogue" role="definition">
 						<p>A concluding section of narrative that wraps up or comments on the actions and events of the
 							work, typically from a future perspective.</p>
+
 						<div class="example" id="example-18">
         <div class="marker">
     <a class="self-link" href="#example-18">Example<bdi> 18</bdi></a>
@@ -2227,6 +2333,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-epilogue</code>:</caption>
 						<thead>
@@ -2297,11 +2404,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-errata">
 					<h3 class="role-name" title="doc-errata" aria-describedby="desc-doc-errata"><code>doc-errata</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-errata" role="definition">
 						<p>A set of corrections discovered after initial publication of the work, sometimes referred to
 							as corrigenda.</p>
+
 						<div class="example" id="example-19">
         <div class="marker">
     <a class="self-link" href="#example-19">Example<bdi> 19</bdi></a>
@@ -2311,6 +2421,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-errata</code>:</caption>
 						<thead>
@@ -2381,11 +2492,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-example">
 					<h3 class="role-name" title="doc-example" aria-describedby="desc-doc-example"><code>doc-example</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-example" role="definition">
 						<p>An illustration of a key concept of the work, such as a code listing, case study or
 							problem.</p>
+
 						<div class="example" id="example-20">
         <div class="marker">
     <a class="self-link" href="#example-20">Example<bdi> 20</bdi></a>
@@ -2395,6 +2509,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-example</code>:</caption>
 						<thead>
@@ -2461,15 +2576,19 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-footnote">
 					<h3 class="role-name" title="doc-footnote" aria-describedby="desc-doc-footnote"><code>doc-footnote</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-footnote" role="definition">
 						<p>Ancillary information, such as a citation or commentary, that provides additional context to
 							a referenced passage of text.</p>
+
 						<p>The <code>doc-footnote</code>
 							<a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> is only for representing individual notes that occur within the
 							body of a work. For collections of notes that occur at the end of a section, see
 								<a href="#doc-endnotes" class="role-reference"><code>doc-endnotes</code></a>.</p>
+
 						<div class="example" id="example-21">
         <div class="marker">
     <a class="self-link" href="#example-21">Example<bdi> 21</bdi></a>
@@ -2478,6 +2597,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-footnote</code>:</caption>
 						<thead>
@@ -2545,11 +2665,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-foreword">
 					<h3 class="role-name" title="doc-foreword" aria-describedby="desc-doc-foreword"><code>doc-foreword</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-foreword" role="definition">
 						<p>An introductory section that precedes the work, typically not written by the author of the
 							work.</p>
+
 						<div class="example" id="example-22">
         <div class="marker">
     <a class="self-link" href="#example-22">Example<bdi> 22</bdi></a>
@@ -2559,6 +2682,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-foreword</code>:</caption>
 						<thead>
@@ -2629,13 +2753,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-glossary">
 					<h3 class="role-name" title="doc-glossary" aria-describedby="desc-doc-glossary"><code>doc-glossary</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-glossary" role="definition">
 						<p>A brief dictionary of new, uncommon, or specialized terms used in the content.</p>
+
 						<p>The structure of a glossary <em class="rfc2119">SHOULD</em> make it possible for end users to identify each term and
 							associated definition (e.g., using the [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>] <code>dl</code> or <code>dfn</code>
 							elements).</p>
+
 						<div class="example" id="example-23">
         <div class="marker">
     <a class="self-link" href="#example-23">Example<bdi> 23</bdi></a>
@@ -2651,6 +2779,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
    <span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
+
 						<div class="example" id="example-24">
         <div class="marker">
     <a class="self-link" href="#example-24">Example<bdi> 24</bdi></a>
@@ -2663,6 +2792,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-glossary</code>:</caption>
 						<thead>
@@ -2733,10 +2863,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-glossref">
 					<h3 class="role-name" title="doc-glossref" aria-describedby="desc-doc-glossref"><code>doc-glossref</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-glossref" role="definition">
 						<p>A reference to a glossary definition.</p>
+
 						<div class="example" id="example-25">
         <div class="marker">
     <a class="self-link" href="#example-25">Example<bdi> 25</bdi></a>
@@ -2746,6 +2879,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-glossref</code>:</caption>
 						<thead>
@@ -2824,11 +2958,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-index">
 					<h3 class="role-name" title="doc-index" aria-describedby="desc-doc-index"><code>doc-index</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-index" role="definition">
 						<p>A navigational aid that provides a detailed list of links to key subjects, names and other
 							important topics covered in the work.</p>
+
 						<div class="example" id="example-26">
         <div class="marker">
     <a class="self-link" href="#example-26">Example<bdi> 26</bdi></a>
@@ -2845,6 +2982,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-index</code>:</caption>
 						<thead>
@@ -2917,10 +3055,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-introduction">
 					<h3 class="role-name" title="doc-introduction" aria-describedby="desc-doc-introduction"><code>doc-introduction</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-introduction" role="definition">
 						<p>A preliminary section that typically introduces the scope or nature of the work.</p>
+
 						<div class="example" id="example-27">
         <div class="marker">
     <a class="self-link" href="#example-27">Example<bdi> 27</bdi></a>
@@ -2929,6 +3070,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-introduction</code>:</caption>
 						<thead>
@@ -2998,17 +3140,21 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-noteref">
 					<h3 class="role-name" title="doc-noteref" aria-describedby="desc-doc-noteref"><code>doc-noteref</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-noteref" role="definition">
 						<p>A reference to a footnote or endnote, typically appearing as a superscripted number or symbol
 							in the main body of text.</p>
+
 						<div class="example" id="example-28">
         <div class="marker">
     <a class="self-link" href="#example-28">Example<bdi> 28</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> … as studies have shown.<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#fn01"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fnref01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-noteref"</span>&gt;</span>[1]<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-noteref</code>:</caption>
 						<thead>
@@ -3087,11 +3233,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-notice">
 					<h3 class="role-name" title="doc-notice" aria-describedby="desc-doc-notice"><code>doc-notice</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-notice" role="definition">
 						<p>Notifies the user of consequences that might arise from an action or event. Examples include
 							warnings, cautions and dangers.</p>
+
 						<div class="example" id="example-29">
         <div class="marker">
     <a class="self-link" href="#example-29">Example<bdi> 29</bdi></a>
@@ -3102,15 +3251,18 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       There are many excellent free open-source fonts available.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
-					</div>
-					<p>Authors <em class="rfc2119">SHOULD</em> include a label when the notice needs to be navigable to.</p>
-					<div class="example" id="example-30">
+
+						<p>Authors <em class="rfc2119">SHOULD</em> include a label when the notice needs to be navigable to.</p>
+
+						<div class="example" id="example-30">
         <div class="marker">
     <a class="self-link" href="#example-30">Example<bdi> 30</bdi></a>
   </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-notice"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Explosion Risk"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>Danger!<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> Mixing reactive materials may cause an explosion.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
       </div>
+					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-notice</code>:</caption>
 						<thead>
@@ -3181,18 +3333,23 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-pagebreak">
 					<h3 class="role-name" title="doc-pagebreak" aria-describedby="desc-doc-pagebreak"><code>doc-pagebreak</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-pagebreak" role="definition">
 						<p>A separator denoting the position before which a break occurs between two contiguous pages in
 							a statically paginated version of the content.</p>
+
 						<p>Page break locators are also commonly used to provide static markers in purely digital
 							publications (i.e., where no statically paginated equivalent exists). These markers provide
 							consistent navigation regardless of differences in font and screen size that can otherwise
 							affect the dynamic pagination of the content.</p>
+
 						<p>Authors <em class="rfc2119">MUST</em> ensure the name of the page break is an end user-consumable page number that
 							identifies the page that is beginning so that assistive technologies can announce the page
 							as needed (e.g., in a command to identify the current page).</p>
+
 						<aside class="example" id="example-31"><div class="marker">
     <a class="self-link" href="#example-31">Example<bdi> 31</bdi></a>
   </div>
@@ -3207,6 +3364,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pg04"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagebreak"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
 						</aside>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-pagebreak</code>:</caption>
 						<thead>
@@ -3315,10 +3473,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-pagelist">
 					<h3 class="role-name" title="doc-pagelist" aria-describedby="desc-doc-pagelist"><code>doc-pagelist</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-pagelist" role="definition">
 						<p>A navigational aid that provides a list of links to the page breaks in the content.</p>
+
 						<div class="example" id="example-32">
         <div class="marker">
     <a class="self-link" href="#example-32">Example<bdi> 32</bdi></a>
@@ -3332,6 +3493,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-pagelist</code>:</caption>
 						<thead>
@@ -3402,18 +3564,25 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-pagefooter">
 					<h3 class="role-name" title="doc-pagefooter" aria-describedby="desc-doc-pagefooter"><code>doc-pagefooter</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-pagefooter" role="definition">
 						<p>A section of text appearing at the bottom of a page that provides context about the current
 							work and location within it. The page footer is distinct from the body text and normally
 							follows a repeating template that contains (possibly truncated) items such as the document
 							title, current section, author name(s), and page number.</p>
+
 						<p>The <code>doc-pagefooter</code> role <em class="rfc2119">MUST</em> be used on every instance of the page footer.</p>
+
 						<p>The <code>doc-pagefooter</code> <em class="rfc2119">MUST NOT</em> contain the <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a>.</p>
+
 						<p>The <code>doc-pagefooter</code> <em class="rfc2119">MUST NOT</em> contain footnotes (<a href="#doc-footnote" class="role-reference"><code>doc-footnote</code></a>).</p>
+
 						<p>Assistive technologies <em class="rfc2119">MAY</em> allow the user to read the document content continuously without
 							interruption from the page footer.</p>
+
 						<div class="example" id="example-33">
         <div class="marker">
     <a class="self-link" href="#example-33">Example<bdi> 33</bdi></a>
@@ -3424,6 +3593,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-pagefooter</code>:</caption>
 						<thead>
@@ -3490,17 +3660,23 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-pageheader">
 					<h3 class="role-name" title="doc-pageheader" aria-describedby="desc-doc-pageheader"><code>doc-pageheader</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-pageheader" role="definition">
 						<p>A section of text appearing at the top of a page that provides context about the current work
 							and location within it. The page header is distinct from the body text and normally follows
 							a repeating template that contains (possibly truncated) items such as the document title,
 							current section, author name(s), and page number.</p>
+
 						<p>The <code>doc-pageheader</code> role <em class="rfc2119">MUST</em> be used on every instance of the page header.</p>
+
 						<p>The <code>doc-pageheader</code> <em class="rfc2119">MUST NOT</em> contain the <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a>.</p>
+
 						<p>Assistive technologies <em class="rfc2119">MAY</em> allow the user to read the document content continuously without
 							interruption from the page header.</p>
+
 						<div class="example" id="example-34">
         <div class="marker">
     <a class="self-link" href="#example-34">Example<bdi> 34</bdi></a>
@@ -3511,6 +3687,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-pageheader</code>:</caption>
 						<thead>
@@ -3577,11 +3754,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-part">
 					<h3 class="role-name" title="doc-part" aria-describedby="desc-doc-part"><code>doc-part</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-part" role="definition">
 						<p>A major structural division in a work that contains a set of related sections dealing with a
 							particular subject, narrative arc, or similar encapsulated theme.</p>
+
 						<div class="example" id="example-35">
         <div class="marker">
     <a class="self-link" href="#example-35">Example<bdi> 35</bdi></a>
@@ -3595,6 +3775,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-part</code>:</caption>
 						<thead>
@@ -3665,11 +3846,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-preface">
 					<h3 class="role-name" title="doc-preface" aria-describedby="desc-doc-preface"><code>doc-preface</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-preface" role="definition">
 						<p>An introductory section that precedes the work, typically written by the author of the
 							work.</p>
+
 						<div class="example" id="example-36">
         <div class="marker">
     <a class="self-link" href="#example-36">Example<bdi> 36</bdi></a>
@@ -3679,6 +3863,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-preface</code>:</caption>
 						<thead>
@@ -3749,11 +3934,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-prologue">
 					<h3 class="role-name" title="doc-prologue" aria-describedby="desc-doc-prologue"><code>doc-prologue</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-prologue" role="definition">
 						<p>An introductory section that sets the background to a work, typically part of the
 							narrative.</p>
+
 						<div class="example" id="example-37">
         <div class="marker">
     <a class="self-link" href="#example-37">Example<bdi> 37</bdi></a>
@@ -3767,6 +3955,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-prologue</code>:</caption>
 						<thead>
@@ -3837,18 +4026,23 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-pullquote">
 					<h3 class="role-name" title="doc-pullquote" aria-describedby="desc-doc-pullquote"><code>doc-pullquote</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-pullquote" role="definition">
 						<p>A distinctively placed or highlighted quotation from the current content designed to draw
 							attention to a topic or highlight a key point.</p>
+
 						<p>Unlike a passage quoted from another source, a pullquote is a direct repetition of text in
 							the current document. As a result, authors must ensure that the presentational occurrence is
 							hidden from users of assistive technologies (e.g., using the <a href="https://w3c.github.io/aria/#aria-hidden" class="property-reference"><code>aria-hidden</code></a>
 							attribute).</p>
+
 						<p>The following example shows the identification of a pullquote that will be presented
 							elsewhere (e.g., via a script). In this case, the pullquote is not hidden as the marked text
 							is not presentational.</p>
+
 						<div class="example" id="example-38">
         <div class="marker">
     <a class="self-link" href="#example-38">Example<bdi> 38</bdi></a>
@@ -3856,8 +4050,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pq01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pullquote"</span>&gt;</span>Beware, for I am fearless and therefore powerful.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
    I will watch with the wiliness of a snake, that I may sting with its venom. … <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
       </div>
+
 						<p>The next example shows a pullquote that duplicates the text. This quote is hidden because it
 							is for presentational purposes only.</p>
+
 						<div class="example" id="example-39">
         <div class="marker">
     <a class="self-link" href="#example-39">Example<bdi> 39</bdi></a>
@@ -3867,6 +4063,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-pullquote</code>:</caption>
 						<thead>
@@ -3937,11 +4134,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-qna">
 					<h3 class="role-name" title="doc-qna" aria-describedby="desc-doc-qna"><code>doc-qna</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-qna" role="definition">
 						<p>A section of content structured as a series of questions and answers, such as an interview or
 							list of frequently asked questions.</p>
+
 						<div class="example" id="example-40">
         <div class="marker">
     <a class="self-link" href="#example-40">Example<bdi> 40</bdi></a>
@@ -3955,6 +4155,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-qna</code>:</caption>
 						<thead>
@@ -4025,10 +4226,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-subtitle">
 					<h3 class="role-name" title="doc-subtitle" aria-describedby="desc-doc-subtitle"><code>doc-subtitle</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-subtitle" role="definition">
 						<p>An explanatory or alternate title for the work, or a section or component within it.</p>
+
 						<div class="example" id="example-41">
         <div class="marker">
     <a class="self-link" href="#example-41">Example<bdi> 41</bdi></a>
@@ -4038,6 +4242,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-subtitle</code>:</caption>
 						<thead>
@@ -4113,11 +4318,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-tip">
 					<h3 class="role-name" title="doc-tip" aria-describedby="desc-doc-tip"><code>doc-tip</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-tip" role="definition">
 						<p>Helpful information that clarifies some aspect of the content or assists in its
 							comprehension.</p>
+
 						<div class="example" id="example-42">
         <div class="marker">
     <a class="self-link" href="#example-42">Example<bdi> 42</bdi></a>
@@ -4128,6 +4336,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-tip</code>:</caption>
 						<thead>
@@ -4198,12 +4407,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</tbody>
 					</table>
 				</section>
+
 				<section class="role notoc" id="doc-toc">
 					<h3 class="role-name" title="doc-toc" aria-describedby="desc-doc-toc"><code>doc-toc</code> <span class="type-indicator">(role)</span></h3>
+
 					<div class="role-description" id="desc-doc-toc" role="definition">
 						<p>A navigational aid that provides an ordered list of links to the major sectional headings in
 							the content. A table of contents may cover an entire work, or only a smaller section of
 							it.</p>
+
 						<div class="example" id="example-43">
         <div class="marker">
     <a class="self-link" href="#example-43">Example<bdi> 43</bdi></a>
@@ -4219,6 +4431,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></code></pre>
       </div>
 					</div>
+
 					<table class="role-features">
 						<caption>Characteristics of <code>doc-toc</code>:</caption>
 						<thead>
@@ -4293,28 +4506,35 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 		</section>
 		<section class="appendix informative" id="a_schemata"><div class="header-wrapper"><h2 id="a-schemata"><bdi class="secno">A. </bdi>Schemata</h2><a class="self-link" href="#a_schemata" aria-label="Permalink for Appendix A."></a></div><p><em>This section is non-normative.</em></p>
 			
+
 			<p>The <a href="http://www.w3.org/html/wg/">HTML Working Group</a> has incorporated the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> attributes
 				into <a href="http://www.w3.org/TR/html5/">HTML 5</a>. Official support for <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> in HTML is provided
 				in that specification.</p>
+
 			<div class="note" role="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-1" aria-level="3"><span>Note</span></div><p class="">Validation support for the roles defined in this module will be added once the specification
 				reaches recommendation.</p></div>
+
 			<p>For information on incorporating <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> into other grammars, refer to <a href="http://www.w3.org/TR/wai-aria-1.1/#a_schemata">Appendix A</a> of [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>]</p>
 		</section>
 		
 		<section class="appendix informative" id="changelog"><div class="header-wrapper"><h2 id="b-change-log"><bdi class="secno">B. </bdi>Change Log</h2><a class="self-link" href="#changelog" aria-label="Permalink for Appendix B."></a></div><p><em>This section is non-normative.</em></p>
 			
+
 			<section id="changelog-recent"><div class="header-wrapper"><h3 id="b-1-substantive-changes-since-the-first-public-working-draft"><bdi class="secno">B.1 </bdi>Substantive changes since the <a href="https://www.w3.org/TR/2021/WD-dpub-aria-1.1-20210826/">First
 						Public Working Draft</a></h3><a class="self-link" href="#changelog-recent" aria-label="Permalink for Appendix B.1"></a></div>
 				
+
 				<ul>
 					
 					<li>20-Sep-2021: Clarified ambiguities in the formatting and processing of endnote and bibliography
 						lists and require that the <a href="#doc-footnote" class="role-reference"><code>doc-footnote</code></a> role not be used within endnotes. See <a href="https://github.com/w3c/dpub-aria/issues/38">issue 38</a>.</li>
 				</ul>
 			</section>
+
 			<section id="changelog-older"><div class="header-wrapper"><h3 id="b-2-substantive-changes-since-the-dpub-aria-1-0-recommendation"><bdi class="secno">B.2 </bdi>Substantive changes since the <a href="https://www.w3.org/TR/dpub-aria-1.0/">DPUB-ARIA 1.0
 						Recommendation</a></h3><a class="self-link" href="#changelog-older" aria-label="Permalink for Appendix B.2"></a></div>
 				
+
 				<ul>
 					<li>24-Feb-2021: Changed required accessible name for <a href="#doc-part" class="role-reference"><code>doc-part</code></a> to false to match the
 						other landmark roles. See <a href="https://github.com/w3c/dpub-aria/issues/34">issue
@@ -4340,9 +4560,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 		</section>
 		<section class="appendix informative section" id="acknowledgements"><div class="header-wrapper"><h2 id="c-acknowledgments"><bdi class="secno">C. </bdi>Acknowledgments</h2><a class="self-link" href="#acknowledgements" aria-label="Permalink for Appendix C."></a></div><p><em>This section is non-normative.</em></p>
 			
+
 			<p>The following people contributed to the development of this document.</p>
+
 			<section class="section" id="ack_dpub"><div class="header-wrapper"><h3 id="c-1-participants-active-in-the-dpub-aria-task-force-at-the-time-of-publication"><bdi class="secno">C.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</h3><a class="self-link" href="#ack_dpub" aria-label="Permalink for Appendix C.1"></a></div>
 				
+
 				<ul>
 					<li>Michael Cooper (<abbr title="World Wide Web Consortium">W3C</abbr> Staff)</li>
 					<li>Joanmarie Diggs (Igalia, S.L.)</li>
