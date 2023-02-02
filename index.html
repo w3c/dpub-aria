@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="UTF-8">
-<meta name="generator" content="ReSpec 32.6.1">
+<meta name="generator" content="ReSpec 32.7.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -296,15 +296,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishISODate": "2023-01-25T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 25 January 2023"
+  "publishISODate": "2023-02-02T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 02 February 2023"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 	<body class="h-entry" data-cite="core-aam accname wai-aria dom infra"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-01-25">25 January 2023</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-02-02">02 February 2023</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -3348,6 +3348,16 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						<p>Authors <em class="rfc2119">MUST</em> ensure the name of the page break is an end user-consumable page number that
 							identifies the page that is beginning so that assistive technologies can announce the page
 							as needed (e.g., in a command to identify the current page).</p>
+						
+						<p>The page break locator <em class="rfc2119">MUST</em> precede the content of the page it identifies. If a page includes
+							a <a href="#doc-pageheader" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document">header</a>, the page break locator <em class="rfc2119">SHOULD</em> be located before it,
+							even if the header includes a visible page number. The page break locator may be used with
+							the page number in a page header if the number precedes all other content in the header.</p>
+						
+						<p>When reproducing page break locators from a static page equivalent, it is sometimes the case
+							that words are hyphenated across pages. When this happens, the page break locator <em class="rfc2119">SHOULD</em> be
+							placed either before or after the word to ensure it does not interfere with text-to-speech
+							playback.</p>
 
 						<aside class="example" id="example-31"><div class="marker">
     <a class="self-link" href="#example-31">Example<bdi> 31</bdi></a>
@@ -3356,6 +3366,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								digital publications. Either the <code>aria-label</code> or <code>title</code>
 								attributes can be used to assign the accessible name when an explicit page number is not
 								provided.</p>
+							
 							<pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pg04"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagebreak"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"4"</span>/&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pg04"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagebreak"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"4"</span>/&gt;</span>
@@ -3670,8 +3681,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							current section, author name(s), and page number.</p>
 
 						<p>The <code>doc-pageheader</code> role <em class="rfc2119">MUST</em> be used on every instance of the page header.</p>
-
-						<p>The <code>doc-pageheader</code> <em class="rfc2119">MUST NOT</em> contain the <a href="#doc-pagebreak" class="role-reference"><code>doc-pagebreak</code></a>.</p>
 
 						<p>Assistive technologies <em class="rfc2119">MAY</em> allow the user to read the document content continuously without
 							interruption from the page header.</p>
