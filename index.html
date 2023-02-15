@@ -449,8 +449,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 				<ul>
 					<li><a data-link-type="dfn" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> that process content containing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> features;</li>
-					<li><a data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-assistive-technologies">Assistive technologies</a> that provide specialized reading experiences to users with
-						disabilities;</li>
+					<li><a data-link-type="dfn" data-lt="assistive technology" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-assistive-technologies">Assistive technologies</a> that provide specialized reading experiences to
+						users with disabilities;</li>
 					<li>Authors of digital publications;</li>
 					<li>Authoring tools that help authors create conforming digital publications; and</li>
 					<li>Conformance checkers, that verify appropriate use of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and this Digital Publishing
@@ -3348,12 +3348,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						<p>Authors <em class="rfc2119">MUST</em> ensure the name of the page break is an end user-consumable page number that
 							identifies the page that is beginning so that assistive technologies can announce the page
 							as needed (e.g., in a command to identify the current page).</p>
-						
+
 						<p>The page break locator <em class="rfc2119">MUST</em> precede the content of the page it identifies. If a page includes
 							a <a href="#doc-pageheader" class="respec-offending-element" title="Broken local reference found in document." id="respec-offender-broken-local-reference-found-in-document">header</a>, the page break locator <em class="rfc2119">SHOULD</em> be located before it,
 							even if the header includes a visible page number. The page break locator may be used with
 							the page number in a page header if the number precedes all other content in the header.</p>
-						
+
 						<p>When reproducing page break locators from a static page equivalent, it is sometimes the case
 							that words are hyphenated across pages. When this happens, the page break locator <em class="rfc2119">SHOULD</em> be
 							placed either before or after the word to ensure it does not interfere with text-to-speech
@@ -3366,7 +3366,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 								digital publications. Either the <code>aria-label</code> or <code>title</code>
 								attributes can be used to assign the accessible name when an explicit page number is not
 								provided.</p>
-							
+
 							<pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pg04"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagebreak"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"4"</span>/&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pg04"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagebreak"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"4"</span>/&gt;</span>
