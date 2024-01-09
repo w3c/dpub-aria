@@ -109,13 +109,12 @@ dd{margin-left:0}
     
     
     
-    
 <link href="common/css/common.css" rel="stylesheet" type="text/css">
     
     
     
   
-<meta name="revision" content="7e6f382650b8cf1fe4be386b0e6f5788c94ee327">
+<meta name="revision" content="015550f3a48b99069a4f885f011b7bc13fcda90a">
 <meta name="description" content="Enabling users of assistive technologies to find their way through web content requires embedding semantic metadata about web document structural divisions. This is particularly important for
         structural divisions of long-form documents and goes along with embedding semantic metadata about web-application widgets and behaviors for assistive technologies. This specification defines a
         set of WAI-ARIA roles specific to helping users of assistive technologies navigate through such long-form documents.">
@@ -150,7 +149,7 @@ dd{margin-left:0}
   "name": "Digital Publishing WAI-ARIA Module 1.1",
   "inLanguage": "en-US",
   "license": "https://www.w3.org/copyright/software-license-2023/",
-  "datePublished": "2024-01-08",
+  "datePublished": "2024-01-09",
   "copyrightHolder": {
     "name": "World Wide Web Consortium",
     "url": "https://www.w3.org/"
@@ -505,21 +504,21 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "gitRevision": "7e6f382650b8cf1fe4be386b0e6f5788c94ee327",
-  "publishISODate": "2024-01-08T00:00:00.000Z",
-  "generatedSubtitle": "W3C Working Draft 08 January 2024"
+  "gitRevision": "015550f3a48b99069a4f885f011b7bc13fcda90a",
+  "publishISODate": "2024-01-09T00:00:00.000Z",
+  "generatedSubtitle": "W3C Working Draft 09 January 2024"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-WD"></head>
   <body class="h-entry" data-cite="core-aam accname wai-aria dom infra"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#WD">W3C Working Draft</a> <time class="dt-published" datetime="2024-01-08">08 January 2024</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#WD">W3C Working Draft</a> <time class="dt-published" datetime="2024-01-09">09 January 2024</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
         <dt>This version:</dt><dd>
-                <a class="u-url" href="https://www.w3.org/TR/2024/WD-dpub-aria-1.1-20240108/">https://www.w3.org/TR/2024/WD-dpub-aria-1.1-20240108/</a>
+                <a class="u-url" href="https://www.w3.org/TR/2024/WD-dpub-aria-1.1-20240109/">https://www.w3.org/TR/2024/WD-dpub-aria-1.1-20240109/</a>
               </dd>
         <dt>Latest published version:</dt><dd>
                 <a href="https://www.w3.org/TR/dpub-aria-1.1/">https://www.w3.org/TR/dpub-aria-1.1/</a>
@@ -626,7 +625,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                       This document is governed by the
                       <a id="w3c_process_revision" href="https://www.w3.org/2023/Process-20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                     </p></section>
-    <nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target Audience</a></li><li class="tocline"><a class="tocxref" href="#ua-support"><bdi class="secno">1.2 </bdi>User Agent Support</a></li><li class="tocline"><a class="tocxref" href="#co-evolution"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><bdi class="secno">1.4 </bdi>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><bdi class="secno">1.5 </bdi>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#roles"><bdi class="secno">3. </bdi>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><bdi class="secno">3.1 </bdi>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#privacy-and-security-considerations"><bdi class="secno">4. </bdi>Privacy and Security Considerations</a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changelog-recent"><bdi class="secno">A.1 </bdi>Substantive changes since the <span class="formerLink">last Working Draft</span></a></li><li class="tocline"><a class="tocxref" href="#changelog-older"><bdi class="secno">A.2 </bdi>Substantive changes since the <span class="formerLink">DPUB-ARIA 1.0 Recommendation</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><bdi class="secno">B.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">B.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">C.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">C.2 </bdi>Informative references</a></li></ol></li></ol></nav>
+    <nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target Audience</a></li><li class="tocline"><a class="tocxref" href="#ua-support"><bdi class="secno">1.2 </bdi>User Agent Support</a></li><li class="tocline"><a class="tocxref" href="#co-evolution"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><bdi class="secno">1.4 </bdi>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><bdi class="secno">1.5 </bdi>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#roles"><bdi class="secno">3. </bdi>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><bdi class="secno">3.1 </bdi>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#security-considerations"><bdi class="secno">4. </bdi>Security Considerations</a></li><li class="tocline"><a class="tocxref" href="#privacy-considerations"><bdi class="secno">5. </bdi>Privacy Considerations</a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changelog-recent"><bdi class="secno">A.1 </bdi>Substantive changes since the <span class="formerLink">last Working Draft</span></a></li><li class="tocline"><a class="tocxref" href="#changelog-older"><bdi class="secno">A.2 </bdi>Substantive changes since the <span class="formerLink">DPUB-ARIA 1.0 Recommendation</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_dpub"><bdi class="secno">B.1 </bdi>Participants active in the DPUB-ARIA task force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">B.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">C.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">C.2 </bdi>Informative references</a></li></ol></li></ol></nav>
     <section class="informative" id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div><p><em>This section is non-normative.</em></p>
       
 
@@ -4752,10 +4751,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </section>
       </section>
     </section>
-    <section class="informative" id="privacy-and-security-considerations"><div class="header-wrapper"><h2 id="x4-privacy-and-security-considerations"><bdi class="secno">4. </bdi>Privacy and Security Considerations</h2><a class="self-link" href="#privacy-and-security-considerations" aria-label="Permalink for Section 4."></a></div><p><em>This section is non-normative.</em></p>
+    <section class="informative" id="security-considerations"><div class="header-wrapper"><h2 id="x4-security-considerations"><bdi class="secno">4. </bdi>Security Considerations</h2><a class="self-link" href="#security-considerations" aria-label="Permalink for Section 4."></a></div><p><em>This section is non-normative.</em></p>
       
 
       <p>This specification introduces no new security considerations.</p>
+    </section>
+    <section class="informative" id="privacy-considerations"><div class="header-wrapper"><h2 id="x5-privacy-considerations"><bdi class="secno">5. </bdi>Privacy Considerations</h2><a class="self-link" href="#privacy-considerations" aria-label="Permalink for Section 5."></a></div><p><em>This section is non-normative.</em></p>
+      
 
       <p>
         In accordance with <a href="https://w3ctag.github.io/design-principles/#do-not-expose-use-of-assistive-tech">Web Platform Design Principles</a>, this specification provides no programatic
@@ -4765,7 +4767,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         technologies.
       </p>
     </section>
-    
     <section class="appendix informative" id="changelog"><div class="header-wrapper"><h2 id="a-change-log"><bdi class="secno">A. </bdi>Change Log</h2><a class="self-link" href="#changelog" aria-label="Permalink for Appendix A."></a></div><p><em>This section is non-normative.</em></p>
       
 
