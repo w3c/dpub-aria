@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="UTF-8">
-<meta name="generator" content="ReSpec 35.1.1">
+<meta name="generator" content="ReSpec 35.2.1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -93,13 +93,14 @@ dd{margin-left:0}
     
     
     
+    
 <link href="common/css/common.css" rel="stylesheet" type="text/css">
     
     
     
   
 <meta name="color-scheme" content="light">
-<meta name="revision" content="12f133047451f07db48175f0ed036d2da2e146bf">
+<meta name="revision" content="801bdb84aa45df641d379213e3773a474ffab28e">
 <meta name="description" content="Enabling users of assistive technologies to find their way through web content requires embedding semantic metadata about web document structural divisions. This is particularly important for
         structural divisions of long-form documents and goes along with embedding semantic metadata about web-application widgets and behaviors for assistive technologies. This specification defines a
         set of WAI-ARIA roles specific to helping users of assistive technologies navigate through such long-form documents.">
@@ -134,7 +135,7 @@ dd{margin-left:0}
   "name": "Digital Publishing WAI-ARIA Module 1.1",
   "inLanguage": "en-US",
   "license": "https://www.w3.org/copyright/software-license-2023/",
-  "datePublished": "2024-06-21",
+  "datePublished": "2024-12-18",
   "copyrightHolder": {
     "name": "World Wide Web Consortium",
     "url": "https://www.w3.org/"
@@ -183,6 +184,9 @@ dd{margin-left:0}
         },
         {
           "name": "Domenic Denicola"
+        },
+        {
+          "name": "Dominic Farolino"
         },
         {
           "name": "Ian Hickson"
@@ -435,6 +439,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "REC": "https://www.w3.org/TR/wai-aria-practices-1.2/"
   },
   "preProcess": [
+    null,
     null
   ],
   "postProcess": [
@@ -493,21 +498,21 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "gitRevision": "12f133047451f07db48175f0ed036d2da2e146bf",
-  "publishISODate": "2024-06-21T00:00:00.000Z",
-  "generatedSubtitle": "W3C Working Draft 21 June 2024"
+  "gitRevision": "801bdb84aa45df641d379213e3773a474ffab28e",
+  "publishISODate": "2024-12-18T00:00:00.000Z",
+  "generatedSubtitle": "W3C Working Draft 18 December 2024"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-WD"></head>
   <body class="h-entry" data-cite="core-aam accname wai-aria dom infra"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#WD">W3C Working Draft</a> <time class="dt-published" datetime="2024-06-21">21 June 2024</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#WD">W3C Working Draft</a> <time class="dt-published" datetime="2024-12-18">18 December 2024</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
         <dt>This version:</dt><dd>
-                <a class="u-url" href="https://www.w3.org/TR/2024/WD-dpub-aria-1.1-20240621/">https://www.w3.org/TR/2024/WD-dpub-aria-1.1-20240621/</a>
+                <a class="u-url" href="https://www.w3.org/TR/2024/WD-dpub-aria-1.1-20241218/">https://www.w3.org/TR/2024/WD-dpub-aria-1.1-20241218/</a>
               </dd>
         <dt>Latest published version:</dt><dd>
                 <a href="https://www.w3.org/TR/dpub-aria-1.1/">https://www.w3.org/TR/dpub-aria-1.1/</a>
@@ -613,7 +618,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                       This document is governed by the
                       <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                     </p></section>
-    <nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target Audience</a></li><li class="tocline"><a class="tocxref" href="#ua-support"><bdi class="secno">1.2 </bdi>User Agent Support</a></li><li class="tocline"><a class="tocxref" href="#co-evolution"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><bdi class="secno">1.4 </bdi>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><bdi class="secno">1.5 </bdi>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#roles"><bdi class="secno">3. </bdi>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><bdi class="secno">3.1 </bdi>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#security-considerations"><bdi class="secno">4. </bdi>Security Considerations</a></li><li class="tocline"><a class="tocxref" href="#privacy-considerations"><bdi class="secno">5. </bdi>Privacy Considerations</a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changelog-recent"><bdi class="secno">A.1 </bdi>Substantive changes since the <span class="formerLink">last Working Draft</span></a></li><li class="tocline"><a class="tocxref" href="#changelog-older"><bdi class="secno">A.2 </bdi>Substantive changes since the <span class="formerLink">DPUB-ARIA 1.0 Recommendation</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">B.1 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">C.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">C.2 </bdi>Informative references</a></li></ol></li></ol></nav>
+    <nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target Audience</a></li><li class="tocline"><a class="tocxref" href="#ua-support"><bdi class="secno">1.2 </bdi>User Agent Support</a></li><li class="tocline"><a class="tocxref" href="#co-evolution"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><bdi class="secno">1.4 </bdi>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><bdi class="secno">1.5 </bdi>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#roles"><bdi class="secno">3. </bdi>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><bdi class="secno">3.1 </bdi>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#security-considerations"><bdi class="secno">4. </bdi>Security Considerations</a></li><li class="tocline"><a class="tocxref" href="#privacy-considerations"><bdi class="secno">5. </bdi>Privacy Considerations</a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changelog-recent"><bdi class="secno">A.1 </bdi>Substantive changes since the <span class="formerLink">last Working Draft</span></a></li><li class="tocline"><a class="tocxref" href="#changelog-older"><bdi class="secno">A.2 </bdi>Substantive changes since the <span class="formerLink">DPUB-ARIA 1.0 Recommendation</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><bdi class="secno">B.1 </bdi>ARIA WG participants at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">B.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">C.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">C.2 </bdi>Informative references</a></li></ol></li></ol></nav>
     <section class="informative" id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div><p><em>This section is non-normative.</em></p>
       
 
@@ -645,16 +650,16 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         
 
         <p>
-          This specification defines a module of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> for digital publishing, including <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a>, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a> and
+          This specification defines a module of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> for digital publishing, including <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a> and
           values. It impacts several audiences:
         </p>
 
         <ul>
           <li>
-            <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> that process content containing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing
+            <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> that process content containing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing
             <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> features;
           </li>
-          <li><a data-link-type="dfn|abstract-op" data-lt="assistive technology" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-assistive-technologies">Assistive technologies</a> that provide specialized reading experiences to users with disabilities;</li>
+          <li><a data-link-type="dfn" data-lt="assistive technology" href="https://www.w3.org/TR/wai-aria/#dfn-assistive-technologies">Assistive technologies</a> that provide specialized reading experiences to users with disabilities;</li>
           <li>Authors of digital publications;</li>
           <li>Authoring tools that help authors create conforming digital publications; and</li>
           <li>
@@ -729,7 +734,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
           <p>
             Many of the requirements in the definitions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing
-            <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a> and <a data-link-type="dfn|abstract-op" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a> can be checked automatically during the development process, similar to
+            <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a> and <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a> can be checked automatically during the development process, similar to
             other quality control processes used for validating code. To assist authors who are creating digital publications, such as EPUB, can compare the semantic structure of Digital Publishing
             <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles from the <abbr title="Document Object Model">DOM</abbr> to that defined in this specification and notify the
             author of errors or simply create templates that enforce that structure.
@@ -741,7 +746,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
           <p>
             The accessibility of interactive content cannot be confirmed by static checks alone. Developers of interactive content should test for device-independent access to
-            <a data-lt="widget" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-widget">widgets</a> and applications, and should verify accessibility <abbr title="application programing interface">API</abbr> access to all content and changes during user
+            <a data-lt="widget" data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-widget">widgets</a> and applications, and should verify accessibility <abbr title="application programing interface">API</abbr> access to all content and changes during user
             interaction.
           </p>
         </section>
@@ -774,15 +779,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       
 
       <p>
-        This section defines additions to the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> <a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a> model and describes the characteristics and properties of
-        all <a data-lt="role" class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>. See <a href="https://www.w3.org/TR/wai-aria-1.1/#roles" class="specref">ARIA Roles</a> for descriptions of the fields provided by this module.
+        This section defines additions to the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> <a class="termref informative" data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a> model and describes the characteristics and properties of
+        all <a data-lt="role" class="termref informative" data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>. See <a href="https://www.w3.org/TR/wai-aria-1.1/#roles" class="specref">ARIA Roles</a> for descriptions of the fields provided by this module.
       </p>
 
       <section id="role_definitions"><div class="header-wrapper"><h3 id="x3-1-definition-of-roles"><bdi class="secno">3.1 </bdi>Definition of Roles</h3><a class="self-link" href="#role_definitions" aria-label="Permalink for Section 3.1"></a></div>
         
 
         <p>
-          Below is an alphabetical list of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> <a data-lt="role" class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a> to be used by rich internet application
+          Below is an alphabetical list of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> <a data-lt="role" class="termref informative" data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a> to be used by rich internet application
           authors.
         </p>
 
@@ -1251,11 +1256,11 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             <div class="example" id="example-5">
         <div class="marker">
     <a class="self-link" href="#example-5">Example<bdi> 5</bdi></a>
-  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fn01"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-footnote"</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-backlink"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#fnref01"</span>&gt;</span>1.<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs abnf">&lt;aside id<span class="hljs-operator">=</span><span class="hljs-string">"fn01"</span> role<span class="hljs-operator">=</span><span class="hljs-string">"doc-footnote"</span>&gt;
+   &lt;a role<span class="hljs-operator">=</span><span class="hljs-string">"doc-backlink"</span> href<span class="hljs-operator">=</span><span class="hljs-string">"#fnref01"</span>&gt;<span class="hljs-number">1</span>.&lt;/a&gt;
    Additional results of this study and
    similar studies can be found at …
-<span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span></code></pre>
+&lt;/aside&gt;</code></pre>
       </div>
           </div>
 
@@ -1350,7 +1355,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             </p>
 
             <div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="4"><span>Note</span></div><p class="">
-              The <code>doc-biblioentry</code> <a data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> was designed for use as a list item, but due to clarifications in the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification, it is not valid as a child of the
+              The <code>doc-biblioentry</code> <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> was designed for use as a list item, but due to clarifications in the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification, it is not valid as a child of the
               <a href="https://www.w3.org/TR/wai-aria-1.1/#list" class="role-reference"><code>list</code></a> role. As the <a href="#doc-bibliography" class="role-reference"><code>doc-bibliography</code></a> role already identifies a section of bibliography entries, authors are instead advised to use the <a href="https://www.w3.org/TR/wai-aria-1.1/#list" class="role-reference"><code>list</code></a> and
               <a href="https://www.w3.org/TR/wai-aria-1.1/#listitem" class="role-reference"><code>listitem</code></a> roles when native HTML elements cannot be used to structure the entries.
             </p></div>
@@ -1404,7 +1409,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             <p>A list of external references cited in the work, which may be to print or digital sources.</p>
 
             <p>
-              The element carrying the <code>doc-bibliography</code> <a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> <em class="rfc2119">MUST</em> contain at least one descendant list containing the bibliography entries (if the entries are
+              The element carrying the <code>doc-bibliography</code> <a class="termref informative" data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> <em class="rfc2119">MUST</em> contain at least one descendant list containing the bibliography entries (if the entries are
               subdivided, for example alphabetically, the element would contain more than one list).
             </p>
 
@@ -1868,7 +1873,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             <div class="example" id="example-11">
         <div class="marker">
     <a class="self-link" href="#example-11">Example<bdi> 11</bdi></a>
-  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-cover"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"coverimage.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"A Room of One's Own by Virginia Woolf"</span>/&gt;</span></code></pre>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs abnf">&lt;img role<span class="hljs-operator">=</span><span class="hljs-string">"doc-cover"</span> src<span class="hljs-operator">=</span><span class="hljs-string">"coverimage.jpg"</span> alt<span class="hljs-operator">=</span><span class="hljs-string">"A Room of One's Own by Virginia Woolf"</span>/&gt;</code></pre>
       </div>
           </div>
 
@@ -2216,7 +2221,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             <p>[Deprecated in DPUB-ARIA 1.1] One of a collection of notes that occur at the end of a work, or a section within it, that provides additional context to a referenced passage of text.</p>
 
             <div class="note" role="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="4"><span>Note</span></div><p class="">
-              The <code>doc-endnote</code> <a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> was designed for use as a list item, but due to clarifications in the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification, it is not valid as a child of the
+              The <code>doc-endnote</code> <a class="termref informative" data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> was designed for use as a list item, but due to clarifications in the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> specification, it is not valid as a child of the
               <a href="https://www.w3.org/TR/wai-aria-1.1/#list" class="role-reference"><code>list</code></a> role. As the <a href="#doc-endnotes" class="role-reference"><code>doc-endnotes</code></a> role already identifies a section of endnotes, authors are instead advised to use the <a href="https://www.w3.org/TR/wai-aria-1.1/#list" class="role-reference"><code>list</code></a> and
               <a href="https://www.w3.org/TR/wai-aria-1.1/#listitem" class="role-reference"><code>listitem</code></a> roles when native HTML elements cannot be used to structure the entries.
             </p></div>
@@ -2301,7 +2306,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             <p>A collection of notes at the end of a work or a section within it.</p>
 
             <p>
-              The element carrying the <code>doc-endnotes</code> <a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> <em class="rfc2119">MUST</em> contain at least one descendant list containing the endnotes (if the notes are subdivided, for example
+              The element carrying the <code>doc-endnotes</code> <a class="termref informative" data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> <em class="rfc2119">MUST</em> contain at least one descendant list containing the endnotes (if the notes are subdivided, for example
               by chapter, the element would contain more than one list).
             </p>
 
@@ -2782,16 +2787,16 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             <p>Ancillary information, such as a citation or commentary, that provides additional context to a referenced passage of text.</p>
 
             <p>
-              The <code>doc-footnote</code> <a class="termref informative" data-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> is only for representing individual notes that occur within the body of a work. For collections of notes that occur at the end
+              The <code>doc-footnote</code> <a class="termref informative" data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> is only for representing individual notes that occur within the body of a work. For collections of notes that occur at the end
               of a section, see <a href="#doc-endnotes" class="role-reference"><code>doc-endnotes</code></a>.
             </p>
 
             <div class="example" id="example-21">
         <div class="marker">
     <a class="self-link" href="#example-21">Example<bdi> 21</bdi></a>
-  </div> <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"6baa07af"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-footnote"</span>&gt;</span>
+  </div> <pre class="highlight" aria-busy="false"><code class="hljs abnf">&lt;aside id<span class="hljs-operator">=</span><span class="hljs-string">"6baa07af"</span> role<span class="hljs-operator">=</span><span class="hljs-string">"doc-footnote"</span>&gt;
    * Additional results of this study and similar studies can be found at …
-<span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span></code></pre>
+&lt;/aside&gt;</code></pre>
       </div>
           </div>
 
@@ -3576,11 +3581,11 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                 used to assign the accessible name when an explicit page number is not provided.
               </p>
 
-              <pre class="highlight" aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pg04"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagebreak"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"4"</span>/&gt;</span>
+              <pre class="highlight" aria-busy="false"><code class="hljs abnf">&lt;hr id<span class="hljs-operator">=</span><span class="hljs-string">"pg04"</span> role<span class="hljs-operator">=</span><span class="hljs-string">"doc-pagebreak"</span> aria-label<span class="hljs-operator">=</span><span class="hljs-string">"4"</span>/&gt;
 
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pg04"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagebreak"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"4"</span>/&gt;</span>
+&lt;span id<span class="hljs-operator">=</span><span class="hljs-string">"pg04"</span> role<span class="hljs-operator">=</span><span class="hljs-string">"doc-pagebreak"</span> title<span class="hljs-operator">=</span><span class="hljs-string">"4"</span>/&gt;
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pg04"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"doc-pagebreak"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+&lt;div id<span class="hljs-operator">=</span><span class="hljs-string">"pg04"</span> role<span class="hljs-operator">=</span><span class="hljs-string">"doc-pagebreak"</span>&gt;<span class="hljs-number">4</span>&lt;/div&gt;</code></pre>
             </aside>
           </div>
 
@@ -4811,26 +4816,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       
 
       <p>The following people contributed to the development of this document:</p>
-
-      <ul>
-        <li>James Craig (Apple Inc.)</li>
-        <li>Romain Deltour (DAISY Consortium)</li>
-        <li>Joanmarie Diggs (Igalia)</li>
-        <li>Matt Garrish (DAISY Consortium)</li>
-        <li>George Kerscher (DAISY Consortium)</li>
-        <li>Peter Krautzberger (<abbr title="World Wide Web Consortium">W3C</abbr> Invited Experts)</li>
-        <li>Charles Lapierre (Benetech)</li>
-        <li>Aaron Leventhal (Google)</li>
-        <li>Daniel Montalvo (<abbr title="World Wide Web Consortium">W3C</abbr> Staff)</li>
-        <li>James Nurthen (Adobe)</li>
-        <li>Scott O'Hara (Microsoft Corporation)</li>
-        <li>Gregorio Pellegrino (Fondazione LIA)</li>
-        <li>Tzviya Siegman (Wiley)</li>
-        <li>Avneesh Singh (DAISY Consortium)</li>
-        <li>Valerie Young (Igalia)</li>
-      </ul>
-
-      <section class="section" id="ack_funders"><div class="header-wrapper"><h3 id="b-1-enabling-funders"><bdi class="secno">B.1 </bdi>Enabling funders</h3><a class="self-link" href="#ack_funders" aria-label="Permalink for Appendix B.1"></a></div>
+      <ul id="gh-contributors"><li><a href="https://github.com/aleventhal">Aaron Leventhal</a></li><li><a href="https://github.com/AmeliaBR">Amelia Bellamy-Royds</a></li><li><a href="https://github.com/bpmcneilly">bpmcneilly</a></li><li><a href="https://github.com/carmacleod">Carolyn MacLeod</a></li><li><a href="https://github.com/daniel-montalvo">Daniel Montalvo</a></li><li><a href="https://github.com/iherman">Ivan Herman</a></li><li><a href="https://github.com/cookiecrook">James Craig</a></li><li><a href="https://github.com/jnurthen">James Nurthen</a></li><li><a href="https://github.com/joanmarie">joanmarie</a></li><li><a href="https://github.com/klown">Joseph Scheuhammer</a></li><li><a href="https://github.com/mcking65">Matt King</a></li><li><a href="https://github.com/pkra">Peter Krautzberger</a></li><li><a href="https://github.com/plehegar">Philippe Le Hegaret</a></li><li><a href="https://github.com/prayagverma">Prayag Verma </a></li><li><a href="https://github.com/ricksbrown">R Brown</a></li><li><a href="https://github.com/richschwer">Richard Schwerdtfeger</a></li><li><a href="https://github.com/halindrome">Shane McCarron</a></li><li><a href="https://github.com/stevefaulkner">Steve Faulkner</a></li><li><a href="https://github.com/TzviyaSiegman">Tzviya</a></li><li><a href="https://github.com/spectranaut">Valerie Young</a></li></ul>
+      <section class="section" id="ack_group"><div class="header-wrapper"><h3 id="b-1-aria-wg-participants-at-the-time-of-publication"><bdi class="secno">B.1 </bdi>ARIA WG participants at the time of publication</h3><a class="self-link" href="#ack_group" aria-label="Permalink for Appendix B.1"></a></div>
+        
+        <ul>
+          
+        </ul>
+      </section>
+      <section class="section" id="ack_funders"><div class="header-wrapper"><h3 id="b-2-enabling-funders"><bdi class="secno">B.2 </bdi>Enabling funders</h3><a class="self-link" href="#ack_funders" aria-label="Permalink for Appendix B.2"></a></div>
 	
 	<p>This publication has been funded in part with U.S. Federal funds from the Department of Education, National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR), initially under contract number ED-OSE-10-C-0067, then under contract number HHSP23301500054C, and now under HHS75P00120P00168. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Education, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
 </section>
@@ -4843,7 +4836,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <dl class="bibliography"><dt id="bib-epub-ssv">[EPUB-SSV]</dt><dd>
       <a href="http://www.idpf.org/epub/vocab/structure/"><cite>EPUB Structural Semantics Vocabulary</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/vocab/structure/">http://www.idpf.org/epub/vocab/structure/</a>
     </dd><dt id="bib-html">[HTML]</dt><dd>
-      <a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
+      <a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Dominic Farolino; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
     </dd><dt id="bib-rfc2119">[RFC2119]</dt><dd>
       <a href="https://www.rfc-editor.org/rfc/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>
     </dd><dt id="bib-rfc8174">[RFC8174]</dt><dd>
