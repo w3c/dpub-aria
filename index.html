@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="UTF-8">
-<meta name="generator" content="ReSpec 35.3.1">
+<meta name="generator" content="ReSpec 35.6.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -98,10 +98,10 @@ dd{margin-left:0}
     
   
 <meta name="color-scheme" content="light">
-<meta name="revision" content="b085915482bbe85c35196a565e1a7a2972f75719">
+<meta name="revision" content="9eaa524efc59353e643f530017f87daef95d4b12">
 <meta name="description" content="Enabling users of assistive technologies to find their way through web content requires embedding semantic metadata about web document structural divisions. This is particularly important for
         structural divisions of long-form documents and goes along with embedding semantic metadata about web-application widgets and behaviors for assistive technologies. This specification defines a
-        set of WAI-ARIA roles specific to helping users of assistive technologies navigate through such long-form documents.">
+        set of WAI-ARIA roles that are specific to helping users of assistive technologies navigate through such long-form documents.">
 <link rel="canonical" href="https://www.w3.org/TR/dpub-aria-1.1/">
 <script type="application/ld+json">{
   "@context": [
@@ -133,7 +133,7 @@ dd{margin-left:0}
   "name": "Digital Publishing WAI-ARIA Module 1.1",
   "inLanguage": "en-US",
   "license": "https://www.w3.org/copyright/software-license-2023/",
-  "datePublished": "2025-05-08",
+  "datePublished": "2025-10-23",
   "copyrightHolder": {
     "name": "World Wide Web Consortium",
     "url": "https://www.w3.org/"
@@ -141,14 +141,14 @@ dd{margin-left:0}
   "discussionUrl": "https://github.com/w3c/dpub-aria/issues/",
   "alternativeHeadline": "",
   "isBasedOn": "",
-  "description": "Enabling users of assistive technologies to find their way through web content requires embedding semantic metadata about web document structural divisions. This is particularly important for\n        structural divisions of long-form documents and goes along with embedding semantic metadata about web-application widgets and behaviors for assistive technologies. This specification defines a\n        set of WAI-ARIA roles specific to helping users of assistive technologies navigate through such long-form documents.",
+  "description": "Enabling users of assistive technologies to find their way through web content requires embedding semantic metadata about web document structural divisions. This is particularly important for\n        structural divisions of long-form documents and goes along with embedding semantic metadata about web-application widgets and behaviors for assistive technologies. This specification defines a\n        set of WAI-ARIA roles that are specific to helping users of assistive technologies navigate through such long-form documents.",
   "editor": [
     {
       "type": "Person",
       "name": "Matt Garrish",
       "worksFor": {
         "name": "DAISY Consortium",
-        "url": "https://daisy.org"
+        "url": "https://daisy.org/"
       }
     },
     {
@@ -164,12 +164,20 @@ dd{margin-left:0}
   "contributor": [],
   "citation": [
     {
-      "id": "http://www.idpf.org/epub/vocab/structure/",
+      "id": "https://www.w3.org/TR/epub-ssv-11/",
       "type": "TechArticle",
-      "name": "EPUB Structural Semantics Vocabulary",
-      "url": "http://www.idpf.org/epub/vocab/structure/",
+      "name": "EPUB 3 Structural Semantics Vocabulary 1.1",
+      "url": "https://www.w3.org/TR/epub-ssv-11/",
+      "creator": [
+        {
+          "name": "Ivan Herman"
+        },
+        {
+          "name": "Matt Garrish"
+        }
+      ],
       "publisher": {
-        "name": "IDPF"
+        "name": "W3C"
       }
     },
     {
@@ -285,6 +293,26 @@ dd{margin-left:0}
       }
     },
     {
+      "id": "https://www.w3.org/TR/epub-33/",
+      "type": "TechArticle",
+      "name": "EPUB 3.3",
+      "url": "https://www.w3.org/TR/epub-33/",
+      "creator": [
+        {
+          "name": "Ivan Herman"
+        },
+        {
+          "name": "Matt Garrish"
+        },
+        {
+          "name": "Dave Cramer"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
       "id": "https://www.w3.org/TR/dpub-aam-1.0/",
       "type": "TechArticle",
       "name": "Digital Publishing Accessibility API Mappings",
@@ -382,14 +410,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <script id="initialUserConfig" type="application/json">{
   "specStatus": "WD",
   "shortName": "dpub-aria-1.1",
-  "crEnd": "2023-08-29",
-  "implementationReportURI": "https://www.w3.org/2021/04/wpt-fyi-snapshot.html?filter=dpub-aam&date=2025-03-06",
+  "implementationReportURI": "https://www.w3.org/2021/04/wpt-fyi-snapshot.html?filter=dpub-aam",
   "edDraftURI": "https://w3c.github.io/dpub-aria/",
   "editors": [
     {
       "name": "Matt Garrish",
       "company": "DAISY Consortium",
-      "companyURL": "https://daisy.org",
+      "companyURL": "https://daisy.org/",
       "w3cid": 51655
     },
     {
@@ -405,14 +432,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "name": "Shane McCarron",
       "url": "http://blog.halindrome.com",
       "company": "Spec-Ops",
-      "companyURL": "https://www.spec-ops.io",
+      "companyURL": "https://spec-ops.io/",
       "w3cid": 89030
     },
     {
       "name": "Markus Gylling",
-      "url": "https://www.daisy.org",
+      "url": "https://daisy.org/",
       "company": "DAISY Consortium",
-      "companyURL": "https://www.daisy.org",
+      "companyURL": "https://daisy.org/",
       "w3cid": 21614
     }
   ],
@@ -427,6 +454,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "ED": "https://w3c.github.io/dpub-aria/",
     "FPWD": "https://www.w3.org/TR/dpub-aria-1.1/",
     "WD": "https://www.w3.org/TR/dpub-aria-1.1/",
+    "CR": "https://www.w3.org/TR/dpub-aria-1.1/",
+    "PR": "https://www.w3.org/TR/dpub-aria-1.1/",
     "REC": "https://www.w3.org/TR/dpub-aria-1.1/"
   },
   "ariaSpecURLs": {
@@ -434,6 +463,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "FPWD": "https://www.w3.org/TR/wai-aria-1.3/",
     "WD": "https://www.w3.org/TR/wai-aria-1.3/",
     "CR": "https://www.w3.org/TR/wai-aria-1.3/",
+    "PR": "https://www.w3.org/TR/wai-aria-1.3/",
     "REC": "https://www.w3.org/TR/wai-aria-1.3/"
   },
   "accNameURLs": {
@@ -441,6 +471,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "WD": "https://www.w3.org/TR/accname-1.2/",
     "FPWD": "https://www.w3.org/TR/accname-1.2/",
     "CR": "https://www.w3.org/TR/accname-1.2/",
+    "PR": "https://www.w3.org/TR/accname-1.2/",
     "REC": "https://www.w3.org/TR/accname-1.2/"
   },
   "coreMappingURLs": {
@@ -448,6 +479,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "WD": "https://www.w3.org/TR/core-aam-1.2/",
     "FPWD": "https://www.w3.org/TR/core-aam-1.2/",
     "CR": "https://www.w3.org/TR/core-aam-1.2/",
+    "PR": "https://www.w3.org/TR/core-aam-1.2/",
     "REC": "https://www.w3.org/TR/core-aam-1.2/"
   },
   "graphicsMappingModURLs": {
@@ -462,20 +494,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "ED": "https://w3c.github.io/graphics-aria/",
     "FPWD": "https://www.w3.org/TR/graphics-aria/",
     "WD": "https://www.w3.org/TR/graphics-aria/",
+    "CR": "https://www.w3.org/TR/graphics-aria/",
+    "PR": "https://www.w3.org/TR/graphics-aria/",
     "REC": "https://www.w3.org/TR/graphics-aria/"
   },
   "htmlMappingURLs": {
     "ED": "https://w3c.github.io/html-aam/",
     "FPWD": "https://www.w3.org/TR/html-aam-1.0/",
     "WD": "https://www.w3.org/TR/html-aam/",
+    "CR": "https://www.w3.org/TR/html-aam/",
+    "PR": "https://www.w3.org/TR/html-aam/",
     "REC": "https://www.w3.org/TR/html-aam/"
-  },
-  "practicesURLs": {
-    "ED": "https://www.w3.org/WAI/ARIA/apg/",
-    "WD": "https://www.w3.org/WAI/ARIA/apg/",
-    "FPWD": "https://www.w3.org/WAI/ARIA/apg/",
-    "CR": "https://www.w3.org/WAI/ARIA/apg/",
-    "REC": "https://www.w3.org/WAI/ARIA/apg/"
   },
   "preProcess": [
     null,
@@ -537,21 +566,21 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "gitRevision": "b085915482bbe85c35196a565e1a7a2972f75719",
-  "publishISODate": "2025-05-08T00:00:00.000Z",
-  "generatedSubtitle": "W3C Working Draft 08 May 2025"
+  "gitRevision": "9eaa524efc59353e643f530017f87daef95d4b12",
+  "publishISODate": "2025-10-23T00:00:00.000Z",
+  "generatedSubtitle": "W3C Working Draft 23 October 2025"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-WD"></head>
   <body class="h-entry" data-cite="core-aam accname wai-aria dom infra"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Digital Publishing WAI-ARIA Module 1.1</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#WD">W3C Working Draft</a> <time class="dt-published" datetime="2025-05-08">08 May 2025</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#WD">W3C Working Draft</a> <time class="dt-published" datetime="2025-10-23">23 October 2025</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
         <dt>This version:</dt><dd>
-                <a class="u-url" href="https://www.w3.org/TR/2025/WD-dpub-aria-1.1-20250508/">https://www.w3.org/TR/2025/WD-dpub-aria-1.1-20250508/</a>
+                <a class="u-url" href="https://www.w3.org/TR/2025/WD-dpub-aria-1.1-20251023/">https://www.w3.org/TR/2025/WD-dpub-aria-1.1-20251023/</a>
               </dd>
         <dt>Latest published version:</dt><dd>
                 <a href="https://www.w3.org/TR/dpub-aria-1.1/">https://www.w3.org/TR/dpub-aria-1.1/</a>
@@ -564,22 +593,22 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
                   </dd>
         
         <dt>Implementation report:</dt><dd>
-                <a href="https://www.w3.org/2021/04/wpt-fyi-snapshot.html?filter=dpub-aam&amp;date=2025-03-06">https://www.w3.org/2021/04/wpt-fyi-snapshot.html?filter=dpub-aam&amp;date=2025-03-06</a>
+                <a href="https://www.w3.org/2021/04/wpt-fyi-snapshot.html?filter=dpub-aam">https://www.w3.org/2021/04/wpt-fyi-snapshot.html?filter=dpub-aam</a>
               </dd>
         
         
         
         <dt>Editors:</dt><dd class="editor p-author h-card vcard" data-editor-id="51655">
-    <span class="p-name fn">Matt Garrish</span> (<a class="p-org org h-org" href="https://daisy.org">DAISY Consortium</a>)
+    <span class="p-name fn">Matt Garrish</span> (<a class="p-org org h-org" href="https://daisy.org/">DAISY Consortium</a>)
   </dd><dd class="editor p-author h-card vcard" data-editor-id="65542">
     <a class="u-url url p-name fn" href="https://www.w3.org/staff/#tzviya">Tzviya Siegman</a> (<a class="p-org org h-org" href="https://www.w3.org">W3C</a>)
   </dd>
         <dt>
                 Former editors:
               </dt><dd class="editor p-author h-card vcard" data-editor-id="89030">
-    <a class="u-url url p-name fn" href="http://blog.halindrome.com">Shane McCarron</a> (<a class="p-org org h-org" href="https://www.spec-ops.io">Spec-Ops</a>)
+    <a class="u-url url p-name fn" href="http://blog.halindrome.com">Shane McCarron</a> (<a class="p-org org h-org" href="https://spec-ops.io/">Spec-Ops</a>)
   </dd><dd class="editor p-author h-card vcard" data-editor-id="21614">
-    <a class="u-url url p-name fn" href="https://www.daisy.org">Markus Gylling</a> (<a class="p-org org h-org" href="https://www.daisy.org">DAISY Consortium</a>)
+    <a class="u-url url p-name fn" href="https://daisy.org/">Markus Gylling</a> (<a class="p-org org h-org" href="https://daisy.org/">DAISY Consortium</a>)
   </dd>
         
         <dt>Feedback:</dt><dd>
@@ -611,30 +640,27 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p>
         Enabling users of assistive technologies to find their way through web content requires embedding semantic metadata about web document structural divisions. This is particularly important for
         structural divisions of long-form documents and goes along with embedding semantic metadata about web-application widgets and behaviors for assistive technologies. This specification defines a
-        set of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles specific to helping users of assistive technologies navigate through such long-form documents.
+        set of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles that are specific to helping users of assistive technologies navigate through such long-form documents.
       </p>
 
-      <p>This document is part of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> suite described in the <a href="https://www.w3.org/WAI/intro/aria.php"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Overview</a>.</p>
+      <p>This document is part of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> suite that is described in the <a href="https://www.w3.org/WAI/standards-guidelines/aria"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Overview</a>.</p>
     </section>
     <section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
       document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
       publications and the latest revision of this technical report can be found
       in the
-      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> standards and drafts index</a> at
-      https://www.w3.org/TR/.</em></p>
-      <p>
-        While feedback on any aspect of the specification is encouraged, we would particularly like feedback on the addition of the <a href="#doc-pageheader" class="role-reference"><code>doc-pageheader</code></a> and <a href="#doc-pagefooter" class="role-reference"><code>doc-pagefooter</code></a> roles.
-      </p>
-      <p>There have been only <a href="#changelog-recent">minor clarifications</a> since the First Public Working Draft.</p>
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> standards and drafts index</a>.</em></p>
+      <p>We encourage feedback on all aspects of the specification, including on the newest additions of the <code>doc-pageheader</code> and <code>doc-pagefooter</code> roles.</p>
+      <p>Future updates to this specification may incorporate <a href="https://www.w3.org/policies/process/20231103/#allow-new-features">new features</a>.</p>
     <p>
     This document was published by the <a href="https://www.w3.org/groups/wg/aria">Accessible Rich Internet Applications Working Group</a> as
     a Working Draft using the
-        <a href="https://www.w3.org/policies/process/20231103/#recs-and-notes">Recommendation track</a>. 
+        <a href="https://www.w3.org/policies/process/20250818/#recs-and-notes">Recommendation track</a>. 
   </p><p>Publication as a Working Draft does not
   imply endorsement by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. </p><p>
     This is a draft document and may be updated, replaced, or obsoleted by other
     documents at any time. It is inappropriate to cite this document as other
-    than work in progress.
+    than a work in progress.
     
   </p><p>
     
@@ -649,71 +675,71 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           made in connection with the deliverables of
           the group; that page also includes
           instructions for disclosing a patent. An individual who has actual
-          knowledge of a patent which the individual believes contains
+          knowledge of a patent that the individual believes contains
           <a href="https://www.w3.org/policies/patent-policy/#def-essential">Essential Claim(s)</a>
           must disclose the information in accordance with
           <a href="https://www.w3.org/policies/patent-policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
         
   </p><p>
                       This document is governed by the
-                      <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                      <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20250818/">18 August 2025 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                     </p></section>
-    <nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target Audience</a></li><li class="tocline"><a class="tocxref" href="#ua-support"><bdi class="secno">1.2 </bdi>User Agent Support</a></li><li class="tocline"><a class="tocxref" href="#co-evolution"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><bdi class="secno">1.4 </bdi>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><bdi class="secno">1.5 </bdi>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#roles"><bdi class="secno">3. </bdi>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><bdi class="secno">3.1 </bdi>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#security-considerations"><bdi class="secno">4. </bdi>Security Considerations</a></li><li class="tocline"><a class="tocxref" href="#privacy-considerations"><bdi class="secno">5. </bdi>Privacy Considerations</a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changelog-recent"><bdi class="secno">A.1 </bdi>Substantive changes since the <span class="formerLink">last Working Draft</span></a></li><li class="tocline"><a class="tocxref" href="#changelog-older"><bdi class="secno">A.2 </bdi>Substantive changes since the <span class="formerLink">DPUB-ARIA 1.0 Recommendation</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><bdi class="secno">B.1 </bdi>ARIA WG participants at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">B.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">C.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">C.2 </bdi>Informative references</a></li></ol></li></ol></nav>
+    <nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.1 </bdi>Target Audience</a></li><li class="tocline"><a class="tocxref" href="#ua-support"><bdi class="secno">1.2 </bdi>User Agent Support</a></li><li class="tocline"><a class="tocxref" href="#co-evolution"><bdi class="secno">1.3 </bdi>Co-evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages</a></li><li class="tocline"><a class="tocxref" href="#authoring_practices"><bdi class="secno">1.4 </bdi>Authoring Practices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authoring_tools"><bdi class="secno">1.4.1 </bdi>Authoring Tools</a></li><li class="tocline"><a class="tocxref" href="#authoring_testing"><bdi class="secno">1.4.2 </bdi>Testing Practices and Tools</a></li></ol></li><li class="tocline"><a class="tocxref" href="#at_support"><bdi class="secno">1.5 </bdi>Assistive Technologies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#roles"><bdi class="secno">3. </bdi>Digital Publishing Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#role_definitions"><bdi class="secno">3.1 </bdi>Definition of Roles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#security-considerations"><bdi class="secno">4. </bdi>Security Considerations</a></li><li class="tocline"><a class="tocxref" href="#privacy-considerations"><bdi class="secno">5. </bdi>Privacy Considerations</a></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">A. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changelog-recent"><bdi class="secno">A.1 </bdi>Substantive changes since the <span class="formerLink">last Candidate Recommendation Snapshot</span></a></li><li class="tocline"><a class="tocxref" href="#changelog-older"><bdi class="secno">A.2 </bdi>Substantive changes since the <span class="formerLink">DPUB-ARIA 1.0 Recommendation</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><bdi class="secno">B.1 </bdi>ARIA WG participants at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">B.2 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">C.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">C.2 </bdi>Informative references</a></li></ol></li></ol></nav>
     <section class="informative" id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div><p><em>This section is non-normative.</em></p>
       
 
       <p>
         <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is a technical specification that defines a common host language semantic accessibility <abbr title="application programing interface">API</abbr> and framework that enables web
-        browsers to map the accessibility semantics in web content to platform-specific accessibility APIs. This enables web content to be interoperable with platform assistive technologies similar to
-        native platform applications without platform dependencies.
+        browsers to map the accessibility semantics in web content to platform-specific accessibility APIs. This enables web content to be interoperable with platform assistive technologies that are
+        similar to native platform applications without platform dependencies.
       </p>
 
       <p>
-        This specification is a modular extension of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> designed for the digital publishing industry. The goals of this specification
-        include:
+        This specification is a modular extension of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> that is designed for the digital publishing industry. This specification
+        includes the following goals:
       </p>
 
       <ul>
-        <li>Expanding [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] to produce structural semantic extensions to accommodate the digital publishing industry.</li>
-        <li>Align with a new governance model for modularization and extensions to <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>.</li>
-        <li>Provide structural semantics extensions that will support both assistive technologies and enable semantic navigation, styling and interactive features used by readers.</li>
+        <li>Expand [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] to produce structural semantic extensions to accommodate the digital publishing industry,</li>
+        <li>Align with a new governance model for modularization and extensions to <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>, and</li>
+        <li>Provide structural semantics extensions that will both support assistive technologies and enable semantic navigation, styling and interactive features used by readers.</li>
       </ul>
 
-      <p>The roles defined in this specification are derived from the <a href="https://idpf.github.io/epub-vocabs/structure/">EPUB Structural Semantics Vocabulary</a>.</p>
+      <p>The roles defined in this specification are derived from the <a href="https://www.w3.org/TR/epub-ssv/">EPUB Structural Semantics Vocabulary</a>.</p>
 
       <p>
-        For a more detailed explanation of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> please refer to the
-        <a href="https://www.w3.org/WAI/intro/aria"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Introduction</a> and how it applies to Rich Internet Application Accessibility.
+        For a more detailed explanation of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>, see the
+        <a href="https://www.w3.org/WAI/standards-guidelines/aria"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Overview</a> and how it applies to Rich Internet Application Accessibility.
       </p>
 
       <section id="target-audience"><div class="header-wrapper"><h3 id="x1-1-target-audience"><bdi class="secno">1.1 </bdi>Target Audience</h3><a class="self-link" href="#target-audience" aria-label="Permalink for Section 1.1"></a></div>
         
 
         <p>
-          This specification defines a module of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> for digital publishing, including <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a> and
-          values. It impacts several audiences:
+          This specification defines a module of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> for digital publishing, including the values used to define <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a>,
+          and <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a> of elements. It impacts several audiences:
         </p>
 
         <ul>
           <li>
             <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#user-agent">User agents</a> that process content containing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing
-            <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> features;
+            <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> features
           </li>
-          <li><a data-link-type="dfn" data-lt="assistive technology" href="https://www.w3.org/TR/wai-aria/#dfn-assistive-technologies">Assistive technologies</a> that provide specialized reading experiences to users with disabilities;</li>
-          <li>Authors of digital publications;</li>
-          <li>Authoring tools that help authors create conforming digital publications; and</li>
+          <li><a href="https://www.w3.org/TR/wai-aria/#dfn-assistive-technology">Assistive technologies</a> that provide specialized reading experiences to users with disabilities</li>
+          <li>Authors of digital publications</li>
+          <li>Authoring tools that help authors create conforming digital publications</li>
           <li>
             Conformance checkers, that verify appropriate use of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and this Digital Publishing
-            <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module.
+            <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module
           </li>
         </ul>
 
         <p>Each conformance requirement indicates the audience to which it applies.</p>
 
         <p>
-          Although this specification is applicable to the above audiences, it is not specifically targeted to, nor is it intended to be the sole source of information for, any of these audiences. In
-          the future, additional documents will be created to assist authors in applying these <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> semantics for the publishing industry
-          and to define how the information in this document is mapped to platform accessibility APIs.
+          Although this specification applies to the above audiences, it is not specifically targeted — nor is it intended to be the sole source of information for — any of these
+          audiences. In the future, additional documents will be created to assist authors to apply these <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> semantics for use in the
+          publishing industry, and to define how the information in this document is mapped to platform accessibility APIs.
         </p>
       </section>
 
@@ -721,47 +747,47 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         
 
         <p>
-          This module builds on the general <a href="https://www.w3.org/TR/wai-aria-1.1/#ua-support">User Agent support principles</a> defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] by also providing the ability for user
+          This module builds on the general <a href="https://www.w3.org/TR/wai-aria-1.1/#ua-support">User Agent support</a> principles defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>] by also providing the ability for user
           agents to enhance the general user interface presented to readers.
         </p>
       </section>
 
-      <section id="co-evolution"><div class="header-wrapper"><h3 id="x1-3-co-evolution-of-wai-aria-and-host-languages"><bdi class="secno">1.3 </bdi>Co-Evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages</h3><a class="self-link" href="#co-evolution" aria-label="Permalink for Section 1.3"></a></div>
+      <section id="co-evolution"><div class="header-wrapper"><h3 id="x1-3-co-evolution-of-wai-aria-and-host-languages"><bdi class="secno">1.3 </bdi>Co-evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Host Languages</h3><a class="self-link" href="#co-evolution" aria-label="Permalink for Section 1.3"></a></div>
         
 
         <p>
           The Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module follows the model for
-          <a href="https://www.w3.org/TR/wai-aria-1.1/#co-evolution">co-evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and host languages</a> defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>].
-          It is intended to augment semantics in supporting languages like [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-svg2" title="Scalable Vector Graphics (SVG) 2">SVG2</a></cite>] and EPUB, or to be used as an accessibility enhancement technology in other markup-based languages that do
-          not explicitly include support for ARIA. It clarifies semantics to assistive technologies when authors create new types of objects, via style and script, that are not yet directly supported
-          by the language of the page, because the invention of new types of objects is faster than standardized support for them appears in web languages.
+          <a href="https://www.w3.org/TR/wai-aria-1.1/#co-evolution">co-evolution of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and host languages</a> that are defined in
+          [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>]. It is intended to augment semantics in supporting languages like [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-svg2" title="Scalable Vector Graphics (SVG) 2">SVG2</a></cite>] and [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub" title="EPUB 3.3">EPUB</a></cite>], or to be used as an accessibility enhancement technology in other markup-based
+          languages that do not explicitly include support for ARIA. It clarifies semantics to assistive technologies when authors create new types of objects via style and script that are not yet
+          directly supported by the language of the page, because the invention of new types of objects is faster than standardized support for them appears in web languages.
         </p>
 
         <p>
-          It is not appropriate to create objects with style and script when the host language provides a semantic element for that type of objects. While
+          It is not appropriate to create objects with style and script when the host language provides a semantic element for those types of objects. While
           <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> can improve the accessibility of these objects, accessibility is best provided by allowing the user agent to handle the
-          object natively. For example, it is not better to use a <a href="https://www.w3.org/TR/wai-aria-1.3/#heading" class="role-reference"><code>heading</code></a> role on a <code>div</code> element than it is to use a native heading element, such as an <code>h1</code>.
+          object natively. For example, it is better to use a native heading element, such as an <code>h1</code>, than it is to use a <a href="https://www.w3.org/TR/wai-aria-1.3/#heading" class="role-reference"><code>heading</code></a> role on a <code>div</code> element.
         </p>
 
         <p>
-          It is expected that, over time, host languages will evolve to provide semantics for objects that currently can only be declared with this specification. This is natural and desirable, as one
+          over time, it is expected that host languages will evolve to provide semantics for objects that currently can only be declared with this specification. This is natural and desirable, as one
           goal of <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> is to help stimulate the emergence of more semantic and accessible markup. When native semantics for a given
-          feature become available, it is appropriate for authors to use the native feature and stop using this module for that feature. Legacy content may continue to use the Digital Publishing
+          feature become available, it is appropriate for authors to use the native feature and stop using this module for that feature. Legacy content can continue to use the Digital Publishing
           <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module, however, so the need for user agents to support it remains.
         </p>
 
         <p>
-          While specific features of this module may lose importance over time, the general possibility of the Digital Publishing
+          While specific features of this module could lose importance over time, the general possibility of the Digital Publishing
           <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module to add semantics to web pages or open web-based standards, such as EPUB, is expected to be a persistent need. Host
-          languages may not implement all the semantics this module provides, and various host languages may implement different subsets of the features. New types of objects are continually being
+          languages might not implement all the semantics this module provides, and various host languages might implement different subsets of the features. New types of objects are continually being
           developed, and one goal of this specification is to provide a way to make such objects accessible, because authoring practices often advance faster than host language standards. In this way,
           this module and host languages both evolve together but at different rates.
         </p>
 
         <p>
-          Some host languages exist to create semantics for features other than the user interface. For example, SVG expresses the semantics behind production of graphical objects, not of user
-          interface components that those objects may represent. Host languages such as these might, by design, not provide native semantics that map to this specification's features. In these cases,
-          the Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module could be adopted as a long-term approach to add semantic information to these host
+          Some host languages exist to create semantics for features other than the user interface. For example, SVG expresses the semantics behind the production of graphical objects, not of the user
+          interface components that those objects might represent. Host languages such as these might, by design, not provide native semantics that map to this specification's features. In these
+          cases, the Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> module could be adopted as a long-term approach to add semantic information to these host
           languages.
         </p>
       </section>
@@ -775,9 +801,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <p>
             Many of the requirements in the definitions of the <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> and Digital Publishing
             <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">roles</a>, <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-state">states</a> and <a data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-property">properties</a> can be checked automatically during the development process, similar to
-            other quality control processes used for validating code. To assist authors who are creating digital publications, such as EPUB, can compare the semantic structure of Digital Publishing
-            <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles from the <abbr title="Document Object Model">DOM</abbr> to that defined in this specification and notify the
-            author of errors or simply create templates that enforce that structure.
+            other quality control processes that are used for validating code. To assist authors who are creating digital publications, such as EPUB, such processes can compare the semantic structure
+            of Digital Publishing <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles from the <abbr title="Document Object Model">DOM</abbr> to that defined in this
+            specification and notify the author of errors or simply create templates that enforce that structure.
           </p>
         </section>
 
@@ -785,8 +811,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           
 
           <p>
-            The accessibility of interactive content cannot be confirmed by static checks alone. Developers of interactive content should test for device-independent access to
-            <a data-lt="widget" data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-widget">widgets</a> and applications, and should verify accessibility <abbr title="application programing interface">API</abbr> access to all content and changes during user
+            The accessibility of interactive content cannot be confirmed by static checks alone. Developers of interactive content need to test for device-independent access to
+            <a data-lt="widget" data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-widget">widgets</a> and applications, and verify accessibility <abbr title="application programing interface">API</abbr> access to all content and changes during user
             interaction.
           </p>
         </section>
@@ -796,8 +822,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         
 
         <p>
-          Programmatic access to accessibility semantics is essential for assistive technologies. For more information, refer to the
-          <a href="https://www.w3.org/TR/wai-aria-1.1/#at_support">Assistive Technologies</a> section in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>].
+          Programmatic access to accessibility semantics is essential for assistive technologies. For more information, see the<a href="https://www.w3.org/TR/wai-aria-1.1/#at_support">Assistive Technologies</a>
+          section in [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>].
         </p>
       </section>
     </section>
@@ -809,11 +835,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         when, and only when, they appear in all
         capitals, as shown here.
       </p>
-      <p>Normative sections provide requirements that authors, user agents and assistive technologies <em class="rfc2119">MUST</em> follow for an implementation to conform to this specification.</p>
-
       <p>
-        Non-normative sections provide information useful to understanding the specification. Such sections may contain examples of recommended practice, but it is not required to follow such
-        recommendations to conform to this specification.
+        Normative sections provide requirements that authors, user agents and assistive technologies <em class="rfc2119">MUST</em> follow for an implementation to conform to this specification.
+      </p>
+      <p>
+        Non-normative (informative) sections provide information useful to understanding the specification. Such sections may contain examples of recommended practice, but it is not required to follow
+        such recommendations in order to conform to this specification.
       </p>
     </section>
     <section class="normative" id="roles"><div class="header-wrapper"><h2 id="x3-digital-publishing-roles"><bdi class="secno">3. </bdi>Digital Publishing Roles</h2><a class="self-link" href="#roles" aria-label="Permalink for Section 3."></a></div>
@@ -851,7 +878,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               (e.g., full title, author(s), publisher, publication date, etc.).
             </dd>
 <dt><a href="#doc-bibliography" class="role-reference">doc-bibliography</a></dt>
-<dd>A list of external references cited in the work, which may be to print or digital sources.</dd>
+<dd>A list of external references cited in the work, which could be to print or digital sources.</dd>
 <dt><a href="#doc-biblioref" class="role-reference">doc-biblioref</a></dt>
 <dd>A reference to a bibliography entry.</dd>
 <dt><a href="#doc-chapter" class="role-reference">doc-chapter</a></dt>
@@ -926,7 +953,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <dd>Helpful information that clarifies some aspect of the content or assists in its comprehension.</dd>
 <dt><a href="#doc-toc" class="role-reference">doc-toc</a></dt>
 <dd>
-              A navigational aid that provides an ordered list of links to the major sectional headings in the content. A table of contents may cover an entire work, or only a smaller section of it.
+              A navigational aid that provides an ordered list of links to the major sectional headings in the content. A table of contents could cover an entire work or only a smaller section of it.
             </dd>
 </dl>
 
@@ -967,7 +994,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#abstract">abstract</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#abstract">abstract</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -1055,7 +1082,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#acknowledgments">acknowledgments</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#acknowledgments">acknowledgments</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -1147,7 +1174,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#afterword">afterword</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#afterword">afterword</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -1236,7 +1263,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#appendix">appendix</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#appendix">appendix</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -1326,7 +1353,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#backlink">referrer</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#backlink">referrer</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -1423,7 +1450,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#biblioentry">biblioentry</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#biblioentry">biblioentry</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -1481,7 +1508,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <h3 class="role-name" title="doc-bibliography" aria-describedby="desc-doc-bibliography"><code>doc-bibliography</code> <span class="type-indicator">(role)</span></h3>
 
           <div class="role-description" id="desc-doc-bibliography" role="definition">
-            <p>A list of external references cited in the work, which may be to print or digital sources.</p>
+            <p>A list of external references cited in the work, which could be to print or digital sources.</p>
 
             <p>
               The element carrying the <code>doc-bibliography</code> <a class="termref informative" data-link-type="dfn" href="https://www.w3.org/TR/wai-aria/#dfn-role">role</a> <em class="rfc2119">MUST</em> contain at least one descendant list containing the bibliography entries (if the entries are
@@ -1523,7 +1550,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#bibliography">bibliography</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#bibliography">bibliography</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -1613,7 +1640,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#biblioref">biblioref</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#biblioref">biblioref</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -1710,7 +1737,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#chapter">chapter</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#chapter">chapter</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -1798,7 +1825,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#colophon">colophon</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#colophon">colophon</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -1887,7 +1914,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#conclusion">conclusion</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#conclusion">conclusion</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -1973,42 +2000,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#cover">cover</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#cover">cover</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
               
               
-              <tr>
-                <th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
-                <td class="role-inherited"><ul>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-atomic" class="property-reference"><code>aria-atomic</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-braillelabel" class="property-reference"><code>aria-braillelabel</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-brailleroledescription" class="property-reference"><code>aria-brailleroledescription</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-busy" class="state-reference"><code>aria-busy (state)</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-controls" class="property-reference"><code>aria-controls</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-current" class="state-reference"><code>aria-current (state)</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-describedby" class="property-reference"><code>aria-describedby</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-description" class="property-reference"><code>aria-description</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-details" class="property-reference"><code>aria-details</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-disabled" class="state-reference"><code>aria-disabled (state)</code></a> (Global use deprecated in ARIA 1.2)</li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-dropeffect" class="property-reference"><code>aria-dropeffect</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-errormessage" class="property-reference"><code>aria-errormessage</code></a> (Global use deprecated in ARIA 1.2)</li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-flowto" class="property-reference"><code>aria-flowto</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-grabbed" class="state-reference"><code>aria-grabbed (state)</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-haspopup" class="property-reference"><code>aria-haspopup</code></a> (Global use deprecated in ARIA 1.2)</li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-hidden" class="state-reference"><code>aria-hidden (state)</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-invalid" class="state-reference"><code>aria-invalid (state)</code></a> (Global use deprecated in ARIA 1.2)</li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-keyshortcuts" class="property-reference"><code>aria-keyshortcuts</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-label" class="property-reference"><code>aria-label</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-labelledby" class="property-reference"><code>aria-labelledby</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-live" class="property-reference"><code>aria-live</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-owns" class="property-reference"><code>aria-owns</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-relevant" class="property-reference"><code>aria-relevant</code></a></li>
-<li><a href="https://www.w3.org/TR/wai-aria-1.3/#aria-roledescription" class="property-reference"><code>aria-roledescription</code></a></li>
-</ul>
-</td>
-              </tr>
+              
               <tr>
                 <th class="role-namefrom-head" scope="row">Name From:</th>
                 <td class="role-namefrom">author</td>
@@ -2062,7 +2060,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#credit">credit</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#credit">credit</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -2151,7 +2149,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#credits">credits</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#credits">credits</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -2237,7 +2235,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#dedication">dedication</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#dedication">dedication</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -2323,7 +2321,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#rearnote">rearnote</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#rearnote">rearnote</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -2446,7 +2444,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#rearnotes">rearnotes</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#rearnotes">rearnotes</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -2535,7 +2533,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#epigraph">epigraph</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#epigraph">epigraph</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -2628,7 +2626,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#epilogue">epilogue</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#epilogue">epilogue</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -2717,7 +2715,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#errata">errata</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#errata">errata</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -2896,7 +2894,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#footnote">footnote</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#footnote">footnote</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -2982,7 +2980,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#foreword">foreword</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#foreword">foreword</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -3092,7 +3090,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#glossary">glossary</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#glossary">glossary</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -3181,7 +3179,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#glossref">glossref</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#glossref">glossref</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -3287,7 +3285,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#index">index</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#index">index</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -3375,7 +3373,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#introduction">introduction</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#introduction">introduction</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -3461,7 +3459,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#noteref">noteref</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#noteref">noteref</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -3570,7 +3568,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#notice">notice</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#notice">notice</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -3640,7 +3638,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
             <p>
               The page break locator <em class="rfc2119">MUST</em> precede the content of the page it identifies. If a page includes a header (<a href="#doc-pageheader" class="role-reference"><code>doc-pageheader</code></a>), the page break locator <em class="rfc2119">SHOULD</em> be located before it,
-              even if the header includes a visible page number. The page break locator may be used with the page number in a page header if the number precedes all other content in the header.
+              even if the header includes a visible page number. The page break locator <em class="rfc2119">MAY</em> be used with the page number in a page header if the number precedes all other content in the header.
             </p>
 
             <p>
@@ -3685,7 +3683,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#pagebreak">pagebreak</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#pagebreak">pagebreak</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -4008,7 +4006,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#page-list">page-list</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#page-list">page-list</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -4101,7 +4099,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#part">part</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#part">part</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -4190,7 +4188,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#preface">preface</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#preface">preface</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -4283,7 +4281,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#prologue">prologue</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#prologue">prologue</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -4342,7 +4340,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             <p>A distinctively placed or highlighted quotation from the current content designed to draw attention to a topic or highlight a key point.</p>
 
             <p>
-              Unlike a passage quoted from another source, a pullquote is a direct repetition of text in the current document. As a result, authors must ensure that the presentational occurrence is
+              Unlike a passage quoted from another source, a pullquote is a direct repetition of text in the current document. As a result, authors <em class="rfc2119">MUST</em> ensure that the presentational occurrence is
               hidden from users of assistive technologies (e.g., using the <a href="https://www.w3.org/TR/wai-aria-1.3/#aria-hidden" class="property-reference"><code>aria-hidden</code></a> attribute).
             </p>
 
@@ -4392,7 +4390,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#pullquote">pullquote</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#pullquote">pullquote</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -4485,7 +4483,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#qna">qna</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#qna">qna</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -4574,7 +4572,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#subtitle">subtitle</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#subtitle">subtitle</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -4669,7 +4667,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#help">help</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#help">help</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -4726,7 +4724,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
           <div class="role-description" id="desc-doc-toc" role="definition">
             <p>
-              A navigational aid that provides an ordered list of links to the major sectional headings in the content. A table of contents may cover an entire work, or only a smaller section of it.
+              A navigational aid that provides an ordered list of links to the major sectional headings in the content. A table of contents could cover an entire work or only a smaller section of it.
             </p>
 
             <div class="example" id="example-43">
@@ -4766,7 +4764,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               
               <tr>
                 <th class="role-related-head" scope="row">Related Concepts:</th>
-                <td class="role-related">EPUB <a href="https://idpf.github.io/epub-vocabs/structure/#toc">toc</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv" title="EPUB Structural Semantics Vocabulary">EPUB-SSV</a></cite>]</td>
+                <td class="role-related">EPUB <a href="https://www.w3.org/TR/epub-ssv/#toc">toc</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-epub-ssv-11" title="EPUB 3 Structural Semantics Vocabulary 1.1">EPUB-SSV-11</a></cite>]</td>
               </tr>
               
               
@@ -4838,15 +4836,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <section class="appendix informative" id="changelog"><div class="header-wrapper"><h2 id="a-change-log"><bdi class="secno">A. </bdi>Change Log</h2><a class="self-link" href="#changelog" aria-label="Permalink for Appendix A."></a></div><p><em>This section is non-normative.</em></p>
       
 
-      <section id="changelog-recent"><div class="header-wrapper"><h3 id="a-1-substantive-changes-since-the-last-working-draft"><bdi class="secno">A.1 </bdi>Substantive changes since the <a href="https://www.w3.org/TR/2023/WD-dpub-aria-1.1-20231030/">last Working Draft</a></h3><a class="self-link" href="#changelog-recent" aria-label="Permalink for Appendix A.1"></a></div>
+      <section id="changelog-recent"><div class="header-wrapper"><h3 id="a-1-substantive-changes-since-the-last-candidate-recommendation-snapshot"><bdi class="secno">A.1 </bdi>Substantive changes since the <a href="https://www.w3.org/TR/2024/CR-dpub-aria-1.1-20240227/">last Candidate Recommendation Snapshot</a></h3><a class="self-link" href="#changelog-recent" aria-label="Permalink for Appendix A.1"></a></div>
         
 
         <ul>
           
-          <li>
-            01-Dec-2023: Removed the requirements to imply list items descendants of <code>doc-bibliography</code> and <code>doc-endnotes</code> are <code>doc-biblioentry</code> and
-            <code>doc-endnote</code>
-          </li>
+          <li>04-March-2025: Add back the superclass role for <code>doc-biblioentry</code></li>
         </ul>
       </section>
 
@@ -4854,6 +4849,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         
 
         <ul>
+          <li>
+            01-Dec-2023: Removed the requirements to imply list items descendants of <code>doc-bibliography</code> and <code>doc-endnotes</code> are <code>doc-biblioentry</code> and
+            <code>doc-endnote</code>
+          </li>
           <li>
             20-Sep-2021: Clarified ambiguities in the formatting and processing of endnote and bibliography lists and require that the <a href="#doc-footnote" class="role-reference"><code>doc-footnote</code></a> role not be used within endnotes. See
             <a href="https://github.com/w3c/dpub-aria/issues/38">issue 38</a>.
@@ -4896,7 +4895,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         
         <ul>
           
-        <li>Rahim Abdi (Apple Inc.)</li><li>NAVYA AGARWAL (Adobe)</li><li>Mario Batušić (Fabasoft)</li><li>Benjamin Beaudry (Microsoft Corporation)</li><li>Curt Bellew (Oracle Corporation)</li><li>Zoë Bijl (W3C Invited Experts)</li><li>Aleksandar Cindrikj (Netcetera)</li><li>Keith Cirkel (Mozilla Foundation)</li><li>Daniel Clark (Microsoft Corporation)</li><li>James Craig (Apple Inc.)</li><li>Chris Cuellar (Bocoup)</li><li>Hidde de Vries (Logius)</li><li>Joanmarie Diggs (Igalia)</li><li>Howard Edwards (Bocoup)</li><li>James Edwards (TPGi)</li><li>Mayuri Faldu (Navy Federal Credit Union)</li><li>Betsy Fanning (PDF Association)</li><li>Steve Faulkner (TetraLogical Services Ltd)</li><li>Jaunita Flessas (Navy Federal Credit Union)</li><li>Jane Fulton (Cisco)</li><li>Bryan Garaventa (W3C Invited Experts)</li><li>Rashmi Garimella (Google LLC)</li><li>Matt Garrish (DAISY Consortium)</li><li>Doug Geoffray (Microsoft Corporation)</li><li>Ariella Gilmore (IBM Corporation)</li><li>Shirisha Gubba (Google LLC)</li><li>Eloisa Guerrero (Rakuten Group, Inc.)</li><li>Jon Gunderson (University of Illinois)</li><li>Oliver Habersetzer (SAP SE)</li><li>Theo Hale (Microsoft Corporation)</li><li>Sunny Hardasani (Adobe)</li><li>Matthew Hardy (Adobe)</li><li>Peter Heumader (Fabasoft)</li><li>Sarah Higley (Microsoft Corporation)</li><li>Hans Hillen (TPGi)</li><li>Isabel Holdsworth (TPGi)</li><li>Stanley Hon (Microsoft Corporation)</li><li>Michael Jackson (Microsoft Corporation)</li><li>Duff Johnson (PDF Association)</li><li>Summer Jones (Thomson Reuters Corp.)</li><li>William Kilian (TargetStream Technologies)</li><li>Matthew King (Meta)</li><li>Zachary Kinsey (TargetStream Technologies)</li><li>Greta Krafsig (The Washington Post)</li><li>Peter Krautzberger (krautzource UG)</li><li>Nina Krauß (SAP SE)</li><li>JaEun Jemma Ku (University of Illinois)</li><li>Joe Lamyman (TetraLogical Services Ltd)</li><li>Charles LaPierre (Benetech)</li><li>Philip Lazarevic (Level Access)</li><li>Aaron Leventhal (Google LLC)</li><li>Brett Lewis (TPGi)</li><li>Andy Luhrs (Microsoft Corporation)</li><li>Sazzad Mahamud (Google LLC)</li><li>Alison Maher (Microsoft Corporation)</li><li>Mark McCarthy (University of Illinois)</li><li>Eduardo Meza Etienne (Navy Federal Credit Union)</li><li>Clay Miller (Microsoft Corporation)</li><li>Daniel Montalvo (W3C)</li><li>James Nurthen (Adobe)</li><li>Scott O'Hara (Microsoft Corporation)</li><li>Lola Odelola (W3C Invited Experts)</li><li>Adam Page (Hilton)</li><li>Michael Pennisi (Bocoup)</li><li>Roberto Perez (Microsoft Corporation)</li><li>Giacomo Petri (UsableNet)</li><li>Noah Praskins (TPGi)</li><li>Daniel Pöll (Fabasoft)</li><li>Paul Rayius (Allyant)</li><li>Adrian Roselli (W3C Invited Experts)</li><li>Marco Sabidussi (UsableNet)</li><li>Trisha Salas (Level Access)</li><li>Stefan Schnabel (SAP SE)</li><li>Harris Schneiderman (Deque Systems, Inc.)</li><li>Raymond Schwartz (Navy Federal Credit Union)</li><li>Cynthia Shelly (W3C Invited Experts)</li><li>Tzviya Siegman (W3C)</li><li>Arturo Silva (The Washington Post)</li><li>Avneesh Singh (DAISY Consortium)</li><li>Michael[tm] Smith (sideshowbarker) (W3C)</li><li>Francis Storr (Intel Corporation)</li><li>Jennifer Strickland (MITRE Corporation)</li><li>Melanie Sumner (IBM Corporation)</li><li>Alexander Surkov (Igalia)</li><li>James Teh (Mozilla Foundation)</li><li>Jocelyn Tran (Google LLC)</li><li>Léonie Watson (TetraLogical Services Ltd)</li><li>Jan Williams (TPGi)</li><li>Valerie Young (Igalia)</li><li>Kate Zhao (Thomson Reuters Corp.)</li><li>Xiao (Helen) Zhou (University of Illinois)</li><li>Filippo Zorzi (UsableNet)</li></ul>
+        <li>Rahim Abdi (Apple Inc.)</li><li>NAVYA AGARWAL (Adobe)</li><li>Mario Batušić (Fabasoft)</li><li>Benjamin Beaudry (Microsoft Corporation)</li><li>Curt Bellew (Oracle Corporation)</li><li>Zoë Bijl (W3C Invited Experts)</li><li>Gautier Chomel (EDRLab)</li><li>Aleksandar Cindrikj (Netcetera)</li><li>Keith Cirkel (Mozilla Foundation)</li><li>Daniel Clark (Microsoft Corporation)</li><li>James Craig (Apple Inc.)</li><li>Chris Cuellar (Bocoup)</li><li>Hidde de Vries (Logius)</li><li>Joanmarie Diggs (Igalia)</li><li>Howard Edwards (Bocoup)</li><li>Tamsin Ewing (W3C)</li><li>Mayuri Faldu (Navy Federal Credit Union)</li><li>Betsy Fanning (PDF Association)</li><li>Steve Faulkner (TetraLogical Services Ltd)</li><li>Jaunita Flessas (Navy Federal Credit Union)</li><li>Jane Fulton (Cisco)</li><li>Bryan Garaventa (W3C Invited Experts)</li><li>Rashmi Garimella (Google LLC)</li><li>Matt Garrish (DAISY Consortium)</li><li>Doug Geoffray (Microsoft Corporation)</li><li>Ariella Gilmore (IBM Corporation)</li><li>Taylore Givens (Microsoft Corporation)</li><li>Shirisha Gubba (Google LLC)</li><li>Eloisa Guerrero (Rakuten Group, Inc.)</li><li>Jon Gunderson (University of Illinois)</li><li>Oliver Habersetzer (SAP SE)</li><li>Theo Hale (Microsoft Corporation)</li><li>Sunny Hardasani (Adobe)</li><li>Matthew Hardy (Adobe)</li><li>Chris Harrelson (Google LLC)</li><li>Peter Heumader (Fabasoft)</li><li>Sarah Higley (Microsoft Corporation)</li><li>Hans Hillen (TPGi)</li><li>Isabel Holdsworth (TPGi)</li><li>Stanley Hon (Microsoft Corporation)</li><li>Michael Jackson (Microsoft Corporation)</li><li>Jilin Jiang (Ant Group Co., Ltd.)</li><li>Duff Johnson (PDF Association)</li><li>Summer Jones (Thomson Reuters Corp.)</li><li>Yuki Kamahori (Cybozu)</li><li>William Kilian (Kilian Codes LLC)</li><li>Matthew King (Meta)</li><li>Zachary Kinsey (TargetStream Technologies)</li><li>Daisuke Kobayashi (Cybozu)</li><li>Greta Krafsig (The Washington Post)</li><li>Peter Krautzberger (krautzource UG)</li><li>Nina Krauß (SAP SE)</li><li>JaEun Jemma Ku (University of Illinois)</li><li>Joe Lamyman (TetraLogical Services Ltd)</li><li>Charles LaPierre (Benetech)</li><li>Philip Lazarevic (Level Access)</li><li>Leo Lee (Microsoft Corporation)</li><li>Aaron Leventhal (Google LLC)</li><li>Brett Lewis (TPGi)</li><li>Andy Luhrs (Microsoft Corporation)</li><li>Sazzad Mahamud (Google LLC)</li><li>Alison Maher (Microsoft Corporation)</li><li>Gurpreet Kaur Mangera (Rakuten Group, Inc.)</li><li>Mark McCarthy (University of Illinois)</li><li>Eduardo Meza Etienne (Navy Federal Credit Union)</li><li>Clay Miller (Microsoft Corporation)</li><li>Hirotaka Minamida (Cybozu)</li><li>Daniel Montalvo (W3C)</li><li>Baldino Morelli (UsableNet)</li><li>Jacques Newman (Microsoft Corporation)</li><li>James Nurthen (Adobe)</li><li>Scott O'Hara (Microsoft Corporation)</li><li>Lola Odelola (W3C Invited Experts)</li><li>Neil Osman (Evinced Inc.)</li><li>Yusuke Oyama (Cybozu)</li><li>Adam Page (Hilton)</li><li>Michael Pennisi (Bocoup)</li><li>Giacomo Petri (UsableNet)</li><li>Noah Praskins (TPGi)</li><li>Daniel Pöll (Fabasoft)</li><li>Lucas Radaelli (Google LLC)</li><li>Paul Rayius (Allyant)</li><li>Adrian Roselli (W3C Invited Experts)</li><li>Marco Sabidussi (UsableNet)</li><li>Trisha Salas (Level Access)</li><li>Stefan Schnabel (SAP SE)</li><li>Harris Schneiderman (Deque Systems, Inc.)</li><li>Raymond Schwartz (Navy Federal Credit Union)</li><li>Cynthia Shelly (W3C Invited Experts)</li><li>Tzviya Siegman (W3C)</li><li>Arturo Silva (The Washington Post)</li><li>Avneesh Singh (DAISY Consortium)</li><li>Michael[tm] Smith (sideshowbarker) (W3C)</li><li>Francis Storr (Intel Corporation)</li><li>Jennifer Strickland (MITRE Corporation)</li><li>Nobukiyo Sugisaki (Cybozu)</li><li>Melanie Sumner (IBM Corporation)</li><li>Alexander Surkov (Igalia)</li><li>James Teh (Mozilla Foundation)</li><li>Jocelyn Tran (Google LLC)</li></ul>
       </section>
       <section class="section" id="ack_funders"><div class="header-wrapper"><h3 id="b-2-enabling-funders"><bdi class="secno">B.2 </bdi>Enabling funders</h3><a class="self-link" href="#ack_funders" aria-label="Permalink for Appendix B.2"></a></div>
 	
@@ -4908,8 +4907,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 <section id="references" class="appendix"><div class="header-wrapper"><h2 id="c-references"><bdi class="secno">C. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix C."></a></div><section id="normative-references"><div class="header-wrapper"><h3 id="c-1-normative-references"><bdi class="secno">C.1 </bdi>Normative references</h3><a class="self-link" href="#normative-references" aria-label="Permalink for Appendix C.1"></a></div>
     
-    <dl class="bibliography"><dt id="bib-epub-ssv">[EPUB-SSV]</dt><dd>
-      <a href="http://www.idpf.org/epub/vocab/structure/"><cite>EPUB Structural Semantics Vocabulary</cite></a>.  IDPF. URL: <a href="http://www.idpf.org/epub/vocab/structure/">http://www.idpf.org/epub/vocab/structure/</a>
+    <dl class="bibliography"><dt id="bib-epub-ssv-11">[EPUB-SSV-11]</dt><dd>
+      <a href="https://www.w3.org/TR/epub-ssv-11/"><cite>EPUB 3 Structural Semantics Vocabulary 1.1</cite></a>. Ivan Herman; Matt Garrish.  W3C. 28 August 2025. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/epub-ssv-11/">https://www.w3.org/TR/epub-ssv-11/</a>
     </dd><dt id="bib-html">[HTML]</dt><dd>
       <a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Dominic Farolino; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
     </dd><dt id="bib-rfc2119">[RFC2119]</dt><dd>
@@ -4921,8 +4920,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <dl class="bibliography"><dt id="bib-dpub-aam-1.0">[dpub-aam-1.0]</dt><dd>
       <a href="https://www.w3.org/TR/dpub-aam-1.0/"><cite>Digital Publishing Accessibility API Mappings</cite></a>. Richard Schwerdtfeger; Joanmarie Diggs.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/dpub-aam-1.0/">https://www.w3.org/TR/dpub-aam-1.0/</a>
+    </dd><dt id="bib-epub">[EPUB]</dt><dd>
+      <a href="https://www.w3.org/TR/epub-33/"><cite>EPUB 3.3</cite></a>. Ivan Herman; Matt Garrish; Dave Cramer.  W3C. 27 March 2025. W3C Recommendation. URL: <a href="https://www.w3.org/TR/epub-33/">https://www.w3.org/TR/epub-33/</a>
     </dd><dt id="bib-fingerprinting-guidance">[fingerprinting-guidance]</dt><dd>
-      <a href="https://www.w3.org/TR/fingerprinting-guidance/"><cite>Mitigating Browser Fingerprinting in Web Specifications</cite></a>. Nick Doty; Tom Ritter.  W3C. 21 March 2025. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/fingerprinting-guidance/">https://www.w3.org/TR/fingerprinting-guidance/</a>
+      <a href="https://www.w3.org/TR/fingerprinting-guidance/"><cite>Mitigating Browser Fingerprinting in Web Specifications</cite></a>. Nick Doty; Tom Ritter.  W3C. 25 September 2025. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/fingerprinting-guidance/">https://www.w3.org/TR/fingerprinting-guidance/</a>
     </dd><dt id="bib-infra">[infra]</dt><dd>
       <a href="https://infra.spec.whatwg.org/"><cite>Infra Standard</cite></a>. Anne van Kesteren; Domenic Denicola.  WHATWG. Living Standard. URL: <a href="https://infra.spec.whatwg.org/">https://infra.spec.whatwg.org/</a>
     </dd><dt id="bib-svg2">[SVG2]</dt><dd>
